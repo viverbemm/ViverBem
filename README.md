@@ -1,0 +1,1 @@
+Esse sistema é para idosos e cuidadores, uma conexão para vida.
