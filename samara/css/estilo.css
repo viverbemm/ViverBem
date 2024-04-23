@@ -1,1 +1,42 @@
+body{
+    font-family: "Oswald", sans-serif;
+    background-color: rgb(230,230,250);
+}
 
+.roxo {
+    background-color: rgb(230,230,250);
+    width: 1872px;
+    height: 100px;
+    color: rgb(52,3,151);
+}
+
+div h1{
+    float: left;
+
+}
+#menu{
+    float: right;
+    width: 60%;
+    text-align: right;
+    margin: 0 100px;
+    padding: 40px 100px;
+}
+
+#pagina_inicial{
+    width: 720px;
+    margin: 50px auto 20px auto;
+}
+
+#menu a{
+    text-decoration: none;
+    padding: 5px;
+}
+
+h1{
+    margin-left: 20px;
+}
+
+
+img{
+    max-width: 100%;
+}
