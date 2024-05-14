@@ -48,3 +48,16 @@ body{
     height: 90%;
     margin: 0;
 }
+
+#caixa{
+    background-color: rgb(250, 230, 230);
+    height: 10px;
+    padding: 5px;
+    color: rgb(151, 3, 3);
+
+}
+
+#titulo_tres{
+    text-align: center;
+}
+
