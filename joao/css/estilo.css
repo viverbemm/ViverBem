@@ -1,0 +1,57 @@
+
+body{
+    font-family: "Oswald", sans-serif;
+    background-color: rgb(230,230,250);
+}
+
+.roxo {
+    background-color: rgb(230,230,250);
+    height: 50px;
+    color: rgb(52,3,151);
+
+}
+
+#titulo_um{
+    float: left;
+    margin-top: 30px ;
+    text-align: center;
+    color:  rgb(52,3,151);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#menu a{
+    text-decoration: none;
+    padding: 5px;
+    color:rgb(52,3,151) ;
+}
+
+h1{
+    margin-left: 50px;
+    margin-top: 60px;
+}
+
+#menu{ 
+    float: right;
+    width: 60%;
+    text-align: right;
+    margin: 0 100px;
+    padding: 40px 100px;
+}
+
+#profissionais{
+   text-align: justify;
+}
+
+
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat;
+    gap: 10px;
+}
+
+.grid-container img{
+    width: 300%;
+    height: auto;
+}
