@@ -1,24 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter } from 'react-router-dom';
+import { Routes } from 'react-router-dom';
+import { Route } from 'react-router-dom';
+import Pagina_inicial from './views/Pagina_inicial';
+import Tela_cliente from './views/Tela_cliente';
+import Teste from './views/Teste';
+import Tela_login from './views/Tela_login';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Pagina_inicial />} />
+
+        <Route path='/Tela_cliente' element={<Tela_cliente />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
