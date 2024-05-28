@@ -47,8 +47,8 @@ h1{
 
 .grid-container{
     display: grid;
-    grid-template-columns: repeat;
-    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
 .grid-container img{
