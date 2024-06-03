@@ -1,5 +1,5 @@
 import React from 'react'
-
+import imagensArray from '../../Imagens'
 function Pagina_inicial() {
     return (
         <div>
@@ -13,12 +13,12 @@ function Pagina_inicial() {
             </div>
             
             <div>
-                <img src="img/paginaprincipal.webp" alt="" />
+                <img src={imagensArray.sentado} alt="" />
             </div>
 
             <div id="meio">
                 <div id="mao">
-                    <img src="img/maos_principal.webp" alt="" />
+                    <img src={imagensArray.maos} alt="" />
                 </div>
                 <div class="texto_um cor">
                     <p id="titulo_dois">ViverBem+ </p>

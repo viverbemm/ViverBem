@@ -156,6 +156,8 @@ button {
 
 #botao{
     margin-inline: 700px;
+    width: 50%;
+    
     
 }
 
@@ -219,7 +221,7 @@ body{
 }
 
 #caixa{
-    background-color: rgb(250, 230, 230);
+
     height: 10px;
     padding: 5px;
     color: rgb(151, 3, 3);
@@ -233,5 +235,20 @@ body{
 
 
 
+
+/*Teste*/
+#log{
+    background-color:  rgb(230,230,250) ;
+}
+
+#botao{
+    width: 50%;
+}
+
+
+
+
+
+/*Tela Cadastro*/
 
 

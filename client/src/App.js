@@ -9,6 +9,8 @@ import Teste from './views/Teste';
 import Tela_login from './views/Tela_login';
 
 
+
+
 function App() {
   return (
     <BrowserRouter>
@@ -16,6 +18,9 @@ function App() {
         <Route path='/' element={<Pagina_inicial />} />
 
         <Route path='/Tela_cliente' element={<Tela_cliente />} />
+
+        <Route path='/Tela_login' element={<Tela_login />} />
+        
       </Routes>
     </BrowserRouter>
   );
