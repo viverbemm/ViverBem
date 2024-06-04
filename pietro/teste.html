@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="css/teste.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="image"></div>
+        <div class="form-container">
+            <h2>Cadastre-se</h2>
+            <form>
+                <input type="text" name="nome" placeholder="Nome Completo *" required>
+                <input type="tel" name="telefone" placeholder="Telefone *" required>
+                <input type="email" name="email" placeholder="Email *" required>
+                <input type="text" name="cpf" placeholder="CPF ou RG *" required>
+                <input type="text" name="matricula" placeholder="Matrícula (profissionais)">
+                <select name="estado" required>
+                    <option value="">Selecione seu estado:</option>
+                    <!-- Adicione as opções de estado aqui -->
+                </select>
+                <input type="date" name="data_nascimento" placeholder="Data de nascimento *" required>
+                <input type="password" name="senha" placeholder="Crie uma senha *" required>
+                <input type="password" name="confirmar_senha" placeholder="Confirme sua senha *" required>
+                <div class="button-group">
+                    <button type="button">Cliente</button>
+                    <button type="button">Profissional</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
