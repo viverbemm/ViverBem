@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Importa a fonte 'Poppins' do Google Fonts, incluindo várias variações de peso e estilo. */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    /* Remove margens e preenchimentos padrão, define o box-sizing como border-box para incluir bordas e
+     preenchimentos na largura e altura dos elementos, e aplica a fonte 'Poppins' a todos os elementos. */
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #e3e9f7;
+    /* Define o corpo da página com display flex para organizar o layout,
+     assegura que o corpo ocupa pelo menos a altura total da viewport e define uma cor de fundo. */
+}
+
+main {
+    padding: 20px;
+    position: fixed;
+    z-index: 1;
+    padding-left: calc(82px + 20px);
+    /* Estiliza o elemento principal, fixando-o na página e garantindo que 
+    o conteúdo comece após a largura inicial da barra lateral (82px). */
+}
+
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #ffffff;
+    height: 100vh;
+    border-radius: 0px 18px 18px 0px;
+    position: relative;
+    transition: all .5s;
+    min-width: 82px;
+    z-index: 2;
+    /* Estiliza a barra lateral com fundo branco, preenchendo a altura da viewport e 
+    com cantos arredondados. Transições são aplicadas para suavizar a abertura/fechamento da barra. */
+}
+
+#sidebar_content {
+    padding: 12px;
+    /* Adiciona preenchimento interno ao conteúdo da barra lateral. */
+}
+
+#user {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+    /* Estiliza a seção de informações do usuário, organizando o avatar e
+     informações em linha com um espaço entre eles. */
+}
+
+#user_avatar {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 20px;
+    /* Define o avatar do usuário como uma imagem circular de 50x50 pixels. */
+}
+
+#user_infos {
+    display: flex;
+    flex-direction: column;
+    /* Organiza as informações do usuário (nome e cargo) em uma coluna. */
+}
+
+#user_infos span:last-child {
+    color: #6b6b6b;
+    font-size: 12px;
+    /* Estiliza o último span em 'user_infos' (provavelmente o cargo do usuário)
+     com uma cor mais suave e tamanho de fonte menor. */
+}
+
+#side_items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style: none;
+    /* Organiza os itens de navegação da barra lateral em uma coluna 
+    com espaço entre eles e remove os marcadores de lista. */
+}
+
+.side-item {
+    border-radius: 8px;
+    padding: 14px;
+    /* Define os itens de navegação com cantos
+     arredondados e preenchimento interno. */
+}
+
+.side-item.active {
+    background-color: #4f46e5;
+    /* Aplica uma cor de fundo diferente ao item de navegação ativo. */
+}
+
+.side-item:hover:not(.active),
+#logout_btn:hover {
+    background-color: #e3e9f7;
+    /* Altera a cor de fundo ao passar o mouse sobre os itens da barra lateral e 
+    o botão de logout, exceto para o item ativo. */
+}
+
+.side-item a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0a0a0a;
+    /* Estiliza os links dentro dos itens da barra lateral,
+     removendo sublinhado e centralizando o conteúdo. */
+}
+
+.side-item.active a {
+    color: #e3e9f7;
+    /* Define a cor do texto para os links dentro
+     do item ativo na barra lateral. */
+}
+
+.side-item a i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    /* Estiliza os ícones dentro dos itens
+     de navegação da barra lateral. */
+}
+
+#logout {
+    border-top: 1px solid #e3e9f7;
+    padding: 12px;
+    /* Estiliza a seção de logout com uma borda
+     superior e preenchimento interno. */
+}
+
+#logout_btn {
+    border: none;
+    padding: 12px;
+    font-size: 14px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border-radius: 8px;
+    text-align: start;
+    cursor: pointer;
+    background-color: transparent;
+    /* Estiliza o botão de logout com preenchimento,
+     um cursor de ponteiro e o texto alinhado à esquerda. */
+}
+
+#open_btn {
+    position: absolute;
+    top: 30px;
+    right: -10px;
+    background-color: #4f46e5;
+    color: #e3e9f7;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+    /* Estiliza o botão para abrir/fechar a barra lateral, 
+    com uma posição absoluta e um ícone em um botão circular. */
+}
+
+#open_btn_icon {
+    transition: transform .3s ease;
+    /* Aplica uma transição suave à rotação do 
+    ícone do botão de abertura/fechamento. */
+}
+
+.open-sidebar #open_btn_icon {
+    transform: rotate(180deg);
+    /* Rotaciona o ícone em 180 graus
+     quando a barra lateral é aberta. */
+}
+
+.item-description {
+    width: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    transition: width .6s;
+    height: 0px;
+    /* Inicialmente, oculta o texto descritivo dos itens da barra lateral e 
+    define uma transição suave para quando a barra lateral for expandida. */
+}
+
+#sidebar.open-sidebar {
+    min-width: 15%;
+    /* Expande a largura mínima da barra lateral quando ela está aberta. */
+}
+
+#sidebar.open-sidebar .item-description {
+    width: 150px;
+    height: auto;
+    /* Expande o texto descritivo dos itens da barra lateral 
+    quando ela está aberta, tornando-o visível. */
+}
+
+#sidebar.open-sidebar .side-item a {
+    justify-content: flex-start;
+    gap: 14px;
+    /* Alinha o conteúdo dos links à esquerda e adiciona espaço
+     entre o ícone e o texto quando a barra lateral está aberta. */
+}
