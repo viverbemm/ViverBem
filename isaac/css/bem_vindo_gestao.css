@@ -85,6 +85,7 @@ h2 {
 
 .section {
     margin: 20px 0;
+    text-align: left;
 }
 
 
@@ -97,4 +98,5 @@ h2 {
 
 .logo img {
     width: 70%;
+    
 }
