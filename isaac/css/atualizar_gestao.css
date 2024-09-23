@@ -1,4 +1,3 @@
-/* Reset padrão */
 * {
     margin: 0;
     padding: 0;
@@ -6,23 +5,94 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #d4d4ea;
-    color: #00007e;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    font-family: 'Arial', sans-serif;
+    background-color: #EFEFFF;
 }
 
-header {
-    background-color: #c0c0f2;
-    width: 100%;
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 25%;
+    background-color: #9191f3;;
+    padding: 20px;
+    color: #0a2ebe;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.content {
+    width: 75%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header {
+    text-align: right;
+    font-size: 20px;
     padding: 10px;
+}
+
+.personal-info h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #663399;
+}
+
+.info-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #EFEFFF;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #001ab0;
+};
+
+
+.info-item p {
+    margin: 0;
+    color: #333;
 }
+
+.info-item a {
+    color: #663399;
+    text-decoration: none;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.logo {
+    width: 100px;
+}
+
+
+/* Reset padrão */
+
+
 
 .navbar {
     display: flex;
@@ -85,7 +155,6 @@ h2 {
 
 .section {
     margin: 20px 0;
-    text-align: left;
 }
 
 
@@ -98,5 +167,4 @@ h2 {
 
 .logo img {
     width: 70%;
-    
 }

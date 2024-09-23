@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #1E0066;
+    background-color: #E6E6FA;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -109,8 +109,4 @@ body {
 
 .logo img {
     width: 70%;
-}
-
-.section{
-    
 }
