@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela Financeiro</title>
+    <link rel="stylesheet" href="css/financeiro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <span><b>Olá Administrador</b></span>
+            <div class="menu">
+                <button class="menu-btn"><b>MENU</b></button>
+                <ul class="dropdown">
+                    <li><a href="#">Financeiro</a></li>
+                    <li><a href="#">Configurações</a></li>
+                    <li><a href="#">Relatórios e Estatísticas</a></li>
+                    <li><a href="#">Controle de Usuários</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h1>Financeiro</h1>
+        <div class="filters">
+            <input type="date" value="2024-06-01">
+            <input type="date" value="2024-06-30">
+            <select>
+                <option>Consultar</option>
+            </select>
+            <button class="search-btn"><i class="fas fa-search"></i> Pesquisar</button>
+        </div>
+
+        <div class="results">
+            <div class="card">
+                <i class="fas fa-handshake"></i>
+                <p>Receita Bruta</p>
+                <h2>R$ 136.000</h2>
+            </div>
+            <div class="card">
+                <i class="fas fa-hand-holding-usd"></i>
+                <p>Receita Líquida</p>
+                <h2>R$ 40.800</h2>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
