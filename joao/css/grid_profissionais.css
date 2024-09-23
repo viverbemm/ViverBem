@@ -32,18 +32,28 @@ body {
     font-size: 30px;
 }
 
+#menu {
+    margin-top: 50px;
+    text-align: right;
+    text-align: right;
+    padding: 5px;
+    margin-top: -40px;
+}
+
 #menu a {
     text-decoration: none;
-    padding: 5px;
     color: rgb(52, 3, 151);
+    margin-right: 30px;
 }
 
 
-#rodape{
+
+#rodape {
     text-align: center;
     color: rgb(52, 3, 151);
     font-weight: bold;
-    font-size: 15px;
+    font-size: 25px;
+    margin-top: 80px;
 }
 
 #controd {
@@ -54,11 +64,15 @@ body {
 
 #profissionais {
     text-align: center;
+    margin-top: 100px;
+    text-decoration: underline;
+    letter-spacing: 2px;
 }
 
 
 #conteupro {
     font-size: 15px;
+    margin-bottom: 50px;
 }
 
 .grid-container {
@@ -71,13 +85,31 @@ body {
 }
 
 .grid-item {
-    text-align: left;
+    text-align: center;
     /* Centraliza o texto */
     font-size: 12px;
 }
 
 .grid-item img {
-    max-width: 100%; /* Faz a imagem ocupar toda a largura do item */
-    height: 300px; /* Define uma altura fixa para todas as imagens (ajuste conforme necessário) */
-    object-fit: cover; /* Mantém a proporção da imagem, cortando partes se necessário */
+    max-width: 100%;
+    /* Faz a imagem ocupar toda a largura do item */
+    height: 300px;
+    /* Define uma altura fixa para todas as imagens (ajuste conforme necessário) */
+    object-fit: cover;
+    /* Mantém a proporção da imagem, cortando partes se necessário */
+}
+
+#mapa {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 50px;
+    margin-bottom: 50px;
+}
+
+#map {
+    height: 400px;
+    /* altura do mapa */
+    width: 100%;
+    /* largura do mapa */
+    text-align: center;
 }
