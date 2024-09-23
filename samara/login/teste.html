@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ViverBem+</title>
+    <link rel="stylesheet" href="css/teste.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    
+</head>
+<body>
+    <header>
+        <!-- A seção <header> contém o cabeçalho da página, 
+            geralmente usado para navegação e informações principais. -->
+
+        <nav class="nav-bar">
+            <!-- A tag <nav> define uma área de navegação na página. 
+            Aqui está um contêiner para os elementos de navegação,
+             com a classe 'nav-bar' para estilização. -->
+
+            <div class="logo">
+                <h1>ViverBem+</h1>
+                <!-- Este bloco contém o logo ou nome do site, 
+                 que é estilizado como um título de nível 1. -->
+            </div>
+
+            <div class="nav-list">
+                <!-- Este bloco contém a lista de links de navegação. -->
+
+                <ul>
+                    <!-- A tag <ul> define uma lista não ordenada, 
+                        usada aqui para os itens de navegação. -->
+
+                    <li class="nav-item"><a href="#" class="nav-link">Página inicial</a></li>
+                    <!-- Um item de navegação que leva à página inicial. 
+                     O atributo 'href="#"' indica que o link 
+                    atualmente não leva a lugar nenhum (é um placeholder). 
+                    A classe 'nav-link' pode ser usada 
+                    para estilizar o link. -->
+
+                    <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
+                    <!-- Outro item de navegação que levará à página de login. -->
+                </ul>
+            </div>
+
+            <div class="mobile-menu-icon">
+                <!-- Este bloco contém o ícone do menu
+                  para dispositivos móveis. -->
+
+                <button onclick="menuShow()">
+                    <!-- Um botão que, ao ser clicado, executa a função JavaScript
+                      'menuShow()', que provavelmente 
+                    exibe ou esconde o menu em dispositivos móveis. -->
+
+                    <img class="icon" src="assets/img/menu_white_36dp.svg" alt="">
+                    <!-- Um ícone (menu hambúrguer) para representar 
+                     o menu em dispositivos móveis. O arquivo de imagem
+                    está localizado na pasta 'assets/img'. -->
+                </button>
+            </div>
+        </nav>
+
+        <div class="mobile-menu">
+            <!-- Este bloco define o menu que será exibido 
+             em dispositivos móveis. -->
+
+            <ul>
+                <!-- Lista de links de navegação 
+                 que aparecem no menu mobile. -->
+
+                <li class="nav-item"><a href="#" class="nav-link">Página inicial</a></li>
+                <!-- Link para a página inicial no menu mobile. -->
+
+                <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
+                <!-- Link para a página de login no menu mobile. -->
+            </ul>
+
+        </div>
+    </header>
+
+    <div class="logo-viver">
+        <img src="img/LOGO_VIVER_BEM_+_2-removebg-preview (1).png" alt="Logo ViverBem+" class="logo-form">
+    </div>
+ 
+
+    <main>
+        <section class="login-section">
+            <img src="img/velho-mulher.novo.png" alt="Idoso e profissional" class="main-image">
+            <div class="form-container">
+               
+                <form>
+                    <h2>Vamos começar!</h2>
+                    <label for="cpf">CPF *</label>
+                    <input type="text" id="cpf" name="cpf" required>
+
+                    <label for="senha">Senha *</label>
+                    <input type="password" id="senha" name="senha" required>
+
+                    <div class="button-group">
+                        <button type="submit" class="btn">Cliente</button>
+                        <button type="submit" class="btn">Profissional</button>
+                    </div>
+
+                    <a href="#" class="register-link">Cadastre-se</a>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="endereco">
+        <p>ViverBem+<br>Centro Empresarial Shopping Praia da Costa, 245, Vila Velha, ES</p>
+    </footer>
+</body>
+</html>
