@@ -1,95 +1,128 @@
-body {
-    height: 100%;
-    /* Faz o html e o body ocuparem 100% da altura da tela */
+* {
     margin: 0;
-    /* Remove margens padrão */
     padding: 0;
-    /* Remove preenchimento padrão */
-    display: flex;
-    /* Usado para centralizar o conteúdo */
-    justify-content: center;
-    /* Centraliza verticalmente */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
     background-color: #BBADDF;
-    /* Cor de fundo */
-    font-family: "Oswald", sans-serif;
-    /* Fonte do texto */
-}
-
-#titulo_um {
-    margin-top: 50px;
-    text-align: left;
     color: rgb(52, 3, 151);
-    font-weight: bold;
-    font-size: 30px;
-}
-
-#menu {
-    margin-top: 50px;
-    text-align: right;
-    text-align: right;
-    padding: 5px;
-    margin-top: -40px;
-}
-
-#menu a {
-    text-decoration: none;
-    color: rgb(52, 3, 151);
-    margin-right: 30px;
-}
-
-#tituprof {
-    max-height: 600px;
-    text-align: right;
-    /* Centraliza o texto dentro da div */
-    /* Define a largura da div */
-    max-width: 80%;
-    /* Define a largura máxima da div */
-    padding: 10px;
-    /* Espaçamento interno */
-    border-radius: 10px;
-    /* Bordas arredondadas */
-    background-color: rgb(230, 230, 250);
-    color: rgb(52, 3, 151);
-    margin-top: 200px;
-}
-
-#textprof {
-    text-align: justify;
-    color: #23008D;
 }
 
 .container {
-    display: flex;
-    /* Usa flexbox para alinhar itens */
-    align-items: center;
-    /* Alinha verticalmente no centro */
-}
-
-.container img {
-    width: 100px;
-    /* Define a largura da imagem */
-    height: auto;
-    /* Mantém a proporção da imagem */
-    margin-right: 15px;
-    /* Espaço entre a imagem e o texto */
-}
-
-#rodape {
-    text-align: center;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #E6E6FA;
     color: rgb(52, 3, 151);
-    font-weight: bold;
-    font-size: 25px;
-    margin-top: 80px;
 }
 
-#controd {
-    font-size: 15px;
-    text-align: center;
+header {
+    color: #fff;
+    padding: 10px 0;
+}
+
+header h1 {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav {
+    float: right;
+    margin-right: 20px;
+}
+
+nav a {
+    color: rgb(52, 3, 151);
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.intro {
+    background-color: #E6E6FA;
+    padding: 60px 0;
+    margin-top: 20px;
+    margin-left: 180px;
+    width: 80%;
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+}
+
+.profile-pic {
+    float: left;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.intro-text {
+    overflow: hidden;
+}
+
+.intro-text h2 {
+    margin-bottom: 10px;
+}
+
+.intro-text p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.about {
+    background-color: #E6E6FA;
+    padding: 60px 0;
+    margin-top: 20px;
+    margin-left: 180px;
+    width: 80%;
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+}
+
+.about h3 {
     margin-bottom: 20px;
 }
 
+.about ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
 
-#conteupro {
-    font-size: 15px;
-    margin-bottom: 50px;
+.contact {
+    background-color: #E6E6FA;
+    padding: 60px 0;
+    margin-top: 20px;
+    margin-left: 180px;
+    width: 80%;
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+}
+
+.contact h3 {
+    margin-bottom: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #5f4bb6;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+footer {
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
 }
