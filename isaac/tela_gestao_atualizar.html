@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Administrador</title>
+    <title>Administrador - ViverBem+</title>
     <link rel="stylesheet" href="css/atualizar_gestao.css">
 </head>
 <body>
@@ -16,54 +16,51 @@
                 <li><a href="#">Preferências gerais</a></li>
             </ul>
         </div>
-        <header>
-           
-                <div class="menu">
-                    <button class="menu-btn"><b>MENU</b></button>
-                    <ul class="dropdown">
-                        <li><a href="#">Financeiro</a></li>
-                        <li><a href="#">Configurações</a></li>
-                        <li><a href="#">Relatórios e Estatísticas</a></li>
-                        <li><a href="#">Controle de Usuários</a></li>
-                    </ul>
-                </div>
+        
+        <div class="content">
+            <h2>Dados pessoais</h2>
+            <div class="info-item">
+                <span>Nome completo:</span>
+                <input type="text" id="nome" value="Isaac Lucca De Paula Barbara" disabled>
+                <a href="#" class="edit-btn" onclick="toggleEdit('nome')">Editar</a>
             </div>
-        </header>
-            <div class="personal-info">
-                <h3>Dados pessoais</h3>
-                <div class="info-item">
-                    <p><strong>Nome completo:</strong> Isaac Lucca De Paula Barbara</p>
-                    <a href="#">Editar</a>
-                </div>
-                <div class="info-item">
-                    <p><strong>Telefone:</strong> (27)99823-457</p>
-                    <a href="#">Editar</a>
-                </div>
-                <div class="info-item">
-                    <p><strong>Pronomes:</strong> Nenhum</p>
-                    <a href="#">Editar</a>
-                </div>
-                <div class="info-item">
-                    <p><strong>Gênero:</strong> Masculino</p>
-                    <a href="#">Editar</a>
-                </div>
-                <div class="info-item">
-                    <p><strong>Data de nascimento:</strong> 19/01/2002</p>
-                    <a href="#">Editar</a>
-                </div>
-                <div class="info-item">
-                    <p><strong>E-mail padrão:</strong> isaaclucca@viverbem.com</p>
-                    <a href="#">Editar</a>
-                </div>
-                <div class="info-item">
-                    <p><strong>Cidade:</strong> Vila Velha - ES</p>
-                    <a href="#">Editar</a>
-                </div>
+            <div class="info-item">
+                <span>Telefone:</span>
+                <input type="text" id="telefone" value="(27) 99823-457" disabled>
+                <a href="#" class="edit-btn" onclick="toggleEdit('telefone')">Editar</a>
             </div>
-            <div class="footer">
-                <img src="img/logo.png" alt="ViverBem+" class="logo">
+            <div class="info-item">
+                <span>Pronomes:</span>
+                <input type="text" id="pronomes" value="Nenhum" disabled>
+                <a href="#" class="edit-btn" onclick="toggleEdit('pronomes')">Editar</a>
+            </div>
+            <div class="info-item">
+                <span>Gênero:</span>
+                <input type="text" id="genero" value="Masculino" disabled>
+                <a href="#" class="edit-btn" onclick="toggleEdit('genero')">Editar</a>
+            </div>
+            <div class="info-item">
+                <span>Data de nascimento:</span>
+                <input type="text" id="dataNascimento" value="19/01/2002" disabled>
+                <a href="#" class="edit-btn" onclick="toggleEdit('dataNascimento')">Editar</a>
+            </div>
+            <div class="info-item">
+                <span>E-mail padrão:</span>
+                <input type="email" id="email" value="isaaclucca@viverbem.com" disabled>
+                <a href="#" class="edit-btn" onclick="toggleEdit('email')">Editar</a>
+            </div>
+            <div class="info-item">
+                <span>Cidade:</span>
+                <input type="text" id="cidade" value="Vila Velha - ES" disabled>
+                <a href="#" class="edit-btn" onclick="toggleEdit('cidade')">Editar</a>
             </div>
         </div>
+
+        <footer>
+            <img src="logo.png" alt="ViverBem+">
+        </footer>
     </div>
+
+    <script src="js/atualizar.js"></script>
 </body>
 </html>
