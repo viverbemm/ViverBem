@@ -1,0 +1,95 @@
+body {
+    height: 100%;
+    /* Faz o html e o body ocuparem 100% da altura da tela */
+    margin: 0;
+    /* Remove margens padrão */
+    padding: 0;
+    /* Remove preenchimento padrão */
+    display: flex;
+    /* Usado para centralizar o conteúdo */
+    justify-content: center;
+    /* Centraliza verticalmente */
+    background-color: #BBADDF;
+    /* Cor de fundo */
+    font-family: "Oswald", sans-serif;
+    /* Fonte do texto */
+}
+
+#titulo_um {
+    margin-top: 50px;
+    text-align: left;
+    color: rgb(52, 3, 151);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#menu {
+    margin-top: 50px;
+    text-align: right;
+    text-align: right;
+    padding: 5px;
+    margin-top: -40px;
+}
+
+#menu a {
+    text-decoration: none;
+    color: rgb(52, 3, 151);
+    margin-right: 30px;
+}
+
+#tituprof {
+    max-height: 600px;
+    text-align: right;
+    /* Centraliza o texto dentro da div */
+    /* Define a largura da div */
+    max-width: 80%;
+    /* Define a largura máxima da div */
+    padding: 10px;
+    /* Espaçamento interno */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    background-color: rgb(230, 230, 250);
+    color: rgb(52, 3, 151);
+    margin-top: 200px;
+}
+
+#textprof {
+    text-align: justify;
+    color: #23008D;
+}
+
+.container {
+    display: flex;
+    /* Usa flexbox para alinhar itens */
+    align-items: center;
+    /* Alinha verticalmente no centro */
+}
+
+.container img {
+    width: 100px;
+    /* Define a largura da imagem */
+    height: auto;
+    /* Mantém a proporção da imagem */
+    margin-right: 15px;
+    /* Espaço entre a imagem e o texto */
+}
+
+#rodape {
+    text-align: center;
+    color: rgb(52, 3, 151);
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 80px;
+}
+
+#controd {
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+#conteupro {
+    font-size: 15px;
+    margin-bottom: 50px;
+}
