@@ -55,14 +55,15 @@ main {
     width: 100%;
     height: auto;
     position: relative;
-   color: #2a2973;
+    color: #2a2973;
+   
 
 }
 
 .main-image {
     width: 100%;
     height: auto;
-    max-height: 400px;
+    max-height: 700px;
     object-fit: cover;
 }
 
@@ -76,7 +77,7 @@ main {
     max-width: 400px;
     width: 100%;
     position: absolute;
-    top: 25%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -136,6 +137,7 @@ input {
 
 .endereco{
     text-align: center;
+    transform: translateY(-20px);
     color: #2a2973;
 }
 
