@@ -7,7 +7,78 @@
     <title>Perfil do profissional (luísa heringer)</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/perfil_profissional.css">
+    <link rel="stylesheet" href="assets/css/estilo.css">
+    <script src="assets/js/script.js"></script>
 </head>
+
+
+<header>
+    <!-- A seção <header> contém o cabeçalho da página, 
+        geralmente usado para navegação e informações principais. -->
+
+    <nav class="nav-bar">
+        <!-- A tag <nav> define uma área de navegação na página. 
+        Aqui está um contêiner para os elementos de navegação,
+         com a classe 'nav-bar' para estilização. -->
+
+        <div class="logo">
+            <h1>ViverBem+</h1>
+            <!-- Este bloco contém o logo ou nome do site, 
+             que é estilizado como um título de nível 1. -->
+        </div>
+
+        <div class="nav-list">
+            <!-- Este bloco contém a lista de links de navegação. -->
+
+            <ul>
+                <!-- A tag <ul> define uma lista não ordenada, 
+                    usada aqui para os itens de navegação. -->
+
+                <li class="nav-item"><a href="#" class="nav-link">Página inicial</a></li>
+                <!-- Um item de navegação que leva à página inicial. 
+                 O atributo 'href="#"' indica que o link 
+                atualmente não leva a lugar nenhum (é um placeholder). 
+                A classe 'nav-link' pode ser usada 
+                para estilizar o link. -->
+
+                <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
+                <!-- Outro item de navegação que levará à página de login. -->
+            </ul>
+        </div>
+
+        <div class="mobile-menu-icon">
+            <!-- Este bloco contém o ícone do menu
+              para dispositivos móveis. -->
+
+            <button onclick="menuShow()">
+                <!-- Um botão que, ao ser clicado, executa a função JavaScript
+                  'menuShow()', que provavelmente 
+                exibe ou esconde o menu em dispositivos móveis. -->
+
+                <img class="icon" src="assets/img/menu_white_36dp.svg" alt="">
+         
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu">
+ 
+        <ul>
+   
+
+            <li class="nav-item"><a href="#" class="nav-link">Página inicial</a></li>
+          
+
+            <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
+           
+        </ul>
+
+    </div>
+</header>
+
+
+
+
 
 <section class="intro">
     <div class="container">
