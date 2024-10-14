@@ -30,7 +30,25 @@ const Cadastro = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const updatedUsuarios = [...usuarios];
+    async (infoUsuarios) => {
+      try {
+          const resposta = await fetch('http://localhost:5000/Cadastro', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(infoUsuarios)
+          });
+
+          if (!resposta.ok) {
+              console.log('Erro ao cadastrar usuario');
+          } else {
+              alert('Usuario cadastrado com sucesso');
+          }
+
+      } catch (error) {
+          console.error('Erro ao cadastrar Usuario', error)
+      }
+
+  }
 
     if (formData.id) {
       // Edita usuário existente
@@ -120,7 +138,7 @@ const Cadastro = () => {
                 <option value="profissional">Profissional</option>
               </select>
 
-              <button type="submit" className="register-link">
+              <button onClick={ () => handleSubmit() } type="submit" className="register-link">
                 {formData.id ? 'Salvar' : 'Cadastre-se'}
               </button>
             </form>

@@ -1,0 +1,18 @@
+{
+    "usuarios": [
+    { 
+    "nome": "",
+    "telefone": "",
+    "email": "",
+    "cpf": "",
+    "matricula": "",
+    "data_nascimento": "",
+    "senha": "",
+    "confirmar_senha": "",
+    "cidade": "",
+    "tipo_usuario": ""  }
+  ]
+   
+
+}
+
