@@ -5,6 +5,7 @@ import Controle_Usuarios from './components/pages/Controle_Usuarios';
 import Financeiro from './components/pages/Financeiro';
 import Login from './components/pages/Login';
 import Tela_Cadastro from './components/pages/Tela_Cadastro';
+import Login_Seg from './components/pages/Login_Seg';
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
             <Route path='Financeiro' element={<Financeiro/>}/>
             <Route path='Login' element={<Login/>}/>
             <Route path='Cadastro' element={<Tela_Cadastro/>}/>
-                    
+            <Route path='Login_Seg' element={<Login_Seg/>}/>         
           </Routes>
         </Router> 
   );
