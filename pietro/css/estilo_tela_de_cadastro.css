@@ -6,6 +6,14 @@
     fonte padrão como Arial, com fallback para Helvetica e sans-serif. */
 }
 
+body {
+    background-color: #f0eef8;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 header {
     background-color: #E6E6FA;
     /* Define a cor de fundo do cabeçalho como um tom lilás claro (#c9bbe4). */
@@ -165,4 +173,11 @@ header {
         /* Classe auxiliar para exibir o menu mobile
          quando a função JavaScript for chamada. */
     }
+}
+
+.endereco{
+    text-align: center;
+    transform: translateY(-20px);
+    color: #2a2973;
+    margin-top: -60px;
 }
