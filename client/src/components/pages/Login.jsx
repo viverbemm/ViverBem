@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/login_gestao.css';
+import './Login.module.css';
 
 function Login() {
     return (

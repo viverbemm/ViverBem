@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './css/atualizar_gestao.css';
+import styles from './Atualizar.module.css';
 
 function AtualizarGestao() {
     // Estado para controlar quais campos podem ser editados

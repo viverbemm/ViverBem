@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/bem_vindo_gestao.css';
+import './Bem_vindo.module.css';
 
 function BemVindoGestao() {
     return (
