@@ -79,10 +79,10 @@ const Cadastro = () => {
           <div className="nav-list">
             <ul>
               <li className="nav-item">
-                <a href="#" className="nav-link">Página inicial</a>
+                <a href="/Bem_vindo" className="nav-link">Página inicial</a>
               </li>
               <li className="nav-item">
-                <a href="#" className="nav-link">Login</a>
+                <a href="/Login" className="nav-link">Login</a>
               </li>
             </ul>
           </div>

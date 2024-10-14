@@ -7,15 +7,28 @@
     <title>Cliente</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/grid_profissionais.css">
+    <link rel="stylesheet" href="assets/css/estilo.css">
+    <script src="assets/js/script.js"></script>
 </head>
 
 <body>
-    <div id="conteudo" class="roxo">
-        <h1 id="titulo_um">ViverBem+</h1>
-        <div id="menu">
-            <a href="pagina_inicial.html"><b>Página inicial</b></a>
-            <a href="login.html"><b>Login</b></a>
+    <nav class="nav-bar">
+        <div class="logo">
+            <h1>ViverBem+</h1>
         </div>
+        <div class="nav-list">
+            <ul>
+                <li class="nav-item"><a href="pagina_inicial.html" class="nav-link">Página inicial</a></li>
+                <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+            </ul>
+        </div>
+        <div class="mobile-menu-icon">
+            <button onclick="menuShow()">
+                <img class="icon" src="assets/img/menu_white_36dp.svg" alt="">
+            </button>
+        </div>
+    </nav>
+    <div id="conteudo" class="roxo">
         <div id="profissionais">
             <h1>Profissionais</h1>
         </div>

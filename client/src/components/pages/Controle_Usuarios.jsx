@@ -7,12 +7,10 @@ const App = () => {
         <div className="container">
             <nav className="navbar navbar-expand-lg">
                 <div>
-                    <span className="navbar-brand">logo</span>
+                    <span className="navbar-brand"></span>
                 </div>
                 <ul className="navbar-nav">
-                    <li className="nav-item"><a className="nav-link" href="">Início</a></li>
-                    <li className="nav-item"><a className="nav-link" href="">Sobre nós</a></li>
-                    <li className="nav-item"><a className="nav-link" href="">Contato</a></li>
+                  
                 </ul>
             </nav>
             <h1>Controle de Clientes</h1>
@@ -97,27 +95,7 @@ const App = () => {
                     </tr>
                 </tbody>
             </table>
-            <div id="senai-carrossel" className="carousel slide container" data-bs-ride="carousel">
-                <div className="carousel-inner">
-                    <div className="carousel-item active">
-                        <img src="https://senaies.com.br/wp-content/uploads/2024/06/Banner-full_Matriculas_SENAI-1.png" alt="" />
-                    </div>
-                    <div className="carousel-item">
-                        <img src="https://senaies.com.br/wp-content/uploads/2024/05/Banner-Site_Senai-Porto.png" alt="" />
-                    </div>
-                    <div className="carousel-item">
-                        <img src="https://senaies.com.br/wp-content/uploads/2024/04/Banner_Card1_desktop_1250x250px.png" alt="" />
-                    </div>
-                </div>
-                <button className="carousel-control-prev" data-bs-target="#senai-carrossel" data-bs-slide="prev">
-                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Previous</span>
-                </button>
-                <button className="carousel-control-next" data-bs-target="#senai-carrossel" data-bs-slide="next">
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Next</span>
-                </button>
-            </div>
+      
         </div>
     );
 };
