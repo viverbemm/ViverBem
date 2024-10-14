@@ -1,6 +1,6 @@
 import React from 'react';
-import './css/financeiro.css';
-import '@fortawesome/fontawesome-free/css/all.min.css'; // Importação de ícones FontAwesome
+import './Financeiro.module.css';
+
 
 function Financeiro() {
     return (

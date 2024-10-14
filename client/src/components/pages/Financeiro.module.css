@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #c5cae9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #c5cae9;
+}
+
+.header-left p, .header-right p {
+    color: #3f51b5;
+}
+
+main {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+h1 {
+    color: #512da8;
+    margin-bottom: 20px;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="date"],
+select {
+    padding: 10px;
+    border: 1px solid #3f51b5;
+    border-radius: 5px;
+}
+
+.search-btn {
+    background-color: #512da8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.results {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #d1c4e9;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 150px;
+}
+
+.card i {
+    font-size: 40px;
+    color: #512da8;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #512da8;
+    margin-bottom: 10px;
+}
+
+.card h2 {
+    color: #3f51b5;
+}
+
+
+header {
+    background-color: #c0c0f2;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    color: #000075;
+    
+}
+
+.menu-btn {
+    background-color: #c0c0f2;
+    color: rgb(0, 24, 112);
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.menu-btn:hover {
+    background-color: #a6a6e8;
+}
+
+.dropdown {
+    display: none;
+    background-color: #c0c0f2;
+    position: absolute;
+
+    top: 60px;
+    list-style-type: none;
+    border: 1px solid #5661B3;
+    padding: 10px;
+}
+
+.menu-btn:focus+.dropdown,
+.dropdown:hover {
+    display: block;
+}
+
+.dropdown li {
+    margin: 10px 0;
+}
+
+.dropdown a {
+    text-decoration: none;
+    color: #000075;
+}
+
+main {
+    padding: 40px;
+    text-align: center;
+}
+
+h1 {
+    color: #000075;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #000075;
+    font-size: 1.8em;
+}
+
+.section {
+    margin: 20px 0;
+}
+
+
+
+.contact {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
