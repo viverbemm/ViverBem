@@ -1,0 +1,101 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ebe4f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #5d4aad;
+    font-weight: bold;
+}
+
+a.deactivate {
+    color: red;
+}
+
+h1, h2, h3 {
+    color: #2d034e;
+}
+
+/* Header */
+.header-container {
+    background-color: #5d4aad;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container h1 {
+    margin: 0;
+}
+
+.header-container nav a {
+    margin-left: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Main section */
+.main-container {
+    background-color: #f3ecfe;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    margin: 20px auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    background-color: #a092db;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.section-header i {
+    font-size: 24px;
+    margin-right: 10px;
+    color: white;
+}
+
+.section-header h2 {
+    margin: 0;
+    color: white;
+}
+
+.login-section, .account-section {
+    margin-top: 20px;
+}
+
+.login-details, .account-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+/* Footer */
+.footer-container {
+    margin-top: 400px;
+    padding:10px;
+    background-color: #e0d8f5;
+    text-align: center;
+}
+
+footer address {
+    color: #5d4aad;
+    font-style: normal;
+    margin-top: 60px;
+}
