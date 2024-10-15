@@ -63,12 +63,19 @@ const Cadastro = () => {
     setFormData(usuario);
   };
 
+
+
+  /*DELETE*/
+
   const handleDelete = (id) => {
     const updatedUsuarios = usuarios.filter(usuario => usuario.id !== id);
     setUsuarios(updatedUsuarios);
     localStorage.setItem('usuarios', JSON.stringify(updatedUsuarios));
   };
 
+
+
+  
   return (
     <div>
       <header>
