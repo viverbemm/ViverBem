@@ -1,18 +1,29 @@
 {
-    "usuarios": [
-    { 
-    "nome": "",
-    "telefone": "",
-    "email": "",
-    "cpf": "",
-    "matricula": "",
-    "data_nascimento": "",
-    "senha": "",
-    "confirmar_senha": "",
-    "cidade": "",
-    "tipo_usuario": ""  }
+  "usuarios": [
+    {
+      "nome": "Isaac",
+      "telefone": "2",
+      "email": "222@gmail.com",
+      "cpf": "111111111-21",
+      "matricula": "",
+      "data_nascimento": "",
+      "senha": "",
+      "confirmar_senha": "",
+      "cidade": "",
+      "tipo_usuario": ""
+    },
+    {
+      "id": null,
+      "nome": "Isaac",
+      "telefone": "27992833778",
+      "email": "isaac.barbara@aluno.senai.br",
+      "cpf": "198.190.887-04",
+      "matricula": "2020202020",
+      "data_nascimento": "2024-10-16",
+      "senha": "123123",
+      "confirmar_senha": "123123",
+      "cidade": "vila velha",
+      "tipo_usuario": "cliente"
+    }
   ]
-   
-
 }
-

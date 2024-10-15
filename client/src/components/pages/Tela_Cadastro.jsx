@@ -18,7 +18,6 @@ const Cadastro = () => {
   });
 
   useEffect(() => {
-    // Simulação de busca de usuários
     const fetchedUsuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
     setUsuarios(fetchedUsuarios);
   }, []);
@@ -28,40 +27,42 @@ const Cadastro = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    async (infoUsuarios) => {
-      try {
-          const resposta = await fetch('http://localhost:5000/Cadastro', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify(infoUsuarios)
-          });
+  const cadastrar = async (infoUsuarios) => {
+    try {
+      const resposta = await fetch('http://localhost:3001/usuarios', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(infoUsuarios)
+      });
 
-          if (!resposta.ok) {
-              console.log('Erro ao cadastrar usuario');
-          } else {
-              alert('Usuario cadastrado com sucesso');
-          }
-
-      } catch (error) {
-          console.error('Erro ao cadastrar Usuario', error)
+      if (!resposta.ok) {
+        console.log('Erro ao cadastrar usuario');
+      } else {
+        alert('Usuario cadastrado com sucesso');
       }
 
-  }
+    } catch (error) {
+      console.error('Erro ao cadastrar Usuario', error);
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const updatedUsuarios = [...usuarios];
 
     if (formData.id) {
-      // Edita usuário existente
-      const index = usuarios.findIndex(u => u.id === formData.id);
+      const index = updatedUsuarios.findIndex(u => u.id === formData.id);
       updatedUsuarios[index] = formData;
     } else {
-      // Adiciona novo usuário
-      const newUser = { ...formData, id: Date.now() }; // Gera um ID único
+      const newUser = { ...formData, id: Date.now() };
       updatedUsuarios.push(newUser);
     }
 
     setUsuarios(updatedUsuarios);
     localStorage.setItem('usuarios', JSON.stringify(updatedUsuarios));
+    cadastrar(formData); // Chamar o POST com os dados do formulário
+
     setFormData({
       id: null,
       nome: '',
@@ -138,7 +139,7 @@ const Cadastro = () => {
                 <option value="profissional">Profissional</option>
               </select>
 
-              <button onClick={ () => handleSubmit() } type="submit" className="register-link">
+              <button type="submit" className="register-link">
                 {formData.id ? 'Salvar' : 'Cadastre-se'}
               </button>
             </form>
