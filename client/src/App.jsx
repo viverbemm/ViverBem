@@ -8,17 +8,22 @@ import Tela_Cadastro from './components/pages/Tela_Cadastro';
 import Login_Seg from './components/pages/Login_Seg';
 
 
+
 function App() {
   return (
         <Router>
           <Routes>
-            <Route path='/' element={<Bem_vindo/>} /> 
+            <Route path='/Bem_vindo' element={<Bem_vindo/>} /> 
             <Route path='/Atualizar' element={<Atualizar/>} /> 
             <Route path='Controle' element={<Controle_Usuarios/>}/>
             <Route path='Financeiro' element={<Financeiro/>}/>
             <Route path='Login' element={<Login/>}/>
             <Route path='Cadastro' element={<Tela_Cadastro/>}/>
+<<<<<<< HEAD
             <Route path='Login_Seg' element={<Login_Seg/>}/>         
+=======
+         
+>>>>>>> b796b0d1ad7d44e238beb5c6c7aee241264be7ce
           </Routes>
         </Router> 
   );

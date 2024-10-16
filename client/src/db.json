@@ -1,0 +1,17 @@
+{
+  "usuarios": [
+    {
+      "id": null,
+      "nome": "Pietro",
+      "telefone": "27992833778",
+      "email": "isaac.barbara@aluno.senai.br",
+      "cpf": "198.190.887-05",
+      "matricula": "2020202021",
+      "data_nascimento": "2024-10-03",
+      "senha": "123",
+      "confirmar_senha": "123",
+      "cidade": "serra",
+      "tipo_usuario": "profissional"
+    }
+  ]
+}
