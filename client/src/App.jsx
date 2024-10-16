@@ -5,6 +5,7 @@ import Controle_Usuarios from './components/pages/Controle_Usuarios';
 import Financeiro from './components/pages/Financeiro';
 import Login from './components/pages/Login';
 import Tela_Cadastro from './components/pages/Tela_Cadastro';
+import Editar_Cadastro from './components/pages/Editar_Cadastro'
 
 
 
@@ -18,6 +19,7 @@ function App() {
             <Route path='Financeiro' element={<Financeiro/>}/>
             <Route path='Login' element={<Login/>}/>
             <Route path='Cadastro' element={<Tela_Cadastro/>}/>
+            <Route path='Editar' element={<Editar_Cadastro/>}/>
          
           </Routes>
         </Router> 
