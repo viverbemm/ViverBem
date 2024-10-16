@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './Tela_cadastro.module.css';
 
 const Cadastro = () => {
+  const navigate = useNavigate();
+
   const [usuarios, setUsuarios] = useState([]);
   const [formData, setFormData] = useState({
     id: null,
@@ -36,15 +39,61 @@ const Cadastro = () => {
       });
 
       if (!resposta.ok) {
-        console.log('Erro ao cadastrar usuario');
+        alert('Erro ao cadastrar usuário');
       } else {
-        alert('Usuario cadastrado com sucesso');
+        alert('Usuário cadastrado com sucesso');
       }
-
     } catch (error) {
-      console.error('Erro ao cadastrar Usuario', error);
+      console.error('Erro ao cadastrar usuário', error);
     }
   };
+
+  const editar = async (infoUsuarios) => {
+    try {
+      const resposta = await fetch(`http://localhost:3001/usuarios/${infoUsuarios.id}`, {
+        method: 'PUT',  // Corrigir para PUT
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(infoUsuarios)
+      });
+  
+      if (!resposta.ok) {
+        alert('Erro ao editar usuário');
+      } else {
+        alert('Usuário editado com sucesso');
+        // Atualizar a lista de usuários no estado local
+        const updatedUsuarios = usuarios.map(usuario =>
+          usuario.id === infoUsuarios.id ? infoUsuarios : usuario
+        );
+        setUsuarios(updatedUsuarios);
+        localStorage.setItem('usuarios', JSON.stringify(updatedUsuarios));
+      }
+    } catch (error) {
+      console.error('Erro ao editar usuário', error);
+    }
+  };
+  
+
+  const excluir = async (id) => {
+    try {
+      const resposta = await fetch(`http://localhost:3001/usuarios/${id}`, {
+        method: 'DELETE',  // Método correto para deletar
+        headers: { 'Content-Type': 'application/json' }
+      });
+  
+      if (!resposta.ok) {
+        alert('Erro ao excluir usuário');
+      } else {
+        alert('Usuário excluído com sucesso');
+        // Atualizar a lista de usuários no estado local
+        const updatedUsuarios = usuarios.filter(usuario => usuario.id !== id);
+        setUsuarios(updatedUsuarios);
+        localStorage.setItem('usuarios', JSON.stringify(updatedUsuarios));
+      }
+    } catch (error) {
+      console.error('Erro ao excluir usuário', error);
+    }
+  };
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -54,14 +103,15 @@ const Cadastro = () => {
     if (formData.id) {
       const index = updatedUsuarios.findIndex(u => u.id === formData.id);
       updatedUsuarios[index] = formData;
+      editar(formData); // Chamar o PUT com os dados do formulário para editar
     } else {
       const newUser = { ...formData, id: Date.now() };
       updatedUsuarios.push(newUser);
+      cadastrar(formData); // Chamar o POST com os dados do formulário para cadastrar
     }
 
     setUsuarios(updatedUsuarios);
     localStorage.setItem('usuarios', JSON.stringify(updatedUsuarios));
-    cadastrar(formData); // Chamar o POST com os dados do formulário
 
     setFormData({
       id: null,
@@ -79,13 +129,11 @@ const Cadastro = () => {
   };
 
   const handleEdit = (usuario) => {
-    setFormData(usuario);
+    setFormData(usuario); // Preencher os campos com os dados do usuário selecionado para edição
   };
 
   const handleDelete = (id) => {
-    const updatedUsuarios = usuarios.filter(usuario => usuario.id !== id);
-    setUsuarios(updatedUsuarios);
-    localStorage.setItem('usuarios', JSON.stringify(updatedUsuarios));
+    excluir(id); // Chamar a função para excluir o usuário
   };
 
   return (
