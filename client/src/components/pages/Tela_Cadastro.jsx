@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import styles from './Tela_cadastro.module.css';
+import styles from './Tela_cadastro.module.css'; // Importando o CSS Module
 
 const Cadastro = () => {
   const [usuarios, setUsuarios] = useState([]);
@@ -63,33 +63,26 @@ const Cadastro = () => {
     setFormData(usuario);
   };
 
-
-
-  /*DELETE*/
-
   const handleDelete = (id) => {
     const updatedUsuarios = usuarios.filter(usuario => usuario.id !== id);
     setUsuarios(updatedUsuarios);
     localStorage.setItem('usuarios', JSON.stringify(updatedUsuarios));
   };
 
-
-
-  
   return (
     <div>
       <header>
-        <nav className="nav-bar">
-          <div className="logo">
+        <nav className={styles['nav-bar']}> {/* Aplicando a classe com styles */}
+          <div className={styles.logo}>
             <h1>ViverBem+</h1>
           </div>
-          <div className="nav-list">
+          <div className={styles['nav-list']}>
             <ul>
-              <li className="nav-item">
-                <a href="/Bem_vindo" className="nav-link">Página inicial</a>
+              <li className={styles['nav-item']}>
+                <a href="/Bem_vindo" className={styles['nav-link']}>Página inicial</a>
               </li>
-              <li className="nav-item">
-                <a href="/Login" className="nav-link">Login</a>
+              <li className={styles['nav-item']}>
+                <a href="/Login" className={styles['nav-link']}>Login</a>
               </li>
             </ul>
           </div>
@@ -97,9 +90,10 @@ const Cadastro = () => {
       </header>
 
       <main>
-        <section className="login-section">
-          <h2>{formData.id ? 'Editar Usuário' : 'Cadastre-se'}</h2>
-          <div className="form-container">
+        <section className={styles['login-section']}>
+         
+          <div className={styles['form-container']}>
+             <h2>{formData.id ? 'Editar Usuário' : 'Cadastre-se'}</h2>
             <form onSubmit={handleSubmit}>
               <input type="text" name="nome" placeholder="Nome Completo *" value={formData.nome} onChange={handleChange} required />
               <input type="tel" name="telefone" placeholder="Telefone *" value={formData.telefone} onChange={handleChange} required />
@@ -127,14 +121,14 @@ const Cadastro = () => {
                 <option value="profissional">Profissional</option>
               </select>
 
-              <button type="submit" className="register-link">
+              <button type="submit" className={styles['register-link']}>
                 {formData.id ? 'Salvar' : 'Cadastre-se'}
               </button>
             </form>
           </div>
         </section>
 
-        <section className="user-list">
+        <section className={styles['user-list']}>
           <h2>Usuários Cadastrados</h2>
           <ul>
             {usuarios.map((usuario) => (
@@ -148,7 +142,7 @@ const Cadastro = () => {
         </section>
       </main>
 
-      <footer className="endereco">
+      <footer className={styles.endereco}>
         <p>
           ViverBem+<br />
           Centro Empresarial Shopping Praia da Costa, 245, Vila Velha, ES
