@@ -1,11 +1,12 @@
-import Navbar from './navBar';
 import { useState } from 'react';
-import FormCadastro from './formCadastro/FormCadastro';
 import { useParams } from 'react-router-dom';
+import FormCadastro from   '../formCadastro/FormCadastro';
+import Navbar from '../layout/navBar'
+
+
 
 function EditCadastro() {
     const { id } = useParams();
-
     async function editarCadastro(infoCadastro, id) {
         try {
             const resposta = await fetch(`http://localhost:3001/usuarios/${id}`, {

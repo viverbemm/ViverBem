@@ -1,3 +1,17 @@
 {
-  "usuarios": []
+  "usuarios": [
+    {
+      "id": "531e",
+      "nome": "cris e greg",
+      "telefone": "27992833778",
+      "email": "cris@aluno.senai.br",
+      "cpf": "7777777777",
+      "matricula": "",
+      "data_nascimento": "2024-06-12",
+      "senha": "123",
+      "confirmar_senha": "123",
+      "cidade": "vila velha",
+      "tipo_usuario": "cliente"
+    }
+  ]
 }

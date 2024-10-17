@@ -54,7 +54,7 @@ const Controle = () => {
   // Função para editar um usuário
   const handleEdit = (usuario) => {
     localStorage.setItem('usuarioParaEditar', JSON.stringify(usuario));
-    navigate('/Cadastro');
+    navigate('/EditCadastro');
   };
 
   return (

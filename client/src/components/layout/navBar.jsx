@@ -1,9 +1,9 @@
 import React from 'react';
-import styles from './Navbar.module.css';
+import styles from './NavBar.module.css'; 
 import { NavLink } from 'react-router-dom';
 
 
-function Navbar() {
+function navbar() {
     return (
         <div className={`bg-primary ${styles.menu_navegacao}`}>
             <nav className='container navbar navbar-expand-lg px-2'>
@@ -25,4 +25,4 @@ function Navbar() {
     )
 }
 
-export default Navbar
+export default navbar

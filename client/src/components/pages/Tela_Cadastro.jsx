@@ -1,4 +1,4 @@
-import Navbar from '../layout/Navbar'
+import Navbar from '../layout/navBar';
 import { useState } from 'react';
 import FormAula from '../formAula/FormAula';
 
@@ -6,7 +6,7 @@ function CadastroAula() {
 
     async function cadastrarAula(infoAula) {
         try {
-            const resposta = await fetch('http://localhost:5000/aulas', {
+            const resposta = await fetch('http://localhost:3001/usuarios', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(infoAula)
