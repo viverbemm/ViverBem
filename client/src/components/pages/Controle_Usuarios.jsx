@@ -3,26 +3,41 @@ import { Link, useNavigate } from 'react-router-dom';
 
 const Controle = () => {
   const [usuarios, setUsuarios] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const navigate = useNavigate();
 
+  // Função para buscar os usuários
   const fetchUsuarios = async () => {
     try {
       const resposta = await fetch('http://localhost:3001/usuarios');
+      if (!resposta.ok) {
+        throw new Error('Erro ao buscar usuários');
+      }
       const data = await resposta.json();
       setUsuarios(data);
     } catch (error) {
-      console.error('Erro ao buscar usuários', error);
+      setError(error.message);
+      console.error('Erro ao buscar usuários:', error);
+    } finally {
+      setLoading(false);
     }
   };
 
+  // Chamada do fetch ao montar o componente
   useEffect(() => {
     fetchUsuarios();
   }, []);
 
+  // Função para deletar um usuário
   const handleDelete = async (id) => {
+    if (!window.confirm('Tem certeza que deseja excluir este usuário?')) {
+      return;
+    }
+
     try {
       const resposta = await fetch(`http://localhost:3001/usuarios/${id}`, {
-        method: 'DELETE'
+        method: 'DELETE',
       });
 
       if (!resposta.ok) {
@@ -32,12 +47,12 @@ const Controle = () => {
         fetchUsuarios(); // Atualiza a lista após a exclusão
       }
     } catch (error) {
-      console.error('Erro ao deletar usuário', error);
+      console.error('Erro ao deletar usuário:', error);
     }
   };
 
+  // Função para editar um usuário
   const handleEdit = (usuario) => {
-    // Armazena os dados do usuário no localStorage e navega para a tela de cadastro
     localStorage.setItem('usuarioParaEditar', JSON.stringify(usuario));
     navigate('/Cadastro');
   };
@@ -45,44 +60,32 @@ const Controle = () => {
   return (
     <div>
       <header>
-        <nav className="nav-bar">
-          <div className="logo">
-            <h1>ViverBem+</h1>
-          </div>
-          <div className="nav-list">
-            <ul>
-              <li className="nav-item">
-                <Link to="/Bem_vindo" className="nav-link">Página inicial</Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/Cadastro" className="nav-link">Cadastrar</Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/Login" className="nav-link">Login</Link>
-              </li>
-            </ul>
-          </div>
-        </nav>
+        <h1>Controle de Usuários</h1>
       </header>
 
       <main>
         <h2>Usuários Cadastrados</h2>
-        <ul>
-          {usuarios.map((usuario) => (
-            <li key={usuario.id}>
-              {usuario.nome} - {usuario.email}
-              <button onClick={() => handleEdit(usuario)}>Editar</button>
-              <button onClick={() => handleDelete(usuario.id)}>Excluir</button>
-            </li>
-          ))}
-        </ul>
+
+        {loading && <p>Carregando usuários...</p>}
+        {error && <p style={{ color: 'red' }}>Erro: {error}</p>}
+
+        {!loading && !error && usuarios.length > 0 ? (
+          <ul>
+            {usuarios.map((usuario) => (
+              <li key={usuario.id}>
+                {usuario.nome} - {usuario.email}
+                <button onClick={() => handleEdit(usuario)}>Editar</button>
+                <button onClick={() => handleDelete(usuario.id)}>Excluir</button>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          !loading && !error && <p>Nenhum usuário encontrado.</p>
+        )}
       </main>
 
       <footer className="endereco">
-        <p>
-          ViverBem+<br />
-          Centro Empresarial Shopping Praia da Costa, 245, Vila Velha, ES
-        </p>
+        <p>Endereço ou informações de contato aqui.</p>
       </footer>
     </div>
   );
