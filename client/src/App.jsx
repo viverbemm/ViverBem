@@ -8,6 +8,7 @@ import Tela_Cadastro from './components/pages/Tela_Cadastro';
 
 
 
+
 function App() {
   return (
         <Router>
@@ -18,7 +19,6 @@ function App() {
             <Route path='Financeiro' element={<Financeiro/>}/>
             <Route path='Login' element={<Login/>}/>
             <Route path='Cadastro' element={<Tela_Cadastro/>}/>
-         
           </Routes>
         </Router> 
   );

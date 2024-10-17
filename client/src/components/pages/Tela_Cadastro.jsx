@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Tela_cadastro.module.css'; // Importando o CSS Module
 
+
+
 const Cadastro = () => {
   const [usuarios, setUsuarios] = useState([]);
   const [formData, setFormData] = useState({
@@ -18,7 +20,6 @@ const Cadastro = () => {
   });
 
   useEffect(() => {
-    // Simulação de busca de usuários
     const fetchedUsuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
     setUsuarios(fetchedUsuarios);
   }, []);
@@ -33,11 +34,9 @@ const Cadastro = () => {
     const updatedUsuarios = [...usuarios];
 
     if (formData.id) {
-      // Edita usuário existente
       const index = usuarios.findIndex(u => u.id === formData.id);
       updatedUsuarios[index] = formData;
     } else {
-      // Adiciona novo usuário
       const newUser = { ...formData, id: Date.now() }; // Gera um ID único
       updatedUsuarios.push(newUser);
     }
@@ -71,29 +70,12 @@ const Cadastro = () => {
 
   return (
     <div>
-      <header>
-        <nav className={styles['nav-bar']}> {/* Aplicando a classe com styles */}
-          <div className={styles.logo}>
-            <h1>ViverBem+</h1>
-          </div>
-          <div className={styles['nav-list']}>
-            <ul>
-              <li className={styles['nav-item']}>
-                <a href="/Bem_vindo" className={styles['nav-link']}>Página inicial</a>
-              </li>
-              <li className={styles['nav-item']}>
-                <a href="/Login" className={styles['nav-link']}>Login</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>
+      <MenuSuperior /> {/* Adicionando o MenuSuperior aqui */}
 
       <main>
         <section className={styles['login-section']}>
-         
           <div className={styles['form-container']}>
-             <h2>{formData.id ? 'Editar Usuário' : 'Cadastre-se'}</h2>
+            <h2>{formData.id ? 'Editar Usuário' : 'Cadastre-se'}</h2>
             <form onSubmit={handleSubmit}>
               <input type="text" name="nome" placeholder="Nome Completo *" value={formData.nome} onChange={handleChange} required />
               <input type="tel" name="telefone" placeholder="Telefone *" value={formData.telefone} onChange={handleChange} required />

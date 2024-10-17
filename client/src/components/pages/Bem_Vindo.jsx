@@ -1,6 +1,7 @@
 import React from 'react';
 import './Bem_vindo.module.css';
 
+
 function BemVindoGestao() {
     return (
         <div>
