@@ -7,7 +7,7 @@ function BemVindoGestao() {
         <div>
             {/* Navbar */}
             <header>
-                <div className="navbar">
+                <div className={styles.navbar}>
                     <span><b>Olá Administrador</b></span>
                     <div className={styles.menu}>
                         <button className={styles.menu_btn}><b>MENU</b></button>
