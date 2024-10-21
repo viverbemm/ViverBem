@@ -30,7 +30,7 @@ header {
     width: 90%;
 }
 
-.menu-btn {
+.menu_btn {
     background-color: #c0c0f2;
     color: rgb(0, 24, 112);
     padding: 10px;
@@ -39,7 +39,7 @@ header {
     font-size: 16px;
 }
 
-.menu-btn:hover {
+.menu_btn:hover {
     background-color: #a6a6e8;
 }
 
@@ -54,7 +54,7 @@ header {
     padding: 10px;
 }
 
-.menu-btn:focus+.dropdown,
+.menu_btn:focus+.dropdown,
 .dropdown:hover {
     display: block;
 }

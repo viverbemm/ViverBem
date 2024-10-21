@@ -56,7 +56,7 @@ function FormCadastro({titulo, handleSubmit, id, teste }) {
     function submit(e) {
         e.preventDefault();
 
-        handleSubmit(formCadastro);
+        handleSubmit(formCadastro,id);
     }
 
     function handleEdit(usuario) {
@@ -200,7 +200,7 @@ function FormCadastro({titulo, handleSubmit, id, teste }) {
                 </section>
 
                 <section className="user-list">
-                    <h2>Usuários Cadastrados</h2>
+                    <h2></h2>
                     <ul>
                         {usuarios.map((usuario) => (
                             <li key={usuario.id}>

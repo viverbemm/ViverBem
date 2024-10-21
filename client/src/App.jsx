@@ -14,13 +14,13 @@ function App() {
   return (
         <Router>
           <Routes>
-            <Route path='/Bem_vindo' element={<Bem_vindo/>} /> 
+            <Route path='/' element={<Bem_vindo/>} /> 
             <Route path='/Atualizar' element={<Atualizar/>} /> 
             <Route path='/Controle' element={<Controle_Usuarios/>}/>
             <Route path='/Financeiro' element={<Financeiro/>}/>
             <Route path='/Login' element={<Login/>}/>
             <Route path='/cadastro' element={<Cadastro/>}/>
-            <Route path='/EditCadastro' element={<EditCadastro/>}/>
+            <Route path='/EditCadastro/:id' element={<EditCadastro/>}/>
           
           </Routes>
         </Router> 
