@@ -26,7 +26,7 @@ header {
     uma sombra sutil para o cabeçalho */
 }
 
-.nav-bar {
+.nav_bar {
     display: flex;
     justify-content: space-between;
     padding: 1.5rem 6rem;
@@ -45,25 +45,25 @@ header {
     /* Define a cor do título no logo */
 }
 
-.nav-list {
+.nav_list {
     display: flex;
     align-items: center;
     /* Usa flexbox para alinhar os itens de navegação ao centro */
 }
 
-.nav-list ul {
+.nav_list ul {
     display: flex;
     justify-content: center;
     list-style: none;
     /* Remove a lista padrão e organiza os itens horizontalmente */
 }
 
-.nav-item {
+.nav_item {
     margin: 0 15px;
     /* Define um espaçamento lateral entre os itens de navegação */
 }
 
-.nav-link {
+.nav_link {
     text-decoration: none;
     font-size: 1.15rem;
     color: #23008D;
@@ -80,14 +80,14 @@ main {
     /* Usa flexbox para centralizar o conteúdo do main verticalmente e horizontalmente */
 }
 
-.login-section {
+.login_section {
     width: 100%;
     position: relative;
     color: #2a2973;
     /* Define a largura total e a posição relativa da seção de login */
 }
 
-.form-container {
+.form_container {
     background-color: white;
     padding: 20px;
     margin-top: -20px;
@@ -133,19 +133,19 @@ button.register-link:hover {
     /* Muda a cor de fundo quando o botão é pressionado */
 }
 
-.user-list {
+.user_list {
     margin-top: 50px;
     text-align: center;
     /* Define o espaçamento superior e centraliza o texto para a lista de usuários */
 }
 
-.user-list ul {
+.user_list ul {
     list-style: none;
     padding: 0;
     /* Remove o estilo da lista para a lista de usuários */
 }
 
-.user-list li {
+.user_list li {
     background-color: #fff;
     margin-bottom: 10px;
     padding: 10px;
@@ -157,7 +157,7 @@ button.register-link:hover {
     /* Estiliza os itens da lista de usuários, define bordas, espaçamento e usa flexbox para espaçar os itens */
 }
 
-.user-list button {
+.user_list button {
     background-color: #23008D;
     color: white;
     border: none;
@@ -167,7 +167,7 @@ button.register-link:hover {
     /* Estiliza os botões da lista de usuários */
 }
 
-.user-list button:hover {
+.user_list button:hover {
     background-color: #1b006a;
     /* Muda a cor do botão ao passar o mouse */
 }
@@ -184,28 +184,28 @@ footer {
 
 /* Estilos para telas menores, como dispositivos móveis */
 @media screen and (max-width: 730px) {
-    .nav-bar {
+    .nav_bar {
         padding: 1.5rem 4rem;
         /* Reduz o preenchimento da barra de navegação em telas menores */
     }
 
-    .nav-item {
+    .nav_item {
         display: none;
         /* Esconde os itens de navegação em dispositivos móveis */
     }
 
-    .mobile-menu-icon {
+    .mobile_menu_icon {
         color: #23008D;
         display: block;
         /* Exibe o ícone do menu para dispositivos móveis */
     }
 
-    .mobile-menu {
+    .mobile_menu {
         display: none;
         /* Esconde o menu móvel inicialmente */
     }
 
-    .mobile-menu.open {
+    .mobile_menu.open {
         display: block;
         flex-direction: column;
         align-items: center;
@@ -214,19 +214,19 @@ footer {
         /* Exibe o menu móvel quando ele estiver "aberto" */
     }
 
-    .mobile-menu .nav-item {
+    .mobile_menu .nav_item {
         display: block;
         padding-top: 1.2rem;
         /* Mostra os itens de navegação no menu móvel */
     }
 
-    .mobile-menu .login-button {
+    .mobile_menu .login_button {
         display: block;
         padding: 1rem 2rem;
         /* Exibe e estiliza o botão de login no menu móvel */
     }
 
-    .mobile-menu .login-button button {
+    .mobile_menu .login_button button {
         width: 100%;
         /* O botão de login ocupa toda a largura no menu móvel */
     }

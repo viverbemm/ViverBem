@@ -15,7 +15,7 @@ function BemVindoGestao() {
                             <li><a href="#">Financeiro</a></li>
                             <li><a href="#">Configurações</a></li>
                             <li><a href="#">Relatórios e Estatísticas</a></li>
-                            <li><a href="#">Controle de Usuários</a></li>
+                            <li><a href="/Controle">Controle de Usuários</a></li>
                         </ul>
                     </div>
                 </div>

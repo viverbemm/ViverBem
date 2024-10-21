@@ -1,7 +1,6 @@
-import Navbar from '../layout/navBar';
 import { useState } from 'react';
 import FormCadastro from '../formCadastro/FormCadastro';
-
+import styles from './Cadastro.module.css';
 
 function Cadastro() {
 
@@ -27,7 +26,7 @@ function Cadastro() {
 
     return (
         <div>
-            <Navbar />
+          
             <FormCadastro nome='teste' handleSubmit={cadastrarUsuario}  />
             
         </div>
