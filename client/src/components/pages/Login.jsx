@@ -1,15 +1,15 @@
 import React from 'react';
-//import styles from './Login.module.css';
+import styles from './Login.module.css';
 
 function Login() {
     return (
-        <div className="container">
-            <header className="header">
+        <div className={styles.container}>
+            <header className={styles.header}>
                 
-                <span className="logo-text">ViverBem+</span>
+                <span className={styles.logo_text}>ViverBem+</span>
             </header>
 
-            <div className="login-box">
+            <div className={styles.login_box}>
                 <h2>Faça Login aqui!</h2>
                 <form action="#">
                     <label htmlFor="cpf">CPF</label>
@@ -24,7 +24,7 @@ function Login() {
 
                     <button type="submit" className="btn">ENTRAR</button>
                 </form>
-                <div className="logo">
+                <div className={styles.logo}>
                     <img src="img/logo.png" alt="Logo ViverBem+" />
                 </div>
             </div>

@@ -17,16 +17,16 @@
     font-family: Arial, sans-serif;
 }
 
-.welcome-text {
+.welcome_text {
     font-size: 1.2rem;
 }
 
-.logo-text {
+.logo_text {
     font-size: 1.2rem;
     font-weight: bold;
 }
 
-.login-box {
+.login_box {
     background-color: #3c00d2; /* Cor de fundo da caixa de login */
     padding: 40px;
     border-radius: 10px;
