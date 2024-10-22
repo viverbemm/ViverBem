@@ -8,6 +8,7 @@ import Cadastro from './components/pages/Cadastro';
 import EditCadastro from './components/pages/EditCadastro';
 import LoginUsuario from './components/pages/LoginUsuario';
 import Perfil_Profissional from './components/pages/Perfil_Profissional';
+import Login_Princ from './components/pages/Login_Princ';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path='/Login' element={<Login/>}/>
             <Route path='/cadastro' element={<Cadastro/>}/>
             <Route path='/EditCadastro/:id' element={<EditCadastro/>}/>
+            <Route path= '/Login_princ' element={<Login_Princ/>}/>
           
           </Routes>
         </Router> 
