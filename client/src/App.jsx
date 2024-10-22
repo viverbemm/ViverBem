@@ -9,10 +9,6 @@ import EditCadastro from './components/pages/EditCadastro';
 import LoginUsuario from './components/pages/LoginUsuario';
 import Perfil_Profissional from './components/pages/Perfil_Profissional';
 
-
-
-
-
 function App() {
   return (
     <Router>
@@ -29,7 +25,6 @@ function App() {
         <Route path='Controle' element={<Controle_Usuarios />} />
         <Route path='Financeiro' element={<Financeiro />} />
         <Route path='Login' element={<Login />} />
-        <Route path='Cadastro' element={<Tela_Cadastro />} />
       </Routes>
     </Router>
   );
