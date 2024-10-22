@@ -7,6 +7,8 @@ import Login from './components/pages/Login';
 import Cadastro from './components/pages/Cadastro';
 import EditCadastro from './components/pages/EditCadastro';
 import LoginUsuario from './components/pages/LoginUsuario';
+import Tela_profissionais from './components/pages/Tela_profissionais';
+import Perfil_profissional from './components/pages/Perfil_profissional';
 
 
 
@@ -23,6 +25,7 @@ function App() {
             <Route path='/cadastro' element={<Cadastro/>}/>
             <Route path='/EditCadastro/:id' element={<EditCadastro/>}/>
             <Route path='/LoginUsuario' element={<LoginUsuario/>}/>
+            <Route path='/tela_profissionais' element={<Tela_profissionais/>}/>
           
           </Routes>
         </Router> 
