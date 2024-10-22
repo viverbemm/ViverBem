@@ -19,11 +19,7 @@ function App() {
             <Route path='Financeiro' element={<Financeiro/>}/>
             <Route path='Login' element={<Login/>}/>
             <Route path='Cadastro' element={<Tela_Cadastro/>}/>
-<<<<<<< HEAD
-            <Route path='Login_Seg' element={<Login_Seg/>}/>         
-=======
          
->>>>>>> b796b0d1ad7d44e238beb5c6c7aee241264be7ce
           </Routes>
         </Router> 
   );

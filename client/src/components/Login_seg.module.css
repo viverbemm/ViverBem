@@ -309,7 +309,6 @@ header {
         largura disponível no menu mobile. */
     }
 
-    .open {
         display: block;
         /* Classe auxiliar para exibir o menu mobile
          quando a função JavaScript for chamada. */
