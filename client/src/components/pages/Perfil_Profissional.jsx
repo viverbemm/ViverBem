@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Bem_vindo.module.css';
+import styles from './Perfil_Profissional.module.css';
 
 
 function PerfilProfissional() {
@@ -23,8 +23,8 @@ function PerfilProfissional() {
 
             {/* Main Content */}
             <main>
-                <h1>Bem-vindo(a), Admin</h1>
-                <h2>ViverBem+<br />Sistema de Gerenciamento</h2>
+                <h1>Olá, eu sou a Luísa Heringer</h1>
+                <h2>ViverBem+</h2>
 
                 <section className={styles.section}>
                     <h3>Sobre a empresa</h3>
