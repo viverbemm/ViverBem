@@ -1,10 +1,25 @@
+<<<<<<< HEAD
+import Navbar from '../layout/navBar';
+import { useState } from 'react';
+import FormAula from '../formAula/FormAula';
+=======
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import styles from './Tela_cadastro.module.css';
+import styles from './Tela_cadastro.module.css'; // Importando o CSS Module
+>>>>>>> 5b1c42d8b75b8abb928b319e67d3ae8523d7a2d2
+
+
+<<<<<<< HEAD
+    async function cadastrarAula(infoAula) {
+        try {
+            const resposta = await fetch('http://localhost:3001/usuarios', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(infoAula)
+            });
+=======
+>>>>>>> 5b1c42d8b75b8abb928b319e67d3ae8523d7a2d2
 
 const Cadastro = () => {
-  const navigate = useNavigate();
-
   const [usuarios, setUsuarios] = useState([]);
   const [formData, setFormData] = useState({
     id: null,
@@ -30,89 +45,20 @@ const Cadastro = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const cadastrar = async (infoUsuarios) => {
-    try {
-      const resposta = await fetch('http://localhost:3001/usuarios', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(infoUsuarios)
-      });
-
-      if (!resposta.ok) {
-        alert('Erro ao cadastrar usuário');
-      } else {
-        alert('Usuário cadastrado com sucesso');
-      }
-    } catch (error) {
-      console.error('Erro ao cadastrar usuário', error);
-    }
-  };
-
-  const editar = async (infoUsuarios) => {
-    try {
-      const resposta = await fetch(`http://localhost:3001/usuarios/${infoUsuarios.id}`, {
-        method: 'PUT',  // Corrigir para PUT
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(infoUsuarios)
-      });
-  
-      if (!resposta.ok) {
-        alert('Erro ao editar usuário');
-      } else {
-        alert('Usuário editado com sucesso');
-        // Atualizar a lista de usuários no estado local
-        const updatedUsuarios = usuarios.map(usuario =>
-          usuario.id === infoUsuarios.id ? infoUsuarios : usuario
-        );
-        setUsuarios(updatedUsuarios);
-        localStorage.setItem('usuarios', JSON.stringify(updatedUsuarios));
-      }
-    } catch (error) {
-      console.error('Erro ao editar usuário', error);
-    }
-  };
-  
-
-  const excluir = async (id) => {
-    try {
-      const resposta = await fetch(`http://localhost:3001/usuarios/${id}`, {
-        method: 'DELETE',  // Método correto para deletar
-        headers: { 'Content-Type': 'application/json' }
-      });
-  
-      if (!resposta.ok) {
-        alert('Erro ao excluir usuário');
-      } else {
-        alert('Usuário excluído com sucesso');
-        // Atualizar a lista de usuários no estado local
-        const updatedUsuarios = usuarios.filter(usuario => usuario.id !== id);
-        setUsuarios(updatedUsuarios);
-        localStorage.setItem('usuarios', JSON.stringify(updatedUsuarios));
-      }
-    } catch (error) {
-      console.error('Erro ao excluir usuário', error);
-    }
-  };
-  
-
   const handleSubmit = (e) => {
     e.preventDefault();
-
     const updatedUsuarios = [...usuarios];
 
     if (formData.id) {
-      const index = updatedUsuarios.findIndex(u => u.id === formData.id);
+      const index = usuarios.findIndex(u => u.id === formData.id);
       updatedUsuarios[index] = formData;
-      editar(formData); // Chamar o PUT com os dados do formulário para editar
     } else {
-      const newUser = { ...formData, id: Date.now() };
+      const newUser = { ...formData, id: Date.now() }; // Gera um ID único
       updatedUsuarios.push(newUser);
-      cadastrar(formData); // Chamar o POST com os dados do formulário para cadastrar
     }
 
     setUsuarios(updatedUsuarios);
     localStorage.setItem('usuarios', JSON.stringify(updatedUsuarios));
-
     setFormData({
       id: null,
       nome: '',
@@ -129,37 +75,23 @@ const Cadastro = () => {
   };
 
   const handleEdit = (usuario) => {
-    setFormData(usuario); // Preencher os campos com os dados do usuário selecionado para edição
+    setFormData(usuario);
   };
 
   const handleDelete = (id) => {
-    excluir(id); // Chamar a função para excluir o usuário
+    const updatedUsuarios = usuarios.filter(usuario => usuario.id !== id);
+    setUsuarios(updatedUsuarios);
+    localStorage.setItem('usuarios', JSON.stringify(updatedUsuarios));
   };
 
   return (
     <div>
-      <header>
-        <nav className="nav-bar">
-          <div className="logo">
-            <h1>ViverBem+</h1>
-          </div>
-          <div className="nav-list">
-            <ul>
-              <li className="nav-item">
-                <a href="/Bem_vindo" className="nav-link">Página inicial</a>
-              </li>
-              <li className="nav-item">
-                <a href="/Login" className="nav-link">Login</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>
+      <MenuSuperior /> {/* Adicionando o MenuSuperior aqui */}
 
       <main>
-        <section className="login-section">
-          <h2>{formData.id ? 'Editar Usuário' : 'Cadastre-se'}</h2>
-          <div className="form-container">
+        <section className={styles['login-section']}>
+          <div className={styles['form-container']}>
+            <h2>{formData.id ? 'Editar Usuário' : 'Cadastre-se'}</h2>
             <form onSubmit={handleSubmit}>
               <input type="text" name="nome" placeholder="Nome Completo *" value={formData.nome} onChange={handleChange} required />
               <input type="tel" name="telefone" placeholder="Telefone *" value={formData.telefone} onChange={handleChange} required />
@@ -187,14 +119,14 @@ const Cadastro = () => {
                 <option value="profissional">Profissional</option>
               </select>
 
-              <button type="submit" className="register-link">
+              <button type="submit" className={styles['register-link']}>
                 {formData.id ? 'Salvar' : 'Cadastre-se'}
               </button>
             </form>
           </div>
         </section>
 
-        <section className="user-list">
+        <section className={styles['user-list']}>
           <h2>Usuários Cadastrados</h2>
           <ul>
             {usuarios.map((usuario) => (
@@ -208,7 +140,7 @@ const Cadastro = () => {
         </section>
       </main>
 
-      <footer className="endereco">
+      <footer className={styles.endereco}>
         <p>
           ViverBem+<br />
           Centro Empresarial Shopping Praia da Costa, 245, Vila Velha, ES

@@ -1,103 +1,94 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const App = () => {
-    return (
-        <div className="container">
-            <nav className="navbar navbar-expand-lg">
-                <div>
-                    <span className="navbar-brand"></span>
-                </div>
-                <ul className="navbar-nav">
-                  
-                </ul>
-            </nav>
-            <h1>Controle de Clientes</h1>
-            {/* <button className="btn btn-primary">Enviar</button>
-            <a href="http://google.com" className="btn btn-success">Google</a> */}
-            <br />
-            <input type="text" className="form-control" placeholder="Pesquisar:" />
+const Controle = () => {
+  const [usuarios, setUsuarios] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
-            <table className="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Status</th>
-                        <th>Nome</th>
-                        <th>CPF</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>ATIVO</td>
-                        <td>Maria Isabel de Paula Barbara</td>
-                        <td>182.596.548-89</td>
-                    </tr>
-                    <tr>
-                        <td>INATIVO</td>
-                        <td>Vitor Vargas Parajara</td>
-                        <td>198.568.723-65</td>
-                    </tr>
-                    <tr>
-                        <td>ATIVO</td>
-                        <td>Sarah Monteiro Duque</td>
-                        <td>148.726.248-21</td>
-                    </tr>
-                    <tr>
-                        <td>INATIVO</td>
-                        <td>Matheus Sarti Brunelli</td>
-                        <td>176.564.187-45</td>
-                    </tr>
-                    <tr>
-                        <td>ATIVO</td>
-                        <td>Gabriel de Assis Sperandio</td>
-                        <td>147.523.698-47</td>
-                    </tr>
-                    <tr>
-                        <td>ATIVO</td>
-                        <td>Antônio Silva Souza</td>
-                        <td>005.158.865-27</td>
-                    </tr>
-                    <tr>
-                        <td>ATIVO</td>
-                        <td>Afrânio Gomes</td>
-                        <td>014.578.321-58</td>
-                    </tr>
-                    <tr>
-                        <td>ATIVO</td>
-                        <td>Maurício Jesus Davel</td>
-                        <td>248.564.298-49</td>
-                    </tr>
-                    <tr>
-                        <td>ATIVO</td>
-                        <td>Gregory Veloso Silva</td>
-                        <td>265.498.267-62</td>
-                    </tr>
-                    <tr>
-                        <td>INATIVO</td>
-                        <td>Anna Julya Silva</td>
-                        <td>163.657.421-06</td>
-                    </tr>
-                    <tr>
-                        <td>INATIVO</td>
-                        <td>Heloisa Rangel Guimarães</td>
-                        <td>106.214.159-09</td>
-                    </tr>
-                    <tr>
-                        <td>ATIVO</td>
-                        <td>Marco Antônio Santos</td>
-                        <td>154.065.008-79</td>
-                    </tr>
-                    <tr>
-                        <td>ATIVO</td>
-                        <td>Elson Barbara</td>
-                        <td>160.396.678-90</td>
-                    </tr>
-                </tbody>
-            </table>
-      
-        </div>
-    );
+  // Função para buscar os usuários
+  const fetchUsuarios = async () => {
+    try {
+      const resposta = await fetch('http://localhost:3001/usuarios');
+      if (!resposta.ok) {
+        throw new Error('Erro ao buscar usuários');
+      }
+      const data = await resposta.json();
+      setUsuarios(data);
+    } catch (error) {
+      setError(error.message);
+      console.error('Erro ao buscar usuários:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // Chamada do fetch ao montar o componente
+  useEffect(() => {
+    fetchUsuarios();
+  }, []);
+
+  // Função para deletar um usuário
+  const handleDelete = async (id) => {
+    if (!window.confirm('Tem certeza que deseja excluir este usuário?')) {
+      return;
+    }
+
+    try {
+      const resposta = await fetch(`http://localhost:3001/usuarios/${id}`, {
+        method: 'DELETE',
+      });
+
+      if (!resposta.ok) {
+        console.log('Erro ao deletar usuário');
+      } else {
+        alert('Usuário deletado com sucesso');
+        fetchUsuarios(); // Atualiza a lista após a exclusão
+      }
+    } catch (error) {
+      console.error('Erro ao deletar usuário:', error);
+    }
+  };
+
+  // Função para editar um usuário
+  const handleEdit = (usuario) => {
+    localStorage.setItem('usuarioParaEditar', JSON.stringify(usuario));
+    navigate(`/EditCadastro/${usuario.id}`);
+  };
+
+  return (
+    <div>
+      <header>
+        <h1>Controle de Usuários</h1>
+      </header>
+
+      <main>
+        <h2>Usuários Cadastrados</h2>
+
+        {loading && <p>Carregando usuários...</p>}
+        {error && <p style={{ color: 'red' }}>Erro: {error}</p>}
+
+        {!loading && !error && usuarios.length > 0 ? (
+          <ul>
+            {usuarios.map((usuario) => (
+              <li key={usuario.id}>
+                {usuario.nome} - {usuario.email}
+                <button onClick={() => handleEdit(usuario)}>Editar</button>
+                <button onClick={() => handleDelete(usuario.id)}>Excluir</button>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          !loading && !error && <p>Nenhum usuário encontrado.</p>
+        )}
+      </main>
+
+      <footer className="endereco">
+        <p>Endereço ou informações de contato aqui.</p>
+      </footer>
+    </div>
+  );
 };
 
-export default App;
+export default Controle;

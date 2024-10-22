@@ -53,7 +53,7 @@ body {
     margin-bottom: 20px;
 }
 
-.info-item {
+.info_item {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -63,7 +63,7 @@ body {
     border-radius: 5px;
 }
 
-.info-item span {
+.info_item span {
     font-size: 16px;
     margin-right: 10px;
 }
@@ -80,7 +80,7 @@ input:disabled {
     color: #4f3c75;
 }
 
-.edit-btn {
+.edit_btn {
     background-color: #4f3c75;
     color: white;
     padding: 5px 10px;
@@ -89,7 +89,7 @@ input:disabled {
     cursor: pointer;
 }
 
-.edit-btn:hover {
+.edit_btn:hover {
     background-color: #3c2958;
 }
 
