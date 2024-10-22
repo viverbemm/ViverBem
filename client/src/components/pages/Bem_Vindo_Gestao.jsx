@@ -1,22 +1,30 @@
-import React from 'react';
-import styles from './Bem_vindo.module.css';
-
+import React, { useState } from 'react';
+import styles from './Bem_vindo_gestao.module.css';
 
 function BemVindoGestao() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false); // Estado para controlar o menu
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen); // Alterna entre abrir e fechar o menu
+    };
+
     return (
-        <div>
+        <div className={styles.pageBackground}> {/* Fundo da página ajustado */}
             {/* Navbar */}
             <header>
                 <div className={styles.navbar}>
                     <span><b>Olá Administrador</b></span>
                     <div className={styles.menu}>
-                        <button className={styles.menu_btn}><b>MENU</b></button>
-                        <ul className={styles.dropdow}>
-                            <li><a href="#">Financeiro</a></li>
-                            <li><a href="#">Configurações</a></li>
-                            <li><a href="#">Relatórios e Estatísticas</a></li>
-                            <li><a href="/Controle">Controle de Usuários</a></li>
-                        </ul>
+                        <button className={styles.menu_btn} onClick={toggleMenu}>
+                            <b>MENU</b>
+                        </button>
+                        {isMenuOpen && ( // Exibe o menu apenas se o estado isMenuOpen for verdadeiro
+                            <ul className={styles.dropdown}>
+                                <li><a href="/Financeiro">Financeiro</a></li>
+                                <li><a href="#">Configurações</a></li>
+                                <li><a href="/Controle">Controle de Usuários</a></li>
+                            </ul>
+                        )}
                     </div>
                 </div>
             </header>

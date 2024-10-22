@@ -1,7 +1,15 @@
 import React from 'react';
-import styles from './Login.module.css';
+import { useNavigate } from 'react-router-dom'; // Importar useNavigate para navegação
+import styles from './Login_Gestao.module.css';
 
 const Login = () => {
+  const navigate = useNavigate(); // Inicializando o hook para navegação
+
+  const handleButtonClick = () => {
+    // Aqui você pode adicionar validação de login, se necessário
+    navigate('/Bem_vindo_gestao'); // Redireciona para a página desejada
+  };
+
   return (
     <div className={styles.login_page}>
       <header className={styles.header}>
@@ -23,8 +31,8 @@ const Login = () => {
             <div className={styles.forgot_password}>
               <a href="#">Esqueci a senha</a>
             </div>
-            <button type="submit" >ENTRAR</button>
-           
+            {/* Substituir o onSubmit pelo onClick */}
+            <button type="button" onClick={handleButtonClick}>ENTRAR</button> 
           </form>
           <div className={styles.logo_container}>
             <img src="logo.png" alt="ViverBem+" className={styles.logo} />
