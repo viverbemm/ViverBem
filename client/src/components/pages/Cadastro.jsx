@@ -33,4 +33,4 @@ function Cadastro() {
     )
 }
 
-export default Cadastro
+export default Cadastro;

@@ -1,12 +1,12 @@
 import React from 'react';
-import './Financeiro.module.css';
+import styles from './Financeiro.module.css';
 
 
 function Financeiro() {
     return (
         <div>
             <header>
-                <div className={StyleSheet. navbar}>
+                <div className={styles.navbar}>
                     <span><b>Olá Administrador</b></span>
                     <div className={styles.menu}>
                         <button className={styles.menu_btn}><b>MENU</b></button>
@@ -33,13 +33,13 @@ function Financeiro() {
                     </button>
                 </div>
 
-                <div className="results">
-                    <div className="card">
-                        <i className="fas fa-handshake"></i>
+                <div className={styles.results}>
+                    <div className={styles.card}>
+                        <i className="fas fa_handshake"></i>
                         <p>Receita Bruta</p>
                         <h2>R$ 136.000</h2>
                     </div>
-                    <div className="card">
+                    <div className={styles.card}>
                         <i className="fas fa-hand-holding-usd"></i>
                         <p>Receita Líquida</p>
                         <h2>R$ 40.800</h2>
