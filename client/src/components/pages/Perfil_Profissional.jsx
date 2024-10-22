@@ -24,35 +24,26 @@ function PerfilProfissional() {
             {/* Main Content */}
             <main>
                 <h1>Olá, eu sou a Luísa Heringer</h1>
-                <h2>ViverBem+</h2>
+                <h2 className={styles.h2}>Meu nome é Luísa Heringer, e tenho o privilégio de dedicar minha vida ao cuidado dos idosos há 3 anos e 6 meses. Minha paixão por esta profissão é impulsionada pela empatia e respeito pelos idosos, e meu objetivo é proporcionar uma qualidade de vida excepcional para aqueles que confiam em meus cuidados. </h2>
 
-                <section className={styles.section}>
-                    <h3>Sobre a empresa</h3>
-                    <p>O ViverBem+ conecta idosos com profissionais especializados em cuidados,</p>
-                    <p>O objetivo é facilitar o encontro entre famílias e cuidadores qualificados, garantindo assistência de qualidade e personalizada para as necessidades de cada idoso.</p>
-                    <p>Oferecendo uma plataforma segura e prática.</p>
-                </section>
+                <div className={styles.container}>
+                    <section className={styles.section}>
+                        <h3>Sobre mim</h3>
+                        <p className={styles.p8}>Experiência Profissional: Cuidadora de Idosos
+                            Cuidadora autônoma para idoso com doença de Parkinson avançada (2020-2023)
+                            Durante 3 anos e 6 meses, atuei como cuidadora autônoma dedicada a um senhor idoso diagnosticado com doença de Parkinson avançada. Minhas responsabilidades incluíam:</p>
 
-                <section className={styles.section}>
-                    <h3>Localização</h3>
-                    <p>O ViverBem+ teve início no Espírito Santo, na unidade de Vila Velha, residindo no seguinte endereço:</p>
-                    <p>Centro Empresarial, Shopping Praia da Costa, Praia da Costa – Vila Velha - ES, e possui abrangência de uso apenas a esta região.</p>
-                </section>
+                        <p className={styles.p1}>Assistência diária</p>
+                        <p className={styles.p2}>Gerenciamento de sintomas</p>
+                        <p className={styles.p3}>Estimulação cognitiva</p>
+                        <p className={styles.p4}>Fisioterapia e exercícios</p>
+                        <p className={styles.p5}>Suporte emocional</p>
+                        <p className={styles.p6}>Coordenação com profissionais de saúde</p>
+                        <p className={styles.p7}>Essa experiência não apenas aprimorou minhas habilidades práticas, mas também reforçou minha compreensão da importância do cuidado holístico e individualizado para idosos que enfrentam condições de saúde complexas.</p>
 
-                <section className={styles.section}>
-                    <h3>Como obter suporte?</h3>
-                    <p>Caso existam problemas, os admins do ViverBem+ poderão entrar em contato com os canais de atendimento:</p>
-                    <p>Opções: WhatsApp, Email e Telefone.</p>
-                </section>
+                    </section>
+                </div>
             </main>
-
-            {/* Footer */}
-            <div className={styles.contact}>
-                <h3><i className="fa fa-whatsapp"></i> (27) 99999-2020</h3>
-                <h3><i className="fa fa-envelope"></i> suporteviverbem@gmail.com</h3>
-                <h3><i className="fa fa-phone"></i> 0800 102 0880</h3>
-            </div>
-
             <div className={styles.logo}>
                 <img src="img/logo.png" alt="ViverBem+ Logo" />
             </div>
