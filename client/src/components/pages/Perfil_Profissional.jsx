@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Bem_vindo.module.css';
 
 
-function BemVindoGestao() {
+function PerfilProfissional() {
     return (
         <div>
             {/* Navbar */}
@@ -60,4 +60,4 @@ function BemVindoGestao() {
     );
 }
 
-export default BemVindoGestao;
+export default PerfilProfissional;

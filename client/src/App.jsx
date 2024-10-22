@@ -6,9 +6,8 @@ import Financeiro from './components/pages/Financeiro';
 import Login from './components/pages/Login';
 import Cadastro from './components/pages/Cadastro';
 import EditCadastro from './components/pages/EditCadastro';
-
-
-
+import LoginUsuario from './components/pages/LoginUsuario';
+import Perfil_Profissional from './components/pages/Perfil_Profissional';
 
 function App() {
   return (
