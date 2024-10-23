@@ -5,13 +5,13 @@
     font-family: Arial, sans-serif;
 }
 
-body {
+/* body {
     background-color: #f0eef8;
     color: #333;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
+} */
 
 header {
     background-color: white;

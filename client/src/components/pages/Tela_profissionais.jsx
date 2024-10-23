@@ -1,6 +1,6 @@
 import React from 'react';
-import './Tela_profissionais.css'; // ajuste o caminho conforme necessário
-import './assets/css/estilo.css';
+import styles from './Tela_profissionais.module.css'; // ajuste o caminho conforme necessário
+// import './assets/css/estilo.css';
 import menuIcon from './assets/img/menu_white_36dp.svg'; // ajuste o caminho conforme necessário
 
 const Profissionais = () => {

@@ -1,19 +1,18 @@
 import React, { useState } from 'react';
 import styles from './Config.module.css';
 import { useNavigate } from 'react-router-dom';
-import Menu_superior from './Menu_superior.jsx';
+
 
 const Configuracoes = () => {
-    // State to manage the mobile menu's visibility
+    
     const [menuOpen, setMenuOpen] = useState(false);
 
-    // Function to toggle the menu's visibility
     const menuShow = () => {
-        setMenuOpen(prevState => !prevState); // Toggle the state
+        setMenuOpen(prevState => !prevState);
     };
 
     return (
-        <main>
+        <main className={styles.config}>
            
             <div className={styles.config_container}>
                 <h2>Configurações</h2>

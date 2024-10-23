@@ -1,27 +1,20 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
+.config{
+    background-color: #b8a6ee;    
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color:#871cd3;
-    color:#23008D;
-}
-
-.header_container {
+.config .header_container {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    background-color: #8787dd;
+    background-color: #0f0fd3;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   
 }
 
-.config_container {
+.config .config_container {
     margin: 50px auto;
     padding: 20px;
+    height: 100%;
     width: 320px;
     background-color: #dcdcf3;
     border-radius: 10px;
@@ -29,33 +22,31 @@ body {
     text-align: center;
 }
 
-.config_container h2 {
+.config .config_container h2 {
     margin-bottom: 20px;
     font-size: 30px;
     color: #23008D;
 }
 
-.config_item {
+.config .config_item {
     display: flex;
     align-items: 40px ;
     justify-content: start;
     margin-bottom: 30px;
     padding: 20px;
-    background-color: rgb(194, 137, 233);
+    background-color: rgb(198, 120, 250);
     border-radius: 10px;
-    transition: background-color 0.3s ease;
+    transition: 0.3s ease;
 
 }
 
-.config_item img {
+.config .config_item img {
     width: 244px;
     height: 244px;
     margin-right:20px;
-    
-
 }
 
-.config_item a {
+.config  .config_item a {
     color: #23008D;
     text-decoration: none;
     font-size: 18px;
@@ -63,10 +54,12 @@ body {
 }
 
 
-.endereco {
+.config .endereco {
     text-align: center;
     color: #2a2973;
     margin-top: 70%
 }
+
+
 
 
