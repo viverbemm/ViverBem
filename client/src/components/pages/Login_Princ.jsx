@@ -10,7 +10,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className={styles.tudo}>
       <header>
         <nav className= {styles.nav_bar}>
           <div className={styles.logo}>
