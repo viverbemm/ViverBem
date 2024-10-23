@@ -6,22 +6,9 @@ import Financeiro from './components/pages/Financeiro';
 import Login from './components/pages/Login_Gestao';
 import Cadastro from './components/pages/Cadastro';
 import EditCadastro from './components/pages/EditCadastro';
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
 import LoginUsuario from './components/pages/LoginUsuario';
 import Tela_profissionais from './components/pages/Tela_profissionais';
-import Perfil_profissional from './components/pages/Perfil_profissional';
-
-
-
-=======
 import Perfil_Profissional from './components/pages/Perfil_Profissional';
->>>>>>> 3766b76105c29e24fdef3dfa7e835e72f47d04da
->>>>>>> 184a0403aace9e6610d2122564edc8733540da8e
-
 function App() {
   return (
         <Router>
@@ -33,13 +20,9 @@ function App() {
             <Route path='/Login' element={<Login/>}/>
             <Route path='/cadastro' element={<Cadastro/>}/>
             <Route path='/EditCadastro/:id' element={<EditCadastro/>}/>
-<<<<<<< HEAD
             <Route path='/LoginUsuario' element={<LoginUsuario/>}/>
             <Route path='/tela_profissionais' element={<Tela_profissionais/>}/>
-=======
-            <Route path='/Perfil_Profissional' element={<Perfil_Profissional/>}/>
->>>>>>> 3766b76105c29e24fdef3dfa7e835e72f47d04da
-          
+            <Route path='/perfil_Profissional' element={<Perfil_Profissional/>}/>
           </Routes>
         </Router> 
   );
