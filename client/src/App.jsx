@@ -8,12 +8,12 @@ import Cadastro from './components/pages/Cadastro';
 import EditCadastro from './components/pages/EditCadastro';
 import LoginUsuario from './components/pages/LoginUsuario';
 import Tela_profissionais from './components/pages/Tela_profissionais';
-import Perfil_Profissional from './components/pages/Perfil_Profissional';
+import Perfil_Profissional from './components/pages/Perfil_profissional';
 function App() {
   return (
         <Router>
           <Routes>
-            <Route path='/Bem_vindo_gestao' element={<Bem_vindo_gestao/>} /> 
+            <Route path='/' element={<Bem_vindo_gestao/>} /> 
             <Route path='/Atualizar' element={<Atualizar/>} /> 
             <Route path='/Controle' element={<Controle_Usuarios/>}/>
             <Route path='/Financeiro' element={<Financeiro/>}/>
