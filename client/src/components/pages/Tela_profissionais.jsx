@@ -1,32 +1,56 @@
-import React from 'react';
-import './Tela_profissionais.css'; 
+import React, { useState } from 'react';
 import './assets/css/estilo.css';
 import menuIcon from './assets/img/menu_white_36dp.svg';
 import profileCarlos from '../pages/imagens/carlosmendes.jpg';
+import profileLaura from '../pages/imagens/laura.webp';
+import profileGabriel from '../pages/imagens/gabriel.webp';
+import profileBenjamin from '../pages/imagens/benjamin.webp';
+import profileLuisa from '../pages/imagens/luisa.webp';
+import profileMaite from '../pages/imagens/maite.webp';
+
 
 const Profissionais = () => {
+    const [menuOpen, setMenuOpen] = useState(false);
+    
     const menuShow = () => {
-       
+        setMenuOpen(!menuOpen); 
     };
 
     return (
-        <div>
-            <nav className="nav-bar">
-                <div className="logo">
-                    <h1>ViverBem+</h1>
-                </div>
-                <div className="nav-list">
+        <div> 
+            <header>
+                <nav className="nav_bar"> 
+                    <div className="logo">
+                        <h1>ViverBem+</h1>
+                    </div>
+                    <div className="nav_list">
+                        <ul>
+                            <li className="nav_item">
+                                <a href="#" className="nav_link">Página inicial</a>
+                            </li>
+                            <li className="nav_item">
+                                <a href="#" className="nav_link">Login</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className="mobile_menu_icon">
+                        <button onClick={menuShow}>
+                            <img className="icon" src={menuIcon} alt="Menu" />
+                        </button>
+                    </div>
+                </nav>
+
+                <div className={`mobile_menu ${menuOpen ? 'open' : ''}`}>
                     <ul>
-                        <li className="nav-item"><a href="pagina_inicial.html" className="nav-link">Página inicial</a></li>
-                        <li className="nav-item"><a href="login.html" className="nav-link">Login</a></li>
+                        <li className="nav_item">
+                            <a href="#" className="nav_link">Página inicial</a>
+                        </li>
+                        <li className="nav_item">
+                            <a href="#" className="nav_link">Login</a>
+                        </li>
                     </ul>
                 </div>
-                <div className="mobile-menu-icon">
-                    <button onClick={menuShow}>
-                        <img className="icon" src={menuIcon} alt="Menu" />
-                    </button>
-                </div>
-            </nav>
+            </header>
 
             <div id="conteudo" className="roxo">
                 <div id="profissionais">
@@ -34,12 +58,12 @@ const Profissionais = () => {
                 </div>
                 <div className="grid-container">
                     {[
-                        { name: 'Carlos Mendes', experience: '3 anos', city: 'Vitória - ES', img:{profileCarlos} },
-                        { name: 'Laura Castro', experience: '1 ano e 2 meses', city: 'Serra - ES', img: 'img/lauracastro.jpg' },
-                        { name: 'Gabriel Lopes', experience: '2 anos e 4 meses', city: 'Cariacica - ES', img: 'img/gabriellopes.jpg' },
-                        { name: 'Benjamin Duarte', experience: '6 meses', city: 'Colatina - ES', img: 'img/benjaninduarte.jpg' },
-                        { name: 'Luísa Heringer', experience: '3 anos e 6 meses', city: 'Vila Velha - ES', img: 'img/luisahenringer.jpg', link: 'perfil_profissional.html' },
-                        { name: 'Maitê Vieira', experience: '9 meses', city: 'Domingos Martins - ES', img: 'img/maitevieira.jpg' },
+                        { name: 'Carlos Mendes', experience: '3 anos', city: 'Vitória - ES', img: profileCarlos },
+                        { name: 'Laura Castro', experience: '1 ano e 2 meses', city: 'Serra - ES', img: profileLaura},
+                        { name: 'Gabriel Lopes', experience: '2 anos e 4 meses', city: 'Cariacica - ES', img: profileGabriel},
+                        { name: 'Benjamin Duarte', experience: '6 meses', city: 'Colatina - ES', img: profileBenjamin },
+                        { name: 'Luísa Heringer', experience: '3 anos e 6 meses', city: 'Vila Velha - ES', img: profileLuisa, link: 'perfil_profissional.html' },
+                        { name: 'Maitê Vieira', experience: '9 meses', city: 'Domingos Martins - ES', img: profileMaite },
                     ].map((profissional, index) => (
                         <div key={index} className="grid-item">
                             {profissional.link ? (
@@ -77,4 +101,4 @@ const Profissionais = () => {
     );
 };
 
-export default Profissionais;
+export default Profissionais; 

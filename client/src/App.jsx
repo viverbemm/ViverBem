@@ -9,6 +9,7 @@ import Login_Usuario from './components/pages/Login_Usuario';
 import Tela_profissionais from './components/pages/Tela_profissionais';
 import Perfil_profissional from './components/pages/Perfil_profissional';
 import Tela_agendamentos from './components/pages/Tela_agendamentos';
+import Menu_superior from './components/pages/Menu_superior';
 
 
 
@@ -30,6 +31,7 @@ function App() {
             <Route path='/Tela_profissionais' element={<Tela_profissionais/>}/>
             <Route path='/Perfil_profissional' element={<Perfil_profissional/>}/>
             <Route path='/Tela_agendamentos' element={<Tela_agendamentos/>}/>
+            <Route path='/Menu_superior' element={<Menu_superior/>}/>
             
            
 
