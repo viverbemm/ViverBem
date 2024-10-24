@@ -1,11 +1,12 @@
 import React from 'react';
-import './Tela_profissionais.css'; // ajuste o caminho conforme necessário
+import './Tela_profissionais.css'; 
 import './assets/css/estilo.css';
-import menuIcon from './assets/img/menu_white_36dp.svg'; // ajuste o caminho conforme necessário
+import menuIcon from './assets/img/menu_white_36dp.svg';
+import profileCarlos from '../pages/imagens/carlosmendes.jpg';
 
 const Profissionais = () => {
     const menuShow = () => {
-        // lógica para mostrar/esconder o menu em dispositivos móveis
+       
     };
 
     return (
@@ -33,7 +34,7 @@ const Profissionais = () => {
                 </div>
                 <div className="grid-container">
                     {[
-                        { name: 'Carlos Mendes', experience: '3 anos', city: 'Vitória - ES', img: 'img/carlosmendes.jpg' },
+                        { name: 'Carlos Mendes', experience: '3 anos', city: 'Vitória - ES', img:{profileCarlos} },
                         { name: 'Laura Castro', experience: '1 ano e 2 meses', city: 'Serra - ES', img: 'img/lauracastro.jpg' },
                         { name: 'Gabriel Lopes', experience: '2 anos e 4 meses', city: 'Cariacica - ES', img: 'img/gabriellopes.jpg' },
                         { name: 'Benjamin Duarte', experience: '6 meses', city: 'Colatina - ES', img: 'img/benjaninduarte.jpg' },
