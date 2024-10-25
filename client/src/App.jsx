@@ -7,6 +7,7 @@ import Cadastro from './components/pages/Cadastro';
 import EditCadastro from './components/pages/EditCadastro';
 import Login_Usuario from './components/pages/Login_Usuario';
 import Tela_profissionais from './components/pages/Tela_profissionais';
+import Completar_Perfil from './components/pages/Completar_Perfil';
 
 
 
@@ -25,6 +26,7 @@ function App() {
             <Route path='/EditCadastro/:id' element={<EditCadastro/>}/>
             <Route path='/LoginUsuario' element={<Login_Usuario/>}/>
             <Route path='/tela_profissionais' element={<Tela_profissionais/>}/>
+            <Route path='/CompletarPerfil' element={<Completar_Perfil/>}/>
            
 
           
