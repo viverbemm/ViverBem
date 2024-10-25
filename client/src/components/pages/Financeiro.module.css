@@ -1,48 +1,9 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body {
-    background-color: #c5cae9;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100vh;
-}
-
-header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #c5cae9;
-}
-
-.header_left p, .header_right p {
-    color: #3f51b5;
-}
-
-main {
-    width: 100%;
-    max-width: 800px;
-    text-align: center;
-    margin-top: 30px;
-}
-
-h1 {
-    color: #512da8;
-    margin-bottom: 20px;
-}
-
 .filters {
     display: flex;
     justify-content: center;
     gap: 10px;
     margin-bottom: 20px;
+   
 }
 
 input[type="date"],
@@ -91,85 +52,42 @@ select {
 }
 
 
-header {
-    background-color: #c0c0f2;
-    width: 100%;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .navbar {
     display: flex;
     justify-content: space-between;
     width: 90%;
     color: #000075;
-    
-}
 
-.menu_btn {
-    background-color: #c0c0f2;
-    color: rgb(0, 24, 112);
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.menu_btn:hover {
-    background-color: #a6a6e8;
-}
-
-.dropdown {
-    display: none;
-    background-color: #c0c0f2;
-    position: absolute;
-
-    top: 60px;
-    list-style-type: none;
-    border: 1px solid #5661B3;
-    padding: 10px;
-}
-
-.menu_btn:focus+.dropdown,
-.dropdown:hover {
-    display: block;
-}
-
-.dropdown li {
-    margin: 10px 0;
-}
-
-.dropdown a {
-    text-decoration: none;
-    color: #000075;
-}
-
-main {
-    padding: 40px;
-    text-align: center;
-}
-
-h1 {
-    color: #000075;
-    font-size: 2.5em;
-}
-
-h2 {
-    color: #000075;
-    font-size: 1.8em;
-}
-
-.section {
-    margin: 20px 0;
 }
 
 
+/*COD NOVO*/
 
-.contact {
+
+
+.pageBackground {
+    background-color: #d3d3f9;
+    /* Cor de fundo */
+    min-height: 100vh;
+    /* Garante que a página cubra a altura total */
     display: flex;
-    justify-content: space-around;
-    width: 50%;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+.navbarRight a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Herda a cor do elemento pai */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    color: #3b00b9;
+}
+  
+
+
+.navbarLeft a {
+    color: #3b00b9;
+    padding: 14px 20px;
+    text-decoration: none;
 }
 

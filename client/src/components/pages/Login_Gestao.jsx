@@ -2,12 +2,14 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom'; // Importar useNavigate para navegação
 import styles from './Login_Gestao.module.css';
 
+
+
 const Login = () => {
   const navigate = useNavigate(); // Inicializando o hook para navegação
 
   const handleButtonClick = () => {
     // Aqui você pode adicionar validação de login, se necessário
-    navigate('/Bem_vindo_gestao'); // Redireciona para a página desejada
+    navigate('/Gestao'); // Redireciona para a página desejada
   };
 
   return (

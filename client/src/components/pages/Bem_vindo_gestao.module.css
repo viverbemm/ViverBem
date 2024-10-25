@@ -35,15 +35,12 @@
     text-decoration: none;
   }
   
-  .navbarLeft a:hover {
-    background-color: #9b78e9;
-    color: black;
-  }
-  
-  .navbarRight {
+  .navbarRight a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Herda a cor do elemento pai */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
     color: #3b00b9;
-    font-size: 16px;
-  }
+}
   
 .text{
 

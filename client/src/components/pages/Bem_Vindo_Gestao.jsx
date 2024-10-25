@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import styles from './Bem_vindo_gestao.module.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
+
 
 function BemVindoGestao() {
 
@@ -9,7 +12,7 @@ function BemVindoGestao() {
 
             <header>
                 <div className={styles.navbarRight}>
-                    <span><b>Olá Administrador</b></span>
+                <a href="/Gestao"><b>Olá Administrador</b></a>
                 </div>
 
                 <div className={styles.navbarLeft}>
