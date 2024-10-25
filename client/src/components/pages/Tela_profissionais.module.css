@@ -1,18 +1,11 @@
 body {
     height: 100%;
-
     margin: 0;
-
     padding: 0;
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
     background-color: rgb(230, 230, 250);
-
     font-family: "Oswald", sans-serif;
 }
 
@@ -78,7 +71,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     /* 3 colunas */
-    gap: 30px;
+    gap: 30px; 
     /* Espaço entre os itens */
     padding: 30px;
 }
