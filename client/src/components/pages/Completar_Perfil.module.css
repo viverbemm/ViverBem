@@ -3,30 +3,31 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
-body {
+/*body {
     min-height: 100vh;
     font-family: Arial, sans-serif;
     background-color: #d4d4ea;
     color: #00007e;
     
-}
+}*/
 
-header {
+/*header {
     background-color: #c0c0f2;
     width: 100%;
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
+}*/
 
-.navbar {
+/*.navbar {
     display: flex;
     justify-content: space-between;
     width: 90%;
-}
+}*/
 
 .menu_btn {
     background-color: #c0c0f2;
@@ -71,23 +72,17 @@ main {
     text-align: center;
 }
 
-h1 {
+.sessao h3 {
     color: #000075;
-    font-size: 0.3em;
-    
+    font-size: 1.9em;
 }
 
-h2 {
-    color: #000075;
-    font-size: 0.3em;
-}
-
-.section {
+.sessao {
     margin: 20px 0;
-    text-align: left;
+    text-align: justify;
+    text-align-last: right; 
+    padding-right: 30px;
 }
-
-
 
 .contact {
     display: flex;
@@ -97,53 +92,139 @@ h2 {
 
 .logo img {
     width: 70%;
-    
-}
 
-.p1 {
-    color: #000075;
-    font-size: 0.8em;
-}
-
-.p2 {
-    color: #000075;
-    font-size: 0.8em;
-}
-
-.p3 {
-    color: #000075;
-    font-size: 0.8em;
-}
-
-.p4 {
-    color: #000075;
-    font-size: 0.8em;
-}
-
-.p5 {
-    color: #000075;
-    font-size: 0.8em;
-}
-
-.p6 {
-    color: #000075;
-    font-size: 0.8em;
-}
-
-.p7 {
-    color: #000075;
-    font-size: 0.8em;
-}
-
-.p8 {
-    color: #000075;
-    font-size: 0.8em;
 }
 
 .container {
-    width: 100%;
-    padding: 20px;
+    width: 200%;
+    padding: 10px;
     background-color: #c0c0f2;
     border: 1px solid #ddd;
     border-radius: 8px;
-  }
+    transform: translateY(-20px);
+    text-align: left;
+}
+
+.b1 {
+    color: #000075;
+    font-size: 1.0em;
+}
+
+.b2 {
+    color: #000075;
+    font-size: 1.0em;
+}
+
+.b3 {
+    color: #000075;
+    font-size: 1.0em;
+}
+
+.b4 {
+    color: #000075;
+    font-size: 1.0em;
+}
+
+.b5 {
+    color: #000075;
+    font-size: 1.0em;
+}
+
+.containers {
+    width: 200%;
+    padding: 30px;
+    background-color: #c0c0f2;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transform: translateY(-100px);
+    text-align: left;
+}
+
+
+.complete h2 {
+    color: #000075;
+    font-size: 1.5em;
+}
+
+.complete {
+    margin: 30px 0;
+    text-align: center;
+    transform: translateY(-70px);
+    margin-top: 50px;
+}
+
+
+.b6 {
+    color: #000075;
+    font-size: 1.0em;
+}
+
+.experiencia {
+    color: #000075;;
+    margin: 20px 0;
+    text-align: left;
+    transform: translateY(-70px);
+}
+
+.inputExperiencia {
+    width: 40%; 
+    padding: 8px; 
+    margin-top: 0.5em; 
+    border: 1px solid #000075; 
+    border-radius: 4px; 
+    font-size: 1em; 
+    transition: border-color 0.3s; 
+}
+
+.formacao {
+    color: #000075;;
+    margin: 20px 0;
+    text-align: left;
+    transform: translateY(-70px);
+}
+
+.inputFormacao {
+    width: 40%; 
+    padding: 8px; 
+    margin-top: 0.5em; 
+    border: 1px solid #000075; 
+    border-radius: 4px; 
+    font-size: 1em; 
+    transition: border-color 0.3s; 
+}
+
+.sobre {
+    color: #000075;;
+    margin: 20px 0;
+    text-align: left;
+    transform: translateY(-70px);
+}
+
+.inputSobre {
+    width: 40%; 
+    padding: 8px; 
+    margin-top: 0.5em; 
+    border: 1px solid #000075; 
+    border-radius: 4px; 
+    font-size: 1em; 
+    transition: border-color 0.3s; 
+}
+
+.certificado {
+    color: #000075;;
+    margin: 20px 0;
+    text-align: left;
+    transform: translateY(-70px);
+}
+
+.inputCertificado {
+    width: 40%; 
+    padding: 8px; 
+    margin-top: 0.5em; 
+    border: 1px solid #000075; 
+    border-radius: 4px; 
+    font-size: 1em; 
+    transition: border-color 0.3s; 
+}
+
+
