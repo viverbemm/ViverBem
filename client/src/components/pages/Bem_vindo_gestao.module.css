@@ -1,54 +1,30 @@
-/* Define o fundo da página */
 .pageBackground {
-    background-color: #d3d3f9; /* Cor de fundo */
-    min-height: 100vh; /* Garante que a página cubra a altura total */
+    background-color: #d3d3f9; 
+    min-height: 100vh; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 100vw;
 }
 
-/* Estilos para o restante da página */
 .section {
     margin: 10px;
     padding: 10px;
     color: #3b00b9;
-    
-   
 }
 
-
-.logo {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-}
-
-
-/*COD NOVO*/
-
-
-  
-  .navbarLeft a {
-    color: #3b00b9;
-    padding: 14px 20px;
-    text-decoration: none;
-  }
-  
-  .navbarRight a {
-    text-decoration: none; /* Remove o sublinhado */
-    color: inherit; /* Herda a cor do elemento pai */
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
-    color: #3b00b9;
-}
-  
 .text{
-
-text-align: center !important;
+text-align: justify;
 
 }
 
-.container{
-    text-align: center;
+.text p{
+    font-size: 20px;
+}
+
+
+.contatos ul li {
+    color: #3b00b9;
+    font-size: 30px;
 }
 

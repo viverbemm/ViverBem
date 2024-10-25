@@ -33,7 +33,7 @@ select {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    width: 150px;
+    width: 500px;
 }
 
 .card i {
@@ -52,42 +52,37 @@ select {
 }
 
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    color: #000075;
-
-}
-
-
-/*COD NOVO*/
-
-
-
 .pageBackground {
     background-color: #d3d3f9;
-    /* Cor de fundo */
     min-height: 100vh;
-    /* Garante que a página cubra a altura total */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 100vw;
 }
 
-.navbarRight a {
-    text-decoration: none; /* Remove o sublinhado */
-    color: inherit; /* Herda a cor do elemento pai */
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
-    color: #3b00b9;
-}
-  
 
 
-.navbarLeft a {
-    color: #3b00b9;
-    padding: 14px 20px;
-    text-decoration: none;
+
+.grafico{
+    margin-left: auto;
+    margin-top: -18%;
+    
 }
 
+.grafico h2{
+
+    color: #512da8;
+   
+}
+
+.gerar{
+    margin-right: auto; 
+
+}
+
+.gerar h1{
+    
+    color: #512da8;
+   
+}

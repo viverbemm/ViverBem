@@ -1,34 +1,19 @@
 import React, { useState } from 'react';
 import styles from './Bem_vindo_gestao.module.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import NavGestao from '../layout/navGestao';
 
 
 
 function BemVindoGestao() {
 
-
     return (
         <div className={styles.pageBackground}>
-
-            <header>
-                <div className={styles.navbarRight}>
-                <a href="/Gestao"><b>Olá Administrador</b></a>
-                </div>
-
-                <div className={styles.navbarLeft}>
-                    <a href="/Financeiro"><b>Financeiro</b></a>
-                    <a href="/Controle"><b>Controle de Usuários</b></a>
-                    <a href="/CadastrarAdmin"><b>Cadastrar Admin</b></a>
-                    <a href="/EditarAdmin"><b>Editar Admin</b></a>
-                </div>
-
-            </header>
-
-
+            <NavGestao />
             <main className={styles.text}>
                 <section className={styles.section}>
                     <h1><b>Bem-vindo(a), Admin</b></h1>
-                    <h2><b>ViverBem+</b><br /><b>Sistema de Gerenciamento</b></h2>
+                    <h2><b>Sistema de Gerenciamento</b></h2>
 
                     <h3><b>Sobre a empresa</b></h3>
                     <p>O ViverBem+ conecta idosos com profissionais especializados em cuidados,</p>
@@ -42,16 +27,26 @@ function BemVindoGestao() {
                     <h3><b>Como obter suporte?</b></h3>
                     <p>Caso existam problemas, os admins do ViverBem+ poderão entrar em contato com os canais de atendimento:</p>
                     <p>Opções: WhatsApp, Email e Telefone.</p>
-                    <h3><i className="fa fa-whatsapp"></i> <b>(27) 99999-2020</b></h3>
-                    <h3><i className="fa fa-envelope"></i> <b>suporteviverbem@gmail.com</b></h3>
-                    <h3><i className="fa fa-phone"></i> <b>0800 102 0880</b></h3>
+
+
                 </section>
+
+                <div className={styles.contatos}>
+
+                    <ul>
+                        <li className="fa-brands fa-square-whatsapp"><b> (27) 99999-2020 </b></li>
+                        <hr />
+                       
+                        <li className="fa fa-phone"><b> 0800 102 0880 </b></li>
+                        <hr />
+
+                        <li className="fa fa-envelope"><b> suporteviverbem@gmail.com </b></li>
+                        <hr />
+
+                    </ul>
+
+                </div>
             </main>
-
-
-            <div className={styles.logo}>
-                <img src="img/logo.png" alt="ViverBem+ Logo" />
-            </div>
         </div>
     );
 }

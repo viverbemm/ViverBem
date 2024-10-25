@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import NavGestao from '../layout/navGestao';
 
 const Controle = () => {
   const [usuarios, setUsuarios] = useState([]);
@@ -59,6 +60,7 @@ const Controle = () => {
 
   return (
     <div>
+     <NavGestao />
       <header>
         <h1>Controle de Usuários</h1>
       </header>
