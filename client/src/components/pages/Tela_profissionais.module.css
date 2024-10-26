@@ -1,22 +1,18 @@
-body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+.header {
+    background-color: #E6E6FA;
+    width: 100%;
+    padding: 10px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    background-color: rgb(230, 230, 250);
-    font-family: "Oswald", sans-serif;
 }
 
 .roxo {
     background-color: rgb(230, 230, 250);
-    height: 50px;
     color: rgb(52, 3, 151);
-
 }
 
-#titulo_um {
+.titulo_um {
     margin-top: 50px;
     text-align: left;
     color: rgb(52, 3, 151);
@@ -24,7 +20,7 @@ body {
     font-size: 30px;
 }
 
-#menu {
+.menu {
     margin-top: 50px;
     text-align: right;
     text-align: right;
@@ -32,15 +28,13 @@ body {
     margin-top: -40px;
 }
 
-#menu a {
+.menu a {
     text-decoration: none;
     color: rgb(52, 3, 151);
     margin-right: 30px;
 }
 
-
-
-#rodape {
+.rodape {
     text-align: center;
     color: rgb(52, 3, 151);
     font-weight: bold;
@@ -48,41 +42,40 @@ body {
     margin-top: 80px;
 }
 
-#controd {
+.controd {
     font-size: 15px;
     text-align: center;
     margin-bottom: 20px;
 }
 
-#profissionais {
+.profissionais {
     text-align: center;
     margin-top: 100px;
     text-decoration: underline;
     letter-spacing: 2px;
 }
 
-
-#conteupro {
+.conteupro {
     font-size: 15px;
     margin-bottom: 50px;
 }
 
-.grid-container {
+.grid_container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     /* 3 colunas */
-    gap: 30px; 
+    gap: 30px;
     /* Espaço entre os itens */
     padding: 30px;
 }
 
-.grid-item {
+.grid_item {
     text-align: center;
     /* Centraliza o texto */
     font-size: 12px;
 }
 
-.grid-item img {
+.grid_item img {
     max-width: 100%;
     /* Faz a imagem ocupar toda a largura do item */
     height: 300px;
@@ -91,14 +84,14 @@ body {
     /* Mantém a proporção da imagem, cortando partes se necessário */
 }
 
-#mapa {
+.mapa {
     text-align: center;
     font-size: 25px;
     margin-bottom: 50px;
     margin-bottom: 50px;
 }
 
-#map {
+.map {
     height: 400px;
     /* altura do mapa */
     width: 100%;
