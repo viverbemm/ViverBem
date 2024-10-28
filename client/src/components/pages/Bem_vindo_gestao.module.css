@@ -1,81 +1,30 @@
-/* Define o fundo da página */
 .pageBackground {
-    background-color: #d3d3f9; /* Cor de fundo */
-    min-height: 100vh; /* Garante que a página cubra a altura total */
+    background-color: #d3d3f9; 
+    min-height: 100vh; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 100vw;
 }
 
-/* Estilo da barra de navegação */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #d3d3f9; /* Cor da barra de navegação */
-    border-bottom: 1px solid #bdbdf7;
-}
-
-.menu {
-    position: relative;
-}
-
-.menu_btn {
-    background-color: #7a42f4;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-}
-
-.menu_btn:hover {
-    background-color: #6a38d4;
-}
-
-/* Dropdown menu */
-.dropdown {
-    list-style-type: none;
-    margin: 0;
-    padding: 10px;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.dropdown li {
-    padding: 8px 12px;
-}
-
-.dropdown li a {
-    text-decoration: none;
-    color: #7a42f4;
-}
-
-.dropdown li a:hover {
-    color: #6a38d4;
-}
-
-/* Estilos para o restante da página */
 .section {
     margin: 10px;
     padding: 10px;
-    justify-content: center;
+    color: #3b00b9;
 }
 
-.contact {
-    padding: 20px;
-    text-align: center;
-    background-color: #f9f9f9;
+.text{
+text-align: justify;
+
 }
 
-.logo {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
+.text p{
+    font-size: 20px;
 }
+
+
+.contatos ul li {
+    color: #3b00b9;
+    font-size: 30px;
+}
+

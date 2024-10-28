@@ -3,7 +3,7 @@ import styles from './LoginUsuario.module.css';
 import NavBar from '../layout/navBar';
 
 
-function Login_Usuario() {
+function LoginUsuario() {
     return (
 
         <div>
@@ -32,5 +32,5 @@ function Login_Usuario() {
     );
 }
 
-export default Login_Usuario;
+export default LoginUsuario;
 
