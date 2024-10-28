@@ -37,12 +37,12 @@ function Completar_Perfil() {
                             />
                         </div>
 
-                        
+
                         <div className={styles.formacao}>
                             <p><b className={styles.b6}>Sua formação acadêmica:*</b></p>
                             <input
                                 type="text"
-                                placeholder="Digite sua formação"
+                                placeholder="Digite sua formação..."
                                 className={styles.inputFormacao}
                             />
                         </div>
@@ -51,7 +51,7 @@ function Completar_Perfil() {
                             <p><b className={styles.b6}>Fale um pouco sobre você:*</b></p>
                             <input
                                 type="text"
-                                placeholder="Digite sobre você"
+                                placeholder="Digite sobre você..."
                                 className={styles.inputSobre}
                             />
                         </div>
@@ -60,15 +60,29 @@ function Completar_Perfil() {
                             <p><b className={styles.b6}>Anexe seu certificado aqui:*</b></p>
                             <input
                                 type="text"
-                                placeholder="Seu certificado"
+                                placeholder="Seu certificado..."
                                 className={styles.inputCertificado}
                             />
                         </div>
                     </form>
+                </div>
 
-
-
-
+                <div className={styles.caixa}>
+                    <form>
+                        <section className={styles.informacaoContato}>
+                            <h2 className={styles.contato}>Contato</h2>
+                        </section>
+                        <div className={styles.email}>
+                            <p className={styles.emailBorrado}>luisaheringer@gmail.com</p>
+                        </div>
+                        <div className={styles.telefone}>
+                            <p className={styles.telefoneBorrado}>(27) 9 9999-2121</p>
+                        </div>
+                        <div className={styles.reservar}>
+                            <p>Estou sempre em busca de novas
+                            oportunidades. Entre em contato.</p>
+                        </div>
+                    </form>
                 </div>
             </main>
 

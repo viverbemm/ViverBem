@@ -228,3 +228,69 @@ main {
 }
 
 
+.caixa {
+    width: 200%;
+    padding: 30px;
+    background-color: #c0c0f2;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transform: translateY(-100px);
+    text-align: left;
+}
+
+.informacaoContato {
+    color: #000075;
+    margin: 30px 0;
+    text-align: center;
+    transform: translateY(-50px);
+    margin-top: 50px;
+}
+
+.contato{
+    font-size: 1.5em; 
+}
+
+.email {
+    color: #000075;;
+    margin: 20px 0;
+    text-align: left;
+    transform: translateY(-70px);
+}
+
+.emailBorrado {
+    color: #000075;
+    font-size: 1.0em;
+    filter: blur(1.8px); 
+    transform: translateX(90px);
+}
+
+.telefone {
+    color: #000075;;
+    margin: 20px 0;
+    text-align: left;
+    transform: translateY(-70px);
+ 
+}
+
+.telefoneBorrado {
+    color: #000075;
+    font-size: 1.0em;
+    filter: blur(1.8px); 
+    transform: translateX(90px);
+}
+
+.reservar {
+    margin: 20px 0;
+    text-align: justify;
+    text-align-last: right; 
+    padding-right: 30px;
+    color: #000075;
+    font-size: 1.0em;
+    margin-top: -120px;
+}
+
+.fraseReservar {
+    color: #000075;
+    font-size: 1.0em;
+}
+
