@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import FormCadastro from   '../formCadastro/FormCadastro';
-import Navbar from '../layout/navBar'
+
 
 
 
@@ -31,7 +31,7 @@ function EditCadastro() {
     }
     return (
         <div>
-            <Navbar />
+          <navGestao/>
             <FormCadastro titulo='Editar Usuário' textoBotao='Salvar' id={id} handleSubmit={editarCadastro} />
         </div>
     )

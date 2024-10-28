@@ -1,0 +1,65 @@
+.config{
+    background-color: #b8a6ee;    
+}
+
+.config .header_container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #0f0fd3;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   
+}
+
+.config .config_container {
+    margin: 50px auto;
+    padding: 20px;
+    height: 100%;
+    width: 320px;
+    background-color: #dcdcf3;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.config .config_container h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: #23008D;
+}
+
+.config .config_item {
+    display: flex;
+    align-items: 40px ;
+    justify-content: start;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: rgb(198, 120, 250);
+    border-radius: 10px;
+    transition: 0.3s ease;
+
+}
+
+.config .config_item img {
+    width: 244px;
+    height: 244px;
+    margin-right:20px;
+}
+
+.config  .config_item a {
+    color: #23008D;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+.config .endereco {
+    text-align: center;
+    color: #2a2973;
+    margin-top: 70%
+}
+
+
+
+

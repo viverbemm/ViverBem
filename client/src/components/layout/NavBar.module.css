@@ -1,9 +1,33 @@
-.menu_navegacao a{
-    color: #e1e2e3;
+.navPrin{
+    font-size: 20px;
+    background-color: #3b00b9;
+    color: bisque;
 }
 
+<<<<<<< HEAD
 .menu_navegacao a:hover{
     color: #fff;
     transition: 0,5s;
 }
 
+=======
+.navBarEsq a{
+
+color: #3b00b9;
+padding: 14px 20px;
+text-decoration: none;
+}
+
+.navBarDire a{
+    text-decoration: none;
+    cursor: pointer;
+    color:#3b00b9;
+
+}
+
+.navPrin header{
+    
+    background-color:#c2c2f8;
+    
+}
+>>>>>>> 8e6bf9eef7f1a1f8fda8ec732eeabb9bb596d0c9
