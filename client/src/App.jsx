@@ -7,8 +7,12 @@ import Cadastro from './components/pages/Cadastro';
 import EditCadastro from './components/pages/EditCadastro';
 import Login_Usuario from './components/pages/Login_Usuario';
 import Tela_profissionais from './components/pages/Tela_profissionais';
+<<<<<<< HEAD
+import Config from './components/pages/Config';
+=======
 import Completar_Perfil from './components/pages/Completar_Perfil';
 
+>>>>>>> f75587326a006c76a5f10c6d093bacebc0e8cfcd
 
 
 
@@ -21,14 +25,18 @@ function App() {
             <Route path='/Atualizar' element={<Atualizar/>} /> 
             <Route path='/Controle' element={<Controle_Usuarios/>}/>
             <Route path='/Financeiro' element={<Financeiro/>}/>
-            <Route path='/Login' element={<Login_Usuario/>}/>
             <Route path='/cadastro' element={<Cadastro/>}/>
             <Route path='/EditCadastro/:id' element={<EditCadastro/>}/>
             <Route path='/LoginUsuario' element={<Login_Usuario/>}/>
             <Route path='/tela_profissionais' element={<Tela_profissionais/>}/>
+<<<<<<< HEAD
+            <Route path='/Config' element={<Config/>}/>
+            
+=======
             <Route path='/CompletarPerfil' element={<Completar_Perfil/>}/>
            
 
+>>>>>>> f75587326a006c76a5f10c6d093bacebc0e8cfcd
           
           </Routes>
         </Router> 

@@ -5,13 +5,13 @@
     font-family: Arial, sans-serif;
 }
 
-body {
+/* body {
     background-color: #f0eef8;
     color: #333;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
+} */
 
 header {
     background-color: white;
@@ -81,7 +81,7 @@ main {
 .form_container {
     background-color: white;
     padding: 20px;
-    margin-top: 100px;
+    margin-top: 250px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
