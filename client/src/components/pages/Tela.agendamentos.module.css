@@ -1,0 +1,82 @@
+.container {
+    font-family: Arial, sans-serif;
+    background-color: #EAE8FF;
+    color: #333;
+    padding: 20px;
+}
+
+.header {
+    background-color: #E6E6FA;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.profileSection {
+    display: flex;
+    gap: 20px;
+}
+
+.profileImage {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.services {
+    background-color: #E0DBF7;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.bookingSection {
+    background-color: #F0EFFB;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bookingSection {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.contactSectio {
+    background-color: #E0DBF7;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.rodape {
+    text-align: center;
+    padding: 10px;
+    background-color: #A89CD8;
+    color: #fff;
+}
+
+.controd {
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,135 @@
+.container {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #F3F3F3;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #6A5ACD;
+    color: #FFF;
+}
+
+.logo {
+    margin: 0;
+    font-size: 24px;
+}
+
+.nav {
+    display: flex;
+    gap: 15px;
+}
+
+.navLink {
+    color: #FFF;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.main {
+    padding: 20px;
+}
+
+.profileContainer {
+    display: flex;
+    background-color: #E6E6FA;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.profileImage {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.profileInfo {
+    margin-left: 20px;
+}
+
+.profileName {
+    margin: 0;
+    font-size: 22px;
+}
+
+.servicesTitle {
+    margin: 10px 0 0 0;
+    font-size: 18px;
+}
+
+.servicesList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.reservationInfo {
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+},
+sectionTitle: {
+    margin: '0 0 10px 0',
+    fontSize: '20px',
+},
+reservationDetails: {
+    display: 'flex',
+    justifyContent: 'space-between',
+},
+reservationDates: {},
+reservationCosts: {},
+paymentInfo: {
+    marginTop: '10px',
+},
+paymentSection: {
+    backgroundColor: '#FFF',
+    padding: '20px',
+    borderRadius: '8px',
+    marginTop: '20px',
+},
+creditCardInfo: {
+    marginBottom: '20px',
+},
+paymentMethods: {
+    width: '100%',
+},
+paymentForm: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '10px',
+},
+input: {
+    padding: '10px',
+    fontSize: '16px',
+    borderRadius: '4px',
+    border: '1px solid #CCC',
+},
+button: {
+    padding: '10px',
+    fontSize: '16px',
+    backgroundColor: '#6A5ACD',
+    color: '#FFF',
+    border: 'none',
+    borderRadius: '4px',
+    cursor: 'pointer',
+},
+contactSection: {
+    backgroundColor: '#FFF',
+    padding: '20px',
+    borderRadius: '8px',
+    marginTop: '20px',
+},
+footer: {
+    textAlign: 'center',
+    padding: '20px',
+    backgroundColor: '#6A5ACD',
+    color: '#FFF',
+    marginTop: '20px',
+}
