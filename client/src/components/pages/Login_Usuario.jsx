@@ -25,9 +25,7 @@ function Login_Usuario() {
                 </section>
 
 
-                <footer className={styles.endereco}>
-                    <p>ViverBem+<br />Centro Empresarial Shopping Praia da Costa, 245, Vila Velha, ES</p>
-                </footer>
+               
             </main>
 
         </div>
