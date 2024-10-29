@@ -1,8 +1,12 @@
 import React from 'react';
 import styles from './Completar_Perfil.module.css';
 
-
 function Completar_Perfil() {
+    // Definindo a função handleClick para o botão "Reservar"
+    const handleClick = () => {
+        alert("Reserva realizada com sucesso!");
+    };
+
     return (
         <div>
             <main>
@@ -11,22 +15,18 @@ function Completar_Perfil() {
                         <h3 className={styles.h3}>Dados Pessoais:</h3>
                         <p><b className={styles.b5}>Nome Completo:</b> Luísa Heringer</p>
                         <p><b className={styles.b4}>Telefone:</b> (27) 9171-4986</p>
-                        <p><b className={styles.b3}>Email:</b>luisaheringer@gmail.com</p>
+                        <p><b className={styles.b3}>Email:</b> luisaheringer@gmail.com</p>
                         <p><b className={styles.b2}>Data de nascimento:</b> 25/10/1998</p>
-                        <p><b className={styles.b1}>Gênero:</b>Feminino</p>
-
+                        <p><b className={styles.b1}>Gênero:</b> Feminino</p>
                     </section>
                 </div>
             </main>
 
             <main>
-
-
                 <div className={styles.containers}>
-
                     <form>
                         <section className={styles.complete}>
-                            <h2 className={styles.h2}>Complete seu perfil </h2>
+                            <h2 className={styles.h2}>Complete seu perfil</h2>
                         </section>
                         <div className={styles.experiencia}>
                             <p><b className={styles.b6}>Quanto tempo de experiência você possui?*</b></p>
@@ -36,7 +36,6 @@ function Completar_Perfil() {
                                 className={styles.inputExperiencia}
                             />
                         </div>
-
 
                         <div className={styles.formacao}>
                             <p><b className={styles.b6}>Sua formação acadêmica:*</b></p>
@@ -64,26 +63,13 @@ function Completar_Perfil() {
                                 className={styles.inputCertificado}
                             />
                         </div>
+                        <button className={styles.botao} onClick={handleClick}>
+                           Finalizar
+                        </button>
                     </form>
                 </div>
 
-                <div className={styles.caixa}>
-                    <form>
-                        <section className={styles.informacaoContato}>
-                            <h2 className={styles.contato}>Contato</h2>
-                        </section>
-                        <div className={styles.email}>
-                            <p className={styles.emailBorrado}>luisaheringer@gmail.com</p>
-                        </div>
-                        <div className={styles.telefone}>
-                            <p className={styles.telefoneBorrado}>(27) 9 9999-2121</p>
-                        </div>
-                        <div className={styles.reservar}>
-                            <p>Estou sempre em busca de novas
-                            oportunidades. Entre em contato.</p>
-                        </div>
-                    </form>
-                </div>
+               
             </main>
 
             {/*<div className={styles.logo}>
