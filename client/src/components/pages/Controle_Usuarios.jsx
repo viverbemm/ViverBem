@@ -87,7 +87,7 @@ const Controle = () => {
                   <td>{usuario.email}</td>
                   <td>
                     <button className={styles.bot} onClick={() => handleEdit(usuario)}><h1>Editar</h1></button>
-                    <button className={styles.botD} onClick={() => handleDelete(usuario.id)}><h2>Excluir</h2></button>
+                    <button className={styles.bot} onClick={() => handleDelete(usuario.id)}><h1>Excluir</h1></button>
                   </td>
                 </tr>
               ))}

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import NavBar from '../layout/navBar';
 
 
 
@@ -80,24 +81,7 @@ function FormCadastro({titulo, handleSubmit, id, teste }) {
 
     return (
         <div>
-            <header>
-                <nav className="nav-bar">
-                    <div className="logo">
-                        <h1>ViverBem+</h1>
-                    </div>
-                    <div className="nav-list">
-                        <ul>
-                            <li className="nav-item">
-                                <a href="/Bem_vindo" className="nav-link">Página inicial</a>
-                            </li>
-                            <li className="nav-item">
-                                <a href="/Login" className="nav-link">Login</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </header>
-
+          <NavBar/>
             <main>
                 <section className="login-section">
                     <h1>{titulo}</h1>
@@ -215,12 +199,7 @@ function FormCadastro({titulo, handleSubmit, id, teste }) {
                 </section>
             </main>
 
-            <footer className="endereco">
-                <p>
-                    ViverBem+<br />
-                    Centro Empresarial Shopping Praia da Costa, 245, Vila Velha, ES
-                </p>
-            </footer>
+            
         </div>
     );
 }
