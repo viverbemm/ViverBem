@@ -10,42 +10,7 @@
 .roxo {
     background-color: rgb(230, 230, 250);
     color: rgb(52, 3, 151);
-}
-
-.titulo_um {
-    margin-top: 50px;
-    text-align: left;
-    color: rgb(52, 3, 151);
-    font-weight: bold;
-    font-size: 30px;
-}
-
-.menu {
-    margin-top: 50px;
-    text-align: right;
-    text-align: right;
-    padding: 5px;
-    margin-top: -40px;
-}
-
-.menu a {
-    text-decoration: none;
-    color: rgb(52, 3, 151);
-    margin-right: 30px;
-}
-
-.rodape {
-    text-align: center;
-    color: rgb(52, 3, 151);
-    font-weight: bold;
-    font-size: 25px;
-    margin-top: 80px;
-}
-
-.controd {
-    font-size: 15px;
-    text-align: center;
-    margin-bottom: 20px;
+    max-width: 100%;
 }
 
 .profissionais {
@@ -53,15 +18,12 @@
     margin-top: 100px;
     text-decoration: underline;
     letter-spacing: 2px;
-}
-
-.conteupro {
-    font-size: 15px;
-    margin-bottom: 50px;
+    width: 100%;
 }
 
 .grid_container {
     display: grid;
+    width: 100%;
     grid-template-columns: repeat(3, 1fr);
     /* 3 colunas */
     gap: 30px;
@@ -84,6 +46,11 @@
     /* Mantém a proporção da imagem, cortando partes se necessário */
 }
 
+.conteupro {
+    font-size: 15px;
+    margin-bottom: 50px;
+}
+
 .mapa {
     text-align: center;
     font-size: 25px;
@@ -97,4 +64,17 @@
     width: 100%;
     /* largura do mapa */
     text-align: center;
+}
+
+.rodape {
+    text-align: center;
+    color: rgb(52, 3, 151);
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 80px;
+}
+.controd {
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 20px;
 }

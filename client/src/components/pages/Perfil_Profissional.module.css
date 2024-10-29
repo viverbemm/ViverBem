@@ -7,56 +7,6 @@
     align-items: center;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-}
-
-.logo {
-    width: 70%;
-}
-
-.logoText {
-    color: #000075;
-    font-size: 2.5em;
-}
-
-.navList {}
-
-.navItems {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-around;
-}
-
-.navItem {
-    margin: 0 15px;
-}
-
-.navLink {
-    text-decoration: none;
-    color: #000075;
-    font-size: 1.2em;
-}
-
-.mobileMenuIcon {
-    display: none;
-}
-
-.menuBtn {
-    background-color: #c0c0f2;
-    color: #001870;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.mobileMenu {
-    display: none;
-}
-
 .intro {
     padding: 40px;
     background-color: #d4d4ea;

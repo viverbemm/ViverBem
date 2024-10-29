@@ -6,11 +6,11 @@ import Financeiro from './components/pages/Financeiro';
 import Cadastro from './components/pages/Cadastro';
 import EditCadastro from './components/pages/EditCadastro';
 import Login_Usuario from './components/pages/Login_Usuario';
-import Tela_profissionais from './components/pages/Tela_profissionais';
-import Perfil_profissional from './components/pages/Perfil_profissional';
-import Tela_agendamentos from './components/pages/Tela_agendamentos';
+import Tela_Profissionais from './components/pages/Tela_Profissionais';
+import Perfil_Profissional from './components/pages/Perfil_Profissional';
+import Tela_Agendamentos from './components/pages/Tela_Agendamentos';
 import Menu_superior from './components/pages/Menu_superior';
-import Tela_pagamento from './components/pages/Tela_pagamento';
+import Tela_Pagamentos from './components/pages/Tela_Pagamentos';
 
 function App() {
   return (
@@ -24,11 +24,11 @@ function App() {
         <Route path='/cadastro' element={<Cadastro />} />
         <Route path='/EditCadastro/:id' element={<EditCadastro />} />
         <Route path='/LoginUsuario' element={<Login_Usuario />} />
-        <Route path='/Tela_profissionais' element={<Tela_profissionais />} />
-        <Route path='/Perfil_profissional' element={<Perfil_profissional />} />
-        <Route path='/Tela_agendamentos' element={<Tela_agendamentos />} />
+        <Route path='/Tela_Profissionais' element={<Tela_Profissionais />} />
+        <Route path='/Perfil_Profissional' element={<Perfil_Profissional />} />
+        <Route path='/Tela_Agendamentos' element={<Tela_Agendamentos />} />
         <Route path='/Menu_superior' element={<Menu_superior />} />
-        <Route path='/Tela_pagamento' element={<Tela_pagamento />} />
+        <Route path='/Tela_Pagamentos' element={<Tela_Pagamentos />} />
       </Routes>
     </Router>
   );

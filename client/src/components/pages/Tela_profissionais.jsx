@@ -1,7 +1,6 @@
-import React, { useState } from 'react'; // Adicione useState aqui
-import stylesT from './Tela_profissionais.module.css';
+import React, { useState } from 'react';
+import stylesT from './Tela_Profissionais.module.css';
 import stylesM from './Menu_superior.module.css';
-import { Pagina_Princ } from 'react-router-dom';
 import profileMenu from './assets/img/menu_white_36dp.svg';
 import profileCarlos from '../pages/imagens/carlosmendes.jpg';
 import profileLaura from '../pages/imagens/laura.webp';
@@ -14,11 +13,11 @@ function Profissionais() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const menuShow = () => {
-    setMenuOpen(!menuOpen); // Alterna o estado do menu (abre/fecha)
+    setMenuOpen(!menuOpen);
   };
 
   return (
-    <div style={{ backgroundColor: '#E6E6FA', width: '100%', display: 'flex', flexDirection: 'column' }}>
+    <div style={{ backgroundColor: '#E6E6FA', width: '100%', display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
       <header className={stylesT.header}>
         <nav className={stylesM.nav_bar}>
           <div className={stylesM.logo}>
@@ -36,29 +35,29 @@ function Profissionais() {
           </div>
           <div className={stylesM.mobile_menu_icon}>
           <button onClick={menuShow}>
-  <img src={profileMenu} alt="Menu Icon" />
-</button>
+            <img src={profileMenu} alt="Menu Icon" />
+          </button>
           </div>
         </nav>
 
         <div className={`${stylesM.mobile_menu} ${menuOpen ? stylesM.open : ''}`}>
           <ul>
             <li className={stylesM.nav_item}>
-              <a className={stylesM.nav_link}>Página inicial</a>
+              <a href= "#"className={stylesM.nav_link}>Página inicial</a>
             </li>
             <li className={stylesM.nav_item}>
-              <a className={stylesM.nav_link}>Login</a>
+              <a href= "#" className={stylesM.nav_link}>Login</a>
             </li>
           </ul>
         </div>
       </header>
 
-      <div className={stylesT.roxo} style={{ flex: 1 }}>
+      <div className={stylesT.roxo}>
         <div className={stylesT.profissionais}>
           <h1>Profissionais</h1>
         </div>
 
-        <div className={stylesT.grid_container}>
+        <section className={stylesT.grid_container}>
           {[
             { nome: 'Carlos Mendes', experiencia: '3 anos', cidade: 'Vitória - ES', img: profileCarlos },
             { nome: 'Laura Castro', experiencia: '1 ano e 2 meses', cidade: 'Serra - ES', img: profileLaura },
@@ -76,7 +75,7 @@ function Profissionais() {
               </div>
             </div>
           ))}
-        </div>
+        </section>
 
         <h1 className={stylesT.mapa}>Procure o profissional mais próximo de você:</h1>
         <iframe

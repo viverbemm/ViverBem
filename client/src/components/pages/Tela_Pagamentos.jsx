@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import profilePic from '../pages/imagens/luisa.webp';
 import stylesM from './Menu_superior.module.css';
 import profileMenu from './assets/img/menu_white_36dp.svg';
-import stylesP from './Tela.pagamento.module.css';
+import stylesP from './Tela.Pagamentos.module.css';
 
 
 function Pagamento() {

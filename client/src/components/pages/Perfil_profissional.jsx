@@ -8,7 +8,7 @@ function Profissional() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const menuShow = () => {
-    setMenuOpen(!menuOpen); // Alterna o estado do menu (abre/fecha)
+    setMenuOpen(!menuOpen); 
   };
 
   return (
