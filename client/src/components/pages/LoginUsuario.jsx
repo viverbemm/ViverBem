@@ -1,16 +1,25 @@
 import React from 'react';
 import styles from './LoginUsuario.module.css';
 import NavBar from '../layout/navBar';
+import NavInferior from '../layout/navInferior';
+import { useNavigate } from 'react-router-dom';
 
 
 function LoginUsuario() {
+
+    const navigate = useNavigate(); 
+
+    const handleButtonClick = () => {
+    
+      navigate('/'); 
+    };
     return (
 
-        <div>
+        <div className={styles.pageee}>
 
             <NavBar />
 
-            <main>
+            <main >
 
                 <section className={styles.login_section}>
 
@@ -20,15 +29,19 @@ function LoginUsuario() {
                             <input type="text" name="cpf" placeholder="CPF:" required />
                             <input type="password" name="senha" placeholder="Digite sua senha:" required />
                             <a href="/Cadastro" className={styles.register_link}>Cadastre-se</a>
-                        </form>
+                           
+                            <button className={styles.button} type="button" onClick={handleButtonClick}>Entrar</button> 
+                       </form>
+                       
+                       
                     </div>
                 </section>
 
-
                
             </main>
-
+            <NavInferior/>
         </div>
+        
     );
 }
 
