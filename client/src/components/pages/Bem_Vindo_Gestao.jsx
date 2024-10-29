@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from './Bem_vindo_gestao.module.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import NavGestao from '../layout/navGestao';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 

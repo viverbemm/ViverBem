@@ -15,8 +15,6 @@ function navGestao(){
             <div className={styles.navbarLeft}>
                 <a href="/Financeiro"><b>Financeiro</b></a>
                 <a href="/Controle"><b>Controle de Usuários</b></a>
-                <a href="/CadastrarAdmin"><b>Cadastrar Admin</b></a>
-                <a href="/EditarAdmin"><b>Editar Admin</b></a>
             </div>
 
         </header>

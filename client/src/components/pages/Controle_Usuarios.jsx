@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import NavGestao from '../layout/navGestao';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Controle = () => {
   const [usuarios, setUsuarios] = useState([]);
@@ -60,10 +61,7 @@ const Controle = () => {
 
   return (
     <div>
-     <NavGestao />
-      <header>
-        <h1>Controle de Usuários</h1>
-      </header>
+      <NavGestao />
 
       <main>
         <h2>Usuários Cadastrados</h2>
@@ -72,23 +70,31 @@ const Controle = () => {
         {error && <p style={{ color: 'red' }}>Erro: {error}</p>}
 
         {!loading && !error && usuarios.length > 0 ? (
-          <ul>
-            {usuarios.map((usuario) => (
-              <li key={usuario.id}>
-                {usuario.nome} - {usuario.email}
-                <button onClick={() => handleEdit(usuario)}>Editar</button>
-                <button onClick={() => handleDelete(usuario.id)}>Excluir</button>
-              </li>
-            ))}
-          </ul>
+          <table className="table">
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              {usuarios.map((usuario) => (
+                <tr key={usuario.id}>
+                  <td>{usuario.nome}</td>
+                  <td>{usuario.email}</td>
+                  <td>
+                    <button onClick={() => handleEdit(usuario)}>Editar</button>
+                    <button onClick={() => handleDelete(usuario.id)}>Excluir</button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         ) : (
           !loading && !error && <p>Nenhum usuário encontrado.</p>
         )}
       </main>
-
-      <footer className="endereco">
-        <p>Endereço ou informações de contato aqui.</p>
-      </footer>
     </div>
   );
 };
