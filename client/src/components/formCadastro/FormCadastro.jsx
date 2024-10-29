@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import NavBar from '../layout/navBar';
+import styles from './Formcadastro.module.css';
 
 
 
 
-function FormCadastro({titulo, handleSubmit, id, teste }) {
+function FormCadastro({ titulo, handleSubmit, id, teste }) {
     const navigate = useNavigate();
     const [usuarios, setUsuarios] = useState([]);
     const [formCadastro, setFormCadastro] = useState({
@@ -59,7 +60,7 @@ function FormCadastro({titulo, handleSubmit, id, teste }) {
     function submit(e) {
         e.preventDefault();
 
-        handleSubmit(formCadastro,id);
+        handleSubmit(formCadastro, id);
     }
 
     function handleEdit(usuario) {
@@ -81,125 +82,129 @@ function FormCadastro({titulo, handleSubmit, id, teste }) {
 
     return (
         <div>
-          <NavBar/>
-            <main>
-                <section className="login-section">
-                    <h1>{titulo}</h1>
-                    <h2>{formCadastro.id ? 'Editar Usuário' : 'Cadastre-se'}</h2>
-                    <div className="form-container">
-                        <form onSubmit={submit}>
-                            <input
-                                type="text"
-                                name="nome"
-                                placeholder="Nome Completo *"
-                                value={formCadastro.nome}
-                                onChange={handleChange}
-                                required
-                            />
-                            <input
-                                type="tel"
-                                name="telefone"
-                                placeholder="Telefone *"
-                                value={formCadastro.telefone}
-                                onChange={handleChange}
-                                required
-                            />
-                            <input
-                                type="email"
-                                name="email"
-                                placeholder="Email *"
-                                value={formCadastro.email}
-                                onChange={handleChange}
-                                required
-                            />
-                            <input
-                                type="text"
-                                name="cpf"
-                                placeholder="CPF *"
-                                value={formCadastro.cpf}
-                                onChange={handleChange}
-                                required
-                            />
-                            <input
-                                type="text"
-                                name="matricula"
-                                placeholder="Matrícula (profissionais)"
-                                value={formCadastro.matricula}
-                                onChange={handleChange}
-                            />
-                            <input
-                                type="date"
-                                name="data_nascimento"
-                                value={formCadastro.data_nascimento}
-                                onChange={handleChange}
-                                required
-                            />
-                            <input
-                                type="password"
-                                name="senha"
-                                placeholder="Crie uma senha *"
-                                value={formCadastro.senha}
-                                onChange={handleChange}
-                                required
-                            />
-                            <input
-                                type="password"
-                                name="confirmar_senha"
-                                placeholder="Confirme sua senha *"
-                                value={formCadastro.confirmar_senha}
-                                onChange={handleChange}
-                                required
-                            />
+            <NavBar />
+            <div className={styles.login_section}>
 
-                            <select
-                                name="cidade"
-                                value={formCadastro.cidade}
-                                onChange={handleChange}
-                                required
-                            >
-                                <option value="">Selecione sua cidade:</option>
-                                <option value="cariacica">Cariacica</option>
-                                <option value="fundao">Fundão</option>
-                                <option value="guarapari">Guarapari</option>
-                                <option value="serra">Serra</option>
-                                <option value="viana">Viana</option>
-                                <option value="vila velha">Vila Velha</option>
-                                <option value="vitoria">Vitória</option>
-                            </select>
+                <main>
+                    <section >
 
-                            <select
-                                name="tipo_usuario"
-                                value={formCadastro.tipo_usuario}
-                                onChange={handleChange}
-                                required
-                            >
-                                <option value="">Selecione uma opção:</option>
-                                <option value="cliente">Cliente</option>
-                                <option value="profissional">Profissional</option>
-                            </select>
+                        <div className={styles.form_container}>
+                            <h1>{titulo}</h1>
+                            <h2><b>{formCadastro.id ? 'Editar Usuário' : 'Cadastre-se'}</b></h2>
+                            <form onSubmit={submit}>
+                                <input
+                                    type="text"
+                                    name="nome"
+                                    placeholder="Nome Completo *"
+                                    value={formCadastro.nome}
+                                    onChange={handleChange}
+                                    required
+                                />
+                                <input
+                                    type="tel"
+                                    name="telefone"
+                                    placeholder="Telefone *"
+                                    value={formCadastro.telefone}
+                                    onChange={handleChange}
+                                    required
+                                />
+                                <input
+                                    type="email"
+                                    name="email"
+                                    placeholder="Email *"
+                                    value={formCadastro.email}
+                                    onChange={handleChange}
+                                    required
+                                />
+                                <input
+                                    type="text"
+                                    name="cpf"
+                                    placeholder="CPF *"
+                                    value={formCadastro.cpf}
+                                    onChange={handleChange}
+                                    required
+                                />
+                                <input
+                                    type="text"
+                                    name="matricula"
+                                    placeholder="Matrícula (profissionais)"
+                                    value={formCadastro.matricula}
+                                    onChange={handleChange}
+                                />
+                                <input
+                                    type="date"
+                                    name="data_nascimento"
+                                    value={formCadastro.data_nascimento}
+                                    onChange={handleChange}
+                                    required
+                                />
+                                <input
+                                    type="password"
+                                    name="senha"
+                                    placeholder="Crie uma senha *"
+                                    value={formCadastro.senha}
+                                    onChange={handleChange}
+                                    required
+                                />
+                                <input
+                                    type="password"
+                                    name="confirmar_senha"
+                                    placeholder="Confirme sua senha *"
+                                    value={formCadastro.confirmar_senha}
+                                    onChange={handleChange}
+                                    required
+                                />
 
-                            <button type="submit" className="register-link">
-                                {formCadastro.id ? 'Salvar' : 'Cadastre-se'}
-                            </button>
-                        </form>
-                    </div>
-                </section>
+                                <select className={styles.sec}
+                                    name="cidade"
+                                    value={formCadastro.cidade}
+                                    onChange={handleChange}
+                                    required
+                                >
+                                    <option value="">Selecione sua cidade:</option>
+                                    <option value="cariacica">Cariacica</option>
+                                    <option value="fundao">Fundão</option>
+                                    <option value="guarapari">Guarapari</option>
+                                    <option value="serra">Serra</option>
+                                    <option value="viana">Viana</option>
+                                    <option value="vila velha">Vila Velha</option>
+                                    <option value="vitoria">Vitória</option>
+                                </select>
 
-                <section className="user-list">
-                    <h2></h2>
-                    <ul>
-                        {usuarios.map((usuario) => (
-                            <li key={usuario.id}>
-                                {usuario.nome} - {usuario.email}
-                                <button onClick={() => handleEdit(usuario)}>Editar</button>
-                                <button onClick={() => handleDelete(usuario.id)}>Excluir</button>
-                            </li>
-                        ))}
-                    </ul>
-                </section>
-            </main>
+                                <select className={styles.sec}
+                                    name="tipo_usuario"
+                                    value={formCadastro.tipo_usuario}
+                                    onChange={handleChange}
+                                    required
+                                >
+                                    <option value="">Selecione uma opção:</option>
+                                    <option value="cliente">Cliente</option>
+                                    <option value="profissional">Profissional</option>
+                                </select>
 
-            
+                                <button type="submit" className={styles.link}>
+                                    {formCadastro.id ? 'Salvar' : 'Cadastre-se'}
+                                </button>
+                            </form>
+                        </div>
+                    </section>
+
+                    <section className="user-list">
+
+                        <ul>
+                            {usuarios.map((usuario) => (
+                                <li key={usuario.id}>
+                                    {usuario.nome} - {usuario.email}
+                                    <button onClick={() => handleEdit(usuario)}>Editar</button>
+                                    <button onClick={() => handleDelete(usuario.id)}>Excluir</button>
+                                </li>
+                            ))}
+                        </ul>
+                    </section>
+                </main>
+
+
+            </div>
         </div>
     );
 }
