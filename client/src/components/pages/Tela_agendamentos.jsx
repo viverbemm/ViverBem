@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
+import profileMenu from './assets/img/menu_white_36dp.svg';
+import profilePic from '../pages/imagens/luisa.webp';
+import stylesA from './Tela.agendamentos.module.css';
+import stylesM from './Menu_superior.module.css';
 
-const App = () => {
+function Agendamentos() {
   const [checkinDate, setCheckinDate] = useState('05/08/2024');
   const [checkoutDate, setCheckoutDate] = useState('09/08/2024');
   const dailyRate = 150;
@@ -8,24 +12,56 @@ const App = () => {
   const days = 5;
   const total = dailyRate * days + serviceFee;
 
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const menuShow = () => {
+    setMenuOpen(!menuOpen); // Alterna o estado do menu (abre/fecha)
+  };
+
   return (
-    <div style={styles.container}>
-      <header style={styles.header}>
-        <h1 style={styles.logo}>ViverBem+</h1>
-        <nav style={styles.nav}>
-          <a href="#">Página inicial</a>
-          <a href="#">Login</a>
+    <div className={stylesA.container}>
+      <header className={stylesA.header}>
+        <nav className={stylesM.nav_bar}>
+          <div className={stylesM.logo}>
+            <h1>ViverBem+</h1>
+          </div>
+          <div className={stylesM.nav_list}>
+            <ul>
+              <li className={stylesM.nav_item}>
+                <a className={stylesM.nav_link}>Página inicial</a>
+              </li>
+              <li className={stylesM.nav_item}>
+                <a className={stylesM.nav_link}>Login</a>
+              </li>
+            </ul>
+          </div>
+          <div className={stylesM.mobile_menu_icon}>
+            <button onClick={menuShow}>
+              <img src={profileMenu} alt="Menu Icon" />
+            </button>
+          </div>
         </nav>
+
+        <div className={`${stylesM.mobile_menu} ${menuOpen ? stylesM.open : ''}`}>
+          <ul>
+            <li className={stylesM.nav_item}>
+              <a href="#" className={stylesM.nav_link}>Página inicial</a>
+            </li>
+            <li className={stylesM.nav_item}>
+              <a href="#" className={stylesM.nav_link}>Login</a>
+            </li>
+          </ul>
+        </div>
       </header>
-      
-      <main style={styles.main}>
-        <section style={styles.profileSection}>
-          <img 
-            src="profile-picture-url.jpg" 
-            alt="Luísa Heringer" 
-            style={styles.profileImage} 
+
+      <main className={stylesA.main}>
+        <section className={stylesA.profileSection}>
+          <img
+            src={profilePic}
+            alt="Luísa Heringer"
+            className={stylesA.profileImage}
           />
-          <div style={styles.services}>
+          <div className={stylesA.services}>
             <h2>Luísa Heringer</h2>
             <h3>Serviços oferecidos</h3>
             <ul>
@@ -38,8 +74,8 @@ const App = () => {
             </ul>
           </div>
         </section>
-        
-        <section style={styles.bookingSection}>
+
+        <section className={stylesA.bookingSection}>
           <div>
             <h3>Check-in</h3>
             <p>{checkinDate}</p>
@@ -53,90 +89,22 @@ const App = () => {
             <p>Taxa de serviço do ViverBem+</p>
             <p>R$ {serviceFee},00</p>
             <h3>Total: R$ {total},00</h3>
-            <button style={styles.reserveButton}>Reservar</button>
+            <button className={stylesA.reserveButton}>Reservar</button>
           </div>
         </section>
-        
-        <section style={styles.contactSection}>
+
+        <section className={stylesA.contactSection}>
           <h3>Contato</h3>
           <p><a href="mailto:luisaheringer@gmail.com">luisaheringer@gmail.com</a></p>
           <p><a href="tel:+5527999992121">(27) 99999-2121</a></p>
           <p>Estou sempre em busca de novas oportunidades. Entre em contato.</p>
         </section>
       </main>
-      
-      <footer style={styles.footer}>
-        <p>ViverBem+<br/>Centro Empresarial Shopping Praia da Costa, 245, Vila Velha, ES</p>
-      </footer>
+
+      <h1 className={stylesA.rodape}>ViverBem+</h1>
+      <p className={stylesA.controd}>Centro Empresarial Shopping Praia da Costa, 245, Vila Velha, ES</p>
     </div>
   );
 };
 
-const styles = {
-  container: {
-    fontFamily: 'Arial, sans-serif',
-    backgroundColor: '#EAE8FF',
-    color: '#333',
-    padding: '20px',
-  },
-  header: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    backgroundColor: '#A89CD8',
-    padding: '10px',
-    color: '#fff',
-  },
-  logo: {
-    fontSize: '24px',
-  },
-  nav: {
-    display: 'flex',
-    gap: '20px',
-  },
-  main: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '20px',
-  },
-  profileSection: {
-    display: 'flex',
-    gap: '20px',
-  },
-  profileImage: {
-    width: '150px',
-    borderRadius: '50%',
-  },
-  services: {
-    backgroundColor: '#E0DBF7',
-    padding: '10px',
-    borderRadius: '10px',
-  },
-  bookingSection: {
-    backgroundColor: '#F0EFFB',
-    padding: '20px',
-    borderRadius: '10px',
-    display: 'flex',
-    justifyContent: 'space-between',
-  },
-  reserveButton: {
-    backgroundColor: '#333',
-    color: '#fff',
-    padding: '10px 20px',
-    borderRadius: '5px',
-    border: 'none',
-    cursor: 'pointer',
-  },
-  contactSection: {
-    backgroundColor: '#E0DBF7',
-    padding: '20px',
-    borderRadius: '10px',
-  },
-  footer: {
-    textAlign: 'center',
-    padding: '10px',
-    backgroundColor: '#A89CD8',
-    color: '#fff',
-  },
-};
-
-export default App;
+export default Agendamentos;
