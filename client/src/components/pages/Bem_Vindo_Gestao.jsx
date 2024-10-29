@@ -14,7 +14,7 @@ function BemVindoGestao() {
             <main className={styles.text}>
                 <section className={styles.section}>
                     <h1><b>Bem-vindo(a), Admin</b></h1>
-                    <h2><b>Sistema de Gerenciamento</b></h2>
+                   
 
                     <h3><b>Sobre a empresa</b></h3>
                     <p>O ViverBem+ conecta idosos com profissionais especializados em cuidados,</p>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import NavGestao from '../layout/navGestao';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import styles from './Controle_usuarios.module.css';
 
 const Controle = () => {
   const [usuarios, setUsuarios] = useState([]);
@@ -60,32 +61,33 @@ const Controle = () => {
   };
 
   return (
-    <div>
+    <div className={styles.pagee}>
       <NavGestao />
 
       <main>
-        <h2>Usuários Cadastrados</h2>
-
+        <div className={styles.font}>
+          <h2>Usuários Cadastrados</h2>
+        </div>
         {loading && <p>Carregando usuários...</p>}
         {error && <p style={{ color: 'red' }}>Erro: {error}</p>}
 
         {!loading && !error && usuarios.length > 0 ? (
           <table className="table">
             <thead>
-              <tr>
+              <tr className={styles.tab}>
                 <th>Nome</th>
                 <th>Email</th>
                 <th>Ações</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className={styles.tabb}>
               {usuarios.map((usuario) => (
                 <tr key={usuario.id}>
                   <td>{usuario.nome}</td>
                   <td>{usuario.email}</td>
                   <td>
-                    <button onClick={() => handleEdit(usuario)}>Editar</button>
-                    <button onClick={() => handleDelete(usuario.id)}>Excluir</button>
+                    <button className={styles.bot} onClick={() => handleEdit(usuario)}><h1>Editar</h1></button>
+                    <button className={styles.botD} onClick={() => handleDelete(usuario.id)}><h2>Excluir</h2></button>
                   </td>
                 </tr>
               ))}

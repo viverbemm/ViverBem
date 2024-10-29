@@ -1,17 +1,4 @@
-/* Reset padrão */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body {
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
-    background-color: #d4d4ea;
-    color: #00007e;
-    
-}
 
 header {
     background-color: #c0c0f2;

@@ -9,12 +9,12 @@ function navGestao(){
 
         <header>
             <div className={styles.navbarRight}>
-                <a href="/Gestao"><b>ViverBem+ | Gestão </b></a>
+                <a href="/bem_vindo">ViverBem+ | Gestão </a>
             </div>
 
             <div className={styles.navbarLeft}>
-                <a href="/Financeiro"><b>Financeiro</b></a>
-                <a href="/Controle"><b>Controle de Usuários</b></a>
+                <a href="/Financeiro">Financeiro</a>
+                <a href="/Controle">Controle de Usuários</a>
             </div>
 
         </header>

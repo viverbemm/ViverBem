@@ -26,6 +26,7 @@ function App() {
             <Route path='/LoginUsuario' element={<Login_Usuario/>}/>
             <Route path='/tela_profissionais' element={<Tela_profissionais/>}/>
             <Route path='/Config' element={<Config/>}/>
+            <Route path='/Login_gestao' element={<Login_Gestao/>}/>
             
           
           </Routes>

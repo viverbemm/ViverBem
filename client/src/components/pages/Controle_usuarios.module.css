@@ -1,0 +1,56 @@
+.font{
+
+font-size: 30px;
+
+}
+
+
+.page{
+
+background-color: #d3d3f9; ;
+}
+
+
+.bot{
+    
+    padding: 10px;
+    
+}
+
+
+.botD{
+
+    padding: 10px;
+}
+
+
+.bot h1{
+    
+  font-size: 15px;
+  color: #fff;
+}
+
+
+.botD h2{
+
+    font-size: 15px;
+    color: #fff;
+}
+
+
+.pagee{
+
+    background-color: #d3d3f9; 
+}
+
+.tab th{
+
+    background-color: #d3d3f9
+}
+
+.tabb td{
+  color: #260077;
+  font-size: 20px;
+  font-weight: bold;
+
+}

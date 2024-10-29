@@ -9,7 +9,7 @@ const Login = () => {
 
   const handleButtonClick = () => {
   
-    navigate('/Gestao'); 
+    navigate('/Bem_vindo'); 
   };
 
   return (
