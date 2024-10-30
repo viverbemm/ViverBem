@@ -17,7 +17,7 @@ function Profissionais() {
   };
 
   return (
-    <div style={{ backgroundColor: '#E6E6FA', width: '100%', display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
+    <div style={{ backgroundColor: '#E6E6FA', width: '100vw', display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <header className={stylesT.header}>
         <nav className={stylesM.nav_bar}>
           <div className={stylesM.logo}>
@@ -34,19 +34,19 @@ function Profissionais() {
             </ul>
           </div>
           <div className={stylesM.mobile_menu_icon}>
-          <button onClick={menuShow}>
-            <img src={profileMenu} alt="Menu Icon" />
-          </button>
+            <button onClick={menuShow}>
+              <img src={profileMenu} alt="Menu Icon" />
+            </button>
           </div>
         </nav>
 
         <div className={`${stylesM.mobile_menu} ${menuOpen ? stylesM.open : ''}`}>
           <ul>
             <li className={stylesM.nav_item}>
-              <a href= "#"className={stylesM.nav_link}>Página inicial</a>
+              <a href="#" className={stylesM.nav_link}>Página inicial</a>
             </li>
             <li className={stylesM.nav_item}>
-              <a href= "#" className={stylesM.nav_link}>Login</a>
+              <a href="#" className={stylesM.nav_link}>Login</a>
             </li>
           </ul>
         </div>

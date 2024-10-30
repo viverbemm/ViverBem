@@ -19,7 +19,7 @@ function Agendamentos() {
   };
 
   return (
-    <div style={{ backgroundColor: '#E6E6FA', width: '100%', display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+    <div style={{ backgroundColor: '#E6E6FA', width: '100vw', display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <div className={stylesA.container}>
         <header className={stylesA.header}>
           <nav className={stylesM.nav_bar}>

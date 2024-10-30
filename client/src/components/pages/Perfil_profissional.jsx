@@ -8,11 +8,11 @@ function Profissional() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const menuShow = () => {
-    setMenuOpen(!menuOpen); 
+    setMenuOpen(!menuOpen);
   };
 
   return (
-    <div style={{ backgroundColor: '#E6E6FA', width: '100%', display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+    <div style={{ backgroundColor: '#E6E6FA', width: '100vw', display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <header className={stylesP.header}>
         <nav className={stylesM.nav_bar}>
           <div className={stylesM.logo}>
