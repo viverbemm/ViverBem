@@ -26,7 +26,7 @@ function App() {
             <Route path='/LoginUsuario' element={<Login_Usuario/>}/>
             <Route path='/tela_profissionais' element={<Tela_profissionais/>}/>
             <Route path='/Config' element={<Config/>}/>
-            
+           
           
           </Routes>
         </Router> 
