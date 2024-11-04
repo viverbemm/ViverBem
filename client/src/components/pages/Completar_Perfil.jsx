@@ -13,23 +13,23 @@ function Completar_Perfil() {
                 <div className={styles.container}>
                     <section className={styles.sessao}>
                         <h3 className={styles.h3}>Dados Pessoais:</h3>
-                        <p><b className={styles.b5}>Nome Completo:</b> Luísa Heringer</p>
-                        <p><b className={styles.b4}>Telefone:</b> (27) 9171-4986</p>
-                        <p><b className={styles.b3}>Email:</b> luisaheringer@gmail.com</p>
-                        <p><b className={styles.b2}>Data de nascimento:</b> 25/10/1998</p>
-                        <p><b className={styles.b1}>Gênero:</b> Feminino</p>
+                        <p className={styles.nome}><b className={styles.b5}>Nome Completo:</b> Luísa Heringer</p>
+                        <p className={styles.telefone}><b className={styles.b4}>Telefone:</b> (27) 9171-4986</p>
+                        <p className={styles.email}><b className={styles.b3}>Email:</b> luisaheringer@gmail.com</p>
+                        <p className={styles.nascimento}><b className={styles.b2}>Data de nascimento:</b> 25/10/1998</p>
+                        <p className={styles.genero}><b className={styles.b1}>Gênero:</b> Feminino</p>
                     </section>
                 </div>
             </main>
 
             <main>
                 <div className={styles.containers}>
-                    <form>
+                    <form className={styles.formComplete}>
                         <section className={styles.complete}>
                             <h2 className={styles.h2}>Complete seu perfil</h2>
                         </section>
                         <div className={styles.experiencia}>
-                            <p><b className={styles.b6}>Quanto tempo de experiência você possui?*</b></p>
+                            <p className={styles.tempoExperiencia}><b className={styles.b6}>Quanto tempo de experiência você possui?*</b></p>
                             <input
                                 type="text"
                                 placeholder="Digite sua experiência"
@@ -38,7 +38,7 @@ function Completar_Perfil() {
                         </div>
 
                         <div className={styles.formacao}>
-                            <p><b className={styles.b6}>Sua formação acadêmica:*</b></p>
+                            <p className={styles.formacaoAcademica}><b className={styles.b6}>Sua formação acadêmica:*</b></p>
                             <input
                                 type="text"
                                 placeholder="Digite sua formação..."
@@ -47,7 +47,7 @@ function Completar_Perfil() {
                         </div>
 
                         <div className={styles.sobre}>
-                            <p><b className={styles.b6}>Fale um pouco sobre você:*</b></p>
+                            <p className={styles.sobreVoce}><b className={styles.b6}>Fale um pouco sobre você:*</b></p>
                             <input
                                 type="text"
                                 placeholder="Digite sobre você..."
@@ -56,7 +56,7 @@ function Completar_Perfil() {
                         </div>
 
                         <div className={styles.certificado}>
-                            <p><b className={styles.b6}>Anexe seu certificado aqui:*</b></p>
+                            <p className={styles.certi}><b className={styles.b6}>Anexe seu certificado aqui:*</b></p>
                             <input
                                 type="text"
                                 placeholder="Seu certificado..."

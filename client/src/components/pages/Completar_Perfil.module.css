@@ -3,6 +3,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #a6a6e8;
+   
+   
 
 }
 
@@ -75,6 +78,7 @@ main {
 .sessao h3 {
     color: #000075;
     font-size: 1.9em;
+    background-color: #c0c0f2;
 }
 
 .sessao {
@@ -82,6 +86,7 @@ main {
     text-align: justify;
     text-align-last: right; 
     padding-right: 10px;
+    background-color: #c0c0f2;
 }
 
 .contact {
@@ -108,26 +113,31 @@ main {
 .b1 {
     color: #000075;
     font-size: 1.0em;
+    background-color: #c0c0f2;
 }
 
 .b2 {
     color: #000075;
     font-size: 1.0em;
+    background-color: #c0c0f2;
 }
 
 .b3 {
     color: #000075;
     font-size: 1.0em;
+    background-color: #c0c0f2;
 }
 
 .b4 {
     color: #000075;
     font-size: 1.0em;
+    background-color: #c0c0f2;
 }
 
 .b5 {
     color: #000075;
     font-size: 1.0em;
+    background-color: #c0c0f2;
 }
 
 .containers {
@@ -145,6 +155,7 @@ main {
 .complete h2 {
     color: #000075;
     font-size: 1.5em;
+    background-color: #c0c0f2;
 }
 
 .complete {
@@ -152,12 +163,15 @@ main {
     text-align: center;
     transform: translateY(-50px);
     margin-top: 50px;
+    background-color: #c0c0f2;
+  
 }
 
 
 .b6 {
     color: #000075;
     font-size: 1.0em;
+    background-color: #c0c0f2;
 }
 
 .experiencia {
@@ -165,6 +179,7 @@ main {
     margin: 20px 0;
     text-align: center; 
     transform: translateY(-70px);
+    background-color: #c0c0f2;
 }
 
 .inputExperiencia {
@@ -175,6 +190,7 @@ main {
     border-radius: 4px; 
     font-size: 1em; 
     transition: border-color 0.3s; 
+    background-color: #c0c0f2;
 }
 
 .formacao {
@@ -182,6 +198,7 @@ main {
     margin: 20px 0;
     text-align: center; 
     transform: translateY(-70px);
+    background-color: #c0c0f2;
 }
 
 .inputFormacao {
@@ -192,6 +209,7 @@ main {
     border-radius: 4px; 
     font-size: 1em; 
     transition: border-color 0.3s; 
+    background-color: #c0c0f2;
 }
 
 .sobre {
@@ -199,6 +217,7 @@ main {
     margin: 20px 0;
     text-align: center; 
     transform: translateY(-70px);
+    background-color: #c0c0f2;
 }
 
 .inputSobre {
@@ -209,6 +228,7 @@ main {
     border-radius: 4px; 
     font-size: 1em; 
     transition: border-color 0.3s; 
+    background-color: #c0c0f2;
 }
 
 .certificado {
@@ -216,6 +236,7 @@ main {
     margin: 20px 0;
      text-align: center; 
     transform: translateY(-70px);
+    background-color: #c0c0f2;
 }
 
 .inputCertificado {
@@ -226,6 +247,7 @@ main {
     border-radius: 4px; 
     font-size: 1em; 
     transition: border-color 0.3s; 
+    background-color: #c0c0f2;
 }
 
 .reservar {
@@ -256,6 +278,42 @@ main {
    
   }
   
+.nome{
+    background-color: #c0c0f2;
+}
 
+.telefone{
+    background-color: #c0c0f2;
+}
 
+.email{
+    background-color: #c0c0f2;
+}
 
+.nascimento{
+    background-color: #c0c0f2;
+}
+
+.genero{
+    background-color: #c0c0f2;
+}
+
+.formComplete{
+    background-color: #c0c0f2;
+}
+
+.tempoExperiencia{
+    background-color: #c0c0f2;
+}
+
+.formacaoAcademica{
+    background-color: #c0c0f2;
+}
+
+.sobreVoce{
+    background-color: #c0c0f2;
+}
+
+.certi{
+    background-color: #c0c0f2;
+}
