@@ -129,32 +129,6 @@
       "confirmar_senha": "123",
       "cidade": "vila velha",
       "tipo_usuario": "cliente"
-    },
-    {
-      "id": "5d83",
-      "nome": "Isaac ",
-      "telefone": "2730725745",
-      "email": "ebarbara2@hotmail.com",
-      "cpf": "1111111111111",
-      "matricula": "0055473-1",
-      "data_nascimento": "2024-10-25",
-      "senha": "123",
-      "confirmar_senha": "123",
-      "cidade": "vitoria",
-      "tipo_usuario": "profissional"
-    },
-    {
-      "id": "bb45",
-      "nome": "Maria Isabel de puala",
-      "telefone": "2730725745",
-      "email": "maria@hotmail.com",
-      "cpf": "1111111111111",
-      "matricula": "0055473-1",
-      "data_nascimento": "2024-10-25",
-      "senha": "123",
-      "confirmar_senha": "123",
-      "cidade": "vitoria",
-      "tipo_usuario": "profissional"
     }
   ]
 }

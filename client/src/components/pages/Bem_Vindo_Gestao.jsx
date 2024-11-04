@@ -35,12 +35,12 @@ function BemVindoGestao() {
                 <div className={styles.contatos}>
 
                     <ul>
-                        <li className="fa-brands fa-square-whatsapp"><b> (27) 99999-2020 </b></li>
+                        <li className="fa-brands fa-square-whatsapp"><b className={styles.info}> (27) 99999-2020 </b></li>
                         
-                        <li className="fa fa-phone"><b> 0800 102 0880 </b></li>
+                        <li className="fa fa-phone"><b className={styles.info}> 0800 102 0880 </b></li>
                       
 
-                        <li className="fa fa-envelope"><b> suporteviverbem@gmail.com </b></li>
+                        <li className="fa fa-envelope"><b className={styles.info}> suporteviverbem@gmail.com </b></li>
                        
 
                     </ul>
