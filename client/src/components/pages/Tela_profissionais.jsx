@@ -8,6 +8,7 @@ import profileGabriel from '../pages/imagens/gabriel.webp';
 import profileBenjamin from '../pages/imagens/benjamin.webp';
 import profileLuisa from '../pages/imagens/luisa.webp';
 import profileMaite from '../pages/imagens/maite.webp';
+import Navbar from '../layout/navBar';
 
 function Profissionais() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,6 +19,7 @@ function Profissionais() {
 
   return (
     <div style={{ backgroundColor: '#E6E6FA', width: '100vw', display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+      <Navbar />
       <header className={stylesT.header}>
         <nav className={stylesM.nav_bar}>
           <div className={stylesM.logo}>
