@@ -1,18 +1,11 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    
-}
-
 
 
 .login_section {
-    width: 100%;
+    width: 500px;
     height: auto;
     position: relative;
     color: #2a2973;
+    padding: 100px;
     
   
 }
@@ -20,8 +13,8 @@
 
 
 .form_container {
-    background-color: white;
-    padding: 20px;
+    background-color:#c2c2f8;
+    padding: 100px;
     margin-top: 250px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -38,29 +31,49 @@
 h2 {
     color: #3A3A8F;
     margin-bottom: 20px;
+
+   
 }
 
-input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+.cpf {
+    margin-bottom: 20px;
+    text-align: left;
+    background-color: #ddd;
+}
+
+.senha{
+    margin-bottom: 20px;
+    text-align: left;
+    background-color: #ddd;
 }
 
 .register_link {
-   
-    margin-top: 30px;
-    color: #3A3A8F;
-    text-decoration: none;
-    font-weight: bold;
+    margin-bottom: 20px;
     text-align: center;
-    margin-left: 40%;
-    padding-top: 10;
-    
+    color: #3A3A8F ;
+   
 }
 
 
+.register_link a {
+   font-size: 18px;
+   
+}
+
+
+.form_container button{
+    background-color: #3A3A8F;
+    color: #ddd;
+    padding: 20px 30px;
+    border-radius: 8px;
+    font-size: 20px;
+    margin-top: 150px;
+    transform: translate(-50%, -50%);
+    position:absolute;
+    top: 50%;
+    left: 50%;    
+
+}
 
 .logo_viver {
     text-align: center;
@@ -81,4 +94,10 @@ input {
 }
 
 
+
+
+.pageee{
+    background-color: #c2c2f8c2;
+    height: 100vh;
+}
 

@@ -26,9 +26,9 @@ function LoginUsuario() {
                     <div className={styles.form_container}>
                         <form>
                             <h2>Login</h2>
-                            <input type="text" name="cpf" placeholder="CPF:" required />
-                            <input type="password" name="senha" placeholder="Digite sua senha:" required />
-                            <a href="/Cadastro" className={styles.register_link}>Cadastre-se</a>
+                            <input className={styles.cpf} type="text" name="cpf" placeholder="CPF:" required />
+                            <input className={styles.senha} type="password" name="senha" placeholder="Digite sua senha:" required />
+                            <a href="/Cadastro" className={styles.register_link}><b>Cadastre-se</b></a>
                            
                             <button className={styles.button} type="button" onClick={handleButtonClick}>Entrar</button> 
                        </form>
