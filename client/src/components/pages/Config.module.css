@@ -1,14 +1,14 @@
 .config{
     background-color: #b8a6ee;    
-    padding: 12%;
+    height: 90vh;
 }
 
 
 
 .config .config_container {
     margin: 50px auto;
-    padding: 20px;
-    height: 100%;
+    padding: 10px;
+    height: 35%;
     width: 320px;
     background-color: #dcdcf3;
     border-radius: 10px;

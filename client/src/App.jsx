@@ -11,6 +11,7 @@ import Tela_profissionais from './components/pages/Tela_profissionais';
 import Perfil_Profissional from './components/pages/Perfil_profissional';
 import Login_Usuario from './components/pages/LoginUsuario';
 import Config from './components/pages/Config';
+import MinhaConta from './components/pages/MinhaConta';
 
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
             <Route path='/LoginUsuario' element={<Login_Usuario/>}/>
             <Route path='/tela_profissionais' element={<Tela_profissionais/>}/>
             <Route path='/Config' element={<Config/>}/>
-            
+            <Route path='/MinhaConta' element={<MinhaConta/>}/>
           
           </Routes>
         </Router> 
