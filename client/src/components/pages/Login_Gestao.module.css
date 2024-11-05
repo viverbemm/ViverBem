@@ -56,17 +56,6 @@
   font-size: 20px;
 }
 
-.forgot_password {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.forgot_password a {
-  color: #260077;
-  font-size: 18px;
-
-}
-
 button {
   background-color: #260077;
   color: #fff;

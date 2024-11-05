@@ -51,84 +51,12 @@
       "confirmar_senha": "123",
       "cidade": "vila velha",
       "tipo_usuario": "profissional"
-    },
+    }
+  ],
+  "administradores": [
     {
-      "id": "ad31",
-      "nome": "isaac",
-      "telefone": "27992833778",
-      "email": "samara@gmail.com",
-      "cpf": "2222222",
-      "matricula": "111111111222",
-      "data_nascimento": "2002-01-19",
-      "senha": "123",
-      "confirmar_senha": "123",
-      "cidade": "vila velha",
-      "tipo_usuario": "profissional"
-    },
-    {
-      "id": "a5a0",
-      "nome": "isaac",
-      "telefone": "27992833778",
-      "email": "isaac.barbara@aluno.senai.br",
-      "cpf": "111111111",
-      "matricula": "",
-      "data_nascimento": "2024-10-08",
-      "senha": "1111",
-      "confirmar_senha": "11",
-      "cidade": "vila velha",
-      "tipo_usuario": "cliente"
-    },
-    {
-      "id": "d1a4",
-      "nome": "isaac",
-      "telefone": "27992833778",
-      "email": "isaac.barbara@aluno.senai.br",
-      "cpf": "111111111",
-      "matricula": "",
-      "data_nascimento": "2024-10-08",
-      "senha": "1111",
-      "confirmar_senha": "11",
-      "cidade": "vila velha",
-      "tipo_usuario": "cliente"
-    },
-    {
-      "id": "67c3",
-      "nome": "isaac",
-      "telefone": "27992833778",
-      "email": "isaac.barbara@aluno.senai.br",
-      "cpf": "111111111",
-      "matricula": "",
-      "data_nascimento": "2024-10-08",
-      "senha": "1111",
-      "confirmar_senha": "11",
-      "cidade": "vila velha",
-      "tipo_usuario": "cliente"
-    },
-    {
-      "id": "d5c0",
-      "nome": "samara",
-      "telefone": "11111111111",
-      "email": "samaradasilvaribeiro@hotmail.com",
-      "cpf": "198.190.887-05",
-      "matricula": "2020202020",
-      "data_nascimento": "2024-10-08",
-      "senha": "1123",
-      "confirmar_senha": "123",
-      "cidade": "vila velha",
-      "tipo_usuario": "cliente"
-    },
-    {
-      "id": "ef81",
-      "nome": "isaac",
-      "telefone": "27992833778",
-      "email": "isaac.barbara@aluno.senai.br",
-      "cpf": "198.190.887-05",
-      "matricula": "2020202020",
-      "data_nascimento": "2024-10-14",
-      "senha": "123",
-      "confirmar_senha": "123",
-      "cidade": "vila velha",
-      "tipo_usuario": "cliente"
+      "matricula": "admin",
+      "senha": "admin"
     }
   ]
 }
