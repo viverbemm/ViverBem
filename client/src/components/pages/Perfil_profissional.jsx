@@ -48,7 +48,7 @@ function Profissional() {
       </header>
 
       <section className={stylesP.intro}>
-        <div className={stylesP.container}>
+        <div className={stylesP.containerI}>
           <img src={profilePic} alt="Luísa Heringer" className={stylesP.profilePic} />
           <div className={stylesP.introText}>
             <h2>Olá, eu sou a Luísa Heringer.</h2>
@@ -62,7 +62,7 @@ function Profissional() {
       </section>
 
       <section className={stylesP.about}>
-        <div className={stylesP.container}>
+        <div className={stylesP.containerII}>
           <h3>Sobre mim:</h3>
           <p><strong>Experiência Profissional: Cuidadora de Idosos</strong></p>
           <p>Cuidadora autônoma para idoso com doença de Parkinson avançada (2020-2023)</p>
@@ -85,16 +85,20 @@ function Profissional() {
         </div>
       </section>
 
-      <section className={stylesP.contact}>
-        <div className={stylesP.container}>
+      <section className={stylesP.contato}>
+        <div className={stylesP.containerIII}>
           <h3>Contato</h3>
           <p><strong>Email:</strong> luisaheringer@gmail.com</p>
           <p><strong>Telefone:</strong> (27) 99999-2121</p>
           <a href="#" className={stylesP.button}>Reservar</a>
         </div>
       </section>
-      <h1 className={stylesP.rodape}>ViverBem+</h1>
-      <p className={stylesP.controd}>Centro Empresarial Shopping Praia da Costa, 245, Vila Velha, ES</p>
+      <section className={stylesP.rod}>
+        <div className={stylesP.containerIV}>
+          <h1 className={stylesP.rodape}>ViverBem+</h1>
+          <p className={stylesP.controd}>Centro Empresarial Shopping Praia da Costa, 245, Vila Velha, ES</p>
+        </div>
+      </section>
     </div>
   );
 }

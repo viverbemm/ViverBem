@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import stylesT from './Tela_Profissionais.module.css';
+import stylesT from './Tela_profissionais.module.css';
 import stylesM from './Menu_superior.module.css';
 import profileMenu from './assets/img/menu_white_36dp.svg';
 import profileCarlos from '../pages/imagens/carlosmendes.jpg';
