@@ -19,7 +19,6 @@ function Profissionais() {
 
   return (
     <div style={{ backgroundColor: '#E6E6FA', width: '100vw', display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-      <Navbar />
       <header className={stylesT.header}>
         <nav className={stylesM.nav_bar}>
           <div className={stylesM.logo}>
