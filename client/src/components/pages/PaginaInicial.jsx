@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Completar_Perfil.module.css';
 
-function Completar_Perfil() {
+function PaginaInicial() {
     // Definindo a função handleClick para o botão "Reservar"
     const handleClick = () => {
         alert("Reserva realizada com sucesso!");
@@ -11,8 +11,8 @@ function Completar_Perfil() {
         <div>
             <main>
                 <div className={styles.container}>
-                    <section className={styles.sessao}>
-                        <h3 className={styles.h3}>Dados Pessoais:</h3>
+                    <section className={styles.comecando}>
+                        <h3 className={styles.h3}><b>Encontre o Cuidador Ideal para o Idoso que Você Ama</b></h3>
                         <p className={styles.nome}><b className={styles.b5}>Nome Completo:</b> Luísa Heringer</p>
                         <p className={styles.telefone}><b className={styles.b4}>Telefone:</b> (27) 9171-4986</p>
                         <p className={styles.email}><b className={styles.b3}>Email:</b> luisaheringer@gmail.com</p>
@@ -88,4 +88,4 @@ function Completar_Perfil() {
     );
 }
 
-export default Completar_Perfil;
+export default PaginaInicial;
