@@ -3,335 +3,41 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #d3d3f9;
-   
-   
-
 }
 
-/*body {
-    min-height: 100vh;
+/* Define a altura total da página */
+html, body {
+    height: 100%;
+    background-color: #d3d3f9; /* Cor de fundo da página inteira */
     font-family: Arial, sans-serif;
-    background-color: #d4d4ea;
-    color: #00007e;
-    
-}*/
-
-/*header {
-    background-color: #c0c0f2;
-    width: 100%;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}*/
-
-/*.navbar {
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-}*/
-
-.menu_btn {
-    background-color: #c0c0f2;
-    color: rgb(0, 24, 112);
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
+    color: #00007e; /* Cor do texto padrão */
 }
 
-.menu_btn:hover {
-    background-color: #a6a6e8;
-}
-
-.dropdown {
-    display: none;
-    background-color: #c0c0f2;
-    position: absolute;
-
-    top: 60px;
-    list-style-type: none;
-    border: 1px solid #5661B3;
-    padding: 10px;
-}
-
-.menu_btn:focus+.dropdown,
-.dropdown:hover {
-    display: block;
-}
-
-.dropdown li {
-    margin: 10px 0;
-}
-
-.dropdown a {
-    text-decoration: none;
-    color: #000075;
-}
-
+/* Define o contêiner principal para ocupar a altura completa */
 main {
+    min-height: 100vh; /* Garante que o main ocupe toda a altura da viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 40px;
     text-align: center;
+    background-color: #d3d3f9;
 }
 
-.sessao h3 {
+.comecando h1 {
     color: #000075;
     font-size: 1.9em;
-    background-color: #c0c0f2;
 }
 
 .comecando {
     margin: 20px 0;
     text-align: justify;
-    text-align-last: right; 
+
     padding-right: 10px;
-    background-color: #c0c0f2;
 }
 
-.contact {
-    display: flex;
-    justify-content: space-around;
-    width: 50%;
-}
-
-.logo img {
-    width: 70%;
-
-}
-
-.container {
-    width: 50%;
-    padding: 10px;
-    background-color: #c0c0f2;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    transform: translateY(-20px);
-    text-align: left;
-}
-
-.b1 {
+.p1, .p2, .p3, .p4, .p5, .p6, .p7 {
     color: #000075;
     font-size: 1.0em;
-    background-color: #c0c0f2;
-}
-
-.b2 {
-    color: #000075;
-    font-size: 1.0em;
-    background-color: #c0c0f2;
-}
-
-.b3 {
-    color: #000075;
-    font-size: 1.0em;
-    background-color: #c0c0f2;
-}
-
-.b4 {
-    color: #000075;
-    font-size: 1.0em;
-    background-color: #c0c0f2;
-}
-
-.b5 {
-    color: #000075;
-    font-size: 1.0em;
-    background-color: #c0c0f2;
-}
-
-.containers {
-    width: 50%;
-    padding: 30px;
-    background-color: #c0c0f2;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    transform: translateY(-100px);
-    text-align: left;
-    
-}
-
-
-.complete h2 {
-    color: #000075;
-    font-size: 1.5em;
-    background-color: #c0c0f2;
-}
-
-.complete {
-    margin: 30px 0;
-    text-align: center;
-    transform: translateY(-50px);
-    margin-top: 50px;
-    background-color: #c0c0f2;
-  
-}
-
-
-.b6 {
-    color: #000075;
-    font-size: 1.0em;
-    background-color: #c0c0f2;
-}
-
-.experiencia {
-    color: #000075;;
-    margin: 20px 0;
-    text-align: center; 
-    transform: translateY(-70px);
-    background-color: #c0c0f2;
-}
-
-.inputExperiencia {
-    width: 40%; 
-    padding: 8px; 
-    margin-top: 0.5em; 
-    border: 1px solid #000075; 
-    border-radius: 4px; 
-    font-size: 1em; 
-    transition: border-color 0.3s; 
-    background-color: #c0c0f2;
-}
-
-.formacao {
-    color: #000075;;
-    margin: 20px 0;
-    text-align: center; 
-    transform: translateY(-70px);
-    background-color: #c0c0f2;
-}
-
-.inputFormacao {
-    width: 40%; 
-    padding: 8px; 
-    margin-top: 0.5em; 
-    border: 1px solid #000075; 
-    border-radius: 4px; 
-    font-size: 1em; 
-    transition: border-color 0.3s; 
-    background-color: #c0c0f2;
-}
-
-.sobre {
-    color: #000075;;
-    margin: 20px 0;
-    text-align: center; 
-    transform: translateY(-70px);
-    background-color: #c0c0f2;
-}
-
-.inputSobre {
-    width: 40%; 
-    padding: 8px; 
-    margin-top: 0.5em; 
-    border: 1px solid #000075; 
-    border-radius: 4px; 
-    font-size: 1em; 
-    transition: border-color 0.3s; 
-    background-color: #c0c0f2;
-}
-
-.certificado {
-    color: #000075;;
-    margin: 20px 0;
-     text-align: center; 
-    transform: translateY(-70px);
-    background-color: #c0c0f2;
-}
-
-.inputCertificado {
-    width: 40%; 
-    padding: 8px; 
-    margin-top: 0.5em; 
-    border: 1px solid #000075; 
-    border-radius: 4px; 
-    font-size: 1em; 
-    transition: border-color 0.3s; 
-    background-color: #c0c0f2;
-}
-
-.reservar {
-    margin: 20px 0;
-    text-align: justify;
-    text-align-last: right; 
-    padding-right: 30px;
-    color: #000075;
-    font-size: 1.0em;
-    margin-top: -150px;
-}
-
-.botao {
-    background-color: #000075;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-left: 370px;
-    transform: translateY(-50px);
-  }
-  
-  .botao:hover {
-    background-color: #a6a6e8;
-    color:#000075;
-    border: 2px solid #000075;
-   
-  }
-  
-.nome{
-    background-color: #c0c0f2;
-}
-
-.telefone{
-    background-color: #c0c0f2;
-}
-
-.email{
-    background-color: #c0c0f2;
-}
-
-.nascimento{
-    background-color: #c0c0f2;
-}
-
-.genero{
-    background-color: #c0c0f2;
-}
-
-.formComplete{
-    background-color: #c0c0f2;
-}
-
-.tempoExperiencia{
-    background-color: #c0c0f2;
-}
-
-.formacaoAcademica{
-    background-color: #c0c0f2;
-}
-
-.sobreVoce{
-    background-color: #c0c0f2;
-}
-
-.certi{
-    background-color: #c0c0f2;
-}
-
-.valorDi{
-    background-color: #c0c0f2;
-}
-
-.valor {
-    color: #000075;;
-    margin: 20px 0;
-     text-align: center; 
-    transform: translateY(-70px);
-    background-color: #c0c0f2;
-}
-
-.b7 {
-    color: #000075;
-    font-size: 1.0em;
-    background-color: #c0c0f2;
+    margin-top: 10px;
 }

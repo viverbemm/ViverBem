@@ -12,6 +12,7 @@ import Perfil_Profissional from './components/pages/Perfil_profissional';
 import Login_Usuario from './components/pages/LoginUsuario';
 import Config from './components/pages/Config';
 import Completar_Perfil from './components/pages/Completar_Perfil';
+import PaginaInicial from './components/pages/PaginaInicial';
 
 
 function App() {
@@ -28,6 +29,8 @@ function App() {
             <Route path='/tela_profissionais' element={<Tela_profissionais/>}/>
             <Route path='/Config' element={<Config/>}/>
             <Route path='/CompletarPerfil' element={<Completar_Perfil/>}/>
+            <Route path='/PaginaInicial' element={<PaginaInicial/>}/>
+           
             
           
           </Routes>
