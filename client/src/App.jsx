@@ -7,7 +7,7 @@ import Cadastro from './components/pages/Cadastro';
 import EditCadastro from './components/pages/EditCadastro';
 import Login_Usuario from './components/pages/Login_Usuario';
 import Tela_profissionais from './components/pages/Tela_profissionais';
-import Perfil_profissional from './components/pages/Perfil_Profissional';
+import Perfil_profissional from './components/pages/Perfil_profissional';
 import Tela_agendamentos from './components/pages/Tela_agendamentos';
 import Menu_superior from './components/pages/Menu_superior';
 import Tela_Pagamentos from './components/pages/Tela_Pagamentos';

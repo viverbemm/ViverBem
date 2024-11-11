@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import profileMenu from './assets/img/menu_white_36dp.svg';
 import profilePic from '../pages/imagens/luisa.webp';
-import stylesA from './Tela.Agendamentos.module.css';
+import stylesA from './Tela.agendamentos.module.css';
 import stylesM from './Menu_superior.module.css';
 
 function Agendamentos() {
