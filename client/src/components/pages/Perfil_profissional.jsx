@@ -14,7 +14,7 @@ function Profissional() {
   };
 
   return (
-    <div style={{ backgroundColor: '#E6E6FA', width: '100vw', display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+    <div style={{ backgroundColor: '#E6E6FA', width: '100%', display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <header className={stylesP.header}>
         <nav className={stylesM.nav_bar}>
           <div className={stylesM.logo}>
@@ -66,7 +66,7 @@ function Profissional() {
       <section className={stylesP.about}>
         <div className={stylesP.containerII}>
           <div className={stylesP.desenvol}>
-            <h3>Sobre mim:</h3>
+            <strong><h3>Sobre mim:</h3></strong>
             <p>Experiência Profissional: Cuidadora de Idosos</p>
             <p>Cuidadora autônoma para idoso com doença de Parkinson avançada (2020-2023)</p>
             <p>
@@ -89,23 +89,19 @@ function Profissional() {
         </div>
       </section>
 
-      <section className={stylesP.contato}>
+      <section className={stylesP.cont}>
         <div className={stylesP.containerIII}>
-          <div className={stylesP.conta}>
-            <h3 className={stylesP.contato}>Contato</h3>
-            <img src={email} alt="email" className={stylesP.email} />
-            <p><strong>Email:</strong> luisaheringer@gmail.com</p>
-            <img src={telephone} alt="telephone" className={stylesP.telephone} />
-            <p><strong>Telefone:</strong> (27) 99999-2121</p>
-          </div>
-          <div className={stylesP.conta}>
-            <p>Estou sempre em busca de novas
-              oportunidades. Entre em contato.</p>
+          <h1 className={stylesP.ato}>Contato</h1>
+          <p><img src={email} alt="email" className={stylesP.email} /><strong>Email:</strong> luisaheringer@gmail.com</p>
+          <p><img src={telephone} alt="telephone" className={stylesP.telephone} /><strong>Telefone:</strong> (27) 99999-2121</p>
+          <div className={stylesP.reservar}>
+            <p className={stylesP.text}>Estou sempre em busca de novas</p>
+            <p className={stylesP.text}>oportunidades. Entre em contato.</p>
             <a href="#" className={stylesP.button}>Reservar</a>
           </div>
         </div>
-
       </section>
+
       <section className={stylesP.rod}>
         <div className={stylesP.containerIV}>
           <h1 className={stylesP.rodape}>ViverBem+</h1>
