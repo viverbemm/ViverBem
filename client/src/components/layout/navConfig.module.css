@@ -1,0 +1,25 @@
+.navPrin{
+    font-size: 20px;
+    background-color: #3b00b9;
+    color: bisque;
+}
+
+.navBarEsq a{
+
+color: #3b00b9;
+padding: 14px 20px;
+text-decoration: none;
+}
+
+.navBarDire a{
+    text-decoration: none;
+    cursor: pointer;
+    color:#3b00b9;
+
+}
+
+.navPrin header{
+    
+    background-color:#c2c2f8;
+    
+}
