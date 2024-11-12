@@ -5,13 +5,10 @@
     box-sizing: border-box;
 }
 
+
+
 /* Define a altura total da página */
-html, body {
-    height: 100%;
-    background-color: #d3d3f9; /* Cor de fundo da página inteira */
-    font-family: Arial, sans-serif;
-    color: #00007e; /* Cor do texto padrão */
-}
+
 
 /* Define o contêiner principal para ocupar a altura completa */
 main {
@@ -21,23 +18,73 @@ main {
     align-items: center;
     padding: 40px;
     text-align: center;
-    background-color: #d3d3f9;
+    background-color:  #d3d3f9;
 }
 
-.comecando h1 {
+.h1 {
     color: #000075;
     font-size: 1.9em;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #c0c0f2;
 }
 
-.comecando {
-    margin: 20px 0;
-    text-align: justify;
-
-    padding-right: 10px;
+.cuidador{
+    background-color: #c0c0f2;
 }
 
-.p1, .p2, .p3, .p4, .p5, .p6, .p7 {
+
+.textoInicial{
     color: #000075;
     font-size: 1.0em;
     margin-top: 10px;
+    text-align: justify;
+    background-color: #c0c0f2;
+}
+
+.comecando{
+    display: flex;
+    flex-direction: column;
+    margin-top: 250px;
+    align-items: center;
+    margin: 20px 0;
+    padding-right: 10px;
+    background-color: #c0c0f2;
+}
+
+.containerDoInicio {
+    width: 104%;
+    max-width: none; /* Define uma largura máxima para que o texto não fique muito espalhado */
+    padding: 20px; /* Adiciona um espaço ao redor do conteúdo */
+    background-color: #c0c0f2; /* Cor de fundo para o container */
+    border-radius: 8px; /* Opcional: arredonda os cantos do container */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Opcional: adiciona uma sombra para destacar o container */
+    margin-top: -240px;
+}
+
+.planoMensal{
+    color: #000075;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #c0c0f2;
+}
+
+.mensal{
+    color: #000075;
+    font-size: 1.9em;
+    background-color: #c0c0f2;
+}
+
+.containerMensal{
+   width: 100%;
+   max-width: 600%;
+   padding: 20px;
+   background-color: #c0c0f2;
+   border-radius: 8px;
+   box-shadow: 0px 4px 8px rgba(0, 0, 0, alpha);
+}
+
+.planosMensais{
+    background-color: #c0c0f2;
 }
