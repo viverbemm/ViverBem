@@ -1,7 +1,7 @@
     .login_section {
 
 
-        width: 99vw;
+        width: 100vw;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -20,7 +20,7 @@
 
         border-radius: 8px;
         background-color: white;
-        padding: 90px;
+        padding: 80px;
         width: 500px;
         text-align: center;
     }

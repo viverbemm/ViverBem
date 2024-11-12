@@ -17,8 +17,8 @@ function FormCadastro({ titulo, handleSubmit, id, teste }) {
         data_nascimento: '',
         senha: '',
         confirmar_senha: '',
-        cidade: '',
-        tipo_usuario: ''
+        cidade: ''
+
     });
 
     useEffect(() => {
@@ -163,16 +163,7 @@ function FormCadastro({ titulo, handleSubmit, id, teste }) {
                                     <option value="vitoria">Vitória</option>
                                 </select>
 
-                                <select className={styles.sec}
-                                    name="tipo_usuario"
-                                    value={formCadastro.tipo_usuario}
-                                    onChange={handleChange}
-                                    required
-                                >
-                                    <option value="">Selecione uma opção:</option>
-                                    <option value="cliente">Cliente</option>
-                                    <option value="profissional">Profissional</option>
-                                </select>
+
 
                                 <button type="submit" className={styles.link}>
                                     {formCadastro.id ? 'Salvar' : 'Cadastre-se'}
