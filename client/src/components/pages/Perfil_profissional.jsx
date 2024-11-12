@@ -3,6 +3,8 @@ import profileMenu from './assets/img/menu_white_36dp.svg';
 import profilePic from '../pages/imagens/luisa.webp';
 import stylesP from './Perfil_Profissional.module.css';
 import stylesM from './Menu_superior.module.css';
+import telephone from '../pages/imagens/telephone-handle-silhouette.png';
+import email from '../pages/imagens/email.png';
 
 function Profissional() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -52,7 +54,7 @@ function Profissional() {
           <img src={profilePic} alt="Luísa Heringer" className={stylesP.profilePic} />
           <div className={stylesP.introText}>
             <h2>Olá, eu sou a Luísa Heringer.</h2>
-            <p>
+            <p className={stylesP.introText_p}>
               Meu nome é Luísa Heringer, e tenho o privilégio de dedicar minha vida ao cuidado dos idosos há 3 anos e 6 meses.
               Minha paixão por esta profissão é impulsionada pela empatia e respeito pelos idosos, e meu objetivo é proporcionar
               uma qualidade de vida excepcional para aqueles que confiam em meus cuidados.
@@ -63,35 +65,46 @@ function Profissional() {
 
       <section className={stylesP.about}>
         <div className={stylesP.containerII}>
-          <h3>Sobre mim:</h3>
-          <p><strong>Experiência Profissional: Cuidadora de Idosos</strong></p>
-          <p>Cuidadora autônoma para idoso com doença de Parkinson avançada (2020-2023)</p>
-          <p>
-            Durante 3 anos e 6 meses, atuei como cuidadora autônoma dedicada a um senhor idoso diagnosticado com
-            doença de Parkinson avançada. Minhas responsabilidades incluíam:
-          </p>
-          <ul>
-            <li>Assistência diária</li>
-            <li>Gerenciamento de sintomas</li>
-            <li>Estimulação cognitiva</li>
-            <li>Fisioterapia e exercícios</li>
-            <li>Suporte emocional</li>
-            <li>Coordenação com profissionais de saúde</li>
-          </ul>
-          <p>
-            Essa experiência não apenas aprimorou minhas habilidades práticas, mas também reforçou minha compreensão
-            da importância do cuidado holístico e individualizado para idosos que enfrentam condições de saúde complexas.
-          </p>
+          <div className={stylesP.desenvol}>
+            <h3>Sobre mim:</h3>
+            <p>Experiência Profissional: Cuidadora de Idosos</p>
+            <p>Cuidadora autônoma para idoso com doença de Parkinson avançada (2020-2023)</p>
+            <p>
+              Durante 3 anos e 6 meses, atuei como cuidadora autônoma dedicada a um senhor idoso diagnosticado com
+              doença de Parkinson avançada. Minhas responsabilidades incluíam:
+            </p>
+            <ul>
+              <li>Assistência diária</li>
+              <li>Gerenciamento de sintomas</li>
+              <li>Estimulação cognitiva</li>
+              <li>Fisioterapia e exercícios</li>
+              <li>Suporte emocional</li>
+              <li>Coordenação com profissionais de saúde</li>
+            </ul>
+            <p>
+              Essa experiência não apenas aprimorou minhas habilidades práticas, mas também reforçou minha compreensão
+              da importância do cuidado holístico e individualizado para idosos que enfrentam condições de saúde complexas.
+            </p>
+          </div>
         </div>
       </section>
 
       <section className={stylesP.contato}>
         <div className={stylesP.containerIII}>
-          <h3>Contato</h3>
-          <p><strong>Email:</strong> luisaheringer@gmail.com</p>
-          <p><strong>Telefone:</strong> (27) 99999-2121</p>
-          <a href="#" className={stylesP.button}>Reservar</a>
+          <div className={stylesP.conta}>
+            <h3 className={stylesP.contato}>Contato</h3>
+            <img src={email} alt="email" className={stylesP.email} />
+            <p><strong>Email:</strong> luisaheringer@gmail.com</p>
+            <img src={telephone} alt="telephone" className={stylesP.telephone} />
+            <p><strong>Telefone:</strong> (27) 99999-2121</p>
+          </div>
+          <div className={stylesP.conta}>
+            <p>Estou sempre em busca de novas
+              oportunidades. Entre em contato.</p>
+            <a href="#" className={stylesP.button}>Reservar</a>
+          </div>
         </div>
+
       </section>
       <section className={stylesP.rod}>
         <div className={stylesP.containerIV}>
