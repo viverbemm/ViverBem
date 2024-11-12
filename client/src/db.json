@@ -51,12 +51,25 @@
       "confirmar_senha": "123",
       "cidade": "vila velha",
       "tipo_usuario": "profissional"
+    },
+    {
+      "id": "5995",
+      "nome": "isaac",
+      "telefone": "27992833778",
+      "email": "isaac.barbara@aluno.senai.br",
+      "cpf": "198.190.887-04",
+      "data_nascimento": "2024-11-14",
+      "senha": "123",
+      "confirmar_senha": "123",
+      "cidade": "vila velha",
+      "tipo_usuario": "cliente"
     }
   ],
   "administradores": [
     {
       "matricula": "admin",
-      "senha": "admin"
+      "senha": "admin",
+      "id": "34d6"
     }
   ]
 }

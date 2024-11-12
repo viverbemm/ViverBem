@@ -14,7 +14,6 @@ function FormCadastro({ titulo, handleSubmit, id, teste }) {
         telefone: '',
         email: '',
         cpf: '',
-        matricula: '',
         data_nascimento: '',
         senha: '',
         confirmar_senha: '',
@@ -123,13 +122,6 @@ function FormCadastro({ titulo, handleSubmit, id, teste }) {
                                     value={formCadastro.cpf}
                                     onChange={handleChange}
                                     required
-                                />
-                                <input
-                                    type="text"
-                                    name="matricula"
-                                    placeholder="Matrícula (profissionais)"
-                                    value={formCadastro.matricula}
-                                    onChange={handleChange}
                                 />
                                 <input
                                     type="date"
