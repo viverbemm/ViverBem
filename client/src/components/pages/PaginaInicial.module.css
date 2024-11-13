@@ -54,37 +54,22 @@ main {
 
 .containerDoInicio {
     width: 104%;
-    max-width: none; /* Define uma largura máxima para que o texto não fique muito espalhado */
-    padding: 20px; /* Adiciona um espaço ao redor do conteúdo */
-    background-color: #c0c0f2; /* Cor de fundo para o container */
-    border-radius: 8px; /* Opcional: arredonda os cantos do container */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Opcional: adiciona uma sombra para destacar o container */
-    margin-top: -240px;
-}
-
-.planoMensal{
-    color: #000075;
-    font-size: 0.9em;
-    margin-bottom: 20px;
-    text-align: center;
-    background-color: #c0c0f2;
-}
-
-.mensal{
-    color: #000075;
-    font-size: 1.9em;
-    background-color: #c0c0f2;
-}
-
-.containerMensal{
-   width: 100%;
-   max-width: 600%;
-   padding: 20px;
-   background-color: #c0c0f2;
-   border-radius: 8px;
-   box-shadow: 0px 4px 8px rgba(0, 0, 0, alpha);
+    max-width: none; 
+    padding: 20px; 
+    background-color: #c0c0f2; 
+    border-radius: 8px; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    margin-top: center;
 }
 
 .planosMensais{
+    background-color: #c0c0f2;
+}
+
+.valorMensal{
+    background-color: #c0c0f2;
+}
+
+.valorAnual{
     background-color: #c0c0f2;
 }
