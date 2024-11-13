@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Completar_Perfil.module.css';
-
+import NavInferior from '../layout/navInferior';
+import NavBar from '../layout/navBar';
 function Completar_Perfil() {
     // Definindo a função handleClick para o botão "Reservar"
     const handleClick = () => {
@@ -8,9 +9,11 @@ function Completar_Perfil() {
     };
 
     return (
-        <div>
+
+        <div className={styles.paginaCompleta}>
+            <NavBar/>
             <main>
-                <div className={styles.container}>
+                <div className={styles.container_Perfil}>
                     <section className={styles.sessao}>
                         <h3 className={styles.h3}>Dados Pessoais:</h3>
                         <p className={styles.nome}><b className={styles.b5}>Nome Completo:</b> Luísa Heringer</p>
@@ -23,7 +26,7 @@ function Completar_Perfil() {
             </main>
 
             <main>
-                <div className={styles.containers}>
+                <div className={styles.containers_Complete}>
                     <form className={styles.formComplete}>
                         <section className={styles.complete}>
                             <h2 className={styles.h2}>Complete seu perfil</h2>
@@ -72,18 +75,14 @@ function Completar_Perfil() {
                                 className={styles.inputCertificado}
                             />
                         </div>
-                        <button className={styles.botao} onClick={handleClick}>
+                        <button className={styles.botao_Final} onClick={handleClick}>
                            Finalizar
                         </button>
                     </form>
                 </div>
-
-               
             </main>
 
-            {/*<div className={styles.logo}>
-                <img src="img/logo.png" alt="ViverBem+ Logo" />
-            </div>*/}
+            <NavInferior/>
         </div>
     );
 }

@@ -1,84 +1,8 @@
-/* Reset padrão */
-* {
+.paginaCompleta{
+    height: 100vw;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    background-color: #d3d3f9;
-   
-   
-
-}
-
-/*body {
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
-    background-color: #d4d4ea;
-    color: #00007e;
-    
-}*/
-
-/*header {
-    background-color: #c0c0f2;
-    width: 100%;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}*/
-
-/*.navbar {
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-}*/
-
-.menu_btn {
-    background-color: #c0c0f2;
-    color: rgb(0, 24, 112);
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.menu_btn:hover {
-    background-color: #a6a6e8;
-}
-
-.dropdown {
-    display: none;
-    background-color: #c0c0f2;
-    position: absolute;
-
-    top: 60px;
-    list-style-type: none;
-    border: 1px solid #5661B3;
-    padding: 10px;
-}
-
-.menu_btn:focus+.dropdown,
-.dropdown:hover {
-    display: block;
-}
-
-.dropdown li {
-    margin: 10px 0;
-}
-
-.dropdown a {
-    text-decoration: none;
-    color: #000075;
-}
-
-main {
-    padding: 40px;
-    text-align: center;
-}
-
-.sessao h3 {
-    color: #000075;
-    font-size: 1.9em;
-    background-color: #c0c0f2;
+ 
 }
 
 .sessao {
@@ -89,24 +13,13 @@ main {
     background-color: #c0c0f2;
 }
 
-.contact {
-    display: flex;
-    justify-content: space-around;
-    width: 50%;
-}
-
-.logo img {
-    width: 70%;
-
-}
-
-.container {
-    width: 50%;
+.container_Perfil {
+    width: 40%;
     padding: 10px;
     background-color: #c0c0f2;
     border: 1px solid #ddd;
     border-radius: 8px;
-    transform: translateY(-20px);
+    transform: translateY(-250px);
     text-align: left;
 }
 
@@ -140,13 +53,13 @@ main {
     background-color: #c0c0f2;
 }
 
-.containers {
-    width: 50%;
+.containers_Complete {
+    width: 40%;
     padding: 30px;
     background-color: #c0c0f2;
     border: 1px solid #ddd;
     border-radius: 8px;
-    transform: translateY(-100px);
+    transform: translateY(-650px);
     text-align: left;
     
 }
@@ -250,17 +163,7 @@ main {
     background-color: #c0c0f2;
 }
 
-.reservar {
-    margin: 20px 0;
-    text-align: justify;
-    text-align-last: right; 
-    padding-right: 30px;
-    color: #000075;
-    font-size: 1.0em;
-    margin-top: -150px;
-}
-
-.botao {
+.botao_Final {
     background-color: #000075;
     color: white;
     padding: 10px 20px;
@@ -271,7 +174,7 @@ main {
     transform: translateY(-50px);
   }
   
-  .botao:hover {
+  .botao_Final:hover {
     background-color: #a6a6e8;
     color:#000075;
     border: 2px solid #000075;
@@ -333,5 +236,11 @@ main {
 .b7 {
     color: #000075;
     font-size: 1.0em;
+    background-color: #c0c0f2;
+}
+
+.h3 {
+    color: #000075;
+    font-size: 1.5em;
     background-color: #c0c0f2;
 }
