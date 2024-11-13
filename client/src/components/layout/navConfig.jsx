@@ -8,13 +8,13 @@ import { NavLink } from 'react-router-dom';
 function navConfig() {
 
     return(
-        <div className={styles.navPrin}>
+        <div className={styles.navPrinc}>
             <header>
-                <div className={styles.navBarDire}>
+                <div className={styles.navBarDirei}>
                     <a href="#"><b>ViverBem+</b></a>
 
                 </div>
-                <div className={styles.navBarEsq}>
+                <div className={styles.navBarEsqu}>
                     <a href="/PaginaInicial">Pagina Inicial</a>
                     <a href="/MinhaConta">Minha Conta</a>
                 </div>

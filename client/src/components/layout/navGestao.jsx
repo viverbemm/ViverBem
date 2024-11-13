@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 function navGestao(){
 
     return(
-    <div className={styles.navBar}>
+    <div className={styles.navBarr}>
 
         <header>
             <div className={styles.navbarRight}>

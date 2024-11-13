@@ -1,68 +1,13 @@
-
-header {
-    background-color: white;
-    padding: 20px;
-    border-bottom: 1px solid #ddd;
-}
-
-.nav_bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo h1 {
-    font-size: 24px;
-    color: #3A3A8F;
-}
-
-.nav_list ul {
-    display: flex;
-    list-style: none;
-}
-
-.nav_item {
-    margin-left: 20px;
-}
-
-.nav_link {
-    color: #3A3A8F;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.mobile_menu-icon button {
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-.mobile_menu {
-    display: none;
-    /* Menu oculto por padrão para mobile */
-}
-
-main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.login_section {
+.LoginUsuario {
     width: 500px;
-    height: auto;
     position: relative;
     color: #2a2973;
     padding: 100px;
-    
-  
+    margin-top: -30%;
 }
 
 
-
-.form_container {
+.caixa {
     background-color:#c2c2f8;
     padding: 100px;
     margin-top: 250px;
@@ -78,13 +23,6 @@ main {
 }
 
 
-h2 {
-    color: #3A3A8F;
-    margin-bottom: 20px;
-
-   
-}
-
 .cpf {
     margin-bottom: 20px;
     text-align: left;
@@ -97,7 +35,7 @@ h2 {
     background-color: #ddd;
 }
 
-.register_link {
+.registerCadastro {
     margin-bottom: 20px;
     text-align: center;
     color: #3A3A8F ;
@@ -105,13 +43,13 @@ h2 {
 }
 
 
-.register_link a {
+.registerCadastro a {
    font-size: 18px;
    
 }
 
 
-.form_container button{
+.caixa button{
     background-color: #3A3A8F;
     color: #ddd;
     padding: 20px 30px;
@@ -125,12 +63,8 @@ h2 {
 
 }
 
-.logo_viver {
-    text-align: center;
-}
 
-
-.button {
+.botao {
     margin-top: -80px;
     padding: 12px 20px;
     background-color:#0120a7;
@@ -142,8 +76,6 @@ h2 {
     margin-right: 50%;
    
 }
-
-
 
 
 .pageee{
