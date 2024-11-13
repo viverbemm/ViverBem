@@ -3,11 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import NavBar from '../layout/navBar';
 import styles from './Formcadastro.module.css';
 
-
-
-
 function FormCadastro({ titulo, handleSubmit, id, teste }) {
-    const navigate = useNavigate();
+    const navigate = useNavigate();  // Navegação para a tela de pagamento
     const [usuarios, setUsuarios] = useState([]);
     const [formCadastro, setFormCadastro] = useState({
         nome: '',
@@ -18,11 +15,9 @@ function FormCadastro({ titulo, handleSubmit, id, teste }) {
         senha: '',
         confirmar_senha: '',
         cidade: ''
-
     });
 
     useEffect(() => {
-
         if (id) {
             buscarCadastro(id);
         }
@@ -59,7 +54,11 @@ function FormCadastro({ titulo, handleSubmit, id, teste }) {
     function submit(e) {
         e.preventDefault();
 
+        // Enviar os dados do formulário
         handleSubmit(formCadastro, id);
+
+        // Redirecionar para a tela de pagamento
+        navigate('/pagamento');  // Modificado aqui para redirecionar
     }
 
     function handleEdit(usuario) {
@@ -77,7 +76,7 @@ function FormCadastro({ titulo, handleSubmit, id, teste }) {
         }
     }
 
-    console.log(formCadastro)
+    console.log(formCadastro);
 
     return (
         <div>
@@ -86,7 +85,6 @@ function FormCadastro({ titulo, handleSubmit, id, teste }) {
 
                 <main>
                     <section >
-
                         <div className={styles.form_container}>
                             <h1>{titulo}</h1>
                             <h2><b>{formCadastro.id ? 'Editar Usuário' : 'Cadastre-se'}</b></h2>
@@ -163,8 +161,6 @@ function FormCadastro({ titulo, handleSubmit, id, teste }) {
                                     <option value="vitoria">Vitória</option>
                                 </select>
 
-
-
                                 <button type="submit" className={styles.link}>
                                     {formCadastro.id ? 'Salvar' : 'Cadastre-se'}
                                 </button>
@@ -173,7 +169,6 @@ function FormCadastro({ titulo, handleSubmit, id, teste }) {
                     </section>
 
                     <section className="user-list">
-
                         <ul>
                             {usuarios.map((usuario) => (
                                 <li key={usuario.id}>
@@ -185,8 +180,6 @@ function FormCadastro({ titulo, handleSubmit, id, teste }) {
                         </ul>
                     </section>
                 </main>
-
-
             </div>
         </div>
     );
