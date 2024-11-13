@@ -6,6 +6,7 @@
     left: 0;
     bottom: 0;
     width: 100%;
+    
 
 
   }
@@ -13,4 +14,5 @@
 .end h1{
     color:#3b00b9;
     font-size: 20px;
+    background-color:#c2c2f8 ;
 }

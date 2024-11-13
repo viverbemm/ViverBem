@@ -19,18 +19,19 @@ function LoginUsuario() {
 
             <NavBar />
 
-            <main >
+            <main className={styles.pagina} >
 
-                <section className={styles.login_section}>
+                <section className={styles.LoginUsuario
+                }>
 
-                    <div className={styles.form_container}>
+                    <div className={styles.caixa}>
                         <form>
                             <h2>Login</h2>
                             <input className={styles.cpf} type="text" name="cpf" placeholder="CPF:" required />
                             <input className={styles.senha} type="password" name="senha" placeholder="Digite sua senha:" required />
-                            <a href="/Cadastro" className={styles.register_link}><b>Cadastre-se</b></a>
+                            <a href="/Cadastro" className={styles.registerCadastro}><b>Cadastre-se</b></a>
                            
-                            <button className={styles.button} type="button" onClick={handleButtonClick}>Entrar</button> 
+                            <button className={styles.botao} type="button" onClick={handleButtonClick}>Entrar</button> 
                        </form>
                        
                        
