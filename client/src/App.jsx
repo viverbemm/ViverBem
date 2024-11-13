@@ -12,6 +12,8 @@ import Perfil_Profissional from './components/pages/Perfil_profissional';
 import Login_Usuario from './components/pages/LoginUsuario';
 import Config from './components/pages/Config';
 import Pag_Men from './components/pages/Pag_Men';
+import Completar_Perfil from './components/pages/Completar_Perfil';
+import PaginaInicial from './components/pages/PaginaInicial';
 import MinhaConta from './components/pages/MinhaConta';
 
 
@@ -30,6 +32,9 @@ function App() {
             <Route path='/Config' element={<Config/>}/>
             <Route path='/Login_gestao' element={<Login_Gestao/>}/>
             <Route path='/Pagamento' element={<Pag_Men/>}/>
+            <Route path='/CompletarPerfil' element={<Completar_Perfil/>}/>
+            <Route path='/PaginaInicial' element={<PaginaInicial/>}/>
+           
             
             <Route path='/MinhaConta' element={<MinhaConta/>}/>
           
