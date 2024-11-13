@@ -1,0 +1,40 @@
+    .login_section {
+
+
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #e6e6fa;
+        font-family: Arial, sans-serif;
+    }
+
+
+    .login_section h2 {
+        font-size: 30px;
+    }
+
+
+    .form_container {
+
+        border-radius: 8px;
+        background-color: white;
+        padding: 80px;
+        width: 500px;
+        text-align: center;
+    }
+
+    .link {
+        background-color: #260077;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 8px;
+        position: relative; 
+        top: 25px; 
+    }
+
+
+    .sec {
+        background-color: white;
+    }

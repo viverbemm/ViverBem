@@ -72,7 +72,7 @@ function Financeiro() {
 
                 <div className={styles.grafico}> 
 
-                    <h2><b>Estatísticas de Usuários</b></h2>
+                    <h1><b>Estatísticas de Usuários</b></h1>
                     <BarChart width={700} height={400} data={dataGrafico}>
                         <CartesianGrid strokeDasharray="3 3" />
                         <XAxis dataKey="tipo" />

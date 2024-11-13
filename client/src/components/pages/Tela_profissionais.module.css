@@ -1,23 +1,4 @@
-/* body {
-    height: 100%;
-    /* Faz o html e o body ocuparem 100% da altura da tela 
-    margin: 0;
-    /* Remove margens padrão 
-    padding: 0;
-    /* Remove preenchimento padrão 
-    display: flex;
-    /* Usado para centralizar o conteúdo 
-    justify-content: center;
-    /* Centraliza horizontalmente 
-    align-items: center;
-    /* Centraliza verticalmente 
-    background-color: rgb(230, 230, 250);
-    /* Cor de fundo 
-    font-family: "Oswald", sans-serif;
-    /* Fonte do texto 
-} 
 
-*/
 
 .roxo {
     background-color: rgb(230, 230, 250);

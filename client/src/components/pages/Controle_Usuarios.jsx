@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import NavGestao from '../layout/navGestao';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import styles from './Controle_usuarios.module.css';
 
 const Controle = () => {
   const [usuarios, setUsuarios] = useState([]);
@@ -59,36 +61,42 @@ const Controle = () => {
   };
 
   return (
-    <div>
-     <NavGestao />
-      <header>
-        <h1>Controle de Usuários</h1>
-      </header>
+    <div className={styles.pagee}>
+      <NavGestao />
 
       <main>
-        <h2>Usuários Cadastrados</h2>
-
+        <div className={styles.font}>
+          <h2>Usuários Cadastrados</h2>
+        </div>
         {loading && <p>Carregando usuários...</p>}
         {error && <p style={{ color: 'red' }}>Erro: {error}</p>}
 
         {!loading && !error && usuarios.length > 0 ? (
-          <ul>
-            {usuarios.map((usuario) => (
-              <li key={usuario.id}>
-                {usuario.nome} - {usuario.email}
-                <button onClick={() => handleEdit(usuario)}>Editar</button>
-                <button onClick={() => handleDelete(usuario.id)}>Excluir</button>
-              </li>
-            ))}
-          </ul>
+          <table className="table">
+            <thead>
+              <tr className={styles.tab}>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody className={styles.tabb}>
+              {usuarios.map((usuario) => (
+                <tr key={usuario.id}>
+                  <td>{usuario.nome}</td>
+                  <td>{usuario.email}</td>
+                  <td>
+                    <button className={styles.bot} onClick={() => handleEdit(usuario)}><h1>Editar</h1></button>
+                    <button className={styles.bot} onClick={() => handleDelete(usuario.id)}><h1>Excluir</h1></button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         ) : (
           !loading && !error && <p>Nenhum usuário encontrado.</p>
         )}
       </main>
-
-      <footer className="endereco">
-        <p>Endereço ou informações de contato aqui.</p>
-      </footer>
     </div>
   );
 };

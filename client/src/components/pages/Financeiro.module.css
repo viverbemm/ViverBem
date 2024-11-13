@@ -1,47 +1,4 @@
-<<<<<<< HEAD
-=======
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
 
-/* body {
-    background-color: #c5cae9;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100vh;
-} */
-
-header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #c5cae9;
-}
-
-.header_left p, .header_right p {
-    color: #3f51b5;
-}
-
-/*
-main {
-    width: 100%;
-    max-width: 800px;
-    text-align: center;
-    margin-top: 30px;
-}*/
-
-h1 {
-    color: #512da8;
-    margin-bottom: 20px;
-}
-
->>>>>>> 8e6bf9eef7f1a1f8fda8ec732eeabb9bb596d0c9
 .filters {
     display: flex;
     justify-content: center;
@@ -111,14 +68,9 @@ select {
 .grafico{
     margin-left: auto;
     margin-top: -18%;
-    
+  
 }
 
-.grafico h2{
-
-    color: #512da8;
-   
-}
 
 .gerar{
     margin-right: auto; 
@@ -126,7 +78,11 @@ select {
 }
 
 .gerar h1{
-    
+  
     color: #512da8;
    
+}
+
+.grafico h1{
+    color: #512da8;
 }

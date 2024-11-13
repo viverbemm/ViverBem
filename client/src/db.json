@@ -1,17 +1,86 @@
 {
   "usuarios": [
     {
-      "id": "531e",
-      "nome": "cris e ",
-      "telefone": "27992833778",
-      "email": "cris@aluno.senai.br",
-      "cpf": "7777777777",
+      "id": "5a72",
+      "nome": "pietro",
+      "telefone": "111111000",
+      "email": "pietro@hotmail.com",
+      "cpf": "1111111111111",
+      "matricula": "333333333",
+      "data_nascimento": "2024-10-03",
+      "senha": "123",
+      "confirmar_senha": "123",
+      "cidade": "vila velha",
+      "tipo_usuario": "profissional"
+    },
+    {
+      "id": "a7cc",
+      "nome": "isaac",
+      "telefone": "2730725745",
+      "email": "isaacluccabar@gmail.com",
+      "cpf": "11111111111",
       "matricula": "",
-      "data_nascimento": "2024-06-12",
+      "data_nascimento": "2024-10-02",
       "senha": "123",
       "confirmar_senha": "123",
       "cidade": "vila velha",
       "tipo_usuario": "cliente"
+    },
+    {
+      "id": "c48b",
+      "nome": "João Costa",
+      "telefone": "27998564886",
+      "email": "joao@gmail.com",
+      "cpf": "20227413745",
+      "matricula": "",
+      "data_nascimento": "2024-10-03",
+      "senha": "123",
+      "confirmar_senha": "123",
+      "cidade": "guarapari",
+      "tipo_usuario": "cliente"
+    },
+    {
+      "id": "881e",
+      "nome": "samara",
+      "telefone": "27998564886",
+      "email": "samara@gmail.com",
+      "cpf": "1111111111",
+      "matricula": "111111111111",
+      "data_nascimento": "2024-10-03",
+      "senha": "123",
+      "confirmar_senha": "123",
+      "cidade": "vila velha",
+      "tipo_usuario": "profissional"
+    },
+    {
+      "id": "5995",
+      "nome": "isaac",
+      "telefone": "27992833778",
+      "email": "isaac.barbara@aluno.senai.br",
+      "cpf": "198.190.887-04",
+      "data_nascimento": "2024-11-14",
+      "senha": "123",
+      "confirmar_senha": "123",
+      "cidade": "vila velha",
+      "tipo_usuario": "cliente"
+    },
+    {
+      "id": "1cf4",
+      "nome": "Samara",
+      "telefone": "27992833778",
+      "email": "samara@aluno.senai.br",
+      "cpf": "07853413742",
+      "data_nascimento": "2024-11-13",
+      "senha": "123",
+      "confirmar_senha": "123",
+      "cidade": "vila velha"
+    }
+  ],
+  "administradores": [
+    {
+      "matricula": "admin",
+      "senha": "admin",
+      "id": "34d6"
     }
   ]
 }
