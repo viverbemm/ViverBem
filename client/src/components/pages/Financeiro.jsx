@@ -3,6 +3,7 @@ import styles from './Financeiro.module.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, Legend } from 'recharts';
 import NavGestao from '../layout/navGestao';
+import NavInferior from '../layout/navInferior';
 
 function Financeiro() {
     const [dataInicio, setDataInicio] = useState('2024-06-01');
@@ -70,7 +71,7 @@ function Financeiro() {
 
                 </div>
 
-                <div className={styles.grafico}> 
+                <div className={styles.grafico}>
 
                     <h1><b>Estatísticas de Usuários</b></h1>
                     <BarChart width={700} height={400} data={dataGrafico}>
@@ -87,7 +88,7 @@ function Financeiro() {
 
 
             </main>
-
+            <NavInferior />
         </div>
 
 

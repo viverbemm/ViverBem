@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import NavGestao from '../layout/navGestao';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from './Controle_usuarios.module.css';
+import NavInferior from '../layout/navInferior';
 
 const Controle = () => {
   const [usuarios, setUsuarios] = useState([]);
@@ -97,6 +98,7 @@ const Controle = () => {
           !loading && !error && <p>Nenhum usuário encontrado.</p>
         )}
       </main>
+      <NavInferior/>
     </div>
   );
 };

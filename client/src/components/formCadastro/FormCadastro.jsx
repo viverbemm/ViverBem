@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import NavBar from '../layout/navBar';
 import styles from './Formcadastro.module.css';
+import NavInferior from '../layout/navInferior';
 
 function FormCadastro({ titulo, handleSubmit, id, teste }) {
     const navigate = useNavigate();  // Navegação para a tela de pagamento
@@ -181,7 +182,9 @@ function FormCadastro({ titulo, handleSubmit, id, teste }) {
                     </section>
                 </main>
             </div>
+            <NavInferior/>
         </div>
+   
     );
 }
 

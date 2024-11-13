@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom'; // Importando useNavigate
 import FormCadastro from '../formCadastro/FormCadastro';
+import navGestao from '../layout/navGestao';
+import NavInferior from '../layout/navInferior';
 
 function EditCadastro() {
     const { id } = useParams();
@@ -34,6 +36,7 @@ function EditCadastro() {
         <div>
             <navGestao />
             <FormCadastro titulo='' textoBotao='Salvar' id={id} handleSubmit={editarCadastro} />
+            <NavInferior/>
         </div>
     );
 }
