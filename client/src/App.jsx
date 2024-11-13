@@ -4,7 +4,6 @@ import Bem_Vindo_Gestao from './components/pages/Bem_Vindo_Gestao';
 import Controle_Usuarios from './components/pages/Controle_Usuarios';
 import Financeiro from './components/pages/Financeiro';
 import Login_Gestao from './components/pages/Login_Gestao';
-import Cadastro from './components/pages/Cadastro';
 import EditCadastro from './components/pages/EditCadastro';
 import LoginUsuario from './components/pages/LoginUsuario';
 import Tela_profissionais from './components/pages/Tela_profissionais';
@@ -15,7 +14,7 @@ import Pag_Men from './components/pages/Pag_Men';
 import Completar_Perfil from './components/pages/Completar_Perfil';
 import PaginaInicial from './components/pages/PaginaInicial';
 import MinhaConta from './components/pages/MinhaConta';
-
+import FormCadastro from './components/formCadastro/FormCadastro';
 
 
 function App() {
@@ -26,7 +25,7 @@ function App() {
             <Route path='/Atualizar' element={<Atualizar/>} /> 
             <Route path='/Controle' element={<Controle_Usuarios/>}/>
             <Route path='/Financeiro' element={<Financeiro/>}/>
-            <Route path='/cadastro' element={<Cadastro/>}/>
+            <Route path='/cadastro' element={<FormCadastro/>}/>
             <Route path='/EditCadastro/:id' element={<EditCadastro/>}/>
             <Route path='/LoginUsuario' element={<Login_Usuario/>}/>
             <Route path='/tela_profissionais' element={<Tela_profissionais/>}/>

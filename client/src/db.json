@@ -74,6 +74,17 @@
       "senha": "123",
       "confirmar_senha": "123",
       "cidade": "vila velha"
+    },
+    {
+      "id": "e998",
+      "nome": "Samara",
+      "telefone": "27992833778",
+      "email": "samara@aluno.senai.br",
+      "cpf": "07853413742",
+      "data_nascimento": "2024-11-27",
+      "senha": "123",
+      "confirmar_senha": "123",
+      "cidade": "vila velha"
     }
   ],
   "administradores": [
