@@ -1,0 +1,70 @@
+.payment_form {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    position: relative;
+    top: 130px;
+}
+
+.payment_form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #3a3a8f;
+    font-size: 20px;
+}
+
+.form_group {
+    margin-bottom: 15px;
+    color: #3a3a8f;
+}
+
+.form_group label {
+    display: block;
+    font-size: 14px;
+    color: #3a3a8f;
+    margin-bottom: 5px;
+}
+
+.form_group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form_row {
+    display: flex;
+    gap: 15px;
+    color: #3a3a8f;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #3a3a8f;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+
+.cartao{
+    background-color: #dedef5c2;
+    height: 100vh;
+}
+
+.success_message{
+    color: green;
+    position: relative;
+    top: 20px;
+}

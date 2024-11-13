@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #260077;
+  background-color: #d3d3f9;
   font-family: Arial, sans-serif;
 }
 
@@ -33,6 +33,7 @@
   color: #260077;
   margin-bottom: 20px;
   font-weight: bold;
+  font-size: 30px;
 }
 
 .input_group {
@@ -53,17 +54,6 @@
   border: 1px solid #260077;
   border-radius: 4px;
   font-size: 20px;
-}
-
-.forgot_password {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.forgot_password a {
-  color: #260077;
-  font-size: 18px;
-
 }
 
 button {
