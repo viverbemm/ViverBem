@@ -13,16 +13,7 @@ function Completar_Perfil() {
         <div className={styles.paginaCompleta}>
             <NavBar/>
             <main>
-                <div className={styles.container_Perfil}>
-                    <section className={styles.sessao}>
-                        <h3 className={styles.h3}>Dados Pessoais:</h3>
-                        <p className={styles.nome}><b className={styles.b5}>Nome Completo:</b> Luísa Heringer</p>
-                        <p className={styles.telefone}><b className={styles.b4}>Telefone:</b> (27) 9171-4986</p>
-                        <p className={styles.email}><b className={styles.b3}>Email:</b> luisaheringer@gmail.com</p>
-                        <p className={styles.nascimento}><b className={styles.b2}>Data de nascimento:</b> 25/10/1998</p>
-                        <p className={styles.genero}><b className={styles.b1}>Gênero:</b> Feminino</p>
-                    </section>
-                </div>
+               
             </main>
 
             <main>
