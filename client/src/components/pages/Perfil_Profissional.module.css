@@ -1,4 +1,3 @@
-
 .header {
     background-color: #E6E6FA;
     width: 100%;
@@ -42,6 +41,7 @@
 }
 
 .introText {
+    margin-top: 50px;
     margin-left: 20px;
     max-width: 80%;
     /* Limita a largura do texto, deixando mais espaço para a imagem */
@@ -53,8 +53,9 @@
 }
 
 .introText p {
-    margin-left: 20px;
-    max-width: 80%;
+    margin-left: 40px;
+    margin-right: 40px;
+    max-width: 100%;
     /* Limita a largura do texto, deixando mais espaço para a imagem */
     text-align: left;
     /* Alinha o texto à direita */
@@ -89,9 +90,13 @@
     /* Para garantir que o texto dos elementos como <p>, <h3>, etc., sejam centralizados */
 }
 
-.cont {
-    padding: 30px;
-    background-color: #BBADDF;
+.pI,
+.pII,
+.pIII,
+.pIV,
+.pV,
+.pVI {
+    margin-bottom: 1px;
 }
 
 .containerIII {
@@ -102,6 +107,11 @@
     color: #23008D;
     border: 1px solid #ddd;
     border-radius: 8px;
+}
+
+.cont {
+    padding: 30px;
+    background-color: #BBADDF;
 }
 
 .ato {
@@ -140,7 +150,7 @@
     text-decoration: none;
 }
 
-.reservar{
+.reservar {
     margin-top: -120px;
 }
 
@@ -151,6 +161,7 @@
     color: #23008D;
     border: 1px solid #ddd;
     border-radius: 8px;
+    margin-bottom: 30px;
 }
 
 
@@ -166,7 +177,7 @@
     color: rgb(52, 3, 151);
     font-weight: bold;
     font-size: 30px;
-    margin-top: 80px;
+    margin-top: 30px;
 }
 
 .controd {
