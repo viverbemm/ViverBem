@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from './Pag_men.module.css';
 import NavBar from '../layout/navBar';
+import { useNavigate } from 'react-router-dom';
 
 function Pagamento() {
     const [cardNumber, setCardNumber] = useState('');
@@ -10,6 +11,7 @@ function Pagamento() {
     const [cardType, setCardType] = useState('');
     const [authenticated, setAuthenticated] = useState(false);
     const [plan, setPlan] = useState('mensal'); // Estado para o plano selecionado
+    const navigate = useNavigate(); // Hook para navegação
 
     const identifyCardType = (number) => {
         const visaRegEx = /^4[0-9]{0,}/;
@@ -31,7 +33,6 @@ function Pagamento() {
         }
         return "Unknown";
     };
-    
 
     const handleCardNumberChange = (e) => {
         let number = e.target.value.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
@@ -61,6 +62,14 @@ function Pagamento() {
         setPlan(e.target.value);
     };
 
+    const handleCardHolderChange = (e) => {
+        const value = e.target.value;
+        // Permite apenas letras e espaços no campo "Nome do Titular"
+        if (/^[a-zA-Z\s]*$/.test(value)) {
+            setCardHolder(value);
+        }
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
         // Valida o ano da data de validade
@@ -68,12 +77,16 @@ function Pagamento() {
         const expiryYear = parseInt(expiryDate.slice(3, 5), 10);
         const expiryMonth = parseInt(expiryDate.slice(0, 2), 10);
 
-        if (cardNumber.length === 19 && expiryDate.length === 5 && cvv.length === 3) {
+        if (cardNumber.length === 19 && expiryDate.length === 5 && cvv.length === 3 && cardHolder) {
             if (expiryYear < currentYear % 100 || (expiryYear === currentYear % 100 && expiryMonth < new Date().getMonth() + 1)) {
                 alert("O ano de validade do cartão precisa ser maior ou igual a 2024.");
                 return;
             }
             setAuthenticated(true);
+            // Aguarda 2 segundos (2000 ms) antes de redirecionar
+            setTimeout(() => {
+                navigate('/Completarperfil');
+            }, 3000);
         } else {
             alert("Dados inválidos. Verifique as informações e tente novamente.");
         }
@@ -114,7 +127,7 @@ function Pagamento() {
                             type="text"
                             placeholder="Nome no cartão"
                             value={cardHolder}
-                            onChange={(e) => setCardHolder(e.target.value)}
+                            onChange={handleCardHolderChange}
                         />
                     </div>
                     <div className={styles.form_row}>

@@ -14,6 +14,7 @@ import Pag_Men from './components/pages/Pag_Men';
 import Completar_Perfil from './components/pages/Completar_Perfil';
 import PaginaInicial from './components/pages/PaginaInicial';
 import MinhaConta from './components/pages/MinhaConta';
+import Perfil_Completo from './components/pages/Perfil_Completo';
 
 
 function App() {
@@ -32,6 +33,8 @@ function App() {
             <Route path='/Pagamento' element={<Pag_Men/>}/>
             <Route path='/CompletarPerfil' element={<Completar_Perfil/>}/>
             <Route path='/PaginaInicial' element={<PaginaInicial/>}/>
+            <Route path='/Perfil' element={<Perfil_Completo/>}/>
+            
          
             <Route path='/MinhaConta' element={<MinhaConta/>}/>
           

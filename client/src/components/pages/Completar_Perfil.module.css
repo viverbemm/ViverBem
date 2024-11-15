@@ -1,246 +1,73 @@
-.paginaCompleta{
-    height: 100vw;
-    margin: 0;
-    padding: 0;
- 
+.form_container {
+  max-width: 500px;
+  margin: auto;
+  padding: 80px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.sessao {
-    margin: 20px 0;
-    text-align: justify;
-    text-align-last: right; 
-    padding-right: 10px;
-    background-color: #c0c0f2;
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 20px;
 }
 
-.container_Perfil {
-    width: 40%;
-    padding: 10px;
-    background-color: #c0c0f2;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    transform: translateY(-250px);
-    text-align: left;
+.form_group {
+  margin-bottom: 15px;
 }
 
-.b1 {
-    color: #000075;
-    font-size: 1.0em;
-    background-color: #c0c0f2;
+.form_group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
 }
 
-.b2 {
-    color: #000075;
-    font-size: 1.0em;
-    background-color: #c0c0f2;
+.form_group input,
+.form_group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
-.b3 {
-    color: #000075;
-    font-size: 1.0em;
-    background-color: #c0c0f2;
+textarea {
+  height: 80px;
+  resize: none;
 }
 
-.b4 {
-    color: #000075;
-    font-size: 1.0em;
-    background-color: #c0c0f2;
+.submit_button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #42029b;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
 }
 
-.b5 {
-    color: #000075;
-    font-size: 1.0em;
-    background-color: #c0c0f2;
+.submit_button:hover {
+  background-color: #0056b3;
 }
 
-.containers_Complete {
-    width: 40%;
-    padding: 30px;
-    background-color: #c0c0f2;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    transform: translateY(-650px);
-    text-align: left;
-    
+.perfil {
+  background-color: #c2c2f8;
 }
 
-
-.complete h2 {
-    color: #000075;
-    font-size: 1.5em;
-    background-color: #c0c0f2;
+/* Estilo para campos com erro */
+.error input,
+.error textarea,
+.error input[type="file"] {
+  border: 2px solid #ff4d4d; /* Borda vermelha */
+  background-color: #ffe6e6; /* Fundo levemente avermelhado */
 }
 
-.complete {
-    margin: 30px 0;
-    text-align: center;
-    transform: translateY(-50px);
-    margin-top: 50px;
-    background-color: #c0c0f2;
-  
-}
-
-
-.b6 {
-    color: #000075;
-    font-size: 1.0em;
-    background-color: #c0c0f2;
-}
-
-.experiencia {
-    color: #000075;;
-    margin: 20px 0;
-    text-align: center; 
-    transform: translateY(-70px);
-    background-color: #c0c0f2;
-}
-
-.inputExperiencia {
-    width: 40%; 
-    padding: 8px; 
-    margin-top: 0.5em; 
-    border: 1px solid #000075; 
-    border-radius: 4px; 
-    font-size: 1em; 
-    transition: border-color 0.3s; 
-    background-color: #c0c0f2;
-}
-
-.formacao {
-    color: #000075;;
-    margin: 20px 0;
-    text-align: center; 
-    transform: translateY(-70px);
-    background-color: #c0c0f2;
-}
-
-.inputFormacao {
-    width: 40%; 
-    padding: 8px; 
-    margin-top: 0.5em; 
-    border: 1px solid #000075; 
-    border-radius: 4px; 
-    font-size: 1em; 
-    transition: border-color 0.3s; 
-    background-color: #c0c0f2;
-}
-
-.sobre {
-    color: #000075;;
-    margin: 20px 0;
-    text-align: center; 
-    transform: translateY(-70px);
-    background-color: #c0c0f2;
-}
-
-.inputSobre {
-    width: 40%; 
-    padding: 8px; 
-    margin-top: 0.5em; 
-    border: 1px solid #000075; 
-    border-radius: 4px; 
-    font-size: 1em; 
-    transition: border-color 0.3s; 
-    background-color: #c0c0f2;
-}
-
-.certificado {
-    color: #000075;;
-    margin: 20px 0;
-     text-align: center; 
-    transform: translateY(-70px);
-    background-color: #c0c0f2;
-}
-
-.inputCertificado {
-    width: 40%; 
-    padding: 8px; 
-    margin-top: 0.5em; 
-    border: 1px solid #000075; 
-    border-radius: 4px; 
-    font-size: 1em; 
-    transition: border-color 0.3s; 
-    background-color: #c0c0f2;
-}
-
-.botao_Final {
-    background-color: #000075;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-left: 370px;
-    transform: translateY(-50px);
-  }
-  
-  .botao_Final:hover {
-    background-color: #a6a6e8;
-    color:#000075;
-    border: 2px solid #000075;
-   
-  }
-  
-.nome{
-    background-color: #c0c0f2;
-}
-
-.telefone{
-    background-color: #c0c0f2;
-}
-
-.email{
-    background-color: #c0c0f2;
-}
-
-.nascimento{
-    background-color: #c0c0f2;
-}
-
-.genero{
-    background-color: #c0c0f2;
-}
-
-.formComplete{
-    background-color: #c0c0f2;
-}
-
-.tempoExperiencia{
-    background-color: #c0c0f2;
-}
-
-.formacaoAcademica{
-    background-color: #c0c0f2;
-}
-
-.sobreVoce{
-    background-color: #c0c0f2;
-}
-
-.certi{
-    background-color: #c0c0f2;
-}
-
-.valorDi{
-    background-color: #c0c0f2;
-}
-
-.valor {
-    color: #000075;;
-    margin: 20px 0;
-     text-align: center; 
-    transform: translateY(-70px);
-    background-color: #c0c0f2;
-}
-
-.b7 {
-    color: #000075;
-    font-size: 1.0em;
-    background-color: #c0c0f2;
-}
-
-.h3 {
-    color: #000075;
-    font-size: 1.5em;
-    background-color: #c0c0f2;
+.error label {
+  color: #ff4d4d; /* Vermelho claro para o texto do rótulo */
 }
