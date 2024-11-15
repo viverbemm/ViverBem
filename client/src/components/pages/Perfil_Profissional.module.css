@@ -1,5 +1,5 @@
-.header {
-    background-color: #E6E6FA;
+header {
+    background-color: #c0c0f2;
     width: 100%;
     padding: 10px;
     display: flex;
@@ -10,35 +10,45 @@
 .intro {
     padding: 30px;
     background-color: #BBADDF;
-}
-
-.about {
-    padding: 30px;
-    background-color: #BBADDF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .containerI {
     display: flex;
     /* Torna o container um flex container */
-    align-items: center;
-    /* Alinha verticalmente a imagem e o texto */
     justify-content: flex-start;
-    /* Garante que o conteúdo não se sobreponha */
-    width: 100%;
-    height: 350px;
+    /* Alinha os itens à esquerda horizontalmente */
+    align-items: center;
+    /* Centraliza os itens verticalmente */
+    width: 80%;
+    /* Ocupa toda a largura disponível */
+    height: auto;
+    /* Ajusta a altura conforme o conteúdo */
+    
     background-color: #E6E6FA;
+    /* Cor de fundo */
     border: 1px solid #ddd;
+    /* Borda, opcional */
     border-radius: 8px;
+    /* Bordas arredondadas, opcional */
+    gap: 20px;
+    /* Espaço entre a imagem e o texto */
 }
 
 .profilePic {
-    width: 350px;
-    /* Aumente a largura da imagem */
-    height: 350px;
-    /* Aumente a altura da imagem */
+    width: 400px;
+    /* Ajuste a largura conforme necessário */
+    height: 400px;
+    /* Ajuste a altura para manter a proporção */
     object-fit: cover;
-    /* Garante que a imagem se ajuste sem distorcer */
+    /* Garante que a imagem não distorça */
+    margin: 0;
+    /* Remove margens */
+    border-radius: 0;
 }
+
 
 .introText {
     margin-top: 50px;
@@ -64,6 +74,14 @@
     color: #23008D;
 }
 
+.about {
+    padding: 30px;
+    background-color: #BBADDF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .containerII {
     display: flex;
     /* Torna o container um flex container */
@@ -71,7 +89,7 @@
     /* Alinha verticalmente a imagem e o texto */
     justify-content: flex-start;
     /* Garante que o conteúdo não se sobreponha */
-    width: 100%;
+    width: 80%;
     height: 700px;
     background-color: #E6E6FA;
     border: 1px solid #ddd;
@@ -99,8 +117,16 @@
     margin-bottom: 1px;
 }
 
+.cont {
+    padding: 30px;
+    background-color: #BBADDF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .containerIII {
-    width: 100%;
+    width: 80%;
     height: 300px;
     padding: 20px;
     background-color: #E6E6FA;
@@ -109,13 +135,8 @@
     border-radius: 8px;
 }
 
-.cont {
-    padding: 30px;
-    background-color: #BBADDF;
-}
-
 .ato {
-    margin-left: 5%;
+    margin-left: 15%;
     margin-bottom: 5%;
     margin-top: 3%;
 }
@@ -130,8 +151,9 @@
     /* Garante que as imagens não deformem */
     float: left;
     /* Alinha as imagens à esquerda */
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 10%;
+    margin-right: 60%;
+    margin-top: 0px;
 }
 
 .text,
@@ -146,7 +168,8 @@
     background-color: #001870;
     color: #fff;
     border: none;
-    margin-left: 58%;
+    margin-left: 65%;
+    margin-bottom: -50%;
     text-decoration: none;
 }
 
@@ -154,8 +177,18 @@
     margin-top: -120px;
 }
 
+.rod {
+    padding: 30px;
+    background-color: #BBADDF;
+    /*padding: 40px;*/
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .containerIV {
-    width: 100%;
+    width: 80%;
     padding: 20px;
     background-color: #E6E6FA;
     color: #23008D;
@@ -165,12 +198,7 @@
 }
 
 
-.rod {
-    padding: 30px;
-    background-color: #BBADDF;
-    /*padding: 40px;*/
-    text-align: center;
-}
+
 
 .rodape {
     text-align: center;

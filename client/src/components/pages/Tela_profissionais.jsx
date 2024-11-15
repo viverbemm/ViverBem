@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import stylesT from './Tela_Profissionais.module.css';
+import stylesT from './Tela_profissionais.module.css';
 import stylesM from './Menu_superior.module.css';
 import profileMenu from './assets/img/menu_white_36dp.svg';
 import profileCarlos from '../pages/imagens/carlosmendes.jpg';
@@ -8,7 +8,9 @@ import profileGabriel from '../pages/imagens/gabriel.webp';
 import profileBenjamin from '../pages/imagens/benjamin.webp';
 import profileLuisa from '../pages/imagens/luisa.webp';
 import profileMaite from '../pages/imagens/maite.webp';
-import Navbar from '../layout/navBar';
+import NavBar from '../layout/navBar';
+import { Link } from 'react-router-dom';
+
 
 function Profissionais() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,41 +20,8 @@ function Profissionais() {
   };
 
   return (
-    <div style={{ backgroundColor: '#E6E6FA', width: '100vw', display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-      <header className={stylesT.header}>
-        <nav className={stylesM.nav_bar}>
-          <div className={stylesM.logo}>
-            <h1>ViverBem+</h1>
-          </div>
-          <div className={stylesM.nav_list}>
-            <ul>
-              <li className={stylesM.nav_item}>
-                <a className={stylesM.nav_link}>Página inicial</a>
-              </li>
-              <li className={stylesM.nav_item}>
-                <a className={stylesM.nav_link}>Login</a>
-              </li>
-            </ul>
-          </div>
-          <div className={stylesM.mobile_menu_icon}>
-            <button onClick={menuShow}>
-              <img src={profileMenu} alt="Menu Icon" />
-            </button>
-          </div>
-        </nav>
-
-        <div className={`${stylesM.mobile_menu} ${menuOpen ? stylesM.open : ''}`}>
-          <ul>
-            <li className={stylesM.nav_item}>
-              <a href="#" className={stylesM.nav_link}>Página inicial</a>
-            </li>
-            <li className={stylesM.nav_item}>
-              <a href="#" className={stylesM.nav_link}>Login</a>
-            </li>
-          </ul>
-        </div>
-      </header>
-
+    <div style={{ backgroundColor: '#E6E6FA', width: '100%', display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+      <NavBar />
       <div className={stylesT.roxo}>
         <div className={stylesT.profissionais}>
           <h1>Profissionais</h1>
@@ -68,8 +37,18 @@ function Profissionais() {
             { nome: 'Maitê Vieira', experiencia: '9 meses', cidade: 'Domingos Martins - ES', img: profileMaite },
           ].map((profissional, index) => (
             <div className={stylesT.grid_item} key={index}>
-              <img src={profissional.img} alt={`Descrição da imagem de ${profissional.nome}`} />
-              <h1>{profissional.nome}</h1>
+              <Link to={`/perfil_profissional/${profissional.nome.toLowerCase().replace(' ', '-')}`}>
+                <img src={profissional.img} alt={`Descrição da imagem de ${profissional.nome}`} />
+              </Link>
+              <h1>  <Link
+                to={`/perfil_profissional/${profissional.nome.toLowerCase().replace(' ', '-')}`}
+                style={{
+                  textDecoration: 'none',
+                  color: 'inherit',
+                }}
+              >
+                {profissional.nome}
+              </Link></h1>
               <div className={stylesT.conteupro}>
                 <p>Tempo de experiência: {profissional.experiencia}</p>
                 <p>Cidade: {profissional.cidade}</p>
@@ -91,7 +70,7 @@ function Profissionais() {
         ></iframe>
 
         <h1 className={stylesT.rodape}>ViverBem+</h1>
-        <p className={stylesT.controd}>Centro Empresarial Shopping Praia da Costa, 245, Vila Velha, ES</p>
+        <p className={stylesT.controd}>Centro Empresarial Shopping Praia da Costa, 245, Vila Velha - ES.</p>
       </div>
     </div>
   );

@@ -1,0 +1,58 @@
+.font{
+
+font-size: 35px;
+
+}
+
+
+
+.page{
+    min-height: 100vh; 
+    width: 100%; 
+    background-color: #d1c4e9; 
+    display: flex;
+    flex-direction: column;
+  }
+  
+
+
+.bot{
+    
+    padding: 10px;
+    margin-right: 10px;
+    
+}
+
+
+.bot h1{
+
+    font-size: 15px;
+    color: #fff;
+    
+}
+
+
+
+.pagee{
+
+    background-color: #d3d3f9; 
+    height: 100vh;
+}
+
+
+.tab th{
+    color: #260077;
+    font-size: 20px;
+}
+
+.tab th{
+
+    background-color: #d3d3f9
+}
+
+.tabb td{
+  color: #260077;
+  font-size: 20px;
+  font-weight: bold;
+
+}

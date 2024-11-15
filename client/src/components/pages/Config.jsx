@@ -1,38 +1,43 @@
 import React, { useState } from 'react';
 import styles from './Config.module.css';
 import { useNavigate } from 'react-router-dom';
-import Menu_superior from './Menu_superior.jsx';
+import 'font-awesome/css/font-awesome.min.css';
+import NavBar from '../layout/navBar';
+import NavInferior from '../layout/navInferior';
 
 const Configuracoes = () => {
-    // State to manage the mobile menu's visibility
+    
     const [menuOpen, setMenuOpen] = useState(false);
 
-    // Function to toggle the menu's visibility
     const menuShow = () => {
-        setMenuOpen(prevState => !prevState); // Toggle the state
+        setMenuOpen(prevState => !prevState);
     };
 
     return (
-        <main>
+
+   <div>
+      <NavBar/>
+        <main className={styles.config}>
            
+         
+
             <div className={styles.config_container}>
                 <h2>Configurações</h2>
                 <div className={styles.config_item}>
-                    <i className="fas fa-wallet"></i>
-                    <a className={styles.cada} href="#">Minha Conta</a>
+                    <i className= "fa-solid fa-circle-user"></i>
+                    <a className={styles.cada} href="/tela_profissionais">Minha Conta</a>
                 </div>
                
                 <div className={styles.config_item}>
                     <i className="fas fa-dollar-sign"></i>
-                    <a className={styles.cada} href="#">Pagamentos</a>
+                    <a className={styles.cada} href="/Login">Pagamentos</a>
+                    
                 </div>
-            </div>
-
-            <div className={styles.endereco}>
-                <p>Viverbem+</p>
-                <p>Centro Empresarial Shopping Praia da Costa, 245, Vila Velha, ES</p>
-            </div>
+                </div>
+                <NavInferior/>
+           
         </main>
+        </div>
     );
 };
 

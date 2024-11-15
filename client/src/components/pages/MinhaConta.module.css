@@ -1,0 +1,93 @@
+/* Estilos para a página de edição de perfil */
+.page{
+  background-color:  #dedef5c2;    
+    height: 100vh;
+
+}
+.editProfileContainer {
+    max-width: 500px;
+    max-height: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 3%;
+    }
+    
+    .editProfileContainer h2 {
+    font-size: 24px;
+    color:#0120a7;
+    margin-bottom: 5px;
+    }
+    
+    .form {
+    display: flex;
+    flex-direction: column;
+    }
+    
+    .inputGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1px;
+    }
+    
+    .inputGroup label {
+    font-size: 14px;
+    color:#0120a7;
+    margin-bottom: 5px;
+    }
+    
+    .inputGroup input,
+    .inputGroup select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    }
+    
+    .inputGroup input:focus,
+    .inputGroup select:focus {
+    border-color: #0120a7;
+    }
+    
+    .submitButton {
+    background-color:#0120a7;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    }
+    
+    .submitButton:hover {
+    background-color: #5700b3;
+    }
+    
+    /* Mensagens de erro e sucesso */
+    .error {
+    color: red;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    }
+    
+    .success {
+    color: green;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    }
+    
+    /* Exibe o nome do arquivo de foto de perfil selecionado */
+    .inputGroup p {
+    font-size: 14px;
+    color:#0120a7;
+    margin-top: 5px;
+    }

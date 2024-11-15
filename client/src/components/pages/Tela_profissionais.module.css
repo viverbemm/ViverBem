@@ -1,16 +1,5 @@
-.header {
-    background-color: #E6E6FA;
-    width: 100%;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .roxo {
-    background-color: rgb(230, 230, 250);
     color: rgb(52, 3, 151);
-    max-width: 100%;
 }
 
 .profissionais {
@@ -38,17 +27,21 @@
 }
 
 .grid_item img {
-    max-width: 100%;
-    /* Faz a imagem ocupar toda a largura do item */
-    height: 300px;
-    /* Define uma altura fixa para todas as imagens (ajuste conforme necessário) */
+    width: 80%;
+    /* Ocupe toda a largura do grid item */
+    aspect-ratio: 1 / 1;
+    /* Mantém a proporção 1:1 para um formato quadrado */
     object-fit: cover;
-    /* Mantém a proporção da imagem, cortando partes se necessário */
+    /* Ajusta a imagem para cobrir completamente o espaço disponível */
+    border-radius: 8px;
+    /* (Opcional) Arredonde os cantos para um visual mais suave */
 }
 
 .conteupro {
-    font-size: 15px;
-    margin-bottom: 50px;
+    font-size: 40px;
+    line-height: 1.6;
+    text-align: center;
+    /* Faz o texto ser justificado */
 }
 
 .mapa {
@@ -73,6 +66,7 @@
     font-size: 25px;
     margin-top: 80px;
 }
+
 .controd {
     font-size: 15px;
     text-align: center;

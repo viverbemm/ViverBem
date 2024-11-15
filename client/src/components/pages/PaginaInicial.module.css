@@ -1,0 +1,75 @@
+/* Reset padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Define a altura total da página */
+
+
+/* Define o contêiner principal para ocupar a altura completa */
+main {
+    min-height: 100vh; /* Garante que o main ocupe toda a altura da viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+    background-color:  #d3d3f9;
+}
+
+.h1 {
+    color: #000075;
+    font-size: 1.9em;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #c0c0f2;
+}
+
+.cuidador{
+    background-color: #c0c0f2;
+}
+
+
+.textoInicial{
+    color: #000075;
+    font-size: 1.0em;
+    margin-top: 10px;
+    text-align: justify;
+    background-color: #c0c0f2;
+}
+
+.comecando{
+    display: flex;
+    flex-direction: column;
+    margin-top: 250px;
+    align-items: center;
+    margin: 20px 0;
+    padding-right: 10px;
+    background-color: #c0c0f2;
+}
+
+.containerDoInicio {
+    width: 104%;
+    max-width: none; 
+    padding: 20px; 
+    background-color: #c0c0f2; 
+    border-radius: 8px; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    margin-top: center;
+}
+
+.planosMensais{
+    background-color: #c0c0f2;
+}
+
+.valorMensal{
+    background-color: #c0c0f2;
+}
+
+.valorAnual{
+    background-color: #c0c0f2;
+}

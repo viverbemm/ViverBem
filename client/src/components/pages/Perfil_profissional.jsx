@@ -5,6 +5,7 @@ import stylesP from './Perfil_Profissional.module.css';
 import stylesM from './Menu_superior.module.css';
 import telephone from '../pages/imagens/telephone-handle-silhouette.png';
 import email from '../pages/imagens/email.png';
+import NavBar from '../layout/navBar';
 
 function Profissional() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -15,46 +16,15 @@ function Profissional() {
 
   return (
     <div style={{ backgroundColor: '#E6E6FA', width: '100%', display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-      <header className={stylesP.header}>
-        <nav className={stylesM.nav_bar}>
-          <div className={stylesM.logo}>
-            <h1>ViverBem+</h1>
-          </div>
-          <div className={stylesM.nav_list}>
-            <ul>
-              <li className={stylesM.nav_item}>
-                <a className={stylesM.nav_link}>Página inicial</a>
-              </li>
-              <li className={stylesM.nav_item}>
-                <a className={stylesM.nav_link}>Login</a>
-              </li>
-            </ul>
-          </div>
-          <div className={stylesM.mobile_menu_icon}>
-            <button onClick={menuShow}>
-              <img src={profileMenu} alt="Menu Icon" />
-            </button>
-          </div>
-        </nav>
-
-        <div className={`${stylesM.mobile_menu} ${menuOpen ? stylesM.open : ''}`}>
-          <ul>
-            <li className={stylesM.nav_item}>
-              <a href="#" className={stylesM.nav_link}>Página inicial</a>
-            </li>
-            <li className={stylesM.nav_item}>
-              <a href="#" className={stylesM.nav_link}>Login</a>
-            </li>
-          </ul>
-        </div>
-      </header>
-
+      <NavBar />
       <section className={stylesP.intro}>
         <div className={stylesP.containerI}>
           <img src={profilePic} alt="Luísa Heringer" className={stylesP.profilePic} />
           <div className={stylesP.introText}>
-            <h2>ﾠﾠﾠﾠﾠOlá, eu sou a Luísa Heringer.</h2>
-            <p>ﾠ</p>
+            <h2 style={{
+              color: '#23008D',
+              marginRight: '20%',
+            }}>Olá, eu sou a Luísa Heringer.</h2>
             <p className={stylesP.introText_p}>
               <p className={stylesP.pI}>Meu nome é Luísa Heringer, e tenho o privilégio de</p>
               <p className={stylesP.pII}>dedicar minha vida ao cuidado dos idosos há 3 anos e 6</p>
@@ -97,8 +67,14 @@ function Profissional() {
       <section className={stylesP.cont}>
         <div className={stylesP.containerIII}>
           <h1 className={stylesP.ato}>Contato</h1>
-          <p><img src={email} alt="email" className={stylesP.email} /><strong>Email:</strong> luisaheringer@gmail.com</p>
-          <p><img src={telephone} alt="telephone" className={stylesP.telephone} /><strong>Telefone:</strong> (27) 99999-2121</p>
+          <p><img src={email} alt="email" className={stylesP.email} /><strong style={{
+            color: '#23008D',
+            marginLeft: '-57%',
+          }}>Email:</strong> luisaheringer@gmail.com</p>
+          <p><img src={telephone} alt="telephone" className={stylesP.telephone} /><strong style={{
+            color: '#23008D',
+            marginLeft: '-57%',
+          }}>Telefone:</strong> (27) 99999-2121</p>
           <div className={stylesP.reservar}>
             <p className={stylesP.text}>Estou sempre em busca de novas</p>
             <p className={stylesP.text}>oportunidades. Entre em contato.</p>
@@ -111,8 +87,7 @@ function Profissional() {
       <section className={stylesP.rod}>
         <div className={stylesP.containerIV}>
           <h1 className={stylesP.rodape}>ViverBem+</h1>
-          <p className={stylesP.pI}>Centro Empresarial Shopping</p>
-          <p className={stylesP.pII}>Praia da Costa, 245, Vila Velha, ES</p>
+          <p className={stylesP.pI}>Centro Empresarial Shopping Praia da Costa, 245, Vila Velha - ES</p>
         </div>
       </section>
     </div>
