@@ -1,12 +1,5 @@
-.container {
-    font-family: Arial, sans-serif;
-    background-color: #EAE8FF;
-    color: #333;
-    max-width: 100%;
-}
-
-.header {
-    background-color: #E6E6FA;
+header {
+    background-color: #c0c0f2;
     width: 100%;
     padding: 10px;
     display: flex;
@@ -14,70 +7,225 @@
     align-items: center;
 }
 
-.logo {
-    font-size: 24px;
+.intro {
+    padding: 30px;
+    background-color: #BBADDF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.nav {
+.containerI {
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 70%;
+    height: auto;
+    background-color: #E6E6FA;
+    border: 1px solid #ddd;
+    border-radius: 30px;
     gap: 20px;
 }
 
-.main {
-    display: flex;
-    gap: 20px;
+.profilePic {
+    width: 400px;
+    height: 420px;
+    object-fit: cover;
+    margin: 0;
+    border-radius: 30px;
+}
+
+.introText {
+    margin-top: 50px;
+    margin-left: 100px;
+    max-width: 80%;
+    text-align: left;
+    font-size: 30px;
+    color: #23008D;
+    font-weight: 900;
+}
+
+.introText p {
+    margin-left: 40px;
+    margin-right: 40px;
     max-width: 100%;
+    font-size: 18px;
+    font-weight: 100;
+    color: #23008D;
 }
 
-.profileSection {
-    display: flex;
-    gap: 20px;
-    width: 100%;
-}
-
-.profileImage {
-    width: 150px;
-    border-radius: 50%;
+.pI,
+.pII,
+.pIII,
+.pIV,
+.pV,
+.pVI {
+    margin-bottom: 1px;
+    margin-left: 90px;
+    font-size: 18px;
 }
 
 .services {
     background-color: #E0DBF7;
     padding: 10px;
     border-radius: 10px;
+    color: #23008D;
 }
 
-.bookingSection {
-    background-color: #F0EFFB;
-    padding: 20px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.bookingSection {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
+.reserva {
+    background-color: white;
     border-radius: 5px;
     border: none;
     cursor: pointer;
+    width: 32%;
+    border-radius: 30px;
+    margin-left: 16.4%;
+    padding: 15px;
 }
 
-.contactSection {
-    background-color: #E0DBF7;
-    padding: 20px;
-    border-radius: 10px;
+.pagamento {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 70%;
+    height: auto;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    width: 32%;
 }
 
-.rodape {
-    text-align: center;
-    padding: 10px;
-    background-color: #A89CD8;
+.cont {
+    padding: 30px;
+    background-color: #BBADDF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 colunas */
+    gap: 20px;
+    /* Diminuindo o espaçamento entre as imagens */
+    justify-items: center;
+    /* Centraliza os itens dentro das células do grid */
+    margin-top: 30px;
+    /* Espaçamento entre o título e o grid */
+    padding-bottom: 10px;
+    /* Espaço extra abaixo do grid */
+}
+
+.grid_item {
+    width: 60%;
+    height: 10;
+    object-fit: cover;
+    padding-bottom: 50%;
+    /* Torna o item quadrado */
+    position: relative;
+    overflow: hidden;
+    /* Garante que a imagem não ultrapasse o limite do contêiner */
+}
+
+.pagamento_imagem {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    /* Garante que a imagem cubra todo o espaço sem distorção */
+}
+
+.grid_containerr {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 3 colunas */
+    gap: 20px;
+    /* Diminuindo o espaçamento entre as imagens */
+    justify-items: center;
+    /* Centraliza os itens dentro das células do grid */
+    margin-top: 30px;
+    /* Espaçamento entre o título e o grid */
+    padding-bottom: 10px;
+    /* Espaço extra abaixo do grid */
+}
+
+.grid_itemm {
+    width: 60%;
+    height: 10;
+    object-fit: cover;
+    padding-bottom: 50%;
+    /* Torna o item quadrado */
+    position: relative;
+}
+
+.pagamento_imagemm {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    /* Garante que a imagem cubra todo o espaço sem distorção */
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #001870;
     color: #fff;
+    border: none;
+    margin-left: 90%;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-bottom: 0px;
 }
 
-.controd {
-    font-size: 15px;
+
+.containerIII {
+    width: 70%;
+    height: 300px;
+    padding: 20px;
+    background-color: #E6E6FA;
+    color: #23008D;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    font-weight: 100;
+    font-size: 18px;
+}
+
+.ato {
+    margin-left: 15%;
+    margin-bottom: 5%;
+    margin-top: 3%;
+    font-size: 30px;
+}
+
+.email,
+.telephone {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    float: left;
+    margin-left: 10%;
+    margin-top: 0px;
+}
+
+.rod {
+    padding: 30px;
+    background-color: #BBADDF;
     text-align: center;
-    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerIV {
+    width: 70%;
+    padding: 20px;
+    background-color: #E6E6FA;
+    color: #23008D;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    margin-bottom: 30px;
 }

@@ -24,14 +24,16 @@ function Profissional() {
             <h2 style={{
               color: '#23008D',
               marginRight: '20%',
-            }}>Olá, eu sou a Luísa Heringer.</h2>
+              fontSize: '30px',
+              marginBottom: '20px'
+            }}>ﾠﾠ ﾠﾠOlá, eu sou a Luísa Heringer.</h2>
             <p className={stylesP.introText_p}>
-              <p className={stylesP.pI}>Meu nome é Luísa Heringer, e tenho o privilégio de</p>
-              <p className={stylesP.pII}>dedicar minha vida ao cuidado dos idosos há 3 anos e 6</p>
-              <p className={stylesP.pIII}>meses. Minha paixão por esta profissão é impulsionada</p>
-              <p className={stylesP.pIV}>pela empatia e respeito pelos idosos, e meu objetivo é</p>
-              <p className={stylesP.pV}>proporcionar uma qualidade de vida excepcional para</p>
-              <p className={stylesP.pVI}>aqueles que confiam em meus cuidados.</p>
+              <p className={stylesP.pI}>Meu nome é Luísa Heringer, tenho o privilégio de dedicar</p>
+              <p className={stylesP.pII}>minha vida ao cuidado dos idosos há 3 anos e 6 meses.</p>
+              <p className={stylesP.pIII}>Minha paixão por esta profissão é impulsionada pela</p>
+              <p className={stylesP.pIV}>empatia e respeito pelos idosos, sendo meu objetivo</p>
+              <p className={stylesP.pV}>proporcionar uma qualidade de vida excepcional</p>
+              <p className={stylesP.pVI}>àqueles que confiam em meus cuidados.</p>
             </p>
           </div>
         </div>
@@ -40,14 +42,18 @@ function Profissional() {
       <section className={stylesP.about}>
         <div className={stylesP.containerII}>
           <div className={stylesP.desenvol}>
-            <strong><h3>Sobre mim:</h3></strong>
+            <strong><h3 style={{
+              fontSize: '30px',
+              marginLeft: '90px'
+            }}>Sobre mim:</h3></strong>
             <p>ﾠ</p>
-            <p className={stylesP.pI}>Experiência Profissional: Cuidadora de Idosos</p>
-            <p className={stylesP.pII}>Cuidadora autônoma para idoso com doença de Parkinson avançada (2020-2023)</p>
-            <p className={stylesP.pIII}>Durante 3 anos e 6 meses, atuei como cuidadora autônoma dedicada a um senhor idoso
-              <p>diagnosticado com doença de Parkinson avançada. Minhas responsabilidades incluíam:</p>
-            </p>
-            <ul>
+            <p className={stylesP.pI}>Experiência Profissional: Cuidadora de Idosos.</p>
+            <p className={stylesP.pII}>Cuidadora autônoma para idoso com doença de Parkinson avançada (2020-2023).</p>
+            <p className={stylesP.pIII}>Durante 3 anos e 6 meses, atuei como cuidadora autônoma dedicada a um senhor idoso</p>
+            <p className={stylesP.pIV}>diagnosticado com doença de Parkinson avançada. Minhas responsabilidades incluíam:</p>
+            <ul style={{
+              marginLeft: '90px'
+            }}>
               <p>ﾠ</p>
               <li>Assistência diária</li>
               <li>Gerenciamento de sintomas</li>
@@ -66,28 +72,36 @@ function Profissional() {
 
       <section className={stylesP.cont}>
         <div className={stylesP.containerIII}>
-          <h1 className={stylesP.ato}>Contato</h1>
-          <p><img src={email} alt="email" className={stylesP.email} /><strong style={{
+          <h1 className={stylesP.ato}>Contato:</h1>
+          <p style={{ fontSize: '18px' }}><img src={email} alt="email" className={stylesP.email} /><strong style={{
             color: '#23008D',
-            marginLeft: '-57%',
+            marginLeft: '2%',
           }}>Email:</strong> luisaheringer@gmail.com</p>
-          <p><img src={telephone} alt="telephone" className={stylesP.telephone} /><strong style={{
+          <p style={{ fontSize: '18px' }}><img src={telephone} alt="telephone" className={stylesP.telephone} /><strong style={{
             color: '#23008D',
-            marginLeft: '-57%',
+            marginLeft: '2%',
+            fontSize: '18px',
           }}>Telefone:</strong> (27) 99999-2121</p>
-          <div className={stylesP.reservar}>
-            <p className={stylesP.text}>Estou sempre em busca de novas</p>
-            <p className={stylesP.text}>oportunidades. Entre em contato.</p>
-            <p>ﾠ</p>
-            <a href="#" className={stylesP.button}>Reservar</a>
+          <div style={{ marginTop: '-10%' }}>
+            <p style={{
+              marginLeft: '60%',
+              fontSize: '18px',
+              marginTop: '3%'
+            }}>Estou sempre em busca de novas</p>
+            <p style={{
+              marginLeft: '60%',
+              marginTop: '-20px',
+              fontSize: '18px',
+            }}>oportunidades. Entre em contato.</p>
           </div>
+          <a href="#" className={stylesP.button}>Reservar</a>
         </div>
       </section>
 
       <section className={stylesP.rod}>
         <div className={stylesP.containerIV}>
           <h1 className={stylesP.rodape}>ViverBem+</h1>
-          <p className={stylesP.pI}>Centro Empresarial Shopping Praia da Costa, 245, Vila Velha - ES</p>
+          <p style={{ fontWeight: '100' }}>Centro Empresarial Shopping Praia da Costa, 245, Vila Velha - ES.</p>
         </div>
       </section>
     </div>

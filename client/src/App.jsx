@@ -8,6 +8,7 @@ import EditCadastro from './components/pages/EditCadastro';
 import LoginUsuario from './components/pages/LoginUsuario';
 import Tela_profissionais from './components/pages/Tela_profissionais';
 import Perfil_profissional from './components/pages/Perfil_profissional';
+import Tela_agendamentos from './components/pages/Tela_agendamentos';
 import Login_Usuario from './components/pages/LoginUsuario';
 import Config from './components/pages/Config';
 import Pag_Men from './components/pages/Pag_Men';
@@ -30,6 +31,7 @@ function App() {
             <Route path='/tela_profissionais' element={<Tela_profissionais/>}/>
             <Route path="/perfil_profissional/:nome" element={<Perfil_profissional />} />
             <Route path='/perfil_profissional' element={<Perfil_profissional/>}/>
+            <Route path='/tela_agendamentos' element={<Tela_agendamentos/>}/>
             <Route path='/Config' element={<Config/>}/>
             <Route path='/Login_gestao' element={<Login_Gestao/>}/>
             <Route path='/Pagamento' element={<Pag_Men/>}/>
