@@ -9,6 +9,7 @@ import LoginUsuario from './components/pages/LoginUsuario';
 import Tela_profissionais from './components/pages/Tela_profissionais';
 import Perfil_profissional from './components/pages/Perfil_profissional';
 import Tela_agendamentos from './components/pages/Tela_agendamentos';
+import Perfil_Profissional from './components/pages/Perfil_profissional';
 import Login_Usuario from './components/pages/LoginUsuario';
 import Config from './components/pages/Config';
 import Pag_Men from './components/pages/Pag_Men';
