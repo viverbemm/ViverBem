@@ -10,10 +10,8 @@ import profileLuisa from '../pages/imagens/luisa.webp';
 import profileMaite from '../pages/imagens/maite.webp';
 import NavBar from '../layout/navBar';
 import { Link } from 'react-router-dom';
-import React from 'react';
-import styles from './Tela_profissionais.module.css'; // ajuste o caminho conforme necessário
-// import './assets/css/estilo.css';
-import menuIcon from './assets/img/menu_white_36dp.svg'; // ajuste o caminho conforme necessário
+import styles from './Tela_profissionais.module.css'; 
+import menuIcon from './assets/img/menu_white_36dp.svg'; 
 
 
 function Profissionais() {
