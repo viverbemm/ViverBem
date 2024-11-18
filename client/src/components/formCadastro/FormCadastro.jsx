@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import NavBar from '../layout/navBar';
 import styles from './Formcadastro.module.css';
+import NavInferior from '../layout/navInferior';
 
 function FormCadastro({ titulo, handleSubmit, id, teste }) {
     const navigate = useNavigate();
@@ -206,7 +207,11 @@ function FormCadastro({ titulo, handleSubmit, id, teste }) {
                     <section >
                         <div className={styles.form_container}>
                             <h1>{titulo}</h1>
-                            <h2><b>{formCadastro.id ? 'Editar Usuário' : 'Cadastre-se'}</b></h2>
+                            <h2 className={styles.form_title}>
+                                <b>{formCadastro.id ? 'Editar Usuário' : 'Cadastre-se'}</b>
+                            </h2>
+
+
                             <form onSubmit={submit}>
                                 <input
                                     type="text"
@@ -293,7 +298,7 @@ function FormCadastro({ titulo, handleSubmit, id, teste }) {
                                 </select>
 
                                 <button type="submit" className={styles.link}>
-                                    {formCadastro.id ? 'Salvar' : 'Cadastre-se'}
+                                    {formCadastro.id ? 'Salvar' : 'Continuar'}
                                 </button>
                             </form>
                         </div>
@@ -312,6 +317,7 @@ function FormCadastro({ titulo, handleSubmit, id, teste }) {
                     </section>
                 </main>
             </div>
+            <NavInferior />
         </div>
     );
 }
