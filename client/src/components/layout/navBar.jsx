@@ -16,7 +16,7 @@ function navBar() {
                 </div>
                 <div className={styles.navBarEsq}>
                     <a href="/PaginaInicial">Pagina Inicial</a>
-                    <a href="/LoginUsuario">Catálogo</a>
+                    <a href="/Tela_profissionais">Catálogo</a>
                     <a href="/LoginUsuario">Login</a>
                 </div>
             </header>
