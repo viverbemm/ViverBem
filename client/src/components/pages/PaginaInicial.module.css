@@ -1,25 +1,4 @@
-/* Reset padrão */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-
-
-/* Define a altura total da página */
-
-
-/* Define o contêiner principal para ocupar a altura completa */
-main {
-    min-height: 100vh; /* Garante que o main ocupe toda a altura da viewport */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;
-    text-align: center;
-    background-color:  #d3d3f9;
-}
 
 .h1 {
     color: #000075;
