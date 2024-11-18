@@ -74,6 +74,17 @@
       "senha": "123",
       "confirmar_senha": "123",
       "cidade": "vila velha"
+    },
+    {
+      "id": "b307",
+      "nome": "pietro gabriel",
+      "telefone": "279977905151",
+      "email": "pietrogabrielheringer@gmail.com",
+      "cpf": "17688810736",
+      "data_nascimento": "2024-11-14",
+      "senha": "pipi",
+      "confirmar_senha": "pipi",
+      "cidade": "vitoria"
     }
   ],
   "administradores": [

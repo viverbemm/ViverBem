@@ -32,8 +32,6 @@ function App() {
             <Route path='/Pagamento' element={<Pag_Men/>}/>
             <Route path='/CompletarPerfil' element={<Completar_Perfil/>}/>
             <Route path='/PaginaInicial' element={<PaginaInicial/>}/>
-           
-            
             <Route path='/MinhaConta' element={<MinhaConta/>}/>
           
           </Routes>
