@@ -123,3 +123,12 @@
     font-size: 1.2rem;
     color: #ffb400; /* Cor amarela para as estrelas */
 }
+
+.imginicial{
+    width: 150px; /* Altere o tamanho conforme necessário */
+    height: 150px; /* Igual à largura para garantir o formato redondo */
+    border-radius: 50%;
+    object-fit: cover; /* Garante que a imagem preencha o círculo */
+    margin: 0 auto; /* Centraliza a imagem dentro do container */
+}
+
