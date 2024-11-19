@@ -106,11 +106,22 @@
       "cidade": "cariacica"
     },
     {
-      "id": "ce06",
-      "nome": "mauricio",
+      "id": "7417",
+      "nome": "Isaac Lucca",
       "telefone": "(27) 99283-3778",
-      "email": "isaac.barbara@aluno.senai.br",
-      "cpf": "198.190.888-04",
+      "email": "isaac@gmail.com",
+      "cpf": "198.190.885-06",
+      "data_nascimento": "2002-01-19",
+      "senha": "@Isaac19",
+      "confirmar_senha": "@Isaac19",
+      "cidade": "Vila Velha"
+    },
+    {
+      "id": "ad37",
+      "nome": "Samara",
+      "telefone": "(27) 99999-9999",
+      "email": "samara.s.ribeiro@aluno.senai.br",
+      "cpf": "202.274.137-42",
       "data_nascimento": "2002-01-19",
       "senha": "@Isaac19",
       "confirmar_senha": "@Isaac19",

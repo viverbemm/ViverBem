@@ -13,10 +13,8 @@ function LoginUsuario() {
 
     // Função para validar CPF
     const isValidCPF = (cpf) => {
-        const cleanCPF = cpf.replace(/\D/g, ''); // Remove qualquer caractere não numérico
-        if (cleanCPF.length !== 11) return false; // O CPF precisa ter 11 números
-        // Aqui você pode adicionar uma validação mais rigorosa de CPF, como o algoritmo de verificação.
-        return true;
+        const cleanCPF = cpf.replace(/\D/g, '');
+        return cleanCPF.length === 11; // Verifica se o CPF tem 11 dígitos
     };
 
     // Função para autenticar o usuário
@@ -32,19 +30,14 @@ function LoginUsuario() {
         }
 
         try {
-            // Busca pelo usuário com o CPF e senha informados
             const response = await fetch(`http://localhost:3001/usuarios?cpf=${cpf}&senha=${senha}`, {
                 method: 'GET',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
+                headers: { 'Content-Type': 'application/json' },
             });
 
             const data = await response.json();
-
-            // Se encontrar o usuário, o login é bem-sucedido
             if (data.length > 0) {
-                navigate('/pagamento');  // Redireciona para a página de pagamento
+                navigate('/perfil'); // Redireciona para a página de perfil
             } else {
                 setError('CPF ou senha incorretos');
             }
@@ -53,12 +46,11 @@ function LoginUsuario() {
         }
     };
 
-    // Validação e formatação para permitir apenas números no CPF e adicionar os pontos e traço
+    // Função para formatar CPF
     const handleCpfChange = (e) => {
-        const input = e.target.value.replace(/\D/g, ''); // Remove qualquer caractere que não seja número
+        const input = e.target.value.replace(/\D/g, '');
         let formattedCPF = input;
 
-        // Adiciona os pontos e traço conforme a quantidade de dígitos
         if (formattedCPF.length > 3 && formattedCPF.length <= 6) {
             formattedCPF = `${formattedCPF.slice(0, 3)}.${formattedCPF.slice(3)}`;
         } else if (formattedCPF.length > 6 && formattedCPF.length <= 9) {
@@ -74,45 +66,45 @@ function LoginUsuario() {
         <div className={styles.pagina}>
             <NavBar />
             <div className={styles.imgvm}>
-                    <img src={VelhoMulher} alt="VelhoMulher" />
-                </div>
-           
-                
-
-               
-                    <div className={styles.caixa}>
-                        <form onSubmit={(e) => e.preventDefault()}>
-                            <h2>Login</h2>
-                            <input
-                                className={styles.cpf}
-                                type="text"
-                                name="cpf"
-                                placeholder="CPF:"
-                                value={cpf}
-                                onChange={handleCpfChange} // Usa a função handleCpfChange para validar e formatar a entrada
-                                required
-                            />
-                            <input
-                                className={styles.senha}
-                                type="password"
-                                name="senha"
-                                placeholder="Digite sua senha:"
-                                value={senha}
-                                onChange={(e) => setSenha(e.target.value)}
-                                required
-                            />
-                            {error && <p className={styles.error}>{error}</p>}
-                            <a href="/Cadastro" className={styles.registerCadastro}><b>Esqueci senha</b></a>
-                            <button
-                                className={styles.botao}
-                                type="button"
-                                onClick={handleLogin}
-                            >
-                                Entrar
-                            </button>
-                        </form>
-                    </div>
-        
+                <img src={VelhoMulher} alt="VelhoMulher" />
+            </div>
+            <div className={styles.caixa}>
+                <form onSubmit={(e) => e.preventDefault()}>
+                    <h2>Login</h2>
+                    <input
+                        className={styles.cpf}
+                        type="text"
+                        name="cpf"
+                        placeholder="CPF:"
+                        value={cpf}
+                        onChange={handleCpfChange}
+                        required
+                    />
+                    <input
+                        className={styles.senha}
+                        type="password"
+                        name="senha"
+                        placeholder="Digite sua senha:"
+                        value={senha}
+                        onChange={(e) => setSenha(e.target.value)}
+                        required
+                    />
+                    {error && <p className={styles.error}>{error}</p>}
+                    <a 
+                        onClick={() => navigate('/AlterarSenha')} 
+                        className={styles.registerCadastro}
+                    >
+                        <b>Esqueci senha</b>
+                    </a>
+                    <button
+                        className={styles.botao}
+                        type="button"
+                        onClick={handleLogin}
+                    >
+                        Entrar
+                    </button>
+                </form>
+            </div>
             <NavInferior />
         </div>
     );

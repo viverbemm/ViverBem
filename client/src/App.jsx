@@ -17,6 +17,8 @@ import Completar_Perfil from './components/pages/Completar_Perfil';
 import PaginaInicial from './components/pages/PaginaInicial';
 import MinhaConta from './components/pages/MinhaConta';
 import Perfil_Completo from './components/pages/Perfil_Completo';
+import AlterarSenha from './components/AlterarSenha';
+<components />
 
 
 function App() {
@@ -39,10 +41,8 @@ function App() {
             <Route path='/CompletarPerfil' element={<Completar_Perfil/>}/>
             <Route path='/PaginaInicial' element={<PaginaInicial/>}/>
             <Route path='/Perfil' element={<Perfil_Completo/>}/>
-            
-         
             <Route path='/MinhaConta' element={<MinhaConta/>}/>
-          
+            <Route path='/AlterarSenha' element={<AlterarSenha/>}/>
           </Routes>
         </Router> 
   );
