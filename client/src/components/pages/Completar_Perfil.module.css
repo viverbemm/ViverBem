@@ -1,9 +1,9 @@
 .form_container {
-  max-width: 500px;
-  margin: auto;
-  padding: 80px;
+  max-width: 400px; /* Reduzindo o tamanho máximo */
+  margin: 50px auto; /* Centraliza horizontalmente e adiciona um espaço no topo */
+  padding: 40px; /* Reduzindo o padding interno */
   font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
+  background-color: #d0d0f7;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -52,12 +52,11 @@ textarea {
   font-size: 16px;
 }
 
-.submit_button:hover {
-  background-color: #0056b3;
-}
+
 
 .perfil {
-  background-color: #c2c2f8;
+  background-color: #dedef5c2;
+  height: 100vh;
 }
 
 /* Estilo para campos com erro */

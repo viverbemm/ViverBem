@@ -3,6 +3,7 @@ import styles from './LoginUsuario.module.css';
 import NavBar from '../layout/navBar';
 import NavInferior from '../layout/navInferior';
 import { useNavigate } from 'react-router-dom';
+import VelhoMulher from '../pages/imagens/velho-mulher.webp';
 
 function LoginUsuario() {
     const navigate = useNavigate();
@@ -70,11 +71,15 @@ function LoginUsuario() {
     };
 
     return (
-        <div className={styles.pageee}>
+        <div className={styles.pagina}>
             <NavBar />
+            <div className={styles.imgvm}>
+                    <img src={VelhoMulher} alt="VelhoMulher" />
+                </div>
+           
+                
 
-            <main className={styles.pagina}>
-                <section className={styles.LoginUsuario}>
+               
                     <div className={styles.caixa}>
                         <form onSubmit={(e) => e.preventDefault()}>
                             <h2>Login</h2>
@@ -107,8 +112,7 @@ function LoginUsuario() {
                             </button>
                         </form>
                     </div>
-                </section>
-            </main>
+        
             <NavInferior />
         </div>
     );

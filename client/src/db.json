@@ -82,6 +82,39 @@
       "senha": "@Isaac19",
       "confirmar_senha": "@Isaac19",
       "cidade": "cariacica"
+    },
+    {
+      "id": "8101",
+      "nome": "Pietra Lopes",
+      "telefone": "(27) 99908-2457",
+      "email": "pietra@gmail.com",
+      "cpf": "040.299.034-01",
+      "data_nascimento": "1990-05-18",
+      "senha": "@Pietra123",
+      "confirmar_senha": "@Pietra123",
+      "cidade": "cariacica"
+    },
+    {
+      "id": "df42",
+      "nome": "Pietra Lopes",
+      "telefone": "(27) 99908-2457",
+      "email": "pietra@gmail.com",
+      "cpf": "040.299.034-02",
+      "data_nascimento": "2002-01-19",
+      "senha": "@Isaac19",
+      "confirmar_senha": "@Isaac19",
+      "cidade": "cariacica"
+    },
+    {
+      "id": "ce06",
+      "nome": "mauricio",
+      "telefone": "(27) 99283-3778",
+      "email": "isaac.barbara@aluno.senai.br",
+      "cpf": "198.190.888-04",
+      "data_nascimento": "2002-01-19",
+      "senha": "@Isaac19",
+      "confirmar_senha": "@Isaac19",
+      "cidade": "vila velha"
     }
   ],
   "administradores": [
