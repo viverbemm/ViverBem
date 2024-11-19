@@ -39,7 +39,7 @@ function App() {
             <Route path='/Login_gestao' element={<Login_Gestao/>}/>
             <Route path='/Pagamento' element={<Pag_Men/>}/>
             <Route path='/CompletarPerfil' element={<Completar_Perfil/>}/>
-            <Route path='/PaginaInicial' element={<PaginaInicial/>}/>
+            <Route path='/' element={<PaginaInicial/>}/>
             <Route path='/Perfil' element={<Perfil_Completo/>}/>
             <Route path='/MinhaConta' element={<MinhaConta/>}/>
             <Route path='/AlterarSenha' element={<AlterarSenha/>}/>
