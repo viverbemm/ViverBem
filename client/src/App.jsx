@@ -22,6 +22,8 @@ import ConfigConta from './components/pages/Config';
 
 
 
+
+
 function App() {
   return (
         <Router>
@@ -45,6 +47,8 @@ function App() {
             <Route path='/MinhaConta' element={<MinhaConta/>}/>
             <Route path='/AlterarSenha' element={<AlterarSenha/>}/>
             <Route path='/Config' element={<ConfigConta/>}/>
+          
+          
           </Routes>
         </Router> 
   );

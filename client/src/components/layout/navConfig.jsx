@@ -11,7 +11,7 @@ function navConfig() {
         <div className={styles.navPrinc}>
             <header>
                 <div className={styles.navBarDirei}>
-                    <a href="#">ViverBem+</a>
+                    <a href="/">ViverBem+</a>
 
                 </div>
                 <div className={styles.navBarEsqu}>

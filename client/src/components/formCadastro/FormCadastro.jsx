@@ -164,10 +164,11 @@ function FormCadastro({ titulo, handleSubmit, id }) {
       // Enviar os dados do formulário
       handleSubmit(formCadastro, id);
 
-      // Redirecionar para a tela de pagamento
-      navigate("/pagamento");
+      // Redirecionar para a tela de pagamento, passando o id do usuário
+      navigate("/pagamento", { state: { userId: id } });
     }
-  }
+}
+
 
   return (
     <div>
@@ -254,6 +255,7 @@ function FormCadastro({ titulo, handleSubmit, id }) {
                   <option value="">Selecione sua cidade:</option>
                   <option value="cariacica">Cariacica</option>
                   <option value="vitoria">Vitória</option>
+                  <option value="guarapari">Vila Velha</option>
                   <option value="serra">Serra</option>
                   <option value="guarapari">Guarapari</option>
                 </select>

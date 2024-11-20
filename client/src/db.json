@@ -1,50 +1,5 @@
 {
-  "usuarios": [
-    {
-      "id": "9421",
-      "nome": "Isaac",
-      "telefone": "(27) 99283-3778",
-      "email": "isaac@gmail.com",
-      "cpf": "198.190.887-04",
-      "data_nascimento": "2002-01-19",
-      "senha": "@Isaac19",
-      "confirmar_senha": "@Isaac19",
-      "cidade": "fundao"
-    },
-    {
-      "id": "e009",
-      "nome": "Samara ",
-      "telefone": "(27) 88888-8888",
-      "email": "isaac@gmail.com",
-      "cpf": "198.190.887-05",
-      "data_nascimento": "2002-01-19",
-      "senha": "@Isaac19",
-      "confirmar_senha": "@Isaac19",
-      "cidade": "vitoria"
-    },
-    {
-      "id": "1dab",
-      "nome": "joao",
-      "telefone": "(27) 88888-8888",
-      "email": "joao@gmail.com",
-      "cpf": "198.190.888-05",
-      "data_nascimento": "2002-12-19",
-      "senha": "@Isaac19",
-      "confirmar_senha": "@Isaac19",
-      "cidade": "vitoria"
-    },
-    {
-      "id": "0c9f",
-      "nome": "isaac",
-      "telefone": "(27) 99283-3778",
-      "email": "isaac@gmail.com",
-      "cpf": "198.197.555-62",
-      "data_nascimento": "2002-01-19",
-      "senha": "@Isaac19",
-      "confirmar_senha": "@Isaac19",
-      "cidade": "vitoria"
-    }
-  ],
+  "usuarios": [],
   "administradores": [
     {
       "matricula": "admin",
