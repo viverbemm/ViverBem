@@ -4,13 +4,77 @@ import stylesM from './Menu_superior.module.css';
 import profileMenu from './assets/img/menu_white_36dp.svg';
 import stylesP from './Tela.Pagamentos.module.css';
 
-
 function Pagamento() {
-
     const [menuOpen, setMenuOpen] = useState(false);
+    const [formData, setFormData] = useState({
+        cardNumber: '',
+        cardName: '',
+        expirationDate: '',
+        cvv: '',
+    });
+    const [erros, setErros] = useState({
+        cardNumber: '',
+        cardName: '',
+        expirationDate: '',
+        cvv: '',
+    });
 
     const menuShow = () => {
         setMenuOpen(!menuOpen);
+    };
+
+    // Função para validar o formulário
+    const validarFormulario = () => {
+        let valid = true;
+        const novosErros = {};
+
+        // Validando o número do cartão (deve ser um número de 16 dígitos)
+        const regexCardNumber = /^\d{16}$/;
+        if (!regexCardNumber.test(formData.cardNumber)) {
+            novosErros.cardNumber = 'Número do cartão inválido. Deve conter 16 dígitos.';
+            valid = false;
+        }
+
+        // Validando o nome no cartão (não pode estar vazio)
+        if (formData.cardName.trim() === '') {
+            novosErros.cardName = 'O nome no cartão é obrigatório.';
+            valid = false;
+        }
+
+        // Validando a validade (deve ser no formato MM/AAAA)
+        const regexExpirationDate = /^(0[1-9]|1[0-2])\/\d{4}$/;
+        if (!regexExpirationDate.test(formData.expirationDate)) {
+            novosErros.expirationDate = 'Formato inválido. Use MM/AAAA.';
+            valid = false;
+        }
+
+        // Validando o CVV (deve ser um número de 3 dígitos)
+        const regexCvv = /^\d{3}$/;
+        if (!regexCvv.test(formData.cvv)) {
+            novosErros.cvv = 'CVV inválido. Deve conter 3 dígitos.';
+            valid = false;
+        }
+
+        setErros(novosErros);
+        return valid;
+    };
+
+    // Função para lidar com o envio do formulário
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        if (validarFormulario()) {
+            // Se todos os campos forem válidos, faça o pagamento (lógica aqui)
+            console.log('Pagamento efetuado!');
+        }
+    };
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value,
+        });
     };
 
     return (
@@ -52,11 +116,7 @@ function Pagamento() {
 
                 <section className={stylesP.main}>
                     <div className={stylesP.profileContainer}>
-                        <img
-                            src={profilePic}
-                            alt="Luísa Heringer"
-                            className={stylesP.profileImage}
-                        />
+                        <img src={profilePic} alt="Luísa Heringer" className={stylesP.profileImage} />
                         <div className={stylesP.profileInfo}>
                             <h2 className={stylesP.profileName}>Luísa Heringer</h2>
                             <h3 className={stylesP.servicesTitle}>Serviços oferecidos:</h3>
@@ -95,11 +155,43 @@ function Pagamento() {
                             <p>Cartão de crédito em até 12x:</p>
                             <img src="https://via.placeholder.com/300x50" alt="Cartões aceitos" className={stylesP.paymentMethods} />
                         </div>
-                        <form className={stylesP.paymentForm}>
-                            <input type="text" placeholder="Número do cartão" className={stylesP.input} />
-                            <input type="text" placeholder="Nome que consta no cartão" className={stylesP.input} />
-                            <input type="text" placeholder="Validade" className={stylesP.input} />
-                            <input type="text" placeholder="CVV" className={stylesP.input} />
+                        <form className={stylesP.paymentForm} onSubmit={handleSubmit}>
+                            <input
+                                type="text"
+                                name="cardNumber"
+                                placeholder="Número do cartão"
+                                className={stylesP.input}
+                                value={formData.cardNumber}
+                                onChange={handleChange}
+                            />
+                            {erros.cardNumber && <p className={stylesP.error}>{erros.cardNumber}</p>}
+                            <input
+                                type="text"
+                                name="cardName"
+                                placeholder="Nome que consta no cartão"
+                                className={stylesP.input}
+                                value={formData.cardName}
+                                onChange={handleChange}
+                            />
+                            {erros.cardName && <p className={stylesP.error}>{erros.cardName}</p>}
+                            <input
+                                type="text"
+                                name="expirationDate"
+                                placeholder="Validade (MM/AAAA)"
+                                className={stylesP.input}
+                                value={formData.expirationDate}
+                                onChange={handleChange}
+                            />
+                            {erros.expirationDate && <p className={stylesP.error}>{erros.expirationDate}</p>}
+                            <input
+                                type="text"
+                                name="cvv"
+                                placeholder="CVV"
+                                className={stylesP.input}
+                                value={formData.cvv}
+                                onChange={handleChange}
+                            />
+                            {erros.cvv && <p className={stylesP.error}>{erros.cvv}</p>}
                             <button type="submit" className={stylesP.button}>Efetuar Pagamento</button>
                         </form>
                     </div>

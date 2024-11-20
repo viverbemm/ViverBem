@@ -1,131 +1,48 @@
 {
   "usuarios": [
     {
-      "id": "5a72",
-      "nome": "pietro",
-      "telefone": "111111000",
-      "email": "pietro@hotmail.com",
-      "cpf": "1111111111111",
-      "matricula": "333333333",
-      "data_nascimento": "2024-10-03",
-      "senha": "123",
-      "confirmar_senha": "123",
-      "cidade": "vila velha",
-      "tipo_usuario": "profissional"
-    },
-    {
-      "id": "a7cc",
-      "nome": "isaac",
-      "telefone": "2730725745",
-      "email": "isaacluccabar@gmail.com",
-      "cpf": "11111111111",
-      "matricula": "",
-      "data_nascimento": "2024-10-02",
-      "senha": "123",
-      "confirmar_senha": "123",
-      "cidade": "vila velha",
-      "tipo_usuario": "cliente"
-    },
-    {
-      "id": "c48b",
-      "nome": "João Costa",
-      "telefone": "27998564886",
-      "email": "joao@gmail.com",
-      "cpf": "20227413745",
-      "matricula": "",
-      "data_nascimento": "2024-10-03",
-      "senha": "123",
-      "confirmar_senha": "123",
-      "cidade": "guarapari",
-      "tipo_usuario": "cliente"
-    },
-    {
-      "id": "d496",
-      "nome": "Samara Ribeiro",
-      "telefone": "27995754986",
-      "email": "samara@aluno.senai.br",
-      "cpf": "20227413741",
-      "data_nascimento": "2004-09-20",
-      "senha": "123",
-      "confirmar_senha": "123",
-      "cidade": "vila velha"
-    },
-    {
-      "id": "dae4",
+      "id": "9421",
       "nome": "Isaac",
       "telefone": "(27) 99283-3778",
-      "email": "isaacluccabar@gmail.com",
+      "email": "isaac@gmail.com",
       "cpf": "198.190.887-04",
       "data_nascimento": "2002-01-19",
       "senha": "@Isaac19",
       "confirmar_senha": "@Isaac19",
-      "cidade": "cariacica"
+      "cidade": "fundao"
     },
     {
-      "id": "d2f9",
-      "nome": "Isaac",
-      "telefone": "(27) 99283-3778",
-      "email": "isaacluccabar@gmail.com",
-      "cpf": "176.888.107-36",
+      "id": "e009",
+      "nome": "Samara ",
+      "telefone": "(27) 88888-8888",
+      "email": "isaac@gmail.com",
+      "cpf": "198.190.887-05",
       "data_nascimento": "2002-01-19",
       "senha": "@Isaac19",
       "confirmar_senha": "@Isaac19",
-      "cidade": "cariacica"
+      "cidade": "vitoria"
     },
     {
-      "id": "bc07",
-      "nome": "Isaac",
-      "telefone": "(27) 99283-3778",
-      "email": "isaacluccabar@gmail.com",
-      "cpf": "078.534.147-14",
-      "data_nascimento": "2002-01-19",
+      "id": "1dab",
+      "nome": "joao",
+      "telefone": "(27) 88888-8888",
+      "email": "joao@gmail.com",
+      "cpf": "198.190.888-05",
+      "data_nascimento": "2002-12-19",
       "senha": "@Isaac19",
       "confirmar_senha": "@Isaac19",
-      "cidade": "cariacica"
+      "cidade": "vitoria"
     },
     {
-      "id": "8101",
-      "nome": "Pietra Lopes",
-      "telefone": "(27) 99908-2457",
-      "email": "pietra@gmail.com",
-      "cpf": "040.299.034-01",
-      "data_nascimento": "1990-05-18",
-      "senha": "@Pietra123",
-      "confirmar_senha": "@Pietra123",
-      "cidade": "cariacica"
-    },
-    {
-      "id": "df42",
-      "nome": "Pietra Lopes",
-      "telefone": "(27) 99908-2457",
-      "email": "pietra@gmail.com",
-      "cpf": "040.299.034-02",
-      "data_nascimento": "2002-01-19",
-      "senha": "@Isaac19",
-      "confirmar_senha": "@Isaac19",
-      "cidade": "cariacica"
-    },
-    {
-      "id": "7417",
-      "nome": "Isaac Lucca",
+      "id": "0c9f",
+      "nome": "isaac",
       "telefone": "(27) 99283-3778",
       "email": "isaac@gmail.com",
-      "cpf": "198.190.885-06",
+      "cpf": "198.197.555-62",
       "data_nascimento": "2002-01-19",
       "senha": "@Isaac19",
       "confirmar_senha": "@Isaac19",
-      "cidade": "Vila Velha"
-    },
-    {
-      "id": "ad37",
-      "nome": "Samara",
-      "telefone": "(27) 99999-9999",
-      "email": "samara.s.ribeiro@aluno.senai.br",
-      "cpf": "202.274.137-42",
-      "data_nascimento": "2002-01-19",
-      "senha": "@Isaac19",
-      "confirmar_senha": "@Isaac19",
-      "cidade": "vila velha"
+      "cidade": "vitoria"
     }
   ],
   "administradores": [

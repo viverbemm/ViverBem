@@ -18,7 +18,8 @@ import PaginaInicial from './components/pages/PaginaInicial';
 import MinhaConta from './components/pages/MinhaConta';
 import Perfil_Completo from './components/pages/Perfil_Completo';
 import AlterarSenha from './components/AlterarSenha';
-<components />
+import ConfigConta from './components/pages/Config';
+
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
             <Route path='/Perfil' element={<Perfil_Completo/>}/>
             <Route path='/MinhaConta' element={<MinhaConta/>}/>
             <Route path='/AlterarSenha' element={<AlterarSenha/>}/>
+            <Route path='/Config' element={<ConfigConta/>}/>
           </Routes>
         </Router> 
   );
