@@ -17,7 +17,11 @@ import Completar_Perfil from './components/pages/Completar_Perfil';
 import PaginaInicial from './components/pages/PaginaInicial';
 import MinhaConta from './components/pages/MinhaConta';
 import Perfil_Completo from './components/pages/Perfil_Completo';
-import Crud_imagens from './components/pages/crud_imagens';
+import AlterarSenha from './components/AlterarSenha';
+import ConfigConta from './components/pages/Config';
+
+
+
 
 
 function App() {
@@ -38,12 +42,12 @@ function App() {
             <Route path='/Login_gestao' element={<Login_Gestao/>}/>
             <Route path='/Pagamento' element={<Pag_Men/>}/>
             <Route path='/CompletarPerfil' element={<Completar_Perfil/>}/>
-            <Route path='/PaginaInicial' element={<PaginaInicial/>}/>
+            <Route path='/' element={<PaginaInicial/>}/>
             <Route path='/Perfil' element={<Perfil_Completo/>}/>
-            <Route path='/Crud_imagens' element={<Crud_imagens/>}/>
-            
-         
             <Route path='/MinhaConta' element={<MinhaConta/>}/>
+            <Route path='/AlterarSenha' element={<AlterarSenha/>}/>
+            <Route path='/Config' element={<ConfigConta/>}/>
+          
           
           </Routes>
         </Router> 

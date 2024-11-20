@@ -1,22 +1,21 @@
-import styles from './NavBar.module.css';
+import styles from './navInicial.module.css';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 
 
 
-function navBar() {
+function NavInicial() {
 
     return(
-        <div className={styles.navPrin}>
+        <div className={styles.navInicial}>
             <header>
-                <div className={styles.navBarDire}>
+                <div className={styles.navInicialDire}>
                     <a href="/">ViverBem+</a>
 
                 </div>
-                <div className={styles.navBarEsq}>
+                <div className={styles.navInicialEsq}>
                     <a href="/">Pagina Inicial</a>
-                    <a href="/Tela_profissionais">Catálogo</a>
                     <a href="/LoginUsuario">Login</a>
                 </div>
             </header>
@@ -25,5 +24,5 @@ function navBar() {
     )
 
 }
-export default navBar;
+export default NavInicial;
 

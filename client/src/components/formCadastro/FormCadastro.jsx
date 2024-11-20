@@ -1,319 +1,275 @@
-import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import NavBar from '../layout/navBar';
-import styles from './Formcadastro.module.css';
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import NavBar from "../layout/navBar";
+import styles from "./Formcadastro.module.css";
+import NavInferior from "../layout/navInferior";
 
-function FormCadastro({ titulo, handleSubmit, id, teste }) {
-    const navigate = useNavigate();
-    const [usuarios, setUsuarios] = useState([]);
-    const [formCadastro, setFormCadastro] = useState({
-        nome: '',
-        telefone: '',
-        email: '',
-        cpf: '',
-        data_nascimento: '',
-        senha: '',
-        confirmar_senha: '',
-        cidade: ''
-    });
-    const [errors, setErrors] = useState({
-        cpf: '',
-        idade: '',
-        senha: '',
-        confirmar_senha: '',
-        telefone: '',
-        email: ''
-    });
+function FormCadastro({ titulo, handleSubmit, id }) {
+  const navigate = useNavigate(); // Navegação para a tela de pagamento
+  const [usuarios, setUsuarios] = useState([]);
+  const [formCadastro, setFormCadastro] = useState({
+    nome: "",
+    telefone: "",
+    email: "",
+    cpf: "",
+    data_nascimento: "",
+    senha: "",
+    confirmar_senha: "",
+    cidade: "",
+  });
 
-    useEffect(() => {
-        if (id) {
-            buscarCadastro(id);
-        }
-    }, [id]);
+  const [erros, setErros] = useState({}); // Armazena os erros de validação
 
-    async function buscarCadastro(id) {
-        try {
-            const resposta = await fetch(`http://localhost:3001/usuarios/${id}`, {
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            });
+  useEffect(() => {
+    if (id) {
+      buscarCadastro(id);
+    } else {
+      // Se não for edição, carregue a lista de usuários cadastrados
+      carregarUsuarios();
+    }
+  }, [id]);
 
-            if (!resposta.ok) {
-                throw new Error('Erro ao buscar usuário');
-            } else {
-                const respostaJSON = await resposta.json();
-                setFormCadastro(respostaJSON);
-            }
-        } catch (error) {
-            console.log(error);
-        }
+  async function buscarCadastro(id) {
+    try {
+      const resposta = await fetch(`http://localhost:3001/usuarios/${id}`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (!resposta.ok) {
+        throw new Error("Erro ao buscar usuário");
+      } else {
+        const respostaJSON = await resposta.json();
+        setFormCadastro(respostaJSON);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async function carregarUsuarios() {
+    try {
+      const resposta = await fetch("http://localhost:3001/usuarios", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (!resposta.ok) {
+        throw new Error("Erro ao carregar usuários");
+      } else {
+        const respostaJSON = await resposta.json();
+        setUsuarios(respostaJSON);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  // Função para verificar se o CPF já existe
+  function verificarCpfExistente(cpf) {
+    return usuarios.some((usuario) => usuario.cpf === cpf);
+  }
+
+  function handleChange(event) {
+    const { name, value } = event.target;
+
+    // Restringir entrada para tipos específicos
+    if (name === "telefone") {
+      // Remove qualquer coisa que não seja número
+      const somenteNumeros = value.replace(/\D/g, "");
+      
+      // Permite no máximo 11 números para o telefone
+      if (somenteNumeros.length <= 11) {
+        // Aplica a formatação no telefone
+        const formattedPhone = somenteNumeros
+          .replace(/^(\d{2})(\d{5})?(\d{4})?/, "($1) $2-$3")
+          .replace(/-$/, "");
+        setFormCadastro({ ...formCadastro, telefone: formattedPhone });
+      }
+    } else if (name === "cpf") {
+      const somenteNumeros = value.replace(/\D/g, ""); // Remove qualquer coisa que não seja número
+      const formattedCPF = somenteNumeros
+        .replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4")
+        .slice(0, 14);
+      setFormCadastro({ ...formCadastro, cpf: formattedCPF });
+    } else if (name === "nome") {
+      const somenteLetras = value.replace(/[^a-zA-ZÀ-ÿ\s]/g, ""); // Permite apenas letras e espaços
+      setFormCadastro({ ...formCadastro, nome: somenteLetras });
+    } else {
+      setFormCadastro({
+        ...formCadastro,
+        [name]: value,
+      });
+    }
+  }
+
+  function validarFormulario() {
+    const novosErros = {};
+
+    // Validação de CPF
+    const cpfValido = /^[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}$/;
+    if (!cpfValido.test(formCadastro.cpf)) {
+      novosErros.cpf = "CPF inválido";
     }
 
-    function handleChange(event) {
-        const { name, value } = event.target;
-
-        if (name === 'cpf') {
-            let formattedCPF = value.replace(/\D/g, '').slice(0, 11);
-            if (formattedCPF.length <= 3) {
-                formattedCPF = formattedCPF.replace(/(\d{3})/g, '$1');
-            } else if (formattedCPF.length <= 6) {
-                formattedCPF = formattedCPF.replace(/(\d{3})(\d{0,3})/, '$1.$2');
-            } else if (formattedCPF.length <= 9) {
-                formattedCPF = formattedCPF.replace(/(\d{3})(\d{3})(\d{0,3})/, '$1.$2.$3');
-            } else {
-                formattedCPF = formattedCPF.replace(/(\d{3})(\d{3})(\d{3})(\d{0,2})/, '$1.$2.$3-$4');
-            }
-            setFormCadastro({ ...formCadastro, cpf: formattedCPF });
-        }
-
-        if (name === 'telefone') {
-            let formattedPhone = value.replace(/\D/g, '').slice(0, 11);
-
-            if (formattedPhone.length <= 2) {
-                formattedPhone = formattedPhone.replace(/(\d{0,2})/, '($1');
-            } else if (formattedPhone.length <= 6) {
-                formattedPhone = formattedPhone.replace(/(\d{2})(\d{0,4})/, '($1) $2');
-            } else {
-                formattedPhone = formattedPhone.replace(/(\d{2})(\d{5})(\d{0,4})/, '($1) $2-$3');
-            }
-
-            setFormCadastro({ ...formCadastro, telefone: formattedPhone });
-        }
-
-        if (name !== 'cpf' && name !== 'telefone') {
-            setFormCadastro({
-                ...formCadastro,
-                [name]: value
-            });
-        }
+    // Verificar se o CPF já está cadastrado
+    if (verificarCpfExistente(formCadastro.cpf)) {
+      novosErros.cpf = "Este CPF já está cadastrado.";
     }
 
-    async function verificarCPFDuplicado(cpf) {
-        try {
-            const resposta = await fetch(`http://localhost:3001/usuarios?cpf=${cpf}`, {
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            });
-
-            const data = await resposta.json();
-            return data.length > 0; // Retorna true se encontrar algum usuário com o CPF
-        } catch (error) {
-            console.log(error);
-            return false;
-        }
+    // Validação de telefone
+    const telefoneValido = /^\(\d{2}\) \d{5}-\d{4}$/;
+    if (!telefoneValido.test(formCadastro.telefone)) {
+      novosErros.telefone = "Telefone inválido";
     }
 
-    function validateCPF(cpf) {
-        const regex = /^\d{3}\.\d{3}\.\d{3}-\d{2}$/;
-        return regex.test(cpf);
+    // Validação de e-mail
+    const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailValido.test(formCadastro.email)) {
+      novosErros.email = "E-mail inválido";
     }
 
-    function validateAge(dateOfBirth) {
-        const birthDate = new Date(dateOfBirth);
-        const age = new Date().getFullYear() - birthDate.getFullYear();
-        return age >= 18;
+    // Validação de senha forte
+    const senhaForte = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    if (!senhaForte.test(formCadastro.senha)) {
+      novosErros.senha =
+        "A senha deve ter pelo menos 8 caracteres, incluindo uma letra maiúscula, um número e um símbolo.";
     }
 
-    function validatePhone(phone) {
-        const regex = /^\(\d{2}\) \d{4,5}-\d{4}$/;
-        return regex.test(phone);
+    // Validação de senhas iguais
+    if (formCadastro.senha !== formCadastro.confirmar_senha) {
+      novosErros.confirmar_senha = "As senhas não são iguais.";
     }
 
-    function validateEmail(email) {
-        const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-        return regex.test(email);
+    // Validação de maioridade
+    const hoje = new Date();
+    const nascimento = new Date(formCadastro.data_nascimento);
+    const idade = hoje.getFullYear() - nascimento.getFullYear();
+    if (idade < 18 || (idade === 18 && hoje < new Date(nascimento.setFullYear(hoje.getFullYear())))) {
+      novosErros.data_nascimento = "Você precisa ter 18 anos ou mais.";
     }
 
-    function validatePassword(password) {
-        const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,}$/;
-        return regex.test(password);
+    setErros(novosErros);
+    return Object.keys(novosErros).length === 0; // Retorna true se não houver erros
+  }
+
+  function submit(e) {
+    e.preventDefault();
+
+    if (validarFormulario()) {
+      // Enviar os dados do formulário
+      handleSubmit(formCadastro, id);
+
+      // Redirecionar para a tela de pagamento, passando o id do usuário
+      navigate("/pagamento", { state: { userId: id } });
     }
+}
 
-    function validateForm() {
-        const errors = {};
-        if (!validateCPF(formCadastro.cpf)) {
-            errors.cpf = 'CPF inválido';
-        }
 
-        if (!validateAge(formCadastro.data_nascimento)) {
-            errors.idade = 'Você precisa ter pelo menos 18 anos';
-        }
+  return (
+    <div>
+      <NavBar />
+      <div className={styles.login_section}>
+        <main>
+          <section>
+            <div className={styles.form_container}>
+              <h1>{titulo}</h1>
+              <h2>
+                <b>{formCadastro.id ? "Editar Usuário" : "Cadastre-se"}</b>
+              </h2>
+              <form onSubmit={submit}>
+                <input
+                  type="text"
+                  name="nome"
+                  placeholder="Nome Completo *"
+                  value={formCadastro.nome}
+                  onChange={handleChange}
+                  required
+                />
+                {erros.nome && <p className={styles.error}>{erros.nome}</p>}
+                <input
+                  type="tel"
+                  name="telefone"
+                  placeholder="Telefone *"
+                  value={formCadastro.telefone}
+                  onChange={handleChange}
+                  required
+                />
+                {erros.telefone && <p className={styles.error}>{erros.telefone}</p>}
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email *"
+                  value={formCadastro.email}
+                  onChange={handleChange}
+                  required
+                />
+                {erros.email && <p className={styles.error}>{erros.email}</p>}
+                <input
+                  type="text"
+                  name="cpf"
+                  placeholder="CPF *"
+                  value={formCadastro.cpf}
+                  onChange={handleChange}
+                  required
+                />
+                {erros.cpf && <p className={styles.error}>{erros.cpf}</p>}
+                <input
+                  type="date"
+                  name="data_nascimento"
+                  value={formCadastro.data_nascimento}
+                  onChange={handleChange}
+                  required
+                />
+                {erros.data_nascimento && <p className={styles.error}>{erros.data_nascimento}</p>}
+                <input
+                  type="password"
+                  name="senha"
+                  placeholder="Crie uma senha *"
+                  value={formCadastro.senha}
+                  onChange={handleChange}
+                  required
+                />
+                {erros.senha && <p className={styles.error}>{erros.senha}</p>}
+                <input
+                  type="password"
+                  name="confirmar_senha"
+                  placeholder="Confirme sua senha *"
+                  value={formCadastro.confirmar_senha}
+                  onChange={handleChange}
+                  required
+                />
+                {erros.confirmar_senha && <p className={styles.error}>{erros.confirmar_senha}</p>}
 
-        if (!validatePhone(formCadastro.telefone)) {
-            errors.telefone = 'Telefone inválido';
-        }
-
-        if (!validateEmail(formCadastro.email)) {
-            errors.email = 'Email inválido';
-        }
-
-        if (!validatePassword(formCadastro.senha)) {
-            errors.senha = 'Senha deve ter no mínimo 8 caracteres, incluindo letras maiúsculas, minúsculas e números';
-        }
-
-        if (formCadastro.senha !== formCadastro.confirmar_senha) {
-            errors.confirmar_senha = 'As senhas não coincidem';
-        }
-
-        setErrors(errors);
-        return Object.keys(errors).length === 0;
-    }
-
-    async function submit(e) {
-        e.preventDefault();
-
-        if (validateForm()) {
-            const cpfDuplicado = await verificarCPFDuplicado(formCadastro.cpf);
-            if (cpfDuplicado) {
-                setErrors({ ...errors, cpf: 'Este CPF já está cadastrado.' });
-                return;
-            }
-
-            handleSubmit(formCadastro, id);
-            navigate('/pagamento');
-        } else {
-            alert('Por favor, corrija os erros no formulário.');
-        }
-    }
-
-    function handleEdit(usuario) {
-        setFormCadastro(usuario);
-    }
-
-    async function handleDelete(id) {
-        try {
-            await fetch(`http://localhost:3001/usuarios/${id}`, {
-                method: 'DELETE',
-            });
-            setUsuarios(usuarios.filter(usuario => usuario.id !== id));
-        } catch (error) {
-            console.log('Erro ao deletar usuário:', error);
-        }
-    }
-
-    console.log(formCadastro);
-
-    return (
-        <div>
-            <NavBar />
-            <div className={styles.login_section}>
-
-                <main>
-                    <section >
-                        <div className={styles.form_container}>
-                            <h1>{titulo}</h1>
-                            <h2><b>{formCadastro.id ? 'Editar Usuário' : 'Cadastre-se'}</b></h2>
-                            <form onSubmit={submit}>
-                                <input
-                                    type="text"
-                                    name="nome"
-                                    placeholder="Nome Completo *"
-                                    value={formCadastro.nome}
-                                    onChange={handleChange}
-                                    required
-                                />
-                                <input
-                                    type="tel"
-                                    name="telefone"
-                                    placeholder="Telefone *"
-                                    value={formCadastro.telefone}
-                                    onChange={handleChange}
-                                    required
-                                />
-                                {errors.telefone && <p>{errors.telefone}</p>}
-
-                                <input
-                                    type="email"
-                                    name="email"
-                                    placeholder="Email *"
-                                    value={formCadastro.email}
-                                    onChange={handleChange}
-                                    required
-                                />
-                                {errors.email && <p>{errors.email}</p>}
-
-                                <input
-                                    type="text"
-                                    name="cpf"
-                                    placeholder="CPF *"
-                                    value={formCadastro.cpf}
-                                    onChange={handleChange}
-                                    required
-                                />
-                                {errors.cpf && <p>{errors.cpf}</p>}
-
-                                <input
-                                    type="date"
-                                    name="data_nascimento"
-                                    value={formCadastro.data_nascimento}
-                                    onChange={handleChange}
-                                    required
-                                />
-                                {errors.idade && <p>{errors.idade}</p>}
-
-                                <input
-                                    type="password"
-                                    name="senha"
-                                    placeholder="Crie uma senha *"
-                                    value={formCadastro.senha}
-                                    onChange={handleChange}
-                                    required
-                                />
-                                {errors.senha && <p>{errors.senha}</p>}
-
-                                <input
-                                    type="password"
-                                    name="confirmar_senha"
-                                    placeholder="Confirme sua senha *"
-                                    value={formCadastro.confirmar_senha}
-                                    onChange={handleChange}
-                                    required
-                                />
-                                {errors.confirmar_senha && <p>{errors.confirmar_senha}</p>}
-
-                                <select
-                                    className={styles.sec}
-                                    name="cidade"
-                                    value={formCadastro.cidade}
-                                    onChange={handleChange}
-                                    required
-                                >
-                                    <option value="">Selecione sua cidade:</option>
-                                    <option value="cariacica">Cariacica</option>
-                                    <option value="fundao">Fundão</option>
-                                    <option value="guarapari">Guarapari</option>
-                                    <option value="serra">Serra</option>
-                                    <option value="viana">Viana</option>
-                                    <option value="vila velha">Vila Velha</option>
-                                    <option value="vitoria">Vitória</option>
-                                </select>
-
-                                <button type="submit" className={styles.link}>
-                                    {formCadastro.id ? 'Salvar' : 'Cadastre-se'}
-                                </button>
-                            </form>
-                        </div>
-                    </section>
-
-                    <section className="user-list">
-                        <ul>
-                            {usuarios.map((usuario) => (
-                                <li key={usuario.id}>
-                                    {usuario.nome} - {usuario.email}
-                                    <button onClick={() => handleEdit(usuario)}>Editar</button>
-                                    <button onClick={() => handleDelete(usuario.id)}>Excluir</button>
-                                </li>
-                            ))}
-                        </ul>
-                    </section>
-                </main>
+                <select
+                  className={styles.sec}
+                  name="cidade"
+                  value={formCadastro.cidade}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="">Selecione sua cidade:</option>
+                  <option value="cariacica">Cariacica</option>
+                  <option value="vitoria">Vitória</option>
+                  <option value="guarapari">Vila Velha</option>
+                  <option value="serra">Serra</option>
+                  <option value="guarapari">Guarapari</option>
+                </select>
+                <button type="submit" className={styles.cadastrar_button}>
+                  {id ? "Editar" : "Cadastrar"}
+                </button>
+              </form>
             </div>
-        </div>
-    );
+          </section>
+        </main>
+      </div>
+      <NavInferior />
+    </div>
+  );
 }
 
 export default FormCadastro;
