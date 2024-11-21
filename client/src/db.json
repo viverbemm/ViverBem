@@ -1,17 +1,5 @@
 {
-  "usuarios": [
-    {
-      "id": "8ac9",
-      "nome": "Isaac",
-      "telefone": "(27) 99283-3778",
-      "email": "isaac@aluno.com",
-      "cpf": "198.190.887-04",
-      "data_nascimento": "2002-01-19",
-      "senha": "@Isaac19",
-      "confirmar_senha": "@Isaac19",
-      "cidade": "cariacica"
-    }
-  ],
+  "usuarios": [],
   "administradores": [
     {
       "matricula": "admin",

@@ -15,7 +15,7 @@ function navConfig() {
 
                 </div>
                 <div className={styles.navBarEsqu}>
-                    <a href="/Perfil">Minha Conta</a>
+                    <a href="/perfil_profissional">Minha Conta</a>
                     <a href="/Config">Configurações</a>
                 </div>
             </header>
