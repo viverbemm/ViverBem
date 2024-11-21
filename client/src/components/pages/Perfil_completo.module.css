@@ -34,15 +34,6 @@ p {
     margin-top: 5px;
 }
 
-img {
-    border-radius: 50%;
-    margin-top: 15px;
-    border: 4px solid #42029b;
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-}
-
 .profile_container div {
     margin-bottom: 20px;
 }
