@@ -1,6 +1,6 @@
 .pageBackground {
-    background-color: #d3d3f9; 
-    min-height: 100vh; 
+    background-color: #d3d3f9;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -8,49 +8,52 @@
 }
 
 .section {
-    margin: 10px;
-    padding: 10px;
+    transform: translateY(-15%);
     color: #3b00b9;
 
 }
 
-.text{
+.text {
     text-align: justify;
     top: 10px;
 }
 
-.text p{
+.text p {
     font-size: 20px;
 }
 
+.contatos {
+    text-align: center;
+}
 
 .contatos ul li {
     color: #3b00b9;
     font-size: 30px;
     margin-right: 50px;
-   margin-top: 30px;
+    margin-top: 30px;
+
 }
 
 .section h1 {
-   
+    text-align: center;
     color: #3b00b9;
 }
 
-.info{
+.info {
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .section p {
-   margin-top: auto;
-    padding: 15px;
+
+    text-align: center;
     color: #3b00b9;
 
 }
 
 
 .section h3 {
-    margin-top: auto;
-     padding: 15px;
-     color: #3b00b9;
- 
- }
+    text-align: center;
+    padding: 15px;
+    color: #3b00b9;
+
+}
