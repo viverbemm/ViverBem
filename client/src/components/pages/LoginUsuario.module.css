@@ -30,6 +30,7 @@
     color: #0120a7;
     font-size: 30px; /* Tamanho um pouco menor para melhorar o layout */
     margin-bottom: 30px; /* Aumentar o espaço abaixo do título */
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Estilos dos campos de CPF e Senha */

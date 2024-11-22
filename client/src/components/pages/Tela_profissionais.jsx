@@ -28,7 +28,7 @@ function Profissionais() {
       <NavBar />
       <div className={stylesT.roxo}>
         <div className={stylesT.profissionais}>
-          <h1>Profissionais</h1>
+          <h1><b>Profissionais</b></h1>
         </div>
 
         <section className={stylesT.grid_container}>
@@ -61,7 +61,7 @@ function Profissionais() {
           ))}
         </section>
 
-        <h1 className={stylesT.mapa}>Procure o profissional mais próximo de você:</h1>
+        <h1 className={stylesT.mapa}><b>Procure o profissional mais próximo de você:</b></h1>
         <iframe
           className={stylesT.map}
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.960643529147!2d-40.29228472391891!3d-20.343244479370224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb83e1c440daee3%3A0xa0951792ea0f3017!2sCentro%20Empresarial%20Praia%20da%20Costa%20Offices!5e0!3m2!1spt-BR!2sbr!4v1727112829741!5m2!1spt-BR!2sbr"
