@@ -36,15 +36,16 @@ function PaginaInicial() {
                         <div className={styles.botoesAcoes}>
                             <button
                                 className={styles.botaoPrimario}
-                                onClick={() => navigate('/cadastro')}
-                            >
-                                Cadastre-se como Cuidador
-                            </button>
-                            <button
-                                className={styles.botaoSecundario}
                                 onClick={() => navigate('/tela_profissionais')}
                             >
                                 Explore Cuidadores
+
+                            </button>
+                            <button
+                                className={styles.botaoSecundario}
+                                onClick={() => navigate('/cadastro')}
+                            >
+                                Cadastre-se como Cuidador
                             </button>
                         </div>
                     </section>
@@ -59,7 +60,7 @@ function PaginaInicial() {
                             <h3>Laura Silva</h3>
                             <span className={styles.data}>10 de Outubro de 2023</span>
                             <p>
-                                "Graças ao site, encontramos uma cuidadora incrível para nossa mãe. Recomendo!"
+                                "Ser cadastrada aqui aumentou minhas oportunidades de trabalho. Obrigado!"
                             </p>
                             <div className={styles.estrelas}>⭐⭐⭐⭐⭐</div>
                         </div>
@@ -68,7 +69,8 @@ function PaginaInicial() {
                             <h3>Leo Pereira</h3>
                             <span className={styles.data}>5 de Novembro de 2023</span>
                             <p>
-                                "Ser cadastrado aqui aumentou minhas oportunidades de trabalho. Obrigado!"
+                                "Graças ao site, encontramos uma cuidadora incrível para nossa mãe. Recomendo!"
+
                             </p>
                             <div className={styles.estrelas}>⭐⭐⭐⭐⭐</div>
                         </div>
