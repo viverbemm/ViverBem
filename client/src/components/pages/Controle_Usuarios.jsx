@@ -32,28 +32,50 @@ const Controle = () => {
     fetchUsuarios();
   }, []);
 
-  // Função para deletar um usuário
-  const handleDelete = async (id) => {
-    if (!window.confirm('Tem certeza que deseja excluir este usuário?')) {
-      return;
-    }
+  // Função para "deletar" um usuário apenas da tela
+const handleDelete = (id) => {
+  if (!window.confirm('Tem certeza que deseja excluir este usuário?')) {
+    return;
+  }
 
+  // Atualiza a lista de usuários localmente
+  const usuariosAtualizados = usuarios.filter((usuario) => usuario.id !== id);
+  setUsuarios(usuariosAtualizados);
+
+  // Salva os IDs dos usuários excluídos no localStorage
+  const excluidos = JSON.parse(localStorage.getItem('usuariosExcluidos')) || [];
+  excluidos.push(id);
+  localStorage.setItem('usuariosExcluidos', JSON.stringify(excluidos));
+
+  alert('Usuário removido com sucesso');
+};
+
+// Chamada do fetch ao montar o componente
+useEffect(() => {
+  const fetchUsuarios = async () => {
     try {
-      const resposta = await fetch(`http://localhost:3001/usuarios/${id}`, {
-        method: 'DELETE',
-      });
-
+      const resposta = await fetch('http://localhost:3001/usuarios');
       if (!resposta.ok) {
-        console.log('Erro ao deletar usuário');
-      } else {
-        alert('Usuário deletado com sucesso');
-        fetchUsuarios(); // Atualiza a lista após a exclusão
+        throw new Error('Erro ao buscar usuários');
       }
+      const data = await resposta.json();
+
+      // Recupera IDs dos usuários excluídos do localStorage
+      const excluidos = JSON.parse(localStorage.getItem('usuariosExcluidos')) || [];
+
+      // Filtra os usuários excluídos
+      const usuariosFiltrados = data.filter((usuario) => !excluidos.includes(usuario.id));
+      setUsuarios(usuariosFiltrados);
     } catch (error) {
-      console.error('Erro ao deletar usuário:', error);
+      setError(error.message);
+      console.error('Erro ao buscar usuários:', error);
+    } finally {
+      setLoading(false);
     }
   };
 
+  fetchUsuarios();
+}, []);
   // Função para editar um usuário
   const handleEdit = (usuario) => {
     localStorage.setItem('usuarioParaEditar', JSON.stringify(usuario));
