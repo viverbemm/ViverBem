@@ -1,0 +1,56 @@
+/* AlterarSenha.module.css */
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transform: translateY(300px);
+}
+
+h2 {
+    font-size: 24px;
+    color: #3a3a8f;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 16px;
+    color: #3a3a8f;
+    margin-bottom: 20px;
+}
+
+.input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+
+
+.message {
+    font-size: 14px;
+    color: #3a3a8f;
+    margin-bottom: 15px;
+}
+
+.button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3a3a8f;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+

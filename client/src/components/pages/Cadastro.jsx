@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import FormCadastro from '../formCadastro/FormCadastro';
-import styles from './Cadastro.module.css';
+
 
 function Cadastro() {
 

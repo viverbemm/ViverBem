@@ -1,75 +1,134 @@
-/* Reset padrão */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-
-/* Define a altura total da página */
-
-
-/* Define o contêiner principal para ocupar a altura completa */
-main {
-    min-height: 100vh; /* Garante que o main ocupe toda a altura da viewport */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;
-    text-align: center;
-    background-color:  #d3d3f9;
-}
-
-.h1 {
-    color: #000075;
-    font-size: 1.9em;
-    margin-bottom: 20px;
-    text-align: center;
-    background-color: #c0c0f2;
-}
-
-.cuidador{
-    background-color: #c0c0f2;
-}
-
-
-.textoInicial{
-    color: #000075;
-    font-size: 1.0em;
-    margin-top: 10px;
-    text-align: justify;
-    background-color: #c0c0f2;
-}
-
-.comecando{
-    display: flex;
-    flex-direction: column;
-    margin-top: 250px;
-    align-items: center;
-    margin: 20px 0;
-    padding-right: 10px;
-    background-color: #c0c0f2;
+.mainn {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
 }
 
 .containerDoInicio {
-    width: 104%;
-    max-width: none; 
-    padding: 20px; 
-    background-color: #c0c0f2; 
-    border-radius: 8px; 
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
-    margin-top: center;
+    text-align: center;
+    padding: 40px 20px;
+    background:#c2c2f8;
+    color: #260077;
+    border-radius: 8px;
 }
 
-.planosMensais{
-    background-color: #c0c0f2;
+.h11 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
-.valorMensal{
-    background-color: #c0c0f2;
+.textoInicial {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
 }
 
-.valorAnual{
-    background-color: #c0c0f2;
+.botoesAcoes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
 }
+
+.botaoPrimario {
+    background-color: #260077;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.botaoSecundario {
+    background-color: #260077;
+    color: white;
+
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.depoimentos {
+    margin-top: 40px;
+    padding: 80px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.depoimentos h2 {
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    color: #260077;
+    text-transform: uppercase;
+}
+
+.cardsDepoimentos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 2px solid #260077;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    color: #260077;
+    margin-bottom: 5px;
+}
+
+.card .data {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.estrelas {
+    font-size: 1.2rem;
+    color: #ffb400; /* Cor amarela para as estrelas */
+}
+
+.imginicial{
+    width: 150px; /* Altere o tamanho conforme necessário */
+    height: 150px; /* Igual à largura para garantir o formato redondo */
+    border-radius: 50%;
+    object-fit: cover; /* Garante que a imagem preencha o círculo */
+    margin: 0 auto; /* Centraliza a imagem dentro do container */
+}
+

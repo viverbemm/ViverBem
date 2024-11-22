@@ -1,0 +1,152 @@
+.container {
+    font-family: Arial, sans-serif;
+    background-color: #EAE8FF;
+    color: #333;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #E6E6FA;
+    width: 100%;
+    align-items: center;
+}
+
+.logo {
+    margin: 0;
+    font-size: 24px;
+}
+
+.nav {
+    display: flex;
+    gap: 15px;
+}
+
+.navLink {
+    color: #FFF;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.main {
+    padding: 20px;
+}
+
+.profileContainer {
+    display: flex;
+    background-color: #E6E6FA;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.profileImage {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.profileInfo {
+    margin-left: 20px;
+}
+
+.profileName {
+    margin: 0;
+    font-size: 22px;
+}
+
+.servicesTitle {
+    margin: 10px 0 0 0;
+    font-size: 18px;
+}
+
+.servicesList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.reservationInfo {
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.sectionTitle {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+}
+
+.reservationDetails {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reservationDates {}
+
+.reservationCosts {}
+
+.paymentInfo {
+    margin-top: 10px;
+}
+
+.paymentSection {
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.creditCardInfo {
+    margin-bottom: 20px;
+}
+
+.paymentMethods {
+    width: 100%;
+}
+
+.paymentForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #CCC;
+}
+
+.button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #6A5ACD;
+    color: #FFF;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contactSection {
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.rodape {
+    text-align: center;
+    padding: 10px;
+    background-color: #A89CD8;
+    color: #fff;
+}
+
+.controd {
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+}

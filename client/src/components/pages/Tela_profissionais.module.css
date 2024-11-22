@@ -1,65 +1,18 @@
-
-
 .roxo {
-    background-color: rgb(230, 230, 250);
-    height: 50px;
     color: rgb(52, 3, 151);
-
 }
 
-#titulo_um {
-    margin-top: 50px;
-    text-align: left;
-    color: rgb(52, 3, 151);
-    font-weight: bold;
-    font-size: 30px;
-}
-
-#menu {
-    margin-top: 50px;
-    text-align: right;
-    text-align: right;
-    padding: 5px;
-    margin-top: -40px;
-}
-
-#menu a {
-    text-decoration: none;
-    color: rgb(52, 3, 151);
-    margin-right: 30px;
-}
-
-
-
-#rodape {
-    text-align: center;
-    color: rgb(52, 3, 151);
-    font-weight: bold;
-    font-size: 25px;
-    margin-top: 80px;
-}
-
-#controd {
-    font-size: 15px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-#profissionais {
+.profissionais {
     text-align: center;
     margin-top: 100px;
     text-decoration: underline;
     letter-spacing: 2px;
+    width: 100%;
 }
 
-
-#conteupro {
-    font-size: 15px;
-    margin-bottom: 50px;
-}
-
-.grid-container {
+.grid_container {
     display: grid;
+    width: 100%;
     grid-template-columns: repeat(3, 1fr);
     /* 3 colunas */
     gap: 30px;
@@ -67,32 +20,55 @@
     padding: 30px;
 }
 
-.grid-item {
+.grid_item {
     text-align: center;
     /* Centraliza o texto */
     font-size: 12px;
 }
 
-.grid-item img {
-    max-width: 100%;
-    /* Faz a imagem ocupar toda a largura do item */
-    height: 300px;
-    /* Define uma altura fixa para todas as imagens (ajuste conforme necessário) */
+.grid_item img {
+    width: 80%;
+    /* Ocupe toda a largura do grid item */
+    aspect-ratio: 1 / 1;
+    /* Mantém a proporção 1:1 para um formato quadrado */
     object-fit: cover;
-    /* Mantém a proporção da imagem, cortando partes se necessário */
+    /* Ajusta a imagem para cobrir completamente o espaço disponível */
+    border-radius: 8px;
+    /* (Opcional) Arredonde os cantos para um visual mais suave */
 }
 
-#mapa {
+.conteupro {
+    font-size: 40px;
+    line-height: 1.6;
+    text-align: center;
+    /* Faz o texto ser justificado */
+}
+
+.mapa {
     text-align: center;
     font-size: 25px;
     margin-bottom: 50px;
     margin-bottom: 50px;
 }
 
-#map {
+.map {
     height: 400px;
     /* altura do mapa */
     width: 100%;
     /* largura do mapa */
     text-align: center;
+}
+
+.rodape {
+    text-align: center;
+    color: rgb(52, 3, 151);
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 80px;
+}
+
+.controd {
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 20px;
 }

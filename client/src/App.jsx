@@ -7,6 +7,8 @@ import Cadastro from './components/pages/Cadastro';
 import EditCadastro from './components/pages/EditCadastro';
 import LoginUsuario from './components/pages/LoginUsuario';
 import Tela_profissionais from './components/pages/Tela_profissionais';
+import Perfil_profissional from './components/pages/Perfil_profissional';
+import Tela_agendamentos from './components/pages/Tela_agendamentos';
 import Perfil_Profissional from './components/pages/Perfil_profissional';
 import Login_Usuario from './components/pages/LoginUsuario';
 import Config from './components/pages/Config';
@@ -14,6 +16,12 @@ import Pag_Men from './components/pages/Pag_Men';
 import Completar_Perfil from './components/pages/Completar_Perfil';
 import PaginaInicial from './components/pages/PaginaInicial';
 import MinhaConta from './components/pages/MinhaConta';
+import Perfil_Completo from './components/pages/Perfil_Completo';
+import AlterarSenha from './components/AlterarSenha';
+import ConfigConta from './components/pages/Config';
+
+
+
 
 
 function App() {
@@ -27,12 +35,20 @@ function App() {
             <Route path='/EditCadastro/:id' element={<EditCadastro/>}/>
             <Route path='/LoginUsuario' element={<Login_Usuario/>}/>
             <Route path='/tela_profissionais' element={<Tela_profissionais/>}/>
+            <Route path="/perfil_profissional/:nome" element={<Perfil_profissional />} />
+            <Route path='/perfil_profissional' element={<Perfil_profissional/>}/>
+            <Route path='/tela_agendamentos' element={<Tela_agendamentos/>}/>
             <Route path='/Config' element={<Config/>}/>
             <Route path='/Login_gestao' element={<Login_Gestao/>}/>
             <Route path='/Pagamento' element={<Pag_Men/>}/>
             <Route path='/CompletarPerfil' element={<Completar_Perfil/>}/>
+            <Route path='/' element={<PaginaInicial/>}/>
+            <Route path='/Perfil' element={<Perfil_Completo/>}/>
             <Route path='/PaginaInicial' element={<PaginaInicial/>}/>
             <Route path='/MinhaConta' element={<MinhaConta/>}/>
+            <Route path='/AlterarSenha' element={<AlterarSenha/>}/>
+            <Route path='/Config' element={<ConfigConta/>}/>
+          
           
           </Routes>
         </Router> 
