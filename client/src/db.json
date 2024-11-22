@@ -2,9 +2,24 @@
   "usuarios": [],
   "administradores": [
     {
-      "matricula": "admin",
-      "senha": "admin",
-      "id": "34d6"
+      "matricula": "i.barbara",
+      "senha": "admin123",
+      "id": "1"
+    },
+    {
+      "matricula": "s.ribeiro",
+      "senha": "admin123",
+      "id": "2"
+    },
+    {
+      "matricula": "p.heringer",
+      "senha": "admin123",
+      "id": "3"
+    },
+    {
+      "matricula": "j.pedro",
+      "senha": "admin123",
+      "id": "4"
     }
   ]
 }
