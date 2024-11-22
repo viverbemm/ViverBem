@@ -36,7 +36,7 @@ function Profissionais() {
             { nome: 'Gabriel Lopes', experiencia: '2 anos e 4 meses', cidade: 'Cariacica - ES', img: profileGabriel },
             { nome: 'Benjamin Duarte', experiencia: '6 meses', cidade: 'Colatina - ES', img: profileBenjamin },
             { nome: 'Luísa Heringer', experiencia: '3 anos e 6 meses', cidade: 'Vila Velha - ES', img: profileLuisa },
-            { nome: 'Maitê Vieira', experiencia: '9 meses', cidade: 'Domingos Martins - ES', img: profileMaite },
+            { nome: 'Maitê Vieira', experiencia: '9 meses', cidade: 'Fundão - ES', img: profileMaite },
           ].map((profissional, index) => (
             <div className={stylesT.grid_item} key={index}>
               <Link to={`/perfil_profissional/${profissional.nome.toLowerCase().replace(' ', '-')}`}>

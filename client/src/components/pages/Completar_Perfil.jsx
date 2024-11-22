@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from 'react-router-dom'; // Importando o hook de navegação
 import styles from './Completar_Perfil.module.css'; // Importa o CSS separado
 import NavBar from '../layout/navBar';
 import NavInferior from '../layout/navInferior';
+import logo from '../pages/imagens/LOGO_VIVER_BEM_+_2-removebg-preview (1).png';
 
 const Completar_Perfil = () => {
     const [formData, setFormData] = useState({
@@ -11,6 +12,7 @@ const Completar_Perfil = () => {
         education: "",
         about: "",
         dailyRate: "",
+        termsAccepted: false, // Estado para o checkbox de termos
     });
 
     const [errors, setErrors] = useState({
@@ -19,9 +21,12 @@ const Completar_Perfil = () => {
         education: false,
         about: false,
         dailyRate: false,
+        termsAccepted: false, // Erro para o checkbox de termos
     });
 
-    const navigate = useNavigate(); // Hook para navegar para outra tela
+    const [showModal, setShowModal] = useState(false); // Estado para controlar a visibilidade do modal
+    const modalRef = useRef(); // Ref para detectar o clique fora do modal
+    const navigate = useNavigate(); // Hook para navegação
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -46,6 +51,11 @@ const Completar_Perfil = () => {
         setErrors({ ...errors, photo: false });
     };
 
+    const handleTermsChange = (e) => {
+        setFormData({ ...formData, termsAccepted: e.target.checked });
+        setErrors({ ...errors, termsAccepted: false });
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -55,6 +65,7 @@ const Completar_Perfil = () => {
             education: !formData.education.trim(),
             about: !formData.about.trim(),
             dailyRate: !formData.dailyRate.trim(),
+            termsAccepted: !formData.termsAccepted, // Verifica se o termo foi aceito
         };
 
         setErrors(newErrors);
@@ -67,6 +78,37 @@ const Completar_Perfil = () => {
 
         // Navegar para a tela de exibição de perfil, passando os dados do formulário
         navigate('/perfil', { state: { formData } });
+    };
+
+    const handleLinkClick = (e) => {
+        e.preventDefault(); // Previne a navegação normal do link
+        setShowModal(true); // Abre o modal ao clicar no link
+    };
+
+    const handleClickOutside = (e) => {
+        // Fecha o modal se o clique for fora do modal
+        if (modalRef.current && !modalRef.current.contains(e.target)) {
+            setShowModal(false);
+        }
+    };
+
+    useEffect(() => {
+        // Adiciona o evento de clique fora do modal
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
+
+    // Função para obter a data formatada
+    const getCurrentDate = () => {
+        const date = new Date();
+        return date.toLocaleDateString("pt-BR", {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
     };
 
     return (
@@ -118,11 +160,44 @@ const Completar_Perfil = () => {
                             placeholder="Ex: R$ 200,00"
                         />
                     </div>
+                    <div className={`${styles.form_terms} ${errors.termsAccepted ? styles.error : ""}`}>
+                        <label style={{ marginBottom: "5%" }}>
+                            Declaro que li e concordo com os{" "}
+                            <a href="#" onClick={handleLinkClick}>termos de uso</a> da plataformaﾠ
+                            <input
+                                type="checkbox"
+                                name="termsAccepted"
+                                checked={formData.termsAccepted}
+                                onChange={handleTermsChange}
+                            />
+                        </label>
+                    </div>
                     <button type="submit" className={styles.submit_button}>
                         Enviar
                     </button>
                 </form>
             </div>
+
+            {/* Modal de termos de uso */}
+            {showModal && (
+                <div className={styles.modalOverlay}>
+                    <div className={styles.modal} ref={modalRef}>
+                        <h2>Termos de Uso</h2>
+                        <textarea
+                            rows="10"
+                            cols="50"
+                            value="Conteúdo dos termos de uso..."
+                            readOnly
+                        ></textarea>
+                        <p>{getCurrentDate()}</p> {/* Exibe a data atual */}
+                        <img style={{ width: "280px", height: "280px", marginLeft: "30px" }} src={logo} />
+                        <div>
+                            <button onClick={() => setShowModal(false)}>Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            )}
+
             <NavInferior />
         </div>
     );

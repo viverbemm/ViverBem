@@ -11,7 +11,7 @@ function navBar() {
         <div className={styles.navPrin}>
             <header>
                 <div className={styles.navBarDire}>
-                    <a href="#">ViverBem+</a>
+                    <a href="/">ViverBem+</a>
 
                 </div>
                 <div className={styles.navBarEsq}>

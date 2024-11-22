@@ -3,7 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import styles from './PaginaInicial.module.css';
 import NavInicial from '../layout/navInicial';
 import NavInferior from '../layout/navInferior';
-import Benjamin from '../pages/imagens/benjamin.webp';
+import Laura from '../pages/imagens/laura.webp';
+import Leo from '../pages/imagens/leo.webp';
+import Carolina from '../pages/imagens/baixados.webp';
 
 function PaginaInicial() {
     const navigate = useNavigate();
@@ -48,34 +50,27 @@ function PaginaInicial() {
                     <h2>O que dizem sobre nós</h2>
                     <div className={styles.cardsDepoimentos}>
                         <div className={styles.card}>
-                            <img src={Benjamin} alt="VelhoMulher" />
-                            <h3>Maria Silva</h3>
+                            <img className={styles.imginicial} src={Laura} alt="Laura" />
+                            <h3>Laura Silva</h3>
                             <span className={styles.data}>10 de Outubro de 2023</span>
                             <p>
-                                "Graças ao site, encontramos uma cuidadora incrível para nossa mãe. Recomendo!"
+                                "Ser cadastrada aqui aumentou minhas oportunidades de trabalho. Obrigado!"
+                                
                             </p>
                             <div className={styles.estrelas}>⭐⭐⭐⭐⭐</div>
                         </div>
                         <div className={styles.card}>
-                            <img
-                                src="https://via.placeholder.com/60"
-                                alt="João Pereira"
-                                className={styles.avatar}
-                            />
-                            <h3>João Pereira</h3>
+                            <img  className={styles.imginicial} src={Leo} alt="Leo" />
+                            <h3>Leo Pereira</h3>
                             <span className={styles.data}>5 de Novembro de 2023</span>
                             <p>
-                                "Ser cadastrado aqui aumentou minhas oportunidades de trabalho. Obrigado!"
+                            "Graças ao site, encontramos uma cuidadora incrível para nossa mãe. Recomendo!"
                             </p>
                             <div className={styles.estrelas}>⭐⭐⭐⭐⭐</div>
                         </div>
                         <div className={styles.card}>
-                            <img
-                                src="https://via.placeholder.com/60"
-                                alt="Ana Oliveira"
-                                className={styles.avatar}
-                            />
-                            <h3>Ana Oliveira</h3>
+                        <img className={styles.imginicial} src={Carolina} alt="Carolina" />
+                            <h3>Carolina Oliveira</h3>
                             <span className={styles.data}>20 de Setembro de 2023</span>
                             <p>
                                 "O site facilitou muito nossa busca por um profissional confiável."

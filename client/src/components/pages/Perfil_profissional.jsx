@@ -94,7 +94,7 @@ function Profissional() {
               fontSize: '18px',
             }}>oportunidades. Entre em contato.</p>
           </div>
-          <a href="#" className={stylesP.button}>Reservar</a>
+        
         </div>
       </section>
 

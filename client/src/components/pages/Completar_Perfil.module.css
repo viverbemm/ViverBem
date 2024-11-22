@@ -1,7 +1,10 @@
 .form_container {
-  max-width: 400px; /* Reduzindo o tamanho máximo */
-  margin: 50px auto; /* Centraliza horizontalmente e adiciona um espaço no topo */
-  padding: 40px; /* Reduzindo o padding interno */
+  max-width: 400px;
+  /* Reduzindo o tamanho máximo */
+  margin: 50px auto;
+  /* Centraliza horizontalmente e adiciona um espaço no topo */
+  padding: 40px;
+  /* Reduzindo o padding interno */
   font-family: Arial, sans-serif;
   background-color: #d0d0f7;
   border-radius: 8px;
@@ -63,10 +66,44 @@ textarea {
 .error input,
 .error textarea,
 .error input[type="file"] {
-  border: 2px solid #ff4d4d; /* Borda vermelha */
-  background-color: #ffe6e6; /* Fundo levemente avermelhado */
+  border: 2px solid #ff4d4d;
+  /* Borda vermelha */
+  background-color: #ffe6e6;
+  /* Fundo levemente avermelhado */
 }
 
 .error label {
-  color: #ff4d4d; /* Vermelho claro para o texto do rótulo */
+  color: #ff4d4d;
+  /* Vermelho claro para o texto do rótulo */
+}
+
+.form_terms label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+
+
+/* Estilo para o modal */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro semi-transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  max-height: 80
 }
