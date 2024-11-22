@@ -17,7 +17,6 @@ import Completar_Perfil from './components/pages/Completar_Perfil';
 import PaginaInicial from './components/pages/PaginaInicial';
 import MinhaConta from './components/pages/MinhaConta';
 import Perfil_Completo from './components/pages/Perfil_Completo';
-import Crud_imagens from './components/pages/crud_imagens';
 
 
 function App() {
@@ -40,8 +39,6 @@ function App() {
             <Route path='/CompletarPerfil' element={<Completar_Perfil/>}/>
             <Route path='/' element={<PaginaInicial/>}/>
             <Route path='/Perfil' element={<Perfil_Completo/>}/>
-            <Route path='/Crud_imagens' element={<Crud_imagens/>}/>
-            
          
             <Route path='/MinhaConta' element={<MinhaConta/>}/>
           
