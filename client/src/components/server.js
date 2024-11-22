@@ -8,7 +8,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 let usuarios = [];
-let nextId = 1;
+let nextId = 1; 
 
 // Endpoint para criar um usuário
 app.post('/usuarios', (req, res) => {
