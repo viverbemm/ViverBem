@@ -1,138 +1,85 @@
 {
   "usuarios": [
     {
-      "id": "5a72",
-      "nome": "pietro",
-      "telefone": "111111000",
-      "email": "pietro@hotmail.com",
-      "cpf": "1111111111111",
-      "matricula": "333333333",
-      "data_nascimento": "2024-10-03",
-      "senha": "123",
-      "confirmar_senha": "123",
-      "cidade": "vila velha",
-      "tipo_usuario": "profissional"
-    },
-    {
-      "id": "a7cc",
-      "nome": "isaac",
-      "telefone": "2730725745",
-      "email": "isaacluccabar@gmail.com",
-      "cpf": "11111111111",
-      "matricula": "",
-      "data_nascimento": "2024-10-02",
-      "senha": "123",
-      "confirmar_senha": "123",
-      "cidade": "vila velha",
-      "tipo_usuario": "cliente"
-    },
-    {
-      "id": "c48b",
-      "nome": "João Costa",
-      "telefone": "27998564886",
-      "email": "joao@gmail.com",
-      "cpf": "20227413745",
-      "matricula": "",
-      "data_nascimento": "2024-10-03",
-      "senha": "123",
-      "confirmar_senha": "123",
-      "cidade": "guarapari",
-      "tipo_usuario": "cliente"
-    },
-    {
-      "id": "d496",
-      "nome": "Samara Ribeiro",
-      "telefone": "27995754986",
-      "email": "samara@aluno.senai.br",
-      "cpf": "20227413741",
-      "data_nascimento": "2004-09-20",
-      "senha": "123",
-      "confirmar_senha": "123",
-      "cidade": "vila velha"
-    },
-    {
-      "id": "dae4",
+      "id": "5c30",
       "nome": "Isaac",
-      "telefone": "(27) 99283-3778",
-      "email": "isaacluccabar@gmail.com",
-      "cpf": "198.190.887-04",
-      "data_nascimento": "2002-01-19",
-      "senha": "@Isaac19",
-      "confirmar_senha": "@Isaac19",
-      "cidade": "cariacica"
-    },
-    {
-      "id": "d2f9",
-      "nome": "Isaac",
-      "telefone": "(27) 99283-3778",
-      "email": "isaacluccabar@gmail.com",
-      "cpf": "176.888.107-36",
-      "data_nascimento": "2002-01-19",
-      "senha": "@Isaac19",
-      "confirmar_senha": "@Isaac19",
-      "cidade": "cariacica"
-    },
-    {
-      "id": "bc07",
-      "nome": "Isaac",
-      "telefone": "(27) 99283-3778",
-      "email": "isaacluccabar@gmail.com",
-      "cpf": "078.534.147-14",
-      "data_nascimento": "2002-01-19",
-      "senha": "@Isaac19",
-      "confirmar_senha": "@Isaac19",
-      "cidade": "cariacica"
-    },
-    {
-      "id": "8101",
-      "nome": "Pietra Lopes",
-      "telefone": "(27) 99908-2457",
-      "email": "pietra@gmail.com",
-      "cpf": "040.299.034-01",
-      "data_nascimento": "1990-05-18",
-      "senha": "@Pietra123",
-      "confirmar_senha": "@Pietra123",
-      "cidade": "cariacica"
-    },
-    {
-      "id": "df42",
-      "nome": "Pietra Lopes",
-      "telefone": "(27) 99908-2457",
-      "email": "pietra@gmail.com",
-      "cpf": "040.299.034-02",
-      "data_nascimento": "2002-01-19",
-      "senha": "@Isaac19",
-      "confirmar_senha": "@Isaac19",
-      "cidade": "cariacica"
-    },
-    {
-      "id": "7417",
-      "nome": "Isaac Lucca",
-      "telefone": "(27) 99283-3778",
-      "email": "isaac@gmail.com",
-      "cpf": "198.190.885-06",
-      "data_nascimento": "2002-01-19",
-      "senha": "@Isaac19",
-      "confirmar_senha": "@Isaac19",
-      "cidade": "Vila Velha"
-    },
-    {
-      "id": "ad37",
-      "nome": "Samara",
       "telefone": "(27) 99999-9999",
-      "email": "samara.s.ribeiro@aluno.senai.br",
-      "cpf": "202.274.137-42",
+      "email": "isaac@gmail.com",
+      "cpf": "198.190.888-52",
       "data_nascimento": "2002-01-19",
       "senha": "@Isaac19",
       "confirmar_senha": "@Isaac19",
-      "cidade": "vila velha"
+      "cidade": "guarapari"
+    },
+    {
+      "id": "1e51"
+    },
+    {
+      "id": "3cdf",
+      "nome": "Isaac",
+      "telefone": "(27) 99999-9999",
+      "email": "isaac@gmail.com",
+      "cpf": "198.190.888-58",
+      "data_nascimento": "2002-01-19",
+      "senha": "@Isaac19",
+      "confirmar_senha": "@Isaac19",
+      "cidade": "guarapari"
+    },
+    {
+      "id": "cf26"
+    },
+    {
+      "id": "",
+      "nome": "",
+      "telefone": "",
+      "email": "",
+      "cpf": "",
+      "data_nascimento": "",
+      "senha": "",
+      "confirmar_senha": "",
+      "cidade": ""
+      "id": "4271",
+      "nome": "pietro gabriel heringer",
+      "telefone": "(27) 88888-8888",
+      "email": "pietro.menezes@aluno.senai.br",
+      "cpf": "152.454.961-61",
+      "data_nascimento": "2001-02-19",
+      "senha": "@Pietro1205",
+      "confirmar_senha": "@Pietro1205",
+      "cidade": "cariacica"
+    },
+    {
+      "id": "ef66",
+      "nome": "isaac",
+      "telefone": "(27) 55555-5555",
+      "email": "pietrogabrielheringer@gmail.com",
+      "cpf": "265.251.251-65",
+      "data_nascimento": "2002-01-19",
+      "senha": "@Isaaclindogostoso1",
+      "confirmar_senha": "@Isaaclindogostoso1",
+      "cidade": "cariacica"
     }
   ],
   "administradores": [
     {
-      "matricula": "admin",
-      "senha": "admin",
-      "id": "34d6"
+      "matricula": "i.barbara",
+      "senha": "admin123",
+      "id": "1"
+    },
+    {
+      "matricula": "s.ribeiro",
+      "senha": "admin123",
+      "id": "2"
+    },
+    {
+      "matricula": "p.heringer",
+      "senha": "admin123",
+      "id": "3"
+    },
+    {
+      "matricula": "j.pedro",
+      "senha": "admin123",
+      "id": "4"
     }
   ]
 }

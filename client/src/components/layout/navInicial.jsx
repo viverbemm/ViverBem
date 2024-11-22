@@ -11,7 +11,7 @@ function NavInicial() {
         <div className={styles.navInicial}>
             <header>
                 <div className={styles.navInicialDire}>
-                    <a href="#">ViverBem+</a>
+                    <a href="/">ViverBem+</a>
 
                 </div>
                 <div className={styles.navInicialEsq}>

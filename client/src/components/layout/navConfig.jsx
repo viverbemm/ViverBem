@@ -11,12 +11,12 @@ function navConfig() {
         <div className={styles.navPrinc}>
             <header>
                 <div className={styles.navBarDirei}>
-                    <a href="#"><b>ViverBem+</b></a>
+                    <a href="/">ViverBem+</a>
 
                 </div>
                 <div className={styles.navBarEsqu}>
-                    <a href="/PaginaInicial">Pagina Inicial</a>
-                    <a href="/MinhaConta">Minha Conta</a>
+                    <a href="/perfil_profissional">Minha Conta</a>
+                    <a href="/Config">Configurações</a>
                 </div>
             </header>
 

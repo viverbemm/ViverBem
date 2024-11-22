@@ -25,21 +25,27 @@ function PaginaInicial() {
                         <p className={styles.textoInicial}>
                             {`Conectamos cuidadores de confiança a idosos que precisam de atenção, cuidado e companhia.`} <br />
                             {`Nosso site é uma plataforma de fácil navegação, onde você pode encontrar profissionais qualificados`} <br />
-                            {`para ajudar seu ente querido no dia a dia, garantindo um atendimento humanizado e seguro.`}
+                            {`para ajudar seu ente querido no dia a dia, garantindo um atendimento humanizado e seguro.`} <br /><br />
+                            {`Para os cuidadores, oferecemos um catálogo virtual que amplia a visibilidade de seus serviços.`} <br />
+                            {`Por uma taxa acessível, de `}
+                            <strong className={styles.valorMensal}>R$ 29,90 mensais</strong> {` ou `} <strong className={styles.valorAnual}>R$ 299,90 anuais</strong>, {` os cuidadores têm seus contatos`} <br />
+                            {`exibidos no site, conectando-se a famílias que buscam assistência especializada.`} <br /><br />
+
                         </p>
                         {/* Botões de ação */}
                         <div className={styles.botoesAcoes}>
                             <button
                                 className={styles.botaoPrimario}
-                                onClick={() => navigate('/cadastro')}
-                            >
-                                Cadastre-se como Cuidador
-                            </button>
-                            <button
-                                className={styles.botaoSecundario}
                                 onClick={() => navigate('/tela_profissionais')}
                             >
                                 Explore Cuidadores
+
+                            </button>
+                            <button
+                                className={styles.botaoSecundario}
+                                onClick={() => navigate('/cadastro')}
+                            >
+                                Cadastre-se como Cuidador
                             </button>
                         </div>
                     </section>
@@ -54,21 +60,22 @@ function PaginaInicial() {
                             <h3>Laura Silva</h3>
                             <span className={styles.data}>10 de Outubro de 2023</span>
                             <p>
-                                "Graças ao site, encontramos uma cuidadora incrível para nossa mãe. Recomendo!"
+                                "Ser cadastrada aqui aumentou minhas oportunidades de trabalho. Obrigado!"
                             </p>
                             <div className={styles.estrelas}>⭐⭐⭐⭐⭐</div>
                         </div>
                         <div className={styles.card}>
-                            <img  className={styles.imginicial} src={Leo} alt="Leo" />
+                            <img className={styles.imginicial} src={Leo} alt="Leo" />
                             <h3>Leo Pereira</h3>
                             <span className={styles.data}>5 de Novembro de 2023</span>
                             <p>
-                                "Ser cadastrado aqui aumentou minhas oportunidades de trabalho. Obrigado!"
+                                "Graças ao site, encontramos uma cuidadora incrível para nossa mãe. Recomendo!"
+
                             </p>
                             <div className={styles.estrelas}>⭐⭐⭐⭐⭐</div>
                         </div>
                         <div className={styles.card}>
-                        <img className={styles.imginicial} src={Carolina} alt="Carolina" />
+                            <img className={styles.imginicial} src={Carolina} alt="Carolina" />
                             <h3>Carolina Oliveira</h3>
                             <span className={styles.data}>20 de Setembro de 2023</span>
                             <p>
