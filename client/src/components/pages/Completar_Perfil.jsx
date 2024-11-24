@@ -1,8 +1,9 @@
-import React, { useState } from "react";
-import { useNavigate } from 'react-router-dom'; // Importando o hook de navegação
-import styles from './Completar_Perfil.module.css'; // Importa o CSS separado
+import React, { useState, useEffect, useRef } from "react";
+import { useNavigate } from 'react-router-dom';
+import styles from './Completar_Perfil.module.css';
 import NavBar from '../layout/navBar';
 import NavInferior from '../layout/navInferior';
+import logo from '../pages/imagens/LOGO_VIVER_BEM_+_2-removebg-preview (1).png';
 
 const Completar_Perfil = () => {
     const [formData, setFormData] = useState({
@@ -11,6 +12,7 @@ const Completar_Perfil = () => {
         education: "",
         about: "",
         dailyRate: "",
+        termsAccepted: false,
     });
 
     const [errors, setErrors] = useState({
@@ -19,9 +21,12 @@ const Completar_Perfil = () => {
         education: false,
         about: false,
         dailyRate: false,
+        termsAccepted: false,
     });
 
-    const navigate = useNavigate(); // Hook para navegar para outra tela
+    const [showModal, setShowModal] = useState(false);
+    const modalRef = useRef();
+    const navigate = useNavigate();
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -46,6 +51,11 @@ const Completar_Perfil = () => {
         setErrors({ ...errors, photo: false });
     };
 
+    const handleTermsChange = (e) => {
+        setFormData({ ...formData, termsAccepted: e.target.checked });
+        setErrors({ ...errors, termsAccepted: false });
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -55,6 +65,7 @@ const Completar_Perfil = () => {
             education: !formData.education.trim(),
             about: !formData.about.trim(),
             dailyRate: !formData.dailyRate.trim(),
+            termsAccepted: !formData.termsAccepted,
         };
 
         setErrors(newErrors);
@@ -65,8 +76,37 @@ const Completar_Perfil = () => {
             return;
         }
 
-        // Navegar para a tela de exibição de perfil, passando os dados do formulário
         navigate('/perfil', { state: { formData } });
+    };
+
+    const handleLinkClick = (e) => {
+        e.preventDefault();
+        setShowModal(true);
+    };
+
+    const handleClickOutside = (e) => {
+
+        if (modalRef.current && !modalRef.current.contains(e.target)) {
+            setShowModal(false);
+        }
+    };
+
+    useEffect(() => {
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
+
+    const getCurrentDate = () => {
+        const date = new Date();
+        return date.toLocaleDateString("pt-BR", {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
     };
 
     return (
@@ -118,11 +158,52 @@ const Completar_Perfil = () => {
                             placeholder="Ex: R$ 200,00"
                         />
                     </div>
+                    <div className={`${styles.form_terms} ${errors.termsAccepted ? styles.error : ""}`}>
+                        <label style={{ marginBottom: "5%" }}>
+                            Declaro que li e concordo com os{" "}
+                            <a href="#" onClick={handleLinkClick}>termos de uso</a> da plataforma.  
+                            <input
+                                type="checkbox"
+                                name="termsAccepted"
+                                checked={formData.termsAccepted}
+                                onChange={handleTermsChange}
+                                className={errors.termsAccepted ? styles.error_checkbox : ""}
+                            />
+                        </label>
+                    </div>
                     <button type="submit" className={styles.submit_button}>
                         Enviar
                     </button>
                 </form>
             </div>
+
+            {showModal && (
+                <div className={styles.modalOverlay}>
+                    <div className={styles.modal} ref={modalRef}>
+                        <h2>Termos de Uso</h2>
+                        <textarea className={styles.termosTextarea}
+                            rows="10"
+                            cols="50"
+                            value='Última atualização: [Data]
+                                Bem-vindo ao Viver Bem+. Ao acessar ou usar os nossos serviços, você concorda com os seguintes Termos de Uso. Se não concordar com qualquer parte destes termos, por favor, não use nossos serviços.
+                                1. Definições
+                                "Serviço": 
+                                "Usuário": Qualquer pessoa que acesse ou use o serviço.
+                                2. Aceitação dos Termos
+                                Ao utilizar nosso serviço, você concorda com estes Termos de Uso, incluindo quaisquer alterações futuras.
+                                3. Regras de Uso
+                                O usuário concorda em usar o serviço de maneira legal, não violando direitos de terceiros, evitando a distribuição de malware, ou praticando qualquer ato ilícito.'
+                            readOnly
+                        ></textarea>
+                        <p style={{ marginLeft: '10px' }}>{getCurrentDate()}</p> { }
+                        <img style={{ width: "280px", height: "280px", marginLeft: "130px" }} src={logo} />
+                        <div>
+                            <button onClick={() => setShowModal(false)}>Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            )}
+
             <NavInferior />
         </div>
     );

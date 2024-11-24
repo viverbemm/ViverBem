@@ -37,7 +37,7 @@ function LoginUsuario() {
 
             const data = await response.json();
             if (data.length > 0) {
-                navigate('/perfil'); // Redireciona para a página de perfil
+                navigate('/perfil_profissional'); // Redireciona para a página de perfil
             } else {
                 setError('CPF ou senha incorretos');
             }
