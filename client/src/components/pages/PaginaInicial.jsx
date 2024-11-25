@@ -15,7 +15,6 @@ function PaginaInicial() {
             <NavInicial />
             <main className={styles.mainn}>
                 {/* Banner principal */}
-                <div className={styles.containerDoInicio}>
                     <section className={styles.comecando}>
                         <h1 className={styles.h11}>
                             <b className={styles.cuidador}>
@@ -49,7 +48,6 @@ function PaginaInicial() {
                             </button>
                         </div>
                     </section>
-                </div>
 
                 {/* Seção de depoimentos */}
                 <section className={styles.depoimentos}>

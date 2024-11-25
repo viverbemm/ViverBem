@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import styles from './Completar_Perfil.module.css';
 import NavBar from '../layout/navBar';
 import NavInferior from '../layout/navInferior';
-import logo from '../pages/imagens/LOGO_VIVER_BEM_+_2-removebg-preview (1).png';
+import logo from '../pages/imagens/LOGO_VIVER_BEM_+_2-removebg-preview (1) - Copia.png';
 
 const Completar_Perfil = () => {
     const [formData, setFormData] = useState({
@@ -196,7 +196,7 @@ const Completar_Perfil = () => {
                             readOnly
                         ></textarea>
                         <p style={{ marginLeft: '10px' }}>{getCurrentDate()}</p> { }
-                        <img style={{ width: "280px", height: "280px", marginLeft: "130px" }} src={logo} />
+                        <img style={{ width: "400px", height: "350px", marginLeft: "80px" }} src={logo} />
                         <div>
                             <button onClick={() => setShowModal(false)}>Fechar</button>
                         </div>
