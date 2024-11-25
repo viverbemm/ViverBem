@@ -2,6 +2,7 @@
     padding: 20px;
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
+   
 }
 
 .containerDoInicio {
@@ -28,6 +29,7 @@
     justify-content: center;
     gap: 20px;
     margin-top: 20px;
+   
 }
 
 .botaoPrimario {
@@ -39,6 +41,7 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 500px;
 }
 
 
@@ -51,6 +54,7 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
+    width: 500px;
 }
 
 .depoimentos {

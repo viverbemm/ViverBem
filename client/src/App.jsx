@@ -43,6 +43,7 @@ function App() {
             <Route path='/CompletarPerfil' element={<Completar_Perfil/>}/>
             <Route path='/' element={<PaginaInicial/>}/>
             <Route path='/Perfil' element={<Perfil_Completo/>}/>
+            <Route path='/PaginaInicial' element={<PaginaInicial/>}/>
             <Route path='/MinhaConta' element={<MinhaConta/>}/>
             <Route path='/AlterarSenha' element={<AlterarSenha/>}/>
             <Route path='/Config' element={<ConfigConta/>}/>
