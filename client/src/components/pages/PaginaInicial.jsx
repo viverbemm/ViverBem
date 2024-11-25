@@ -53,11 +53,11 @@ function PaginaInicial() {
 
                 {/* Seção de depoimentos */}
                 <section className={styles.depoimentos}>
-                    <h2>O que dizem sobre nós</h2>
+                    <h2><b>O que dizem sobre nós</b></h2>
                     <div className={styles.cardsDepoimentos}>
                         <div className={styles.card}>
                             <img className={styles.imginicial} src={Laura} alt="Laura" />
-                            <h3>Laura Silva</h3>
+                            <h3><b>Laura Silva</b></h3>
                             <span className={styles.data}>10 de Outubro de 2023</span>
                             <p>
                                 "Ser cadastrada aqui aumentou minhas oportunidades de trabalho. Obrigado!"
@@ -66,7 +66,7 @@ function PaginaInicial() {
                         </div>
                         <div className={styles.card}>
                             <img className={styles.imginicial} src={Leo} alt="Leo" />
-                            <h3>Leo Pereira</h3>
+                            <h3><b>Leo Pereira</b></h3>
                             <span className={styles.data}>5 de Novembro de 2023</span>
                             <p>
                                 "Graças ao site, encontramos uma cuidadora incrível para nossa mãe. Recomendo!"
@@ -76,7 +76,7 @@ function PaginaInicial() {
                         </div>
                         <div className={styles.card}>
                             <img className={styles.imginicial} src={Carolina} alt="Carolina" />
-                            <h3>Carolina Oliveira</h3>
+                            <h3><b>Carolina Oliveira</b></h3>
                             <span className={styles.data}>20 de Setembro de 2023</span>
                             <p>
                                 "O site facilitou muito nossa busca por um profissional confiável."
