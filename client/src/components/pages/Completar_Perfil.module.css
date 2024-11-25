@@ -6,6 +6,7 @@
   background-color: #d0d0f7;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: 'Roboto', sans-serif;
 }
 
 h2 {
@@ -23,7 +24,7 @@ h2 {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
-  color: #555;
+  color:#0a1f8f;
 }
 
 .form_group input,

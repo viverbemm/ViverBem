@@ -14,12 +14,15 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     margin-top: 3%;
+    font-family: 'Roboto', sans-serif;
     }
     
     .editProfileContainer h2 {
-    font-size: 24px;
-    color:#0120a7;
-    margin-bottom: 5px;
+      color: #3A3A8F;
+      font-size: 30px; /* Tamanho um pouco menor para melhorar o layout */
+      margin-bottom: 30px; /* Aumentar o espaço abaixo do título */
+      font-family: 'Roboto', sans-serif;
+      text-transform: none; /* Garante que o texto respeite o formato original */
     }
     
     .form {
@@ -47,6 +50,7 @@
     border-radius: 4px;
     outline: none;
     transition: border-color 0.3s ease;
+
     }
     
     .inputGroup input:focus,
@@ -64,10 +68,12 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-top: 10px;
+    
     }
     
     .submitButton:hover {
     background-color: #5700b3;
+    
     }
     
     /* Mensagens de erro e sucesso */
@@ -76,6 +82,7 @@
     font-size: 14px;
     margin-top: -10px;
     margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
     }
     
     .success {
@@ -83,6 +90,7 @@
     font-size: 14px;
     margin-top: -10px;
     margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
     }
     
     /* Exibe o nome do arquivo de foto de perfil selecionado */
@@ -90,4 +98,5 @@
     font-size: 14px;
     color:#0120a7;
     margin-top: 5px;
+    font-family: 'Roboto', sans-serif;
     }

@@ -27,10 +27,13 @@
 
 /* Estilo do título dentro da caixa */
 .caixa h2 {
-    color: #0120a7;
+    color: #3A3A8F;
     font-size: 30px; /* Tamanho um pouco menor para melhorar o layout */
     margin-bottom: 30px; /* Aumentar o espaço abaixo do título */
+    font-family: 'Roboto', sans-serif;
+    text-transform: none; /* Garante que o texto respeite o formato original */
 }
+
 
 /* Estilos dos campos de CPF e Senha */
 .cpf, .senha {
@@ -62,6 +65,8 @@
     cursor: pointer; /* Garante que o cursor de clique apareça */
     font-size: 16px;
     display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    
 }
 
 .registerCadastro:hover::after {
@@ -116,6 +121,7 @@
     margin-top: 20px; /* Ajustar o espaçamento entre botões */
     width: 100%; /* Botão ocupa toda a largura */
     transition: background-color 0.3s ease;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Efeito ao passar o mouse sobre o botão */
