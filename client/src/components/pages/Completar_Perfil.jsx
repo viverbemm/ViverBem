@@ -183,8 +183,8 @@ const Completar_Perfil = () => {
                         <h2>Termos de Uso</h2>
                         <textarea className={styles.termosTextarea}
                             rows="10"
-                            cols="50"
-                            value='Última atualização: [Data]
+                            cols="0"
+                            value ='Última atualização: [Data]
                                 Bem-vindo ao Viver Bem+. Ao acessar ou usar os nossos serviços, você concorda com os seguintes Termos de Uso. Se não concordar com qualquer parte destes termos, por favor, não use nossos serviços.
                                 1. Definições
                                 "Serviço": 

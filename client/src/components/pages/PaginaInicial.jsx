@@ -15,7 +15,15 @@ function PaginaInicial() {
             <NavInicial />
             <main className={styles.mainn}>
                 {/* Banner principal */}
-                    <section className={styles.comecando}>
+                <section className={styles.comecando}>
+                    <section style={{
+                        width: '90%',
+                        padding: '20px',
+                        backgroundColor: '#E6E6FA',
+                        border: '1px solid ddd',
+                        borderRadius: '30px',
+                        marginBottom: '30px'
+                    }}>
                         <h1 className={styles.h11}>
                             <b className={styles.cuidador}>
                                 Encontre o Cuidador Ideal para o Idoso que Você Ama
@@ -48,6 +56,7 @@ function PaginaInicial() {
                             </button>
                         </div>
                     </section>
+                </section>
 
                 {/* Seção de depoimentos */}
                 <section className={styles.depoimentos}>
@@ -86,7 +95,7 @@ function PaginaInicial() {
 
             </main>
             <NavInferior />
-        </div>
+        </div >
     );
 }
 
