@@ -7,8 +7,9 @@ function navInferior() {
     <section className={styles.rod}>
       <div className={styles.containerIV}>
         <h1 className={styles.rodape}>ViverBem+</h1>
-        <p style={{ fontWeight: '100' }}>Centro Empresarial Shopping Praia da Costa, 245, Vila Velha - ES.</p>
-        <p style={{ marginTop: '-1.5%' }}>viverbemmais@gmail.com</p>
+        <p style={{ fontWeight: '100' }}>"Cuidar de quem nos cuidou é um ato de amor."</p>
+        <p>viverbemmais@gmail.com</p>
+        <p>@viverbemmais_</p>
       </div>
     </section>
   );

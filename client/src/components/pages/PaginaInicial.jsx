@@ -21,13 +21,13 @@ function PaginaInicial() {
                         border: '1px solid #ddd',
                         borderRadius: '30px',
                         marginBottom: '30px',
-                        width: '87%',
+                        width: '83%',
                         backgroundColor: '#E6E6FA',
                         padding: '40px'
                     }}>
                         <h1 className={styles.h11}>
                             <b className={styles.cuidador}>
-                                Encontre o Cuidador Ideal para o Idoso que Você Ama
+                                Encontre o cuidador ideal para o idoso que você ama
                             </b>
                         </h1>
                         <p className={styles.textoInicial}>

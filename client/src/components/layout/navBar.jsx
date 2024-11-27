@@ -12,14 +12,14 @@ function navBar() {
         <div className={styles.navPrin}>
             <header>
                 <div className={styles.navBarDire}>
-                    <img style={{ marginLeft: '20px', width: '300px', height: '270px' }} src={logo} alt="" />
+                    <img style={{ marginLeft: '35%', width: '300px', height: '270px' }} src={logo} alt="" />
                 </div>
                 <div className={styles.navBarEsq}>
                     <a style={{
                         border: '2px solid #ddd',
                         borderRadius: '30px',
                         marginRight: '20px'
-                    }} href="/">Pagina Inicial</a>
+                    }} href="/">Página Inicial</a>
                     <a style={{
                         border: '2px solid #ddd',
                         borderRadius: '30px',

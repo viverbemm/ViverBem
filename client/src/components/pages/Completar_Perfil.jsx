@@ -159,7 +159,7 @@ const Completar_Perfil = () => {
                         />
                     </div>
                     <div className={`${styles.form_terms} ${errors.termsAccepted ? styles.error : ""}`}>
-                        <label style={{ marginBottom: "5%" }}>
+                        <label st>
                             Declaro que li e concordo com os{" "}
                             <a href="#" onClick={handleLinkClick}>termos de uso</a> da plataforma.  
                             <input
