@@ -18,24 +18,24 @@ export async function createUsuario(usuario) {
     ];
 
     try {
-       const [retorno] = await conexao.query(sql,params);
-       console.log(retorno.insertId);
-       return [201, {message:'Usuário Cadastrado'}]
+        const [retorno] = await conexao.query(sql, params);
+        console.log(retorno.insertId);
+        return [201, { message: 'Usuário Cadastrado' }]
     } catch (error) {
         console.log(error);
-        return [500, {message:'Erro ao cadastrar usuário'}]
+        return [500, { message: 'Erro ao cadastrar usuário' }]
     }
 }
 
 export async function readUsuario() {
     console.log('UsuarioModel :: readUsuario');
     const conexao = mysql.createPool(db);
-    
+
     const sql = 'SELECT * FROM usuarios';
 
     try {
         const [retorno] = await conexao.query(sql);
-        return [200,retorno];
+        return [200, retorno];
     } catch (error) {
         return [500, error]
     }
@@ -49,15 +49,15 @@ export async function showOneUsuario(id_usuario) {
     const params = [id_usuario];
 
     try {
-        const [retorno] = await conexao.query(sql,params);
-        if(retorno.length < 1){
-            return [404, {message:'Usuario não encontrado'}];
-        }else{
-            return [200,retorno[0]];
+        const [retorno] = await conexao.query(sql, params);
+        if (retorno.length < 1) {
+            return [404, { message: 'Usuario não encontrado' }];
+        } else {
+            return [200, retorno[0]];
         }
     } catch (error) {
         console.log(error);
-        return [500, {message: 'Erro ao mostrar usuário'}];
+        return [500, { message: 'Erro ao mostrar usuário' }];
     }
 }
 
@@ -80,12 +80,12 @@ export async function deleteUsuario(id_usuario) {
 }
 
 
-export async function updateUsuario(id_usuario, nome_completo, telefone, email, data_nascimento, cidade) {
+export async function updateUsuario(id_usuario, usuario) {
     const conexao = mysql.createPool(db);
 
     const sql = `
         UPDATE usuarios
-        SET nome_completo = ?, telefone = ?, email = ?, data_nascimento = ?, cidade = ?
+        SET nome_completo = ?, telefone = ?, email = ?, data_nascimento = ?, senha = ?, cidade = ?
         WHERE id_usuario = ?
     `;
 
@@ -96,6 +96,7 @@ export async function updateUsuario(id_usuario, nome_completo, telefone, email, 
         usuario.data_nascimento,
         usuario.senha,
         usuario.cidade,
+        id_usuario,
     ];
 
     try {
@@ -114,20 +115,20 @@ export async function updateUsuario(id_usuario, nome_completo, telefone, email, 
 
 
 
-export async function findUserByLoginPassword(cpf,senha) {
+export async function findUserByLoginPassword(cpf, senha) {
     console.log('UsuarioModel :: findUserByLoginPassword');
     const conexao = mysql.createPool(db);
     const sql = 'SELECT id_usuario FROM usuarios WHERE cpf = ? AND senha = ?';
-    const params = [cpf,senha];
+    const params = [cpf, senha];
     try {
-        const [retorno] = await conexao.query(sql,params);
-        if(retorno.length < 1){
-            return [404, {message:'cpf ou senha invalidos'}];
-        }else{
-            return [200,retorno[0]];
+        const [retorno] = await conexao.query(sql, params);
+        if (retorno.length < 1) {
+            return [404, { message: 'cpf ou senha invalidos' }];
+        } else {
+            return [200, retorno[0]];
         }
     } catch (error) {
         console.log(error);
-        return [500, {message: 'Erro ao mostrar usuário'}];
-    }    
+        return [500, { message: 'Erro ao mostrar usuário' }];
+    }
 }

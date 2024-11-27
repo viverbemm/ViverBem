@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const app = express();
-const PORT = 3001;
+const PORT = 5000;
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -11,7 +11,7 @@ let usuarios = [];
 let nextId = 1; 
 
 // Endpoint para criar um usuário
-app.post('/usuarios', (req, res) => {
+app.post('/usuario', (req, res) => {
   const { nome, email, senha } = req.body;
   const novoUsuario = { id: nextId++, nome, email, senha };  // Incluindo a senha no novo usuário
   usuarios.push(novoUsuario);
@@ -19,7 +19,7 @@ app.post('/usuarios', (req, res) => {
 });
 
 // Endpoint para atualizar um usuário
-app.put('/usuarios/:id', (req, res) => {
+app.put('/usuario/:id', (req, res) => {
   const { id } = req.params;
   const { nome, email, senha } = req.body;  
   const usuarioIndex = usuarios.findIndex((u) => u.id === parseInt(id));
@@ -33,19 +33,19 @@ app.put('/usuarios/:id', (req, res) => {
 });
 
 // Endpoint para buscar todos os usuários
-app.get('/usuarios', (req, res) => {
+app.get('/usuario', (req, res) => {
   res.json(usuarios);
 });
 
 // Endpoint para deletar um usuário
-app.delete('/usuarios/:id', (req, res) => {
+app.delete('/usuario/:id', (req, res) => {
   const { id } = req.params;
   usuarios = usuarios.filter((u) => u.id !== parseInt(id));
   res.status(204).send();
 });
 
 // Novo Endpoint para alterar a senha de um usuário
-app.put('/usuarios/alterar-senha', (req, res) => {
+app.put('/usuario/alterar-senha', (req, res) => {
   const { cpf, novaSenha } = req.body;  // Esperamos que CPF e nova senha sejam enviados no corpo da requisição
 
   // Verificando se os dados necessários foram enviados

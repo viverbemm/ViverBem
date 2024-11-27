@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState} from 'react';
 import FormCadastro from '../formCadastro/FormCadastro';
 
 
@@ -6,7 +6,7 @@ function Cadastro() {
 
     async function cadastrarUsuario(infoCadastro) {
         try {
-            const resposta = await fetch('http://localhost:3001/usuarios', {
+            const resposta = await fetch('http://localhost:5000/usuario', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(infoCadastro)
