@@ -10,8 +10,8 @@ import profileLuisa from '../pages/imagens/luisa.webp';
 import profileMaite from '../pages/imagens/maite.webp';
 import NavBar from '../layout/navBar';
 import { Link } from 'react-router-dom';
-import styles from './Tela_profissionais.module.css'; 
-import menuIcon from './assets/img/menu_white_36dp.svg'; 
+import styles from './Tela_profissionais.module.css';
+import menuIcon from './assets/img/menu_white_36dp.svg';
 
 
 function Profissionais() {
@@ -70,7 +70,6 @@ function Profissionais() {
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
-
         <h1 className={stylesT.rodape}>ViverBem+</h1>
         <p className={stylesT.controd}>Centro Empresarial Shopping Praia da Costa, 245, Vila Velha - ES.</p>
       </div>

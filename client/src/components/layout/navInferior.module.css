@@ -1,5 +1,4 @@
 .rod {
-  padding: 30px;
   background-color: #c2c2f8;
   text-align: center;
   display: flex;
@@ -9,7 +8,7 @@
 
 .containerIV {
   width: 86%;
-  padding: 20px;
+  padding: 1px;
   background-color: #E6E6FA;
   border: 1px solid #ddd;
   border-radius: 30px;

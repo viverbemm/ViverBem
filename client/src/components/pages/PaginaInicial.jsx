@@ -31,13 +31,13 @@ function PaginaInicial() {
                             </b>
                         </h1>
                         <p className={styles.textoInicial}>
-                            {`Conectamos cuidadores de confiança a idosos que precisam de atenção, cuidado e companhia.`} <br />
-                            {`Nosso site é uma plataforma de fácil navegação, onde você pode encontrar profissionais qualificados`} <br />
-                            {`para ajudar seu ente querido no dia a dia, garantindo um atendimento humanizado e seguro.`} <br /><br />
+                            {`Conectamos cuidadores de confiança a idosos que precisam de atenção, cuidados e companhia.`} <br />
+                            {`Nosso site é uma plataforma de fácil navegação, onde você encontrará profissionais qualificados`} <br />
+                            {`para ajudar seu ente querido no dia a dia, garantindo um atendimento humanizado e profissional.`} <br /><br />
                             {`Para os cuidadores, oferecemos um catálogo virtual que amplia a visibilidade de seus serviços.`} <br />
                             {`Por uma taxa acessível, de `}
-                            <strong className={styles.valorMensal}>R$ 29,90 mensais</strong> {` ou `} <strong className={styles.valorAnual}>R$ 299,90 anuais</strong>, {` os cuidadores têm seus contatos`} <br />
-                            {`exibidos no site, conectando-se a famílias que buscam assistência especializada.`} <br /><br />
+                            <strong className={styles.valorMensal}>R$ 29,90 mensal</strong> {` ou `} <strong className={styles.valorAnual}>R$ 299,90 anual</strong>, {` os cuidadores têm seu perfil`} <br />
+                            {`divulgado em nossa plataforma, conectando-se a famílias que buscam assistência especializada.`} <br /><br />
 
                         </p>
                         {/* Botões de ação */}

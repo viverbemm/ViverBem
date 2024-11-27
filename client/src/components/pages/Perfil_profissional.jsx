@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import profileMenu from './assets/img/menu_white_36dp.svg';
 import profilePic from '../pages/imagens/luisa.webp';
 import stylesP from './Perfil_Profissional.module.css';
-import stylesM from './Menu_superior.module.css';
 import telephone from '../pages/imagens/telephone-handle-silhouette.png';
 import email from '../pages/imagens/email.png';
 import NavBar from '../layout/navBar';
+import NavInferior from '../layout/navInferior';
 
 function Profissional() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -97,14 +97,7 @@ function Profissional() {
         
         </div>
       </section>
-
-      <section className={stylesP.rod}>
-        <div className={stylesP.containerIV}>
-          <h1 className={stylesP.rodape}>ViverBem+</h1>
-          <p style={{ fontWeight: '100' }}>Centro Empresarial Shopping Praia da Costa, 245, Vila Velha - ES.</p>
-          <p style={{marginTop: '-1.5%'}}>viverbemmais@gmail.com</p>
-        </div>
-      </section>
+      <NavInferior />
     </div>
   );
 }
