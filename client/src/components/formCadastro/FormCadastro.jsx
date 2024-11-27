@@ -8,13 +8,12 @@ function FormCadastro({ titulo, handleSubmit, id }) {
   const navigate = useNavigate(); // Navegação para a tela de pagamento
   const [usuarios, setUsuarios] = useState([]);
   const [formCadastro, setFormCadastro] = useState({
-    nome: "",
+    nome_completo: "",
     telefone: "",
     email: "",
     cpf: "",
     data_nascimento: "",
     senha: "",
-    confirmar_senha: "",
     cidade: "",
   });
 
@@ -31,7 +30,7 @@ function FormCadastro({ titulo, handleSubmit, id }) {
 
   async function buscarCadastro(id) {
     try {
-      const resposta = await fetch(`http://localhost:3001/usuarios/${id}`, {
+      const resposta = await fetch(`http://localhost:5000/usuario/${id}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -51,7 +50,7 @@ function FormCadastro({ titulo, handleSubmit, id }) {
 
   async function carregarUsuarios() {
     try {
-      const resposta = await fetch("http://localhost:3001/usuarios", {
+      const resposta = await fetch("http://localhost:5000/usuario", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -185,7 +184,7 @@ function FormCadastro({ titulo, handleSubmit, id }) {
                 <input
                   type="text"
                   name="nome"
-                  placeholder="Nome Completo *"
+                  placeholder="Nome Completo"
                   value={formCadastro.nome}
                   onChange={handleChange}
                   required

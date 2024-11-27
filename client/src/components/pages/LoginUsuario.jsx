@@ -30,7 +30,7 @@ function LoginUsuario() {
         }
 
         try {
-            const response = await fetch(`http://localhost:3001/usuarios?cpf=${cpf}&senha=${senha}`, {
+            const response = await fetch(`http://localhost:5000/usuario?cpf=${cpf}&senha=${senha}`, {
                 method: 'GET',
                 headers: { 'Content-Type': 'application/json' },
             });
