@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './PaginaInicial.module.css';
-import NavInicial from '../layout/navInicial';
+import NavBar from '../layout/navBar';
 import NavInferior from '../layout/navInferior';
 import Laura from '../pages/imagens/laura.webp';
 import Leo from '../pages/imagens/leo.webp';
@@ -12,17 +12,18 @@ function PaginaInicial() {
 
     return (
         <div>
-            <NavInicial />
-            <main className={styles.mainn}>
+            <NavBar />
+            <main style={{ backgroundColor: '#c2c2f8', width: '100%', display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
                 {/* Banner principal */}
+                <h1>ﾠﾠﾠﾠﾠﾠﾠﾠﾠﾠ</h1>
                 <section className={styles.comecando}>
                     <section style={{
-                        width: '90%',
-                        padding: '20px',
-                        backgroundColor: '#E6E6FA',
-                        border: '1px solid ddd',
+                        border: '1px solid #ddd',
                         borderRadius: '30px',
-                        marginBottom: '30px'
+                        marginBottom: '30px',
+                        width: '87%',
+                        backgroundColor: '#E6E6FA',
+                        padding: '40px'
                     }}>
                         <h1 className={styles.h11}>
                             <b className={styles.cuidador}>
@@ -61,6 +62,7 @@ function PaginaInicial() {
                 {/* Seção de depoimentos */}
                 <section className={styles.depoimentos}>
                     <h2><b>O que dizem sobre nós</b></h2>
+                    <h1>ﾠﾠﾠﾠﾠﾠﾠﾠﾠﾠ</h1>
                     <div className={styles.cardsDepoimentos}>
                         <div className={styles.card}>
                             <img className={styles.imginicial} src={Laura} alt="Laura" />

@@ -46,9 +46,7 @@ function App() {
             <Route path='/PaginaInicial' element={<PaginaInicial/>}/>
             <Route path='/MinhaConta' element={<MinhaConta/>}/>
             <Route path='/AlterarSenha' element={<AlterarSenha/>}/>
-            <Route path='/Config' element={<ConfigConta/>}/>
-          
-          
+            <Route path='/Config' element={<ConfigConta/>}/>      
           </Routes>
         </Router> 
   );
