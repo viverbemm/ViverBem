@@ -8,7 +8,7 @@ function EditCadastro() {
 
     async function editarCadastro(infoCadastro, id) {
         try {
-            const resposta = await fetch(`http://localhost:3001/usuarios/${id}`, {
+            const resposta = await fetch(`http://localhost:5000/usuario/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json' // Corrigido 'Conten-Type' para 'Content-Type'
