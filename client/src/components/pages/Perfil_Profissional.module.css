@@ -5,17 +5,17 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.intro {
+    }
+    
+    .intro {
     padding: 30px;
     background-color: #BBADDF;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.containerI {
+    }
+    
+    .containerI {
     display: flex;
     /* Torna o container um flex container */
     justify-content: flex-start;
@@ -26,7 +26,7 @@ header {
     /* Ocupa toda a largura disponível */
     height: auto;
     /* Ajusta a altura conforme o conteúdo */
-
+    
     background-color: #E6E6FA;
     /* Cor de fundo */
     border: 1px solid #ddd;
@@ -35,9 +35,9 @@ header {
     /* Bordas arredondadas, opcional */
     gap: 20px;
     /* Espaço entre a imagem e o texto */
-}
-
-.profilePic {
+    }
+    
+    .profilePic {
     width: 400px;
     /* Ajuste a largura conforme necessário */
     height: 420px;
@@ -47,10 +47,10 @@ header {
     margin: 0;
     /* Remove margens */
     border-radius: 30px;
-}
-
-
-.introText {
+    }
+    
+    
+    .introText {
     margin-top: 50px;
     margin-left: 20px;
     max-width: 80%;
@@ -60,9 +60,9 @@ header {
     font-size: 30px;
     color: #23008D;
     font-weight: 900;
-}
-
-.introText p {
+    }
+    
+    .introText p {
     margin-left: 40px;
     margin-right: 40px;
     max-width: 100%;
@@ -72,17 +72,17 @@ header {
     font-size: 18px;
     font-weight: 100;
     color: #23008D;
-}
-
-.about {
+    }
+    
+    .about {
     padding: 30px;
     background-color: #BBADDF;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.containerII {
+    }
+    
+    .containerII {
     display: flex;
     /* Torna o container um flex container */
     align-items: center;
@@ -94,9 +94,9 @@ header {
     background-color: #E6E6FA;
     border: 1px solid #ddd;
     border-radius: 30px;
-}
-
-.desenvol {
+    }
+    
+    .desenvol {
     margin-left: 5%;
     font-size: 18px;
     font-weight: 100;
@@ -106,28 +106,28 @@ header {
     align-items: left;
     text-align: left;
     /* Para garantir que o texto dos elementos como <p>, <h3>, etc., sejam centralizados */
-}
-
-.pI,
-.pII,
-.pIII,
-.pIV,
-.pV,
-.pVI {
+    }
+    
+    .pI,
+    .pII,
+    .pIII,
+    .pIV,
+    .pV,
+    .pVI {
     margin-bottom: 1px;
     margin-left: 90px;
     font-size: 18px;
-}
-
-.cont {
+    }
+    
+    .cont {
     padding: 30px;
     background-color: #BBADDF;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.containerIII {
+    }
+    
+    .containerIII {
     width: 80%;
     height: 300px;
     padding: 20px;
@@ -137,17 +137,17 @@ header {
     border-radius: 30px;
     font-weight: 100;
     font-size: 18px;
-}
-
-.ato {
+    }
+    
+    .ato {
     margin-left: 15%;
     margin-bottom: 5%;
     margin-top: 3%;
     font-size: 30px;
-}
-
-.email,
-.telephone {
+    }
+    
+    .email,
+    .telephone {
     width: 35px;
     /* Largura das imagens */
     height: 35px;
@@ -158,9 +158,9 @@ header {
     /* Alinha as imagens à esquerda */
     margin-left: 10%;
     margin-top: 0px;
-}
-
-.button {
+    }
+    
+    .button {
     padding: 10px 20px;
     background-color: #001870;
     color: #fff;
@@ -168,9 +168,9 @@ header {
     margin-left: 53%;
     text-decoration: none;
     border-radius: 10px;
-}
-
-.rod {
+    }
+    
+    .rod {
     padding: 30px;
     background-color: #BBADDF;
     /*padding: 40px;*/
@@ -178,9 +178,9 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.containerIV {
+    }
+    
+    .containerIV {
     width: 80%;
     padding: 20px;
     background-color: #E6E6FA;
@@ -188,18 +188,18 @@ header {
     border: 1px solid #ddd;
     border-radius: 30px;
     margin-bottom: 30px;
-}
-
-.rodape {
+    }
+    
+    .rodape {
     text-align: center;
     color: rgb(52, 3, 151);
     font-weight: bold;
     font-size: 30px;
     margin-top: 30px;
-}
-
-.controd {
+    }
+    
+    .controd {
     font-size: 18px;
     text-align: center;
     margin-bottom: 20px;
-}
+    }

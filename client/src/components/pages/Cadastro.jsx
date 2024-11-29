@@ -6,7 +6,7 @@ function Cadastro() {
 
     async function cadastrarUsuario(infoCadastro) {
         try {
-            const resposta = await fetch('http://localhost:5000/usuario', {
+            const resposta = await fetch('http://localhost:5001/usuario', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(infoCadastro)

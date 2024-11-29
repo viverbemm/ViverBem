@@ -30,7 +30,7 @@ function FormCadastro({ titulo, handleSubmit, id }) {
 
   async function buscarCadastro(id) {
     try {
-      const resposta = await fetch(`http://localhost:5000/usuario/${id}`, {
+      const resposta = await fetch(`http://localhost:5001/usuario/${id}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -50,7 +50,7 @@ function FormCadastro({ titulo, handleSubmit, id }) {
 
   async function carregarUsuarios() {
     try {
-      const resposta = await fetch("http://localhost:5000/usuario", {
+      const resposta = await fetch("http://localhost:5001/usuario", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

@@ -7,7 +7,7 @@ const PORT = 5000;
 app.use(cors());
 app.use(bodyParser.json());
 
-let usuarios = [];
+let usuario = [];
 let nextId = 1; 
 
 // Endpoint para criar um usuário
