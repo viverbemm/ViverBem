@@ -1,30 +1,28 @@
-.navPrin {
+.navPrin{
     font-size: 20px;
     background-color: #3b00b9;
     color: bisque;
-    background-color: #c2c2f8;
-    height: 190px;
-    margin-top: -70px;
+    background-color:#c2c2f8;
 }
 
-.navBarEsq {
-    margin-right: 15px;
+.navBarEsq a{
+
+color: #3b00b9;
+padding: 14px 20px;
+text-decoration: none;
+background-color:#c2c2f8;
 }
 
-.navBarEsq a {
-    color: #3b00b9;
-    padding: 14px 20px;
-    text-decoration: none;
-    background-color: #E6E6FA;
-}
-
-.navBarDire a {
+.navBarDire a{
     text-decoration: none;
     cursor: pointer;
-    background-color: #c2c2f8;
-    color: #3b00b9;
+    background-color:#c2c2f8;
+    color:#3b00b9;
+
 }
 
-.navPrin header {
-    background-color: #c2c2f8;
+.navPrin header{
+    
+    background-color:#c2c2f8;
+    
 }

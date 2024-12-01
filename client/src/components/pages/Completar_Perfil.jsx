@@ -56,7 +56,7 @@ const Completar_Perfil = () => {
         setErrors({ ...errors, termsAccepted: false });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         const newErrors = {
@@ -76,7 +76,28 @@ const Completar_Perfil = () => {
             return;
         }
 
-        navigate('/perfil', { state: { formData } });
+        const formDataToSend = new FormData();
+        formDataToSend.append('descricao', formData.about);
+        formDataToSend.append('imagem', formData.photo);
+
+        try {
+            const response = await fetch('http://localhost:3001/upload', {
+                method: 'POST',
+                body: formDataToSend,
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                alert('Perfil completo e imagem enviada com sucesso!');
+                navigate('/perfil', { state: { formData } });
+            } else {
+                alert(data.message || 'Erro ao enviar os dados');
+            }
+        } catch (error) {
+            console.error('Erro ao enviar os dados:', error);
+            alert('Erro ao enviar os dados para o servidor.');
+        }
     };
 
     const handleLinkClick = (e) => {
@@ -85,14 +106,12 @@ const Completar_Perfil = () => {
     };
 
     const handleClickOutside = (e) => {
-
         if (modalRef.current && !modalRef.current.contains(e.target)) {
             setShowModal(false);
         }
     };
 
     useEffect(() => {
-
         document.addEventListener("mousedown", handleClickOutside);
         return () => {
             document.removeEventListener("mousedown", handleClickOutside);
@@ -161,7 +180,7 @@ const Completar_Perfil = () => {
                     <div className={`${styles.form_terms} ${errors.termsAccepted ? styles.error : ""}`}>
                         <label st>
                             Declaro que li e concordo com os{" "}
-                            <a href="#" onClick={handleLinkClick}>termos de uso</a> da plataforma.  
+                            <a href="#" onClick={handleLinkClick}>termos de uso</a> da plataforma.
                             <input
                                 type="checkbox"
                                 name="termsAccepted"
@@ -184,7 +203,7 @@ const Completar_Perfil = () => {
                         <textarea className={styles.termosTextarea}
                             rows="10"
                             cols="0"
-                            value ='Última atualização: [Data]
+                            value='Última atualização: [Data]
                                 Bem-vindo ao Viver Bem+. Ao acessar ou usar os nossos serviços, você concorda com os seguintes Termos de Uso. Se não concordar com qualquer parte destes termos, por favor, não use nossos serviços.
                                 1. Definições
                                 "Serviço": 
