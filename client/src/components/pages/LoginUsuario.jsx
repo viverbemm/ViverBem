@@ -28,17 +28,22 @@ function LoginUsuario() {
             setError('A senha precisa ter no mínimo 6 caracteres');
             return;
         }
-
+        const dadosLogin = {
+            cpf,
+            senha
+        };
         try {
-            const response = await fetch(`http://localhost:5000/usuario?cpf=${cpf}&senha=${senha}`, {
-                method: 'GET',
+            const response = await fetch(`http://localhost:5000/login`, {
+                method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
+                body:JSON.stringify(dadosLogin) 
             });
 
-            const data = await response.json();
-            if (data.length > 0) {
-                navigate('/perfil_profissional'); // Redireciona para a página de perfil
-            } else {
+            if(response.ok){
+                navigate('/perfil'); // Redireciona para a página de perfil
+                const {id_usuario} = await response.json();
+                localStorage.setItem("id_usuario",id_usuario);
+            }else {
                 setError('CPF ou senha incorretos');
             }
         } catch (error) {

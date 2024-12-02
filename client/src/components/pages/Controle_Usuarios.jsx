@@ -13,7 +13,7 @@ const Controle = () => {
   // Função para buscar os usuários
   const fetchUsuarios = async () => {
     try {
-      const resposta = await fetch('http://localhost:3001/usuarios');
+      const resposta = await fetch('http://localhost:5000/usuario');
       if (!resposta.ok) {
         throw new Error('Erro ao buscar usuários');
       }
@@ -54,7 +54,7 @@ const handleDelete = (id) => {
 useEffect(() => {
   const fetchUsuarios = async () => {
     try {
-      const resposta = await fetch('http://localhost:3001/usuarios');
+      const resposta = await fetch('http://localhost:5000/usuario');
       if (!resposta.ok) {
         throw new Error('Erro ao buscar usuários');
       }

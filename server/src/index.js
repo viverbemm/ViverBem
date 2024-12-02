@@ -26,6 +26,8 @@ app.get('/usuario/:id_usuario',mostrarUmUsuario);
 app.delete('/usuario/:id_usuario', deletarUsuario);
 app.put ('/usuario/:id_usuario', atualizarUsuario);
 
+
+
 //Efetuar login
 app.post('/login',logarUsuario);
 

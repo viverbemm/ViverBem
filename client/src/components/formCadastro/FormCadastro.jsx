@@ -14,7 +14,7 @@ function FormCadastro({ titulo, handleSubmit, id }) {
     cpf: "",
     data_nascimento: "",
     senha: "",
-    cidade: "",
+    cidade: "", // Cidade foi incluída aqui novamente
   });
 
   const [erros, setErros] = useState({}); // Armazena os erros de validação
@@ -23,14 +23,13 @@ function FormCadastro({ titulo, handleSubmit, id }) {
     if (id) {
       buscarCadastro(id);
     } else {
-      // Se não for edição, carregue a lista de usuários cadastrados
       carregarUsuarios();
     }
   }, [id]);
 
   async function buscarCadastro(id) {
     try {
-      const resposta = await fetch(`http://localhost:5001/usuario/${id}`, {
+      const resposta = await fetch(`http://localhost:5000/usuario/${id}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -50,7 +49,7 @@ function FormCadastro({ titulo, handleSubmit, id }) {
 
   async function carregarUsuarios() {
     try {
-      const resposta = await fetch("http://localhost:5001/usuario", {
+      const resposta = await fetch("http://localhost:5000/usuario", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -73,6 +72,50 @@ function FormCadastro({ titulo, handleSubmit, id }) {
     return usuarios.some((usuario) => usuario.cpf === cpf);
   }
 
+  // Função para validar o CPF
+  function validarCpf(cpf) {
+    const cpfLimpo = cpf.replace(/\D/g, "");
+
+    // Verificar se o CPF tem 11 dígitos
+    if (cpfLimpo.length !== 11) {
+      return false;
+    }
+
+    // Verificar se o CPF é uma sequência de números iguais
+    if (/^(\d)\1{10}$/.test(cpfLimpo)) {
+      return false;
+    }
+
+    // Calcular o primeiro dígito verificador
+    let soma = 0;
+    let peso = 10;
+    for (let i = 0; i < 9; i++) {
+      soma += parseInt(cpfLimpo.charAt(i)) * peso--;
+    }
+    let primeiroDigito = 11 - (soma % 11);
+    if (primeiroDigito === 10 || primeiroDigito === 11) {
+      primeiroDigito = 0;
+    }
+
+    // Calcular o segundo dígito verificador
+    soma = 0;
+    peso = 11;
+    for (let i = 0; i < 10; i++) {
+      soma += parseInt(cpfLimpo.charAt(i)) * peso--;
+    }
+    let segundoDigito = 11 - (soma % 11);
+    if (segundoDigito === 10 || segundoDigito === 11) {
+      segundoDigito = 0;
+    }
+
+    // Verificar se os dígitos calculados coincidem com os fornecidos
+    if (parseInt(cpfLimpo.charAt(9)) !== primeiroDigito || parseInt(cpfLimpo.charAt(10)) !== segundoDigito) {
+      return false;
+    }
+
+    return true;
+  }
+
   function handleChange(event) {
     const { name, value } = event.target;
 
@@ -80,7 +123,7 @@ function FormCadastro({ titulo, handleSubmit, id }) {
     if (name === "telefone") {
       // Remove qualquer coisa que não seja número
       const somenteNumeros = value.replace(/\D/g, "");
-      
+
       // Permite no máximo 11 números para o telefone
       if (somenteNumeros.length <= 11) {
         // Aplica a formatação no telefone
@@ -110,8 +153,7 @@ function FormCadastro({ titulo, handleSubmit, id }) {
     const novosErros = {};
 
     // Validação de CPF
-    const cpfValido = /^[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}$/;
-    if (!cpfValido.test(formCadastro.cpf)) {
+    if (!validarCpf(formCadastro.cpf)) {
       novosErros.cpf = "CPF inválido";
     }
 
@@ -166,8 +208,7 @@ function FormCadastro({ titulo, handleSubmit, id }) {
       // Redirecionar para a tela de pagamento, passando o id do usuário
       navigate("/pagamento", { state: { userId: id } });
     }
-}
-
+  }
 
   return (
     <div>
@@ -183,9 +224,9 @@ function FormCadastro({ titulo, handleSubmit, id }) {
               <form onSubmit={submit}>
                 <input
                   type="text"
-                  name="nome"
+                  name="nome_completo"
                   placeholder="Nome Completo"
-                  value={formCadastro.nome}
+                  value={formCadastro.nome_completo}
                   onChange={handleChange}
                   required
                 />
