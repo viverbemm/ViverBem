@@ -80,25 +80,29 @@ const Completar_Perfil = () => {
         formDataToSend.append('descricao', formData.about);
         formDataToSend.append('imagem', formData.photo);
 
-        try {
-            const response = await fetch('http://localhost:3001/upload', {
-                method: 'POST',
-                body: formDataToSend,
-            });
+        async function getNomeFuncao(id_imagem) {
+            console.log(`http://localhost:5000/imagens/${id_imagem}`);
+            try {
+                const response = await fetch('http://localhost:5000/imagens', {
+                    method: 'POST',
+                    body: formDataToSend,
+                });
 
-            const data = await response.json();
+                const data = await response.json();
 
-            if (response.ok) {
-                alert('Perfil completo e imagem enviada com sucesso!');
-                navigate('/perfil', { state: { formData } });
-            } else {
-                alert(data.message || 'Erro ao enviar os dados');
+                if (response.ok) {
+                    alert('Perfil completo e imagem enviada com sucesso!');
+                    navigate('/perfil', { state: { formData } });
+                } else {
+                    alert(data.message || 'Erro ao enviar os dados');
+                }
+            } catch (error) {
+                console.error('Erro ao enviar os dados:', error);
+                alert('Erro ao enviar os dados para o servidor.');
             }
-        } catch (error) {
-            console.error('Erro ao enviar os dados:', error);
-            alert('Erro ao enviar os dados para o servidor.');
-        }
-    };
+        };
+    }
+
 
     const handleLinkClick = (e) => {
         e.preventDefault();

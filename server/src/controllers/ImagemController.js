@@ -14,27 +14,27 @@ export async function criarImagem(req, res) {
     // Verificar se a descrição e a imagem foram enviadas
     if (!descricao || !imagem) {
         return res.status(400).json({ message: 'Imagem e descrição são obrigatórios' });
-    }
-
-    // Verificar a extensão do arquivo de imagem
-    const extensao = path.extname(imagem.name).toLocaleLowerCase();
-    const extensoesPermitidas = ['.jpg', '.png', '.jpeg'];
-
-    // Verificar se a extensão do arquivo é permitida
-    if (extensoesPermitidas.includes(extensao)) {
-        const nomeImg = `${Date.now()}${extensao}`; // Gerar nome único para a imagem
-
-        try {
-            // Salvar a imagem no diretório desejado e registrar no banco de dados
-            const [status, resposta] = await createImagem(descricao, nomeImg, imagem);
-            res.status(status).json(resposta);
-        } catch (error) {
-            console.log(error);
-            res.status(500).json({ message: 'Erro ao salvar a imagem' });
-        }
     } else {
-        // Retornar erro caso a extensão do arquivo seja inválida
-        res.status(415).json({ message: 'Arquivo inválido' });
+        // Verificar a extensão do arquivo de imagem
+        const extensao = path.extname(imagem.name).toLocaleLowerCase();
+        const extensoesPermitidas = ['.jpg', '.png', '.jpeg'];
+
+        // Verificar se a extensão do arquivo é permitida
+        if (extensoesPermitidas.includes(extensao)) {
+            const nomeImg = `${Date.now()}${extensao}`; // Gerar nome único para a imagem
+
+            try {
+                // Salvar a imagem no diretório desejado e registrar no banco de dados
+                const [status, resposta] = await createImagem(id_imagem, nome_imagem);
+                res.status(status).json(resposta);
+            } catch (error) {
+                console.log(error);
+                res.status(500).json({ message: 'Erro ao salvar a imagem' });
+            }
+        } else {
+            // Retornar erro caso a extensão do arquivo seja inválida
+            res.status(415).json({ message: 'Arquivo inválido' });
+        }
     }
 }
 
@@ -42,7 +42,7 @@ export async function criarImagem(req, res) {
 export async function mostrarImagem(req, res) {
     console.log('ImagemController :: Mostrando lista de imagens');
     try {
-        const [status, resposta] = await readImagem(); // Recuperar imagens do banco de dados
+        const [status, resposta] = await createImagem(); // Recuperar imagens do banco de dados
         res.status(status).json(resposta);
     } catch (error) {
         console.log(error);

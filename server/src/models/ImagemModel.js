@@ -7,20 +7,20 @@ import url from 'url';
 const __filename = url.fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-export async function createImagem(descricao, nomeImg, imagem) {
+export async function createImagem(id_imagem, nome_imagem) {
     const conexao = mysql.createPool(db);
     console.log('ImagemModel :: createImagem');
     
     // Definindo o caminho onde a imagem será armazenada no servidor
-    const caminhoImagem = path.join(__dirname, '..', '..', 'public', 'img', nomeImg);
+    const caminhoImagem = path.join(__dirname, '..', '..', 'public', 'img', nome_imagem);
     
     // Query para inserir a descrição e o caminho da imagem no banco
     const sql = 'INSERT INTO imagens (descricao, caminho) VALUES (?, ?)';
-    const params = [descricao, nomeImg];
+    const params = [id_imagem, nome_imagem];
 
     try {
         // Movendo o arquivo da imagem para a pasta do servidor
-        await imagem.mv(caminhoImagem);
+        await imagem.mv(path.join(__dirname, '..', '..', 'public', 'img', nome_imagem));
         
         // Inserindo a imagem no banco de dados
         const [retorno] = await conexao.query(sql, params);
