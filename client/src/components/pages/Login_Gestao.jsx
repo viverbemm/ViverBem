@@ -13,7 +13,7 @@ const Login = () => {
   const handleLogin = async () => {
     try {
       // Fazendo a requisição ao json-server para verificar os administradores
-      const responseAdmin = await fetch('http://localhost:3001/administradores');
+      const responseAdmin = await fetch('http://localhost:5000/administradores');
       const dataAdmin = await responseAdmin.json();
 
       // Verifica se a matrícula e senha correspondem ao administrador
