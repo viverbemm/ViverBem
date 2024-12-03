@@ -77,31 +77,28 @@ const Completar_Perfil = () => {
         }
 
         const formDataToSend = new FormData();
-        formDataToSend.append('descricao', formData.about);
-        formDataToSend.append('imagem', formData.photo);
+        formDataToSend.append('descricao', formData.about);  // Adicionando descrição
+        formDataToSend.append('imagem', formData.photo);  // Adicionando a foto
 
-        async function getNomeFuncao(id_imagem) {
-            console.log(`http://localhost:5000/imagens/${id_imagem}`);
-            try {
-                const response = await fetch('http://localhost:5000/imagens', {
-                    method: 'POST',
-                    body: formDataToSend,
-                });
+        try {
+            const response = await fetch('http://localhost:5000/imagens', {
+                method: 'POST',
+                body: formDataToSend,  // Enviando os dados como FormData
+            });
 
+            if (response.ok) {
                 const data = await response.json();
-
-                if (response.ok) {
-                    alert('Perfil completo e imagem enviada com sucesso!');
-                    navigate('/perfil', { state: { formData } });
-                } else {
-                    alert(data.message || 'Erro ao enviar os dados');
-                }
-            } catch (error) {
-                console.error('Erro ao enviar os dados:', error);
-                alert('Erro ao enviar os dados para o servidor.');
+                alert('Perfil completo e imagem enviada com sucesso!');
+                navigate('/perfil', { state: { formData } });
+            } else {
+                const errorData = await response.json();
+                alert(errorData.message || 'Erro ao enviar os dados');
             }
-        };
-    }
+        } catch (error) {
+            console.error('Erro ao enviar os dados:', error);
+            alert('Erro ao enviar os dados para o servidor.');
+        }
+    };
 
 
     const handleLinkClick = (e) => {
@@ -140,7 +137,9 @@ const Completar_Perfil = () => {
                 <form onSubmit={handleSubmit}>
                     <div className={`${styles.form_group} ${errors.photo ? styles.error : ""}`}>
                         <label>Adicione sua foto:</label>
-                        <input type="file" accept="image/*" onChange={handlePhotoChange} />
+                        <input type="file" accept="image/*" id="imagem-form" method="POST" encType="multipart/form-data" onChange={handlePhotoChange} />
+                        <input type="text" name="descricao" placeholder="Descrição da imagem" />
+                        <button type="submit">Enviar Imagem</button>
                     </div>
                     <div className={`${styles.form_group} ${errors.experience ? styles.error : ""}`}>
                         <label>Quanto tempo de experiência você possui?</label>

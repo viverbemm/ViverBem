@@ -1,35 +1,46 @@
+// src/models/ImagemModel.js
 import mysql from 'mysql2/promise';
-import db from '../conexao.js';
-import fs from 'fs/promises';
-import path from 'path';
+import db from '../conexao.js'; // Aqui você importa a configuração da conexão com o MySQL
+import fs from 'fs/promises';  // Para manipulação de arquivos
+import path from 'path';       // Para manipulação de caminhos
 import url from 'url';
 
 const __filename = url.fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-export async function createImagem(id_imagem, nome_imagem) {
+export async function createImagem(req, res) {
     const conexao = mysql.createPool(db);
     console.log('ImagemModel :: createImagem');
     
-    // Definindo o caminho onde a imagem será armazenada no servidor
-    const caminhoImagem = path.join(__dirname, '..', '..', 'public', 'img', nome_imagem);
+    // Verificando se o arquivo foi enviado
+    if (!req.files || !req.files.imagem) {
+        throw new Error('Nenhum arquivo foi enviado.');
+    }
+
+    const imagem = req.files.imagem;
     
+    // Gerar nome único para a imagem
+    const extensao = path.extname(imagem.name).toLowerCase();
+    const nomeImagem = `${Date.now()}${extensao}`;
+
+    // Definindo o caminho onde a imagem será salva
+    const caminhoImagem = path.join(__dirname, '..', '..', 'public', 'img', nomeImagem);
+
     // Query para inserir a descrição e o caminho da imagem no banco
     const sql = 'INSERT INTO imagens (descricao, caminho) VALUES (?, ?)';
-    const params = [id_imagem, nome_imagem];
+    const params = [descricao, nomeImagem];
 
     try {
-        // Movendo o arquivo da imagem para a pasta do servidor
-        await imagem.mv(path.join(__dirname, '..', '..', 'public', 'img', nome_imagem));
+        // Movendo o arquivo da imagem para a pasta pública
+        await imagem.mv(caminhoImagem);
         
-        // Inserindo a imagem no banco de dados
-        const [retorno] = await conexao.query(sql, params);
+        // Inserindo no banco de dados
+        const [result] = await conexao.query(sql, params);
+        console.log('Imagem inserida com sucesso no banco de dados:', result);
 
-        // Retorna sucesso caso tudo ocorra corretamente
-        return [201, 'Imagem cadastrada com sucesso'];
+        return { status: 201, message: 'Imagem cadastrada com sucesso!' };
     } catch (error) {
         console.log(error);
-        // Caso ocorra algum erro, retorna o erro
-        return [500, error];
+        throw new Error('Erro ao salvar imagem no servidor ou banco de dados.');
     }
 }
