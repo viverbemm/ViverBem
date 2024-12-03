@@ -1,24 +1,26 @@
-import React, { useState } from "react";
-import { useNavigate } from 'react-router-dom'; // Importando o hook de navegação
+import React, { useState } from 'react'; // Importação correta de useState
+import { useNavigate } from 'react-router-dom'; // Importação correta de useNavigate
 import styles from './Completar_Perfil.module.css'; // Importa o CSS separado
 import NavBar from '../layout/navBar';
 import NavInferior from '../layout/navInferior';
 
-const Completar_Perfil = () => {
+const DadosProfissionais = ({ id_usuario }) => { // Recebendo o id_usuario como prop
     const [formData, setFormData] = useState({
-        photo: null,
-        experience: "",
-        education: "",
-        about: "",
-        dailyRate: "",
+        id_dados: id_usuario, // Inicializa o id_dados com o id_usuario
+        id_usuario: id_usuario,
+        experiencia: "",
+        formacao: "",
+        fale_sobre: "", // Nome correto aqui
+        valor_diaria: "", // Nome correto aqui
+        caminho_imagem: "",
     });
 
     const [errors, setErrors] = useState({
-        photo: false,
-        experience: false,
-        education: false,
-        about: false,
-        dailyRate: false,
+        experiencia: false,
+        formacao: false,
+        fale_sobre: false, // Nome correto aqui
+        valor_diaria: false, // Nome correto aqui
+        caminho_imagem: false,
     });
 
     const navigate = useNavigate(); // Hook para navegar para outra tela
@@ -26,7 +28,7 @@ const Completar_Perfil = () => {
     const handleInputChange = (e) => {
         const { name, value } = e.target;
 
-        if (name === "dailyRate") {
+        if (name === "valor_diaria") { // Corrigido: nome correto aqui
             const formattedValue = value.replace(/\D/g, "");
             const formattedMoney = (formattedValue / 100).toLocaleString("pt-BR", {
                 style: "currency",
@@ -42,19 +44,20 @@ const Completar_Perfil = () => {
     };
 
     const handlePhotoChange = (e) => {
-        setFormData({ ...formData, photo: e.target.files[0] });
-        setErrors({ ...errors, photo: false });
+        setFormData({ ...formData, caminho_imagem: e.target.files[0] });
+        setErrors({ ...errors, caminho_imagem: false });
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
         const newErrors = {
-            photo: !formData.photo,
-            experience: !formData.experience.trim(),
-            education: !formData.education.trim(),
-            about: !formData.about.trim(),
-            dailyRate: !formData.dailyRate.trim(),
+            experiencia: !formData.experiencia,
+            formacao: !formData.formacao.trim(),
+            fale_sobre: !formData.fale_sobre.trim(), // Corrigido: nome correto aqui
+            valor_diaria: !formData.valor_diaria.trim(), // Corrigido: nome correto aqui
+            // Verificar se o caminho_imagem não é nulo (ou seja, um arquivo foi selecionado)
+            caminho_imagem: !formData.caminho_imagem,
         };
 
         setErrors(newErrors);
@@ -75,45 +78,45 @@ const Completar_Perfil = () => {
             <div className={styles.form_container}>
                 <h2><b>Complete seu perfil</b></h2>
                 <form onSubmit={handleSubmit}>
-                    <div className={`${styles.form_group} ${errors.photo ? styles.error : ""}`}>
+                    <div className={`${styles.form_group} ${errors.caminho_imagem ? styles.error : ""}`}>
                         <label>Adicione sua foto:</label>
                         <input type="file" accept="image/*" onChange={handlePhotoChange} />
                     </div>
-                    <div className={`${styles.form_group} ${errors.experience ? styles.error : ""}`}>
+                    <div className={`${styles.form_group} ${errors.experiencia ? styles.error : ""}`}>
                         <label>Quanto tempo de experiência você possui?</label>
                         <input
                             type="text"
-                            name="experience"
-                            value={formData.experience}
+                            name="experiencia"
+                            value={formData.experiencia}
                             onChange={handleInputChange}
                             placeholder="Ex: 5 anos"
                         />
                     </div>
-                    <div className={`${styles.form_group} ${errors.education ? styles.error : ""}`}>
+                    <div className={`${styles.form_group} ${errors.formacao ? styles.error : ""}`}>
                         <label>Sua formação acadêmica:</label>
                         <input
                             type="text"
-                            name="education"
-                            value={formData.education}
+                            name="formacao"
+                            value={formData.formacao}
                             onChange={handleInputChange}
                             placeholder="Ex: Ensino superior completo"
                         />
                     </div>
-                    <div className={`${styles.form_group} ${errors.about ? styles.error : ""}`}>
+                    <div className={`${styles.form_group} ${errors.fale_sobre ? styles.error : ""}`}>
                         <label>Fale um pouco sobre você:</label>
                         <textarea
-                            name="about"
-                            value={formData.about}
+                            name="fale_sobre" // Corrigido: nome correto aqui
+                            value={formData.fale_sobre} // Corrigido: nome correto aqui
                             onChange={handleInputChange}
                             placeholder="Escreva um breve resumo sobre você"
                         ></textarea>
                     </div>
-                    <div className={`${styles.form_group} ${errors.dailyRate ? styles.error : ""}`}>
+                    <div className={`${styles.form_group} ${errors.valor_diaria ? styles.error : ""}`}>
                         <label>Qual valor da sua diária?</label>
                         <input
                             type="text"
-                            name="dailyRate"
-                            value={formData.dailyRate}
+                            name="valor_diaria" // Corrigido: nome correto aqui
+                            value={formData.valor_diaria} // Corrigido: nome correto aqui
                             onChange={handleInputChange}
                             placeholder="Ex: R$ 200,00"
                         />
@@ -128,4 +131,4 @@ const Completar_Perfil = () => {
     );
 };
 
-export default Completar_Perfil;
+export default DadosProfissionais;

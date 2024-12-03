@@ -9,7 +9,14 @@ const Perfil_Completo = () => {
     const location = useLocation(); // Agora utilizando o hook useLocation corretamente
     const { formData } = location.state || {}; // Desestruturando os dados passados
 
-    const [editableData, setEditableData] = useState(formData);
+    // Se formData estiver undefined, inicialize com valores vazios
+    const [editableData, setEditableData] = useState(formData || {
+        caminho_imagem: "",
+        experiencia: "",
+        formacao: "",
+        fale_sobre: "",
+        valor_diaria: ""
+    });
     const [isEditing, setIsEditing] = useState(false); // Controla o modo de edição
 
     const handleEdit = () => {
@@ -34,7 +41,7 @@ const Perfil_Completo = () => {
         if (file) {
             setEditableData((prevData) => ({
                 ...prevData,
-                photo: file
+                caminho_imagem: file
             }));
         }
     };
@@ -57,7 +64,7 @@ const Perfil_Completo = () => {
                         </div>
                     ) : (
                         <img
-                            src={editableData.photo ? URL.createObjectURL(editableData.photo) : ''}
+                            src={editableData.caminho_imagem ? URL.createObjectURL(editableData.caminho_imagem) : ''} // Corrigido para caminho_imagem
                             alt="Perfil"
                             width="100"
                         />
@@ -69,12 +76,12 @@ const Perfil_Completo = () => {
                     {isEditing ? (
                         <input
                             type="text"
-                            name="experience"
-                            value={editableData.experience}
+                            name="experiencia" // Alterado para o nome correto
+                            value={editableData.experiencia}
                             onChange={handleChange}
                         />
                     ) : (
-                        <p>{editableData.experience}</p>
+                        <p>{editableData.experiencia}</p>
                     )}
                 </div>
 
@@ -83,12 +90,12 @@ const Perfil_Completo = () => {
                     {isEditing ? (
                         <input
                             type="text"
-                            name="education"
-                            value={editableData.education}
+                            name="formacao" // Alterado para o nome correto
+                            value={editableData.formacao}
                             onChange={handleChange}
                         />
                     ) : (
-                        <p>{editableData.education}</p>
+                        <p>{editableData.formacao}</p>
                     )}
                 </div>
 
@@ -96,12 +103,12 @@ const Perfil_Completo = () => {
                     <h3>Sobre você:</h3>
                     {isEditing ? (
                         <textarea
-                            name="about"
-                            value={editableData.about}
+                            name="fale_sobre" // Alterado para o nome correto
+                            value={editableData.fale_sobre}
                             onChange={handleChange}
                         />
                     ) : (
-                        <p>{editableData.about}</p>
+                        <p>{editableData.fale_sobre}</p>
                     )}
                 </div>
 
@@ -110,12 +117,12 @@ const Perfil_Completo = () => {
                     {isEditing ? (
                         <input
                             type="text"
-                            name="dailyRate"
-                            value={editableData.dailyRate}
+                            name="valor_diaria" // Alterado para o nome correto
+                            value={editableData.valor_diaria}
                             onChange={handleChange}
                         />
                     ) : (
-                        <p>{editableData.dailyRate}</p>
+                        <p>{editableData.valor_diaria}</p>
                     )}
                 </div>
 
