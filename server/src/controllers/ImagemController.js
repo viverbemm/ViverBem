@@ -1,4 +1,4 @@
-import { createImagem, readImagem, showOneImage, updateImagem, deletarImagem } from '../models/ImagemModel.js';
+import { createImagem, readImagem, showOneImage, updateImagem, deletarImagem as deletarImagemModel } from '../models/ImagemModel.js';  // Renomeando a função importada
 import path from 'path';
 import url from 'url';
 
@@ -14,7 +14,7 @@ export async function criarImagem(req, res) {
     }
 
     const extensao = path.extname(imagem.name).toLocaleLowerCase();
-    const extensoesPermitidas = ['.jpg', '.png', '.jpeg'];
+    const extensoesPermitidas = ['.jpg', '.png', '.jpeg', '.webp', '.heif', '.heic', '.svg', '.bmp'];
 
     if (extensoesPermitidas.includes(extensao)) {
         const nomeImg = `${Date.now()}${extensao}`;
@@ -46,6 +46,8 @@ export async function editarImagem(req, res) {
     console.log('ImagemController :: Editando uma imagem');
     const { id_imagem } = req.params;
     const { imagem } = req.files;
+    console.log(imagem);
+
 
     if (!imagem) {
         return res.status(400).json({ message: 'Imagem é obrigatória' });
@@ -74,7 +76,7 @@ export async function deletarImagem(req, res) {
     const { id_imagem } = req.params;
 
     try {
-        const [status, resposta] = await deletarImagem(id_imagem);
+        const [status, resposta] = await deletarImagemModel(id_imagem);  // Usando a função renomeada
         res.status(status).json(resposta);
     } catch (error) {
         console.log(error);
