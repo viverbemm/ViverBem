@@ -1,34 +1,39 @@
-import React, { useState } from 'react'; // Importação correta de useState
-import { useNavigate } from 'react-router-dom'; // Importação correta de useNavigate
-import styles from './Completar_Perfil.module.css'; // Importa o CSS separado
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import styles from './Completar_Perfil.module.css';
 import NavBar from '../layout/navBar';
 import NavInferior from '../layout/navInferior';
 
-const DadosProfissionais = ({ id_usuario }) => { // Recebendo o id_usuario como prop
+const DadosProfissionais = () => {
+    useEffect(() => {
+        const id_usuario = localStorage.getItem("id_usuario");
+        console.log(id_usuario);
+        setFormData({ ...formData, id_usuario: id_usuario });
+    }, []);
+
     const [formData, setFormData] = useState({
-        id_dados: id_usuario, // Inicializa o id_dados com o id_usuario
-        id_usuario: id_usuario,
+        id_usuario: "",
         experiencia: "",
         formacao: "",
-        fale_sobre: "", // Nome correto aqui
-        valor_diaria: "", // Nome correto aqui
+        fale_sobre: "",
+        valor_diaria: "",
         caminho_imagem: "",
     });
 
     const [errors, setErrors] = useState({
         experiencia: false,
         formacao: false,
-        fale_sobre: false, // Nome correto aqui
-        valor_diaria: false, // Nome correto aqui
+        fale_sobre: false,
+        valor_diaria: false,
         caminho_imagem: false,
     });
 
-    const navigate = useNavigate(); // Hook para navegar para outra tela
+    const navigate = useNavigate();
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
 
-        if (name === "valor_diaria") { // Corrigido: nome correto aqui
+        if (name === "valor_diaria") {
             const formattedValue = value.replace(/\D/g, "");
             const formattedMoney = (formattedValue / 100).toLocaleString("pt-BR", {
                 style: "currency",
@@ -48,15 +53,35 @@ const DadosProfissionais = ({ id_usuario }) => { // Recebendo o id_usuario como 
         setErrors({ ...errors, caminho_imagem: false });
     };
 
-    const handleSubmit = (e) => {
+    async function cadastrarPerfil(infoCadastro) {
+        try {
+            const resposta = await fetch('http://localhost:5000/perfil', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(infoCadastro),
+            });
+
+            if (!resposta.ok) {
+                console.log('Erro ao cadastrar perfil');
+            } else {
+                const { id_usuario } = await resposta.json();
+                console.log(id_usuario);
+                localStorage.setItem("id_usuario", id_usuario);
+                alert('Perfil cadastrado com sucesso');
+            }
+        } catch (error) {
+            console.error('Erro ao cadastrar perfil', error);
+        }
+    }
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         const newErrors = {
             experiencia: !formData.experiencia,
             formacao: !formData.formacao.trim(),
-            fale_sobre: !formData.fale_sobre.trim(), // Corrigido: nome correto aqui
-            valor_diaria: !formData.valor_diaria.trim(), // Corrigido: nome correto aqui
-            // Verificar se o caminho_imagem não é nulo (ou seja, um arquivo foi selecionado)
+            fale_sobre: !formData.fale_sobre.trim(),
+            valor_diaria: !formData.valor_diaria.trim(),
             caminho_imagem: !formData.caminho_imagem,
         };
 
@@ -68,7 +93,10 @@ const DadosProfissionais = ({ id_usuario }) => { // Recebendo o id_usuario como 
             return;
         }
 
-        // Navegar para a tela de exibição de perfil, passando os dados do formulário
+        // Chama a função para cadastrar o perfil
+        await cadastrarPerfil(formData);
+
+        // Navegar para a tela de exibição de perfil, após o cadastro
         navigate('/perfil', { state: { formData } });
     };
 
@@ -105,8 +133,8 @@ const DadosProfissionais = ({ id_usuario }) => { // Recebendo o id_usuario como 
                     <div className={`${styles.form_group} ${errors.fale_sobre ? styles.error : ""}`}>
                         <label>Fale um pouco sobre você:</label>
                         <textarea
-                            name="fale_sobre" // Corrigido: nome correto aqui
-                            value={formData.fale_sobre} // Corrigido: nome correto aqui
+                            name="fale_sobre"
+                            value={formData.fale_sobre}
                             onChange={handleInputChange}
                             placeholder="Escreva um breve resumo sobre você"
                         ></textarea>
@@ -115,8 +143,8 @@ const DadosProfissionais = ({ id_usuario }) => { // Recebendo o id_usuario como 
                         <label>Qual valor da sua diária?</label>
                         <input
                             type="text"
-                            name="valor_diaria" // Corrigido: nome correto aqui
-                            value={formData.valor_diaria} // Corrigido: nome correto aqui
+                            name="valor_diaria"
+                            value={formData.valor_diaria}
                             onChange={handleInputChange}
                             placeholder="Ex: R$ 200,00"
                         />
