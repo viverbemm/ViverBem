@@ -1,64 +1,96 @@
+import { createImagem, readImagem, showOneImage, updateImagem, deletarImagem } from '../models/ImagemModel.js';
 import path from 'path';
 import url from 'url';
-import { createImagem } from '../models/ImagemModel.js';
 
 const __filename = url.fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Função para criar e salvar a imagem
 export async function criarImagem(req, res) {
     console.log('ImagemController :: Criando Imagem');
-    console.log('Arquivos recebidos:', req.files);  // Log de depuração para visualizar o conteúdo de req.files
+    const { imagem } = req.files;
 
-    // Verifique se `req.files` e `req.files.imagem` existem
-    if (!req.files || !req.files.imagem) {
-        console.log('Erro: Arquivo de imagem não enviado ou formato incorreto');
-        return res.status(400).json({ message: 'Arquivo de imagem não enviado ou formato incorreto' });
+    if (!imagem) {
+        return res.status(400).json({ message: 'Imagem é obrigatória' });
     }
 
-    const { descricao } = req.body;  // A descrição vem do corpo da requisição
-    const { imagem } = req.files;    // A imagem vem de `req.files`
-
-    // Se não houver descrição, retornar erro
-    if (!descricao || descricao.trim() === '') {
-        console.log('Erro: Descrição não fornecida');
-        return res.status(400).json({ message: 'Descrição não fornecida' });
-    }
-
-    // Verificar a extensão do arquivo de imagem
-    const extensao = path.extname(imagem.name).toLowerCase(); // Use `.toLowerCase()` para garantir a comparação sem sensibilidade a maiúsculas/minúsculas
+    const extensao = path.extname(imagem.name).toLocaleLowerCase();
     const extensoesPermitidas = ['.jpg', '.png', '.jpeg'];
 
-    // Verificar se a extensão do arquivo é permitida
-    if (!extensoesPermitidas.includes(extensao)) {
-        console.log('Erro: Arquivo inválido. Apenas imagens .jpg, .png e .jpeg são permitidas');
-        return res.status(415).json({ message: 'Arquivo inválido. Apenas imagens .jpg, .png e .jpeg são permitidas' });
+    if (extensoesPermitidas.includes(extensao)) {
+        const nomeImg = `${Date.now()}${extensao}`;
+
+        try {
+            const [status, resposta] = await createImagem(nomeImg, imagem);
+            res.status(status).json(resposta);
+        } catch (error) {
+            console.log(error);
+            res.status(500).json({ message: 'Erro ao cadastrar a imagem' });
+        }
+    } else {
+        return res.status(415).json({ message: 'Tipo de arquivo inválido' });
+    }
+}
+
+export async function mostrarImagem(req, res) {
+    console.log('ImagemController :: Mostrando lista de imagens');
+    try {
+        const [status, resposta] = await readImagem();
+        res.status(status).json(resposta);
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ message: 'Erro ao recuperar imagens' });
+    }
+}
+
+export async function editarImagem(req, res) {
+    console.log('ImagemController :: Editando uma imagem');
+    const { id_imagem } = req.params;
+    const { imagem } = req.files;
+
+    if (!imagem) {
+        return res.status(400).json({ message: 'Imagem é obrigatória' });
     }
 
-    const nomeImg = `${Date.now()}${extensao}`; // Gerar nome único para a imagem
-    console.log(`Imagem gerada com nome: ${nomeImg}`);
+    const extensao = path.extname(imagem.name).toLocaleLowerCase();
+    const extensoesPermitidas = ['.jpg', '.png', '.jpeg', '.webp', '.heif', '.heic', '.svg', '.bmp'];
+
+    if (extensoesPermitidas.includes(extensao)) {
+        const nomeImg = `${Date.now()}${extensao}`;
+
+        try {
+            const [status, resposta] = await updateImagem(id_imagem, nomeImg);
+            res.status(status).json(resposta);
+        } catch (error) {
+            console.log(error);
+            res.status(500).json({ message: 'Erro ao editar imagem' });
+        }
+    } else {
+        return res.status(415).json({ message: 'Tipo de arquivo inválido' });
+    }
+}
+
+export async function deletarImagem(req, res) {
+    console.log('ImagemController :: Deletando Imagem');
+    const { id_imagem } = req.params;
 
     try {
-        // Passar os dados para a função createImagem (descrição e nome da imagem)
-        const [status, resposta] = await createImagem(descricao, nomeImg);
-
-        // Logando a resposta e retornando
-        console.log(`Status: ${status}, Resposta: ${resposta}`);
-        
-        // Salvar a imagem no sistema de arquivos
-        const caminhoImagem = path.join(__dirname, '..', 'public', 'img', nomeImg);
-        imagem.mv(caminhoImagem, (err) => {
-            if (err) {
-                console.log('Erro ao mover a imagem para o diretório:', err);
-                return res.status(500).json({ message: 'Erro ao mover a imagem para o diretório' });
-            }
-
-            console.log('Imagem movida com sucesso');
-            res.status(status).json({ message: resposta });
-        });
-
+        const [status, resposta] = await deletarImagem(id_imagem);
+        res.status(status).json(resposta);
     } catch (error) {
-        console.log('Erro ao salvar a imagem no banco de dados:', error);
-        res.status(500).json({ message: 'Erro ao salvar a imagem no banco de dados' });
+        console.log(error);
+        res.status(500).json({ message: 'Erro ao deletar imagem' });
+    }
+}
+
+export async function mostrarUmaImagem(req, res) {
+    console.log('ImagemController :: Mostrar uma imagem');
+    const { id_imagem } = req.params;
+
+    try {
+        const [status, retorno] = await showOneImage(id_imagem);
+        res.status(status).json(retorno);
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ message: 'Erro ao recuperar a imagem' });
     }
 }

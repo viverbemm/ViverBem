@@ -77,8 +77,7 @@ const Completar_Perfil = () => {
         }
 
         const formDataToSend = new FormData();
-        formDataToSend.append('descricao', formData.about);  // Adicionando descrição
-        formDataToSend.append('imagem', formData.photo);  // Adicionando a foto
+        formDataToSend.append('imagem', formData.photo);  // Enviando apenas a foto
 
         try {
             const response = await fetch('http://localhost:5000/imagens', {
@@ -99,7 +98,6 @@ const Completar_Perfil = () => {
             alert('Erro ao enviar os dados para o servidor.');
         }
     };
-
 
     const handleLinkClick = (e) => {
         e.preventDefault();
@@ -138,8 +136,6 @@ const Completar_Perfil = () => {
                     <div className={`${styles.form_group} ${errors.photo ? styles.error : ""}`}>
                         <label>Adicione sua foto:</label>
                         <input type="file" accept="image/*" id="imagem-form" method="POST" encType="multipart/form-data" onChange={handlePhotoChange} />
-                        <input type="text" name="descricao" placeholder="Descrição da imagem" />
-                        <button type="submit">Enviar Imagem</button>
                     </div>
                     <div className={`${styles.form_group} ${errors.experience ? styles.error : ""}`}>
                         <label>Quanto tempo de experiência você possui?</label>
@@ -181,7 +177,7 @@ const Completar_Perfil = () => {
                         />
                     </div>
                     <div className={`${styles.form_terms} ${errors.termsAccepted ? styles.error : ""}`}>
-                        <label st>
+                        <label>
                             Declaro que li e concordo com os{" "}
                             <a href="#" onClick={handleLinkClick}>termos de uso</a> da plataforma.
                             <input
@@ -217,7 +213,7 @@ const Completar_Perfil = () => {
                                 O usuário concorda em usar o serviço de maneira legal, não violando direitos de terceiros, evitando a distribuição de malware, ou praticando qualquer ato ilícito.'
                             readOnly
                         ></textarea>
-                        <p style={{ marginLeft: '10px' }}>{getCurrentDate()}</p> { }
+                        <p style={{ marginLeft: '10px' }}>{getCurrentDate()}</p>
                         <img style={{ width: "400px", height: "350px", marginLeft: "80px" }} src={logo} />
                         <div>
                             <button onClick={() => setShowModal(false)}>Fechar</button>
