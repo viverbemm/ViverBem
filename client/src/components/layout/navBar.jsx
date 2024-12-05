@@ -1,18 +1,16 @@
 import styles from './NavBar.module.css';
+import logo from '../pages/imagens/logox.png';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 
-
-
 function navBar() {
 
-    return(
+    return (
         <div className={styles.navPrin}>
             <header>
                 <div className={styles.navBarDire}>
-                    < a href="/">ViverBem+</a>
-
+                    <a href="/"><img src={logo} alt="" style={{height: '55px', with: '30px' }} /></a>
                 </div>
                 <div className={styles.navBarEsq}>
                     <a href="/">Pagina Inicial</a>
