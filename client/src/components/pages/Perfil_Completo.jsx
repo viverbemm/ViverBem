@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useLocation } from "react-router-dom"; // Importando o hook useLocation
+import React, { useState, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom"; // Importando o hook useLocation e useNavigate
 import { FaPen } from "react-icons/fa"; // Ícone de edição
 import styles from './Perfil_completo.module.css'; // Importa o CSS para o componente
 import NavConfig from "../layout/navConfig";
@@ -7,6 +7,7 @@ import NavInferior from "../layout/navInferior";
 
 const Perfil_Completo = () => {
     const location = useLocation(); // Agora utilizando o hook useLocation corretamente
+    const navigate = useNavigate(); // Navegação para redirecionar após salvar
     const { formData } = location.state || {}; // Desestruturando os dados passados
 
     // Se formData estiver undefined, inicialize com valores vazios
@@ -19,6 +20,34 @@ const Perfil_Completo = () => {
     });
     const [isEditing, setIsEditing] = useState(false); // Controla o modo de edição
 
+    // Função para enviar os dados para a API (atualização do perfil)
+    const updateProfileData = async (data) => {
+        try {
+            const response = await fetch('http://localhost:5000/perfil', {
+                method: 'PUT', // Usando PUT para atualizar os dados
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data), // Envia os dados como JSON
+            });
+
+            if (!response.ok) {
+                throw new Error('Erro ao atualizar perfil');
+            }
+
+            const result = await response.json();
+            console.log('Perfil atualizado com sucesso', result);
+            alert('Perfil atualizado com sucesso!');
+            
+            // Navegar para a página de perfil com os dados atualizados
+            navigate('/perfil', { state: { formData: result } });
+
+        } catch (error) {
+            console.error('Erro ao atualizar perfil:', error);
+            alert('Houve um erro ao tentar atualizar o perfil.');
+        }
+    };
+
     const handleEdit = () => {
         setIsEditing(true); // Ativa o modo de edição
     };
@@ -26,6 +55,9 @@ const Perfil_Completo = () => {
     const handleSave = () => {
         setIsEditing(false); // Desativa o modo de edição
         console.log("Dados salvos:", editableData);
+
+        // Envia os dados atualizados para a API
+        updateProfileData(editableData);
     };
 
     const handleChange = (e) => {
@@ -45,6 +77,19 @@ const Perfil_Completo = () => {
             }));
         }
     };
+
+    // Função para carregar os dados do perfil (no caso de não ter sido passado pelo estado)
+    useEffect(() => {
+        if (!formData) {
+            const id_usuario = localStorage.getItem("id_usuario");
+            if (id_usuario) {
+                fetch(`http://localhost:5000/perfil/${id_usuario}`)
+                    .then(response => response.json())
+                    .then(data => setEditableData(data))
+                    .catch(error => console.error("Erro ao carregar perfil:", error));
+            }
+        }
+    }, [formData]);
 
     return (
         <div>

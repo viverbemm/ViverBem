@@ -53,6 +53,27 @@ const DadosProfissionais = () => {
         setErrors({ ...errors, caminho_imagem: false });
     };
 
+    // Função para fazer a requisição para a API
+    const sendToAPI = async (formData) => {
+        try {
+            const url = "http://localhost:5000/perfil"; // Substitua pela sua URL
+            const params = new URLSearchParams(formData); // Converte os dados do formulário em parâmetros
+
+            const response = await fetch(`${url}?${params}`, { method: "GET" });
+
+            if (!response.ok) {
+                throw new Error(`Erro na API: ${response.status} - ${response.statusText}`);
+            }
+
+            const data = await response.json();
+            console.log("Resposta da API:", data);
+
+            // Aqui você pode fazer algo com a resposta da API, como mostrar dados ou redirecionar
+        } catch (error) {
+            console.error("Erro durante a chamada da API:", error);
+        }
+    };
+
     async function cadastrarPerfil(infoCadastro) {
         try {
             const resposta = await fetch('http://localhost:5000/perfil', {
@@ -75,8 +96,9 @@ const DadosProfissionais = () => {
     }
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
+        e.preventDefault(); // Impede o envio padrão do formulário.
 
+        // Validação dos campos
         const newErrors = {
             experiencia: !formData.experiencia,
             formacao: !formData.formacao.trim(),
@@ -92,6 +114,9 @@ const DadosProfissionais = () => {
             alert("Por favor, preencha todos os campos obrigatórios.");
             return;
         }
+
+        // Enviar os dados para a API
+        await sendToAPI(formData);
 
         // Chama a função para cadastrar o perfil
         await cadastrarPerfil(formData);
