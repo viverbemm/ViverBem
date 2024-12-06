@@ -50,24 +50,24 @@ function Profissional() {
                         }}><b>Sobre mim:</b></h3></strong>
                         <p>ﾠ</p>
                         <p className={stylesP.pI}>Experiência Profissional: Cuidador de Idosos e Enfermeiro.</p>
-                        <p className={stylesP.pII}>Cuidador autônomo para idoso com doença de Parkinson avançada (2020-2023).</p>
-                        <p className={stylesP.pIII}>Nos últimos 3 anos, atuei como cuidador autônomo dedicado a um senhor idoso</p>
-                        <p className={stylesP.pIV}>diagnosticado com doença de Parkinson avançada. Minhas responsabilidades incluíam:</p>
+                        <p className={stylesP.pII}>Cuidador e enfermeiro dedicado ao bem-estar de idosos (2018).</p>
+                        <p className={stylesP.pIII}>Nos últimos 6 anos, atuei como cuidador e enfermeiro para idosos em diferentes contextos,</p>
+                        <p className={stylesP.pIV}>incluindo acompanhamento de pacientes com condições de saúde complexas. Minhas responsabilidades incluíam:</p>
                         <ul style={{
                             marginLeft: '90px'
                         }}>
                             <p>ﾠ</p>
-                            <li>Assistência diária</li>
-                            <li>Gerenciamento de sintomas</li>
-                            <li>Estimulação cognitiva</li>
-                            <li>Fisioterapia e exercícios</li>
-                            <li>Suporte emocional</li>
-                            <li>Coordenação com profissionais de saúde</li>
+                            <li>Assistência nas atividades diárias</li>
+                            <li>Administração de medicamentos e controle de horários</li>
+                            <li>Estimulação física e cognitiva</li>
+                            <li>Acompanhamento em consultas médicas</li>
+                            <li>Suporte emocional e social</li>
+                            <li>Planejamento e execução de cuidados personalizados</li>
                         </ul>
                         <p>ﾠ</p>
-                        <p className={stylesP.pIII}>Essa experiência não apenas aprimorou minhas habilidades práticas, mas também reforçou</p>
-                        <p className={stylesP.pIII}>minha compreensão da importância do cuidado holístico e individualizado para idosos que</p>
-                        <p className={stylesP.pIII}>enfrentam condições de saúde complexas.</p>
+                        <p className={stylesP.pIII}>Minha jornada profissional me proporcionou uma visão abrangente do cuidado humanizado e</p>
+                        <p className={stylesP.pIII}>da importância de criar um ambiente seguro e acolhedor, garantindo qualidade de vida</p>
+                        <p className={stylesP.pIII}>aos idosos que confiam em mim para cuidar de sua saúde e bem-estar.</p>
                     </div>
                 </div>
             </section>
@@ -78,18 +78,18 @@ function Profissional() {
                     <p style={{ fontSize: '18px' }}><img src={email} alt="email" className={stylesP.email} /><strong style={{
                         color: '#23008D',
                         marginLeft: '2%',
-                    }}>Email:</strong> carlosmendes34@gmail.com</p>
+                    }}>Email:</strong> carlosmendes@gmail.com</p>
                     <p style={{ fontSize: '18px' }}><img src={telephone} alt="telephone" className={stylesP.telephone} /><strong style={{
                         color: '#23008D',
                         marginLeft: '2%',
                         fontSize: '18px',
                     }}>Telefone:</strong> (27) 96392-3456</p>
-                    <h1 style={{ fontSize: '30px', marginLeft: '60%', marginTop: '-12.5%' }}><b>Diária:</b></h1>
+                    <h1 style={{ fontSize: '30px', marginLeft: '60%', marginTop: '-12%' }}><b>Diária:</b></h1>
                     <img style={{ height: '35px', width: '35px', marginLeft: '45%', marginTop: '2%' }} src={coin} alt="telephone" />
                     <p style={{
                         marginLeft: '62.2%',
                         fontSize: '18px',
-                        marginTop: '-2.2%'
+                        marginTop: '-2.6%'
                     }}>R$ 179,90</p>
                 </div>
             </section>
