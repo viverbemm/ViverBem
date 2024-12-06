@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
-import { useNavigate } from 'react-router-dom';
 import styles from './Completar_Perfil.module.css';
-import NavBar from '../layout/navBar';
 import NavInferior from '../layout/navInferior';
-import logo from '../pages/imagens/LOGO_VIVER_BEM_+_2-removebg-preview (1) - Copia.png';
+import { useNavigate } from 'react-router-dom';
+import logo from '../pages/imagens/logox.png';
+import NavBar from '../layout/navBar';
 
 const Completar_Perfil = () => {
     const [formData, setFormData] = useState({
@@ -131,7 +131,10 @@ const Completar_Perfil = () => {
         <div className={styles.perfil}>
             <NavBar />
             <div className={styles.form_container}>
-                <h2><b>Complete seu perfil</b></h2>
+                <h1 style={{
+                    fontSize: '25px', textAlign: 'center', fontWeight: 'bold',
+                    color: '#23008D', marginBottom: '20px'
+                }}>Complete seu perfil</h1>
                 <form onSubmit={handleSubmit}>
                     <div className={`${styles.form_group} ${errors.photo ? styles.error : ""}`}>
                         <label>Adicione sua foto:</label>
@@ -179,7 +182,7 @@ const Completar_Perfil = () => {
                     <div className={`${styles.form_terms} ${errors.termsAccepted ? styles.error : ""}`}>
                         <label>
                             Declaro que li e concordo com os{" "}
-                            <a href="#" onClick={handleLinkClick}>termos de uso</a> da plataforma.
+                            <a href="#" onClick={handleLinkClick}>termos de uso</a> da plataforma.ﾠ
                             <input
                                 type="checkbox"
                                 name="termsAccepted"
@@ -198,12 +201,18 @@ const Completar_Perfil = () => {
             {showModal && (
                 <div className={styles.modalOverlay}>
                     <div className={styles.modal} ref={modalRef}>
-                        <h2>Termos de Uso</h2>
+                        <h1 style={{
+                            fontSize: '25px', textAlign: 'center', fontWeight: 'bold',
+                            color: '#23008D', marginBottom: '20px'
+                        }}>Termos de Uso</h1>
                         <textarea className={styles.termosTextarea}
                             rows="10"
                             cols="0"
                             value='Última atualização: [Data]
-                                Bem-vindo ao Viver Bem+. Ao acessar ou usar os nossos serviços, você concorda com os seguintes Termos de Uso. Se não concordar com qualquer parte destes termos, por favor, não use nossos serviços.
+                                ﾠﾠ
+                                 Bem-vindo ao Viver Bem+. Ao acessar ou usar os serviços daﾠﾠﾠﾠﾠ  ﾠﾠﾠﾠplataforma, você concorda com os seguintes Termos de Uso. 
+                                Caso contrário, não contrate os serviços da plataforma.
+                                ﾠﾠ
                                 1. Definições
                                 "Serviço": 
                                 "Usuário": Qualquer pessoa que acesse ou use o serviço.
@@ -213,8 +222,8 @@ const Completar_Perfil = () => {
                                 O usuário concorda em usar o serviço de maneira legal, não violando direitos de terceiros, evitando a distribuição de malware, ou praticando qualquer ato ilícito.'
                             readOnly
                         ></textarea>
-                        <p style={{ marginLeft: '10px' }}>{getCurrentDate()}</p>
-                        <img style={{ width: "400px", height: "350px", marginLeft: "80px" }} src={logo} />
+                        <p style={{ marginLeft: '30%' }}>{getCurrentDate()}</p>
+                        <img style={{ height: "100px", width: "220px", marginLeft: "30%", marginBottom: "20px" }} src={logo} />
                         <div>
                             <button onClick={() => setShowModal(false)}>Fechar</button>
                         </div>

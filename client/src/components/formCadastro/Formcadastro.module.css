@@ -7,7 +7,7 @@
   
   body {
     font-family: 'Arial', sans-serif;
-    background-color: #dedef5c2; /* Fundo neutro */
+    background-color: #c2c2f8; /* Fundo neutro */
   }
   
   /* Estilo da seção principal */
@@ -21,7 +21,9 @@
   
   /* Container do formulário */
   .form_container {
-    background-color: #c3c3eb;
+    background-color: #E6E6FA;
+    margin-bottom: 40px;
+    margin-top: 20px;
     padding: 30px 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
