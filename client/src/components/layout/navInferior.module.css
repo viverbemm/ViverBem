@@ -1,14 +1,18 @@
 .rod {
+  margin-top: -13px;
+  margin-bottom: -2px;
   background-color: #c2c2f8;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px;
 }
 
 .containerIV {
-  width: 86%;
-  padding: 1px;
+  width: 100%;
+  max-width: 1200px; /* Limite máximo de largura para grandes telas */
+  padding: 5px;
   background-color: #E6E6FA;
   border: 1px solid #ddd;
   border-radius: 30px;
@@ -19,6 +23,60 @@
   text-align: center;
   color: #260077;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 25px;
   margin-top: 30px;
+}
+
+/* Estilo dos links de contato */
+.containerIV p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.containerIV p img {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+}
+
+/* Media Query para telas pequenas */
+@media (max-width: 768px) {
+  .rodape {
+    font-size: 24px; /* Menor tamanho de fonte para dispositivos móveis */
+  }
+
+  .containerIV {
+    width: 90%; /* Deixa o container um pouco maior em telas pequenas */
+    padding: 10px;
+  }
+
+  .containerIV p {
+    font-size: 16px; /* Tamanho de fonte menor para dispositivos móveis */
+  }
+
+  .containerIV p img {
+    width: 18px; /* Ajusta o tamanho dos ícones */
+    height: 18px;
+  }
+}
+
+/* Media Query para telas muito pequenas (ex: celulares em modo retrato) */
+@media (max-width: 480px) {
+  .rodape {
+    font-size: 20px; /* Diminui mais o tamanho da fonte */
+  }
+
+  .containerIV {
+    width: 100%; /* Ocupa toda a largura da tela em dispositivos muito pequenos */
+    padding: 5px;
+  }
+
+  .containerIV p {
+    font-size: 14px; /* Diminui o tamanho da fonte ainda mais */
+  }
+
+  .containerIV p img {
+    width: 16px; /* Ajusta o tamanho dos ícones ainda mais */
+    height: 16px;
+  }
 }

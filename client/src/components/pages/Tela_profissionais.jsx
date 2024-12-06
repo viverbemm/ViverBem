@@ -1,17 +1,14 @@
-import React, { useState } from 'react';
-import stylesT from './Tela_profissionais.module.css';
-import stylesM from './Menu_superior.module.css';
-import profileMenu from './assets/img/menu_white_36dp.svg';
 import profileCarlos from '../pages/imagens/carlosmendes.jpg';
-import profileLaura from '../pages/imagens/laura.webp';
-import profileGabriel from '../pages/imagens/gabriel.webp';
 import profileBenjamin from '../pages/imagens/benjamin.webp';
+import profileGabriel from '../pages/imagens/gabriel.webp';
+import profileLaura from '../pages/imagens/laura.webp';
 import profileLuisa from '../pages/imagens/luisa.webp';
 import profileMaite from '../pages/imagens/maite.webp';
-import NavBar from '../layout/navBar';
+import stylesT from './Tela_profissionais.module.css';
+import NavInferior from '../layout/navInferior';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import styles from './Tela_profissionais.module.css';
-import menuIcon from './assets/img/menu_white_36dp.svg';
+import NavBar from '../layout/navBar';
 
 
 function Profissionais() {
@@ -22,7 +19,7 @@ function Profissionais() {
   };
 
   return (
-    <div style={{ backgroundColor: '#E6E6FA', width: '100%', display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+    <div style={{ backgroundColor: '#c2c2f8', width: '100%', display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <NavBar />
       <div className={stylesT.roxo}>
         <div className={stylesT.profissionais}>
@@ -70,8 +67,7 @@ function Profissionais() {
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
-        <h1 className={stylesT.rodape}>ViverBem+</h1>
-        <p className={stylesT.controd}>Centro Empresarial Shopping Praia da Costa, 245, Vila Velha - ES.</p>
+        <NavInferior />
       </div>
     </div>
   );

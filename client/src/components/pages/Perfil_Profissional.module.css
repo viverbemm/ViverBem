@@ -9,7 +9,7 @@ header {
 
 .intro {
     padding: 30px;
-    background-color: #BBADDF;
+    background-color: #c2c2f8;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,7 +22,7 @@ header {
     /* Alinha os itens à esquerda horizontalmente */
     align-items: center;
     /* Centraliza os itens verticalmente */
-    width: 80%;
+    width: 83%;
     /* Ocupa toda a largura disponível */
     height: auto;
     /* Ajusta a altura conforme o conteúdo */
@@ -76,7 +76,7 @@ header {
 
 .about {
     padding: 30px;
-    background-color: #BBADDF;
+    background-color: #c2c2f8;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -89,7 +89,7 @@ header {
     /* Alinha verticalmente a imagem e o texto */
     justify-content: flex-start;
     /* Garante que o conteúdo não se sobreponha */
-    width: 80%;
+    width: 83%;
     height: 700px;
     background-color: #E6E6FA;
     border: 1px solid #ddd;
@@ -121,14 +121,14 @@ header {
 
 .cont {
     padding: 30px;
-    background-color: #BBADDF;
+    background-color: #c2c2f8;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .containerIII {
-    width: 80%;
+    width: 83%;
     height: 300px;
     padding: 20px;
     background-color: #E6E6FA;
@@ -140,7 +140,7 @@ header {
 }
 
 .ato {
-    margin-left: 15%;
+    margin-left: 12%;
     margin-bottom: 5%;
     margin-top: 3%;
     font-size: 30px;
@@ -156,7 +156,7 @@ header {
     /* Garante que as imagens não deformem */
     float: left;
     /* Alinha as imagens à esquerda */
-    margin-left: 10%;
+    margin-left: 11%;
     margin-top: 0px;
 }
 
@@ -172,22 +172,12 @@ header {
 
 .rod {
     padding: 30px;
-    background-color: #BBADDF;
+    background-color: #c2c2f8;
     /*padding: 40px;*/
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.containerIV {
-    width: 80%;
-    padding: 20px;
-    background-color: #E6E6FA;
-    color: #23008D;
-    border: 1px solid #ddd;
-    border-radius: 30px;
-    margin-bottom: 30px;
 }
 
 .rodape {

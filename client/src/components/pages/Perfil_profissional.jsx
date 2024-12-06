@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import profileMenu from './assets/img/menu_white_36dp.svg';
-import profilePic from '../pages/imagens/luisa.webp';
-import stylesP from './Perfil_Profissional.module.css';
 import telephone from '../pages/imagens/telephone-handle-silhouette.png';
-import email from '../pages/imagens/email.png';
-import NavBar from '../layout/navBar';
+import stylesP from './Perfil_Profissional.module.css';
+import profilePic from '../pages/imagens/luisa.webp';
 import NavInferior from '../layout/navInferior';
+import email from '../pages/imagens/email.png';
+import React, { useState } from 'react';
+import NavBar from '../layout/navBar';
+
 
 function Profissional() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -15,18 +15,18 @@ function Profissional() {
   };
 
   return (
-    <div style={{ backgroundColor: '#E6E6FA', width: '100%', display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+    <div style={{ backgroundColor: '#c2c2f8', width: '100%', display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <NavBar />
       <section className={stylesP.intro}>
         <div className={stylesP.containerI}>
           <img src={profilePic} alt="Luísa Heringer" className={stylesP.profilePic} />
           <div className={stylesP.introText}>
-            <h2 style={{
+            <h1 style={{
               color: '#23008D',
-              marginRight: '20%',
+              marginLeft: '13%',
               fontSize: '30px',
               marginBottom: '20px'
-            }}>ﾠﾠ ﾠﾠOlá, eu sou a Luísa Heringer.</h2>
+            }}><b>Olá, eu sou a Luísa Heringer.</b></h1>
             <p className={stylesP.introText_p}>
               <p className={stylesP.pI}>Meu nome é Luísa Heringer, tenho o privilégio de dedicar</p>
               <p className={stylesP.pII}>minha vida ao cuidado dos idosos há 3 anos e 6 meses.</p>
@@ -44,8 +44,9 @@ function Profissional() {
           <div className={stylesP.desenvol}>
             <strong><h3 style={{
               fontSize: '30px',
-              marginLeft: '90px'
-            }}>Sobre mim:</h3></strong>
+              marginLeft: '90px',
+              marginBottom: '-10px'
+            }}><b>Sobre mim:</b></h3></strong>
             <p>ﾠ</p>
             <p className={stylesP.pI}>Experiência Profissional: Cuidadora de Idosos.</p>
             <p className={stylesP.pII}>Cuidadora autônoma para idoso com doença de Parkinson avançada (2020-2023).</p>
@@ -72,7 +73,7 @@ function Profissional() {
 
       <section className={stylesP.cont}>
         <div className={stylesP.containerIII}>
-          <h1 className={stylesP.ato}>Contato:</h1>
+          <h1 className={stylesP.ato}><b>Contatos:</b></h1>
           <p style={{ fontSize: '18px' }}><img src={email} alt="email" className={stylesP.email} /><strong style={{
             color: '#23008D',
             marginLeft: '2%',
@@ -94,7 +95,6 @@ function Profissional() {
               fontSize: '18px',
             }}>oportunidades. Entre em contato.</p>
           </div>
-        
         </div>
       </section>
       <NavInferior />

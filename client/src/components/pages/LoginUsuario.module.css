@@ -1,59 +1,80 @@
 /* Estilo da área de login do usuário */
 .LoginUsuario {
-    width: 100%;  /* Tira a largura fixa */
+    width: 100%;
+    /* Tira a largura fixa */
     position: relative;
-    color: #2a2973;
-    padding: 0; /* Remover padding extra que afeta a centralização */
+    color: #c2c2f8;
+    padding: 0;
+    /* Remover padding extra que afeta a centralização */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Garantir que ocupe toda a altura da tela */
+    height: 100vh;
+    /* Garantir que ocupe toda a altura da tela */
 }
 
 /* Estilo da caixa de login */
 .caixa {
     background-color: #c2c2f8;
-    padding: 40px 50px; /* Ajustar o padding para melhor distribuir o conteúdo */
+    padding: 40px 50px;
+    /* Ajustar o padding para melhor distribuir o conteúdo */
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     max-width: 400px;
     width: 100%;
-    position: absolute;  /* Isso vai permitir o alinhamento no centro da tela */
+    position: absolute;
+    /* Isso vai permitir o alinhamento no centro da tela */
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Centralização exata */
+    transform: translate(-50%, -50%);
+    /* Centralização exata */
 }
 
 /* Estilo do título dentro da caixa */
 .caixa h2 {
     color: #3A3A8F;
-    font-size: 30px; /* Tamanho um pouco menor para melhorar o layout */
-    margin-bottom: 30px; /* Aumentar o espaço abaixo do título */
+    font-size: 30px;
+    /* Tamanho um pouco menor para melhorar o layout */
+    margin-bottom: 30px;
+    /* Aumentar o espaço abaixo do título */
     font-family: 'Roboto', sans-serif;
-    text-transform: none; /* Garante que o texto respeite o formato original */
+    text-transform: none;
+    /* Garante que o texto respeite o formato original */
 }
 
 
 /* Estilos dos campos de CPF e Senha */
-.cpf, .senha {
-    margin-bottom: 15px; /* Ajustar espaçamento entre os campos */
+.cpf,
+.senha {
+    margin-bottom: 15px;
+    /* Ajustar espaçamento entre os campos */
     text-align: left;
-    background-color: #f5f5f5;  /* Cor mais suave para os campos */
+    background-color: #f5f5f5;
+    /* Cor mais suave para os campos */
     padding: 12px;
     border-radius: 8px;
-    border: 1px solid #ddd; /* Adiciona borda suave */
-    width: 100%;  /* Garantir que o campo ocupe toda a largura */
-    font-size: 16px;  /* Tamanho de fonte mais legível */
-    color: #333;  /* Cor mais escura para o texto */
-    box-sizing: border-box;  /* Incluir padding e bordas no cálculo da largura */
+    border: 1px solid #ddd;
+    /* Adiciona borda suave */
+    width: 100%;
+    /* Garantir que o campo ocupe toda a largura */
+    font-size: 16px;
+    /* Tamanho de fonte mais legível */
+    color: #333;
+    /* Cor mais escura para o texto */
+    box-sizing: border-box;
+    /* Incluir padding e bordas no cálculo da largura */
 }
 
 /* Adicionar efeito de foco nos campos */
-.cpf:focus, .senha:focus {
-    border-color: #3A3A8F;  /* Cor de foco suave */
-    outline: none; /* Remover a borda padrão ao focar */
-    background-color: #fff; /* Fundo branco ao focar para dar destaque */
+.cpf:focus,
+.senha:focus {
+    border-color: #3A3A8F;
+    /* Cor de foco suave */
+    outline: none;
+    /* Remover a borda padrão ao focar */
+    background-color: #fff;
+    /* Fundo branco ao focar para dar destaque */
 }
 
 /* Estilo do texto de registro/cadastro */
@@ -62,31 +83,39 @@
     text-align: center;
     color: #3A3A8F;
     position: relative;
-    cursor: pointer; /* Garante que o cursor de clique apareça */
+    cursor: pointer;
+    /* Garante que o cursor de clique apareça */
     font-size: 16px;
     display: inline-block;
     font-family: 'Roboto', sans-serif;
-    
+
 }
 
 .registerCadastro:hover::after {
-    content: ' ➔'; /* Adiciona a setinha */
+    content: ' ➔';
+    /* Adiciona a setinha */
     position: absolute;
-    right: -20px; /* Ajuste a posição horizontal da setinha */
-    color: #3A3A8F; /* Cor da setinha */
-    font-size: 16px; /* Tamanho da setinha */
-    transition: all 0.3s ease; /* Suaviza a aparição da setinha */
+    right: -20px;
+    /* Ajuste a posição horizontal da setinha */
+    color: #3A3A8F;
+    /* Cor da setinha */
+    font-size: 16px;
+    /* Tamanho da setinha */
+    transition: all 0.3s ease;
+    /* Suaviza a aparição da setinha */
 }
 
 /* Estilos dos links de registro */
 .registerCadastro a {
     font-size: 16px;
-    text-decoration: none; /* Remover sublinhado */
+    text-decoration: none;
+    /* Remover sublinhado */
     color: #3A3A8F;
 }
 
 .registerCadastro a:hover {
-    text-decoration: underline; /* Adicionar sublinhado ao passar o mouse */
+    text-decoration: underline;
+    /* Adicionar sublinhado ao passar o mouse */
 }
 
 /* Estilo do botão de login */
@@ -96,17 +125,22 @@
     padding: 15px 30px;
     border-radius: 8px;
     font-size: 18px;
-    margin-top: 20px; /* Ajuste de margin para não distorcer o layout */
+    margin-top: 20px;
+    /* Ajuste de margin para não distorcer o layout */
     position: relative;
-    width: 100%; /* Garantir que o botão ocupe toda a largura disponível */
-    cursor: pointer; /* Mudar o cursor para indicar que é clicável */
+    width: 100%;
+    /* Garantir que o botão ocupe toda a largura disponível */
+    cursor: pointer;
+    /* Mudar o cursor para indicar que é clicável */
     border: none;
-    transition: background-color 0.3s ease; /* Efeito suave de transição */
+    transition: background-color 0.3s ease;
+    /* Efeito suave de transição */
 }
 
 /* Efeito ao passar o mouse sobre o botão */
 .caixa button:hover {
-    background-color: #2c2f7f;  /* Cor mais escura ao passar o mouse */
+    background-color: #2c2f7f;
+    /* Cor mais escura ao passar o mouse */
 }
 
 /* Estilo do botão de cadastro ou outras ações */
@@ -118,8 +152,10 @@
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    margin-top: 20px; /* Ajustar o espaçamento entre botões */
-    width: 100%; /* Botão ocupa toda a largura */
+    margin-top: 20px;
+    /* Ajustar o espaçamento entre botões */
+    width: 100%;
+    /* Botão ocupa toda a largura */
     transition: background-color 0.3s ease;
     font-family: 'Roboto', sans-serif;
 }
@@ -132,25 +168,33 @@
 
 
 
-.pagina{
+.pagina {
     background-color: #dedef5c2;
     height: 100vh;
 }
 
 
 .imgvm {
-    height: 90vh;            /* Ocupa toda a altura da tela */
-    overflow: hidden;        /* Garante que a imagem não ultrapasse os limites do contêiner */
-    position: relative;      /* Pode ser útil para posicionamento futuro */
+    height: 90vh;
+    /* Ocupa toda a altura da tela */
+    overflow: hidden;
+    /* Garante que a imagem não ultrapasse os limites do contêiner */
+    position: relative;
+    /* Pode ser útil para posicionamento futuro */
 }
 
 .imgvm img {
-    width: 100%;             /* Garante que a imagem ocupe toda a largura do contêiner */
-    height: 100%;            /* Garante que a imagem ocupe toda a altura do contêiner */
-    object-fit: cover;       /* Faz a imagem cobrir o contêiner sem distorcer */
-    border-radius: 0;        /* Garantir que a imagem não tenha bordas arredondadas */
-    position: absolute;      
-    top: -2%;                  /* Alinha a imagem no topo do contêiner */
-    left: 0;                 /* Garante que a imagem ocupe toda a largura do contêiner */
+    width: 100%;
+    /* Garante que a imagem ocupe toda a largura do contêiner */
+    height: 100%;
+    /* Garante que a imagem ocupe toda a altura do contêiner */
+    object-fit: cover;
+    /* Faz a imagem cobrir o contêiner sem distorcer */
+    border-radius: 0;
+    /* Garantir que a imagem não tenha bordas arredondadas */
+    position: absolute;
+    top: -2%;
+    /* Alinha a imagem no topo do contêiner */
+    left: 0;
+    /* Garante que a imagem ocupe toda a largura do contêiner */
 }
-
