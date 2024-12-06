@@ -14,7 +14,10 @@ import MinhaConta from './components/pages/MinhaConta';
 import Financeiro from './components/pages/Financeiro';
 import AlterarSenha from './components/AlterarSenha';
 import ConfigConta from './components/pages/Config';
+import Laura from './components/pages/Laura_Castro';
+import Carlos from './components/pages/Carlos_Mendes';
 import Cadastro from './components/pages/Cadastro';
+
 import Pag_Men from './components/pages/Pag_Men';
 import Config from './components/pages/Config';
 
@@ -38,6 +41,8 @@ function App() {
         <Route path='/Perfil' element={<Perfil_Completo />} />
         <Route path='/Financeiro' element={<Financeiro />} />
         <Route path='/MinhaConta' element={<MinhaConta />} />
+        <Route path='/Carlos_Mendes' element={<Carlos />} />
+        <Route path='/Laura_Castro' element={<Laura />} />
         <Route path='/Config' element={<ConfigConta />} />
         <Route path='/Pagamento' element={<Pag_Men />} />
         <Route path='/cadastro' element={<Cadastro />} />

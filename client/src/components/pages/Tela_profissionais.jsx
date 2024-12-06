@@ -10,13 +10,21 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '../layout/navBar';
 
-
 function Profissionais() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const menuShow = () => {
     setMenuOpen(!menuOpen);
   };
+
+  const profissionais = [
+    { nome: 'Carlos Mendes', experiencia: '3 anos', cidade: 'Vitória - ES', diária: 'R$ 179,90', img: profileCarlos },
+    { nome: 'Laura Castro', experiencia: '1 ano e 2 meses', cidade: 'Serra - ES', diária: 'R$ 210,90', img: profileLaura },
+    { nome: 'Gabriel Lopes', experiencia: '2 anos e 4 meses', cidade: 'Cariacica - ES', diária: 'R$ 148,80', img: profileGabriel },
+    { nome: 'Benjamin Duarte', experiencia: '6 meses', cidade: 'Colatina - ES', diária: 'R$ 190,45', img: profileBenjamin },
+    { nome: 'Luísa Heringer', experiencia: '3 anos e 6 meses', cidade: 'Vila Velha - ES', diária: 'R$ 210,00', img: profileLuisa },
+    { nome: 'Maitê Vieira', experiencia: '9 meses', cidade: 'Fundão - ES', diária: 'R$ 169,50', img: profileMaite },
+  ];
 
   return (
     <div style={{ backgroundColor: '#c2c2f8', width: '100%', display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
@@ -27,30 +35,26 @@ function Profissionais() {
         </div>
 
         <section className={stylesT.grid_container}>
-          {[
-            { nome: 'Carlos Mendes', experiencia: '3 anos', cidade: 'Vitória - ES', img: profileCarlos },
-            { nome: 'Laura Castro', experiencia: '1 ano e 2 meses', cidade: 'Serra - ES', img: profileLaura },
-            { nome: 'Gabriel Lopes', experiencia: '2 anos e 4 meses', cidade: 'Cariacica - ES', img: profileGabriel },
-            { nome: 'Benjamin Duarte', experiencia: '6 meses', cidade: 'Colatina - ES', img: profileBenjamin },
-            { nome: 'Luísa Heringer', experiencia: '3 anos e 6 meses', cidade: 'Vila Velha - ES', img: profileLuisa },
-            { nome: 'Maitê Vieira', experiencia: '9 meses', cidade: 'Fundão - ES', img: profileMaite },
-          ].map((profissional, index) => (
+          {profissionais.map((profissional, index) => (
             <div className={stylesT.grid_item} key={index}>
-              <Link to={`/perfil_profissional/${profissional.nome.toLowerCase().replace(' ', '-')}`}>
+              <Link to={`/perfil_profissional/${profissional.nome.toLowerCase().replace(/ /g, '-')}`}>
                 <img src={profissional.img} alt={`Descrição da imagem de ${profissional.nome}`} />
               </Link>
-              <h1>  <Link
-                to={`/perfil_profissional/${profissional.nome.toLowerCase().replace(' ', '-')}`}
-                style={{
-                  textDecoration: 'none',
-                  color: 'inherit',
-                }}
-              >
-                {profissional.nome}
-              </Link></h1>
+              <h1>
+                <Link
+                  to={`/perfil_profissional/${profissional.nome.toLowerCase().replace(/ /g, '-')}`}
+                  style={{
+                    textDecoration: 'none',
+                    color: 'inherit',
+                  }}
+                >
+                  {profissional.nome}
+                </Link>
+              </h1>
               <div className={stylesT.conteupro}>
                 <p>Tempo de experiência: {profissional.experiencia}</p>
-                <p>Cidade: {profissional.cidade}</p>
+                <p style={{ marginTop: '-20px' }}>Cidade: {profissional.cidade}</p>
+                <p style={{ marginTop: '-20px' }}>Diária: {profissional.diária}</p>
               </div>
             </div>
           ))}
@@ -71,6 +75,6 @@ function Profissionais() {
       </div>
     </div>
   );
-};
+}
 
 export default Profissionais;
