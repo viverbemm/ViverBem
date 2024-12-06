@@ -6,6 +6,7 @@ import NavConfig from "../layout/navConfig";
 import NavInferior from "../layout/navInferior";
 
 const Perfil_Completo = () => {
+    const [id_usuario, setId_usuario] = useState ( localStorage.getItem("id_usuario"));
     const location = useLocation(); // Agora utilizando o hook useLocation corretamente
     const navigate = useNavigate(); // Navegação para redirecionar após salvar
     const { formData } = location.state || {}; // Desestruturando os dados passados
@@ -23,7 +24,7 @@ const Perfil_Completo = () => {
     // Função para enviar os dados para a API (atualização do perfil)
     const updateProfileData = async (data) => {
         try {
-            const response = await fetch('http://localhost:5000/perfil', {
+            const response = await fetch(`http://localhost:5000/perfil/${data.id_dado}`, {
                 method: 'PUT', // Usando PUT para atualizar os dados
                 headers: {
                     'Content-Type': 'application/json',
@@ -80,8 +81,9 @@ const Perfil_Completo = () => {
 
     // Função para carregar os dados do perfil (no caso de não ter sido passado pelo estado)
     useEffect(() => {
+        setId_usuario(localStorage.getItem("id_usuario"));
         if (!formData) {
-            const id_usuario = localStorage.getItem("id_usuario");
+            //const id_usuario = localStorage.getItem("id_usuario");
             if (id_usuario) {
                 fetch(`http://localhost:5000/perfil/${id_usuario}`)
                     .then(response => response.json())
