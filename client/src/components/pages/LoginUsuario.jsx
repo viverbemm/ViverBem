@@ -40,9 +40,11 @@ function LoginUsuario() {
             });
 
             if(response.ok){
-                navigate('/perfil'); // Redireciona para a página de perfil
+                
                 const {id_usuario} = await response.json();
+                console.log(id_usuario);
                 localStorage.setItem("id_usuario",id_usuario);
+                navigate('/perfil'); // Redireciona para a página de perfil
             }else {
                 setError('CPF ou senha incorretos');
             }

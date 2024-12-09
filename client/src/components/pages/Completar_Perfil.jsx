@@ -1,23 +1,16 @@
-import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import styles from './Completar_Perfil.module.css';
-import NavBar from '../layout/navBar';
-import NavInferior from '../layout/navInferior';
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import styles from "./Completar_Perfil.module.css";
+import NavBar from "../layout/navBar";
+import NavInferior from "../layout/navInferior";
 
 const DadosProfissionais = () => {
-    useEffect(() => {
-        const id_usuario = localStorage.getItem("id_usuario");
-        console.log(id_usuario);
-        setFormData({ ...formData, id_usuario: id_usuario });
-    }, []);
-
-    const [formData, setFormData] = useState({
-        id_usuario: "",
+    const [formValues, setFormValues] = useState({
         experiencia: "",
         formacao: "",
         fale_sobre: "",
         valor_diaria: "",
-        caminho_imagem: "",
+        imagem: null,
     });
 
     const [errors, setErrors] = useState({
@@ -25,86 +18,38 @@ const DadosProfissionais = () => {
         formacao: false,
         fale_sobre: false,
         valor_diaria: false,
-        caminho_imagem: false,
+        imagem: false,
     });
 
     const navigate = useNavigate();
 
+    useEffect(() => {
+        const id_usuario = localStorage.getItem("id_usuario");
+        setFormValues((prev) => ({ ...prev, id_usuario }));
+    }, []);
+
     const handleInputChange = (e) => {
         const { name, value } = e.target;
-
-        if (name === "valor_diaria") {
-            const formattedValue = value.replace(/\D/g, "");
-            const formattedMoney = (formattedValue / 100).toLocaleString("pt-BR", {
-                style: "currency",
-                currency: "BRL",
-            });
-
-            setFormData({ ...formData, [name]: formattedMoney });
-        } else {
-            setFormData({ ...formData, [name]: value });
-        }
-
-        setErrors({ ...errors, [name]: false });
+        setFormValues((prev) => ({ ...prev, [name]: value }));
+        setErrors((prev) => ({ ...prev, [name]: false }));
     };
 
     const handlePhotoChange = (e) => {
-        setFormData({ ...formData, caminho_imagem: e.target.files[0] });
-        setErrors({ ...errors, caminho_imagem: false });
+        const file = e.target.files[0];
+        setFormValues((prev) => ({ ...prev, imagem: file }));
+        setErrors((prev) => ({ ...prev, imagem: false }));
     };
-
-    // Função para fazer a requisição para a API
-    const sendToAPI = async (formData) => {
-        try {
-            const url = "http://localhost:5000/perfil"; // Substitua pela sua URL
-            const params = new URLSearchParams(formData); // Converte os dados do formulário em parâmetros
-
-            const response = await fetch(`${url}?${params}`, { method: "GET" });
-
-            if (!response.ok) {
-                throw new Error(`Erro na API: ${response.status} - ${response.statusText}`);
-            }
-
-            const data = await response.json();
-            console.log("Resposta da API:", data);
-
-            // Aqui você pode fazer algo com a resposta da API, como mostrar dados ou redirecionar
-        } catch (error) {
-            console.error("Erro durante a chamada da API:", error);
-        }
-    };
-
-    async function cadastrarPerfil(infoCadastro) {
-        try {
-            const resposta = await fetch('http://localhost:5000/perfil', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(infoCadastro),
-            });
-
-            if (!resposta.ok) {
-                console.log('Erro ao cadastrar perfil');
-            } else {
-                const { id_usuario } = await resposta.json();
-                console.log(id_usuario);
-                localStorage.setItem("id_usuario", id_usuario);
-                alert('Perfil cadastrado com sucesso');
-            }
-        } catch (error) {
-            console.error('Erro ao cadastrar perfil', error);
-        }
-    }
 
     const handleSubmit = async (e) => {
-        e.preventDefault(); // Impede o envio padrão do formulário.
+        e.preventDefault();
 
         // Validação dos campos
         const newErrors = {
-            experiencia: !formData.experiencia,
-            formacao: !formData.formacao.trim(),
-            fale_sobre: !formData.fale_sobre.trim(),
-            valor_diaria: !formData.valor_diaria.trim(),
-            caminho_imagem: !formData.caminho_imagem,
+            experiencia: !formValues.experiencia,
+            formacao: !formValues.formacao.trim(),
+            fale_sobre: !formValues.fale_sobre.trim(),
+            valor_diaria: !formValues.valor_diaria.trim(),
+            imagem: !formValues.imagem,
         };
 
         setErrors(newErrors);
@@ -115,14 +60,29 @@ const DadosProfissionais = () => {
             return;
         }
 
-        // Enviar os dados para a API
-        await sendToAPI(formData);
+        // Criar FormData
+        const formData = new FormData();
+        for (const key in formValues) {
+            formData.append(key, formValues[key]);
+        }
 
-        // Chama a função para cadastrar o perfil
-        await cadastrarPerfil(formData);
+        try {
+            const resposta = await fetch("http://localhost:5000/perfil", {
+                method: "POST",
+                body: formData,
+            });
 
-        // Navegar para a tela de exibição de perfil, após o cadastro
-        navigate('/perfil', { state: { formData } });
+            if (!resposta.ok) {
+                console.error("Erro ao cadastrar perfil");
+            } else {
+                const data = await resposta.json();
+                localStorage.setItem("id_usuario", data.id_usuario);
+                alert("Perfil cadastrado com sucesso");
+                navigate("/perfil", { state: { formData } });
+            }
+        } catch (error) {
+            console.error("Erro ao enviar perfil:", error);
+        }
     };
 
     return (
@@ -131,7 +91,7 @@ const DadosProfissionais = () => {
             <div className={styles.form_container}>
                 <h2><b>Complete seu perfil</b></h2>
                 <form onSubmit={handleSubmit}>
-                    <div className={`${styles.form_group} ${errors.caminho_imagem ? styles.error : ""}`}>
+                    <div className={`${styles.form_group} ${errors.imagem ? styles.error : ""}`}>
                         <label>Adicione sua foto:</label>
                         <input type="file" accept="image/*" onChange={handlePhotoChange} />
                     </div>
@@ -140,7 +100,7 @@ const DadosProfissionais = () => {
                         <input
                             type="text"
                             name="experiencia"
-                            value={formData.experiencia}
+                            value={formValues.experiencia}
                             onChange={handleInputChange}
                             placeholder="Ex: 5 anos"
                         />
@@ -150,7 +110,7 @@ const DadosProfissionais = () => {
                         <input
                             type="text"
                             name="formacao"
-                            value={formData.formacao}
+                            value={formValues.formacao}
                             onChange={handleInputChange}
                             placeholder="Ex: Ensino superior completo"
                         />
@@ -159,7 +119,7 @@ const DadosProfissionais = () => {
                         <label>Fale um pouco sobre você:</label>
                         <textarea
                             name="fale_sobre"
-                            value={formData.fale_sobre}
+                            value={formValues.fale_sobre}
                             onChange={handleInputChange}
                             placeholder="Escreva um breve resumo sobre você"
                         ></textarea>
@@ -169,7 +129,7 @@ const DadosProfissionais = () => {
                         <input
                             type="text"
                             name="valor_diaria"
-                            value={formData.valor_diaria}
+                            value={formValues.valor_diaria}
                             onChange={handleInputChange}
                             placeholder="Ex: R$ 200,00"
                         />
