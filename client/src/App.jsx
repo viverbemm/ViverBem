@@ -16,6 +16,7 @@ import AlterarSenha from './components/AlterarSenha';
 import ConfigConta from './components/pages/Config';
 import Laura from './components/pages/Laura_Castro';
 import Carlos from './components/pages/Carlos_Mendes';
+import Gabriel from './components/pages/Gabriel_Lopes';
 import Cadastro from './components/pages/Cadastro';
 
 import Pag_Men from './components/pages/Pag_Men';
@@ -42,6 +43,7 @@ function App() {
         <Route path='/Financeiro' element={<Financeiro />} />
         <Route path='/MinhaConta' element={<MinhaConta />} />
         <Route path='/Carlos_Mendes' element={<Carlos />} />
+        <Route path='/Gabriel_Lopes' element={<Gabriel />} />
         <Route path='/Laura_Castro' element={<Laura />} />
         <Route path='/Config' element={<ConfigConta />} />
         <Route path='/Pagamento' element={<Pag_Men />} />
