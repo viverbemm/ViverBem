@@ -1,0 +1,196 @@
+header {
+    background-color: #c0c0f2;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+    
+    .intro {
+    padding: 30px;
+    background-color: #c2c2f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    
+    .containerI {
+    display: flex;
+    /* Torna o container um flex container */
+    justify-content: flex-start;
+    /* Alinha os itens à esquerda horizontalmente */
+    align-items: center;
+    /* Centraliza os itens verticalmente */
+    width: 83%;
+    /* Ocupa toda a largura disponível */
+    height: auto;
+    /* Ajusta a altura conforme o conteúdo */
+    
+    background-color: #E6E6FA;
+    /* Cor de fundo */
+    border: 1px solid #ddd;
+    /* Borda, opcional */
+    border-radius: 30px;
+    /* Bordas arredondadas, opcional */
+    gap: 20px;
+    /* Espaço entre a imagem e o texto */
+    }
+    
+    .profilePic {
+    width: 400px;
+    /* Ajuste a largura conforme necessário */
+    height: 420px;
+    /* Ajuste a altura para manter a proporção */
+    object-fit: cover;
+    /* Garante que a imagem não distorça */
+    margin: 0;
+    /* Remove margens */
+    border-radius: 30px;
+    }
+    
+    
+    .introText {
+    margin-top: 50px;
+    margin-left: 20px;
+    max-width: 80%;
+    /* Limita a largura do texto, deixando mais espaço para a imagem */
+    text-align: left;
+    /* Alinha o texto à direita */
+    font-size: 30px;
+    color: #23008D;
+    font-weight: 900;
+    }
+    
+    .introText p {
+    margin-left: 40px;
+    margin-right: 40px;
+    max-width: 100%;
+    /* Limita a largura do texto, deixando mais espaço para a imagem */
+    text-align: left;
+    /* Alinha o texto à direita */
+    font-size: 18px;
+    font-weight: 100;
+    color: #23008D;
+    }
+    
+    .about {
+    padding: 30px;
+    background-color: #c2c2f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    
+    .containerII {
+    display: flex;
+    /* Torna o container um flex container */
+    align-items: center;
+    /* Alinha verticalmente a imagem e o texto */
+    justify-content: flex-start;
+    /* Garante que o conteúdo não se sobreponha */
+    width: 83%;
+    height: 700px;
+    background-color: #E6E6FA;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    }
+    
+    .desenvol {
+    margin-left: 5%;
+    font-size: 18px;
+    font-weight: 100;
+    color: #23008D;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    /* Para garantir que o texto dos elementos como <p>, <h3>, etc., sejam centralizados */
+    }
+    
+    .pI,
+    .pII,
+    .pIII,
+    .pIV,
+    .pV,
+    .pVI {
+    margin-bottom: 1px;
+    margin-left: 90px;
+    font-size: 18px;
+    }
+    
+    .cont {
+    padding: 30px;
+    background-color: #c2c2f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerIII {
+    width: 83%;
+    height: 300px;
+    padding: 20px;
+    background-color: #E6E6FA;
+    color: #23008D;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    font-weight: 100;
+    font-size: 18px;
+}
+
+.ato {
+    margin-left: 12%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+    font-size: 30px;
+}
+
+.email,
+.telephone,
+.coin {
+    width: 35px;
+    /* Largura das imagens */
+    height: 35px;
+    /* Altura das imagens */
+    object-fit: cover;
+    /* Garante que as imagens não deformem */
+    float: left;
+    /* Alinha as imagens à esquerda */
+    margin-left: 11%;
+    margin-top: 0px;
+    }
+    
+    .button {
+    padding: 10px 20px;
+    background-color: #001870;
+    color: #fff;
+    border: none;
+    margin-left: 53%;
+    text-decoration: none;
+    border-radius: 10px;
+    }
+    
+    .rod {
+    padding: 30px;
+    background-color: #c2c2f8;
+    /*padding: 40px;*/
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rodape {
+    text-align: center;
+    color: rgb(52, 3, 151);
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 30px;
+    }
+    
+    .controd {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+    }

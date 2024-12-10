@@ -1,6 +1,6 @@
 import telephone from '../pages/imagens/telephone-handle-silhouette.png';
-import stylesP from './Benjamin_Duarte.module.css';
-import profilePic from '../pages/imagens/benjamin.webp';
+import stylesP from './Perfil_Profissional.module.css';
+import profilePic from '../pages/imagens/maite.webp';
 import NavInferior from '../layout/navInferior';
 import email from '../pages/imagens/email.png';
 import coin from '../pages/imagens/coin.png';
@@ -19,20 +19,20 @@ function Profissional() {
             <NavBar />
             <section className={stylesP.intro}>
                 <div className={stylesP.containerI}>
-                    <img src={profilePic} alt="Benjamin Duarte" className={stylesP.profilePic} />
+                    <img src={profilePic} alt="Maitê Vieira" className={stylesP.profilePic} />
                     <div className={stylesP.introText}>
                         <h1 style={{
                             color: '#23008D',
                             marginLeft: '9%',
                             fontSize: '30px',
                             marginBottom: '20px'
-                        }}><b>Olá, eu sou o Benjamin Duarte.</b></h1>
+                        }}><b>Olá, eu sou a Maitê Vieira.</b></h1>
                         <p className={stylesP.introText_p}>
-                            <p className={stylesP.pI}>Meu nome é Benjamin Duarte, sou cuidador de idosos e, há 6 meses, tenho dedicado</p>
-                            <p className={stylesP.pII}>minha jornada ao cuidado de pessoas idosas com foco no bem-estar e conforto.</p>
-                            <p className={stylesP.pIII}>Acredito que o cuidado deve ser holístico e individualizado, tratando não apenas das</p>
-                            <p className={stylesP.pIV}>necessidades físicas, mas também emocionais e psicológicas. Meu maior objetivo é garantir</p>
-                            <p className={stylesP.pV}>qualidade de vida para cada idoso sob meus cuidados, promovendo autonomia e felicidade.</p>
+                            <p className={stylesP.pI}>Meu nome é Maitê Vieira, sou cuidadora de idosos e estou na profissão há 9 meses.</p>
+                            <p className={stylesP.pII}>Minha motivação para seguir essa carreira vem do meu profundo respeito e carinho</p>
+                            <p className={stylesP.pIII}>pelos idosos, buscando sempre oferecer cuidados que garantam a qualidade de vida</p>
+                            <p className={stylesP.pIV}>e o bem-estar. Tenho como objetivo proporcionar não apenas cuidados físicos, mas</p>
+                            <p className={stylesP.pV}>também emocionais, ajudando a promover dignidade em cada fase da vida do idoso.</p>
                         </p>
                     </div>
                 </div>
@@ -47,25 +47,26 @@ function Profissional() {
                             marginBottom: '-10px'
                         }}><b>Sobre mim:</b></h3></strong>
                         <p>ﾠ</p>
-                        <p className={stylesP.pI}>Experiência Profissional: Cuidador de Idosos.</p>
-                        <p className={stylesP.pII}>Cuidador autônomo com foco em cuidados personalizados e assistenciais para idosos (2023-presente).</p>
-                        <p className={stylesP.pIII}>Com 6 meses de experiência, atuei como cuidador autônomo, prestando cuidados diretos a idosos com necessidades,</p>
-                        <p className={stylesP.pIV}>incluindo acompanhamento de saúde, higiene pessoal, e suporte emocional. Minhas responsabilidades incluem:</p>
+                        <p className={stylesP.pI}>Experiência Profissional: Cuidadora de Idosos.</p>
+                        <p className={stylesP.pII}>Cuidadora autônoma com experiência em cuidados personalizados para idosos (2023-presente).</p>
+                        <p className={stylesP.pIII}>Durante os últimos 9 meses, tenho trabalhado como cuidadora autônoma, oferecendo assistência direta</p>
+                        <p className={stylesP.pIV}>e apoio a idosos com diversas necessidades de saúde, focando sempre no bem-estar, na segurança e</p>
+                        <p className={stylesP.pIV}>no conforto deles. Minhas principais responsabilidades incluem:</p>
                         <ul style={{
                             marginLeft: '90px'
                         }}>
                             <p>ﾠ</p>
-                            <li>Assistência nas atividades diárias, como banho, alimentação e mobilidade</li>
-                            <li>Gestão de medicamentos e acompanhamento de tratamentos médicos</li>
-                            <li>Estimulação cognitiva com atividades recreativas e de socialização</li>
-                            <li>Planejamento de exercícios físicos adaptados à saúde do idoso</li>
-                            <li>Apoio emocional e psicológico, criando um ambiente seguro e acolhedor</li>
-                            <li>Coordenação com médicos e outros profissionais de saúde</li>
+                            <li>Auxílio nas atividades diárias, como higiene pessoal e alimentação</li>
+                            <li>Administração de medicações e acompanhamento de tratamentos médicos</li>
+                            <li>Promoção de atividades de estimulação cognitiva e física</li>
+                            <li>Oferecer suporte emocional, garantindo um ambiente acolhedor e seguro</li>
+                            <li>Apoio psicológico e social, mantendo o idoso conectado com sua família e comunidade</li>
+                            <li>Coordenação com outros profissionais de saúde para garantir o melhor cuidado possível</li>
                         </ul>
                         <p>ﾠ</p>
-                        <p className={stylesP.pIII}>Essa experiência tem me proporcionado uma visão mais profunda sobre o cuidado integral e individualizado que</p>
-                        <p className={stylesP.pIII}>cada idoso necessita, reforçando minha habilidade em lidar com diferentes desafios e necessidades específicas,</p>
-                        <p className={stylesP.pIII}>sempre com muito respeito e dedicação ao bem-estar deles.</p>
+                        <p className={stylesP.pIII}>Essa experiência tem me permitido aprimorar minhas habilidades práticas, ao mesmo tempo em que</p>
+                        <p className={stylesP.pIII}>aprendo a importância do cuidado holístico, onde cada idoso é tratado com a atenção que merece,</p>
+                        <p className={stylesP.pIII}>respeitando suas necessidades físicas, emocionais e sociais.</p>
                     </div>
                 </div>
             </section>
@@ -77,19 +78,19 @@ function Profissional() {
                     <p style={{ fontSize: '18px' }}><img src={email} alt="email" className={stylesP.email} /><strong style={{
                         color: '#23008D',
                         marginLeft: '2%',
-                    }}>Email:</strong> benjaminduarte@gmail.com</p>
+                    }}>Email:</strong> maitevieira@gmail.com</p>
                     <p style={{ fontSize: '18px' }}><img src={telephone} alt="telephone" className={stylesP.telephone} /><strong style={{
                         color: '#23008D',
                         marginLeft: '2%',
                         fontSize: '18px',
-                    }}>Telefone:</strong> (27) 97689-2345</p>
+                    }}>Telefone:</strong> (27) 93434-3456</p>
                     <h1 style={{ fontSize: '30px', marginLeft: '60%', marginTop: '-12.5%' }}><b>Diária:</b></h1>
                     <img style={{ height: '35px', width: '35px', marginLeft: '45%', marginTop: '2%' }} src={coin} alt="telephone" />
                     <p style={{
                         marginLeft: '62.2%',
                         fontSize: '18px',
                         marginTop: '-2.2%'
-                    }}>R$ 190,45</p>
+                    }}>R$ 169,50</p>
                 </div>
             </section>
             <NavInferior />

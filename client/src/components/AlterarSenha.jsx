@@ -54,7 +54,6 @@ function AlterarSenha() {
                 Enviar
             </button>
         </div>
-        <NavInferior/>
         </div>
     );
 }

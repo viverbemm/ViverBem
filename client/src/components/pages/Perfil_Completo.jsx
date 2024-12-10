@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom"; // Importando o hook useLocation e useNavigate
 import { FaPen } from "react-icons/fa"; // Ícone de edição
 import styles from './Perfil_completo.module.css'; // Importa o CSS para o componente
-import NavConfig from "../layout/navConfig";
-import NavInferior from "../layout/navInferior";
+import NavBar from '../layout/navBar';
 
 const Perfil_Completo = () => {
     const [id_usuario, setId_usuario] = useState('');
@@ -99,7 +98,7 @@ const Perfil_Completo = () => {
 
     return (
         <div>
-            <NavConfig />
+            <NavBar />
             <div className={styles.profile_container}>
                 <h2>Perfil Completo</h2>
 
@@ -183,8 +182,6 @@ const Perfil_Completo = () => {
                     </button>
                 </div>
             </div>
-
-            <NavInferior />
         </div>
     );
 };
