@@ -7,6 +7,7 @@ const __dirname = path.dirname(__filename);
 
 export async function criarImagem(req, res) {
     console.log('ImagemController :: Criando Imagem');
+    console.log(req.files);
     const { imagem } = req.files;
 
     if (!imagem) {

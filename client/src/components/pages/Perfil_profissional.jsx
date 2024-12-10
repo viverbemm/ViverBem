@@ -7,6 +7,12 @@ import coin from '../pages/imagens/coin.png';
 import React, { useState } from 'react';
 import NavBar from '../layout/navBar';
 
+function Profissional() {
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const menuShow = () => {
+        setMenuOpen(!menuOpen);
+    };
 
 function Profissional() {
   const [menuOpen, setMenuOpen] = useState(false);

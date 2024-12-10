@@ -15,6 +15,9 @@ function Cadastro() {
             if (!resposta.ok) {
                 console.log('Erro ao cadastrar usuario');
             } else {
+                const {id_usuario} = await resposta.json();
+                console.log(id_usuario)
+                localStorage.setItem("id_usuario",id_usuario)
                 alert('usuario cadastrado com sucesso');
             }
 

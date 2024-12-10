@@ -27,28 +27,46 @@ const Completar_Perfil = () => {
     const [showModal, setShowModal] = useState(false);
     const modalRef = useRef();
     const navigate = useNavigate();
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import styles from "./Completar_Perfil.module.css";
+import NavBar from "../layout/navBar";
+import NavInferior from "../layout/navInferior";
+
+const DadosProfissionais = () => {
+    const [formValues, setFormValues] = useState({
+        experiencia: "",
+        formacao: "",
+        fale_sobre: "",
+        valor_diaria: "",
+        imagem: null,
+    });
+
+    const [errors, setErrors] = useState({
+        experiencia: false,
+        formacao: false,
+        fale_sobre: false,
+        valor_diaria: false,
+        imagem: false,
+    });
+
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        const id_usuario = localStorage.getItem("id_usuario");
+        setFormValues((prev) => ({ ...prev, id_usuario }));
+    }, []);
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
-
-        if (name === "dailyRate") {
-            const formattedValue = value.replace(/\D/g, "");
-            const formattedMoney = (formattedValue / 100).toLocaleString("pt-BR", {
-                style: "currency",
-                currency: "BRL",
-            });
-
-            setFormData({ ...formData, [name]: formattedMoney });
-        } else {
-            setFormData({ ...formData, [name]: value });
-        }
-
-        setErrors({ ...errors, [name]: false });
+        setFormValues((prev) => ({ ...prev, [name]: value }));
+        setErrors((prev) => ({ ...prev, [name]: false }));
     };
 
     const handlePhotoChange = (e) => {
-        setFormData({ ...formData, photo: e.target.files[0] });
-        setErrors({ ...errors, photo: false });
+        const file = e.target.files[0];
+        setFormValues((prev) => ({ ...prev, imagem: file }));
+        setErrors((prev) => ({ ...prev, imagem: false }));
     };
 
     const handleTermsChange = (e) => {
@@ -59,6 +77,7 @@ const Completar_Perfil = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+        // Validação dos campos
         const newErrors = {
             photo: !formData.photo,
             experience: !formData.experience.trim(),
@@ -66,6 +85,11 @@ const Completar_Perfil = () => {
             about: !formData.about.trim(),
             dailyRate: !formData.dailyRate.trim(),
             termsAccepted: !formData.termsAccepted,
+            experiencia: !formValues.experiencia,
+            formacao: !formValues.formacao.trim(),
+            fale_sobre: !formValues.fale_sobre.trim(),
+            valor_diaria: !formValues.valor_diaria.trim(),
+            imagem: !formValues.imagem,
         };
 
         setErrors(newErrors);
@@ -125,6 +149,29 @@ const Completar_Perfil = () => {
             month: 'long',
             day: 'numeric'
         });
+        // Criar FormData
+        const formData = new FormData();
+        for (const key in formValues) {
+            formData.append(key, formValues[key]);
+        }
+
+        try {
+            const resposta = await fetch("http://localhost:5000/perfil", {
+                method: "POST",
+                body: formData,
+            });
+
+            if (!resposta.ok) {
+                console.error("Erro ao cadastrar perfil");
+            } else {
+                const data = await resposta.json();
+                localStorage.setItem("id_usuario", data.id_usuario);
+                alert("Perfil cadastrado com sucesso");
+                navigate("/perfil", { state: { formData } });
+            }
+        } catch (error) {
+            console.error("Erro ao enviar perfil:", error);
+        }
     };
 
     return (
@@ -136,45 +183,45 @@ const Completar_Perfil = () => {
                     color: '#23008D', marginBottom: '20px'
                 }}>Complete seu perfil</h1>
                 <form onSubmit={handleSubmit}>
-                    <div className={`${styles.form_group} ${errors.photo ? styles.error : ""}`}>
+                    <div className={`${styles.form_group} ${errors.imagem ? styles.error : ""}`}>
                         <label>Adicione sua foto:</label>
                         <input type="file" accept="image/*" id="imagem-form" method="POST" encType="multipart/form-data" onChange={handlePhotoChange} />
                     </div>
-                    <div className={`${styles.form_group} ${errors.experience ? styles.error : ""}`}>
+                    <div className={`${styles.form_group} ${errors.experiencia ? styles.error : ""}`}>
                         <label>Quanto tempo de experiência você possui?</label>
                         <input
                             type="text"
-                            name="experience"
-                            value={formData.experience}
+                            name="experiencia"
+                            value={formValues.experiencia}
                             onChange={handleInputChange}
                             placeholder="Ex: 5 anos"
                         />
                     </div>
-                    <div className={`${styles.form_group} ${errors.education ? styles.error : ""}`}>
+                    <div className={`${styles.form_group} ${errors.formacao ? styles.error : ""}`}>
                         <label>Sua formação acadêmica:</label>
                         <input
                             type="text"
-                            name="education"
-                            value={formData.education}
+                            name="formacao"
+                            value={formValues.formacao}
                             onChange={handleInputChange}
                             placeholder="Ex: Ensino superior completo"
                         />
                     </div>
-                    <div className={`${styles.form_group} ${errors.about ? styles.error : ""}`}>
+                    <div className={`${styles.form_group} ${errors.fale_sobre ? styles.error : ""}`}>
                         <label>Fale um pouco sobre você:</label>
                         <textarea
-                            name="about"
-                            value={formData.about}
+                            name="fale_sobre"
+                            value={formValues.fale_sobre}
                             onChange={handleInputChange}
                             placeholder="Escreva um breve resumo sobre você"
                         ></textarea>
                     </div>
-                    <div className={`${styles.form_group} ${errors.dailyRate ? styles.error : ""}`}>
+                    <div className={`${styles.form_group} ${errors.valor_diaria ? styles.error : ""}`}>
                         <label>Qual valor da sua diária?</label>
                         <input
                             type="text"
-                            name="dailyRate"
-                            value={formData.dailyRate}
+                            name="valor_diaria"
+                            value={formValues.valor_diaria}
                             onChange={handleInputChange}
                             placeholder="Ex: R$ 200,00"
                         />
@@ -236,4 +283,4 @@ const Completar_Perfil = () => {
     );
 };
 
-export default Completar_Perfil;
+export default DadosProfissionais;
