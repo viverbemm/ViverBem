@@ -82,7 +82,6 @@ const ConfigConta = () => {
           </div>
         )}
       </div>
-        <NavInferior/>
     </div>
   );
 };

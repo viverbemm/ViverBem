@@ -18,7 +18,6 @@ import Laura from './components/pages/Laura_Castro';
 import Carlos from './components/pages/Carlos_Mendes';
 import Gabriel from './components/pages/Gabriel_Lopes';
 import Cadastro from './components/pages/Cadastro';
-
 import Pag_Men from './components/pages/Pag_Men';
 import Config from './components/pages/Config';
 
