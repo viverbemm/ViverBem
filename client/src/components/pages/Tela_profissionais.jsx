@@ -19,8 +19,8 @@ function TelaProfissionais() {
     { id: 1, nome: 'Carlos Mendes', experiencia: '3 anos', cidade: 'Vitória - ES', diaria: 'R$ 179,90', img: profileCarlos, slug: 'carlos-mendes' },
     { id: 2, nome: 'Laura Castro', experiencia: '1 ano e 2 meses', cidade: 'Serra - ES', diaria: 'R$ 210,90', img: profileLaura, slug: 'laura-castro' },
     { id: 3, nome: 'Gabriel Lopes', experiencia: '2 anos e 4 meses', cidade: 'Cariacica - ES', diaria: 'R$ 148,80', img: profileGabriel, slug: 'gabriel-lopes' },
-    { id: 4, nome: 'Benjamin Duarte', experiencia: '6 meses', cidade: 'Colatina - ES', diaria: 'R$ 190,45', img: profileBenjamin, slug: 'benjamin-duarte' },
-    { id: 5, nome: 'Maitê Vieira', experiencia: '9 meses', cidade: 'Fundão - ES', diaria: 'R$ 169,50', img: profileMaite, slug: 'maite-vieira' },
+    { id: 4, nome: 'Benjamin Duarte', experiencia: '6 meses', cidade: 'Guarapari - ES', diaria: 'R$ 190,45', img: profileBenjamin, slug: 'benjamin-duarte' },
+    { id: 5, nome: 'Maitê Vieira', experiencia: '9 meses', cidade: 'Vitória - ES', diaria: 'R$ 169,50', img: profileMaite, slug: 'maite-vieira' },
     { id: 6, nome: 'Luísa Heringer', experiencia: '3 anos e 6 meses', cidade: 'Vila-Velha - ES', diaria: 'R$ 210,00', img: profileLuisa, slug: 'luisa-heringer' },
   ];
 

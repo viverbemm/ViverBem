@@ -85,12 +85,12 @@ function Profissional() {
             marginLeft: '2%',
             fontSize: '18px',
           }}>Telefone:</strong> (27) 93865-8514</p>
-          <h1 style={{ fontSize: '30px', marginLeft: '60%', marginTop: '-12.5%' }}><b>Diária:</b></h1>
+          <h1 style={{ fontSize: '30px', marginLeft: '60%', marginTop: '-11.3%' }}><b>Diária:</b></h1>
           <img style={{ height: '35px', width: '35px', marginLeft: '45%', marginTop: '2%' }} src={coin} alt="telephone" />
           <p style={{
             marginLeft: '62.2%',
             fontSize: '18px',
-            marginTop: '-2.2%'
+            marginTop: '-2.3%'
           }}>R$ 210,90</p>
         </div>
       </section>

@@ -51,10 +51,10 @@ function Profissional() {
             <p>ﾠ</p>
             <p className={stylesP.pI}>Experiência Profissional: Cuidador de Idosos.</p>
             <p className={stylesP.pII}>Atualmente atuo como cuidador autônomo com ampla experiência</p>
-            <p className={stylesP.pIII}>em assistência a idosos, incluindo aqueles com necessidades físicas e cognitivas específicas.</p>
-            <p className={stylesP.pIV}>Minha trajetória começou em 2021, e desde então tenho cuidado</p>
-            <p className={stylesP.pIV}>de idosos com respeito, empatia e dedicação. Entre minhas</p>
-            <p className={stylesP.pIV}>responsabilidades, destaco:</p>
+            <p className={stylesP.pIII}>em assistência a idosos, incluindo aqueles com necessidades físicas</p>
+            <p className={stylesP.pIV}>e cognitivas específicas. Minha trajetória começou em 2021, e desde</p>
+            <p className={stylesP.pIV}>então tenho cuidado de idosos com respeito, empatia e dedicação.</p>
+            <p className={stylesP.pIV}>Entre minhas responsabilidades, destaco:</p>
             <ul style={{
               marginLeft: '90px'
             }}>
@@ -73,7 +73,27 @@ function Profissional() {
           </div>
         </div>
       </section>
-
+      <section className={stylesP.cont}>
+        <div className={stylesP.containerIII}>
+          <h1 className={stylesP.ato}><b>Contatos:</b></h1>
+          <p style={{ fontSize: '18px' }}><img src={email} alt="email" className={stylesP.email} /><strong style={{
+            color: '#23008D',
+            marginLeft: '2%',
+          }}>Email:</strong> gabriellopes@gmail.com</p>
+          <p style={{ fontSize: '18px' }}><img src={telephone} alt="telephone" className={stylesP.telephone} /><strong style={{
+            color: '#23008D',
+            marginLeft: '2%',
+            fontSize: '18px',
+          }}>Telefone:</strong> (27) 96392-3456</p>
+          <h1 style={{ fontSize: '30px', marginLeft: '60%', marginTop: '-11%' }}><b>Diária:</b></h1>
+          <img style={{ height: '35px', width: '35px', marginLeft: '45%', marginTop: '1.5%' }} src={coin} alt="telephone" />
+          <p style={{
+            marginLeft: '62.2%',
+            fontSize: '18px',
+            marginTop: '-2.4%'
+          }}>R$ 148,80</p>
+        </div>
+      </section>
       <NavInferior />
     </div>
   );

@@ -42,15 +42,15 @@ function App() {
         <Route path='/EditCadastro/:id' element={<EditCadastro />} />
         <Route path='/PaginaInicial' element={<PaginaInicial />} />
         <Route path='/Bem_vindo' element={<Bem_Vindo_Gestao />} />{/*não se aplica*/}
-        <Route path='/Controle' element={<Controle_Usuarios />} />
+        <Route path='/Controle' element={<Controle_Usuarios />} />{/*não se aplica*/}
         <Route path='/LoginUsuario' element={<Login_Usuario />} />
         <Route path='/Login_gestao' element={<Login_Gestao />} />{/*não se aplica*/}
         <Route path='/AlterarSenha' element={<AlterarSenha />} />
         <Route path='/Benjamin_Duarte' element={<Benjamin />} />
         <Route path='/Perfil' element={<Perfil_Completo />} />
         <Route path='/Gabriel_Lopes' element={<Gabriel />} />
-        <Route path='/Financeiro' element={<Financeiro />} />
-        <Route path='/MinhaConta' element={<MinhaConta />} />
+        <Route path='/Financeiro' element={<Financeiro />} />{/*não se aplica*/}
+        <Route path='/MinhaConta' element={<MinhaConta />} />{/*não se aplica*/}
         <Route path='/Carlos_Mendes' element={<Carlos />} />
         <Route path="/" element={<Tela_profissionais />} />
         <Route path='/Maite_Vieira' element={<Maite />} />
@@ -58,7 +58,7 @@ function App() {
         <Route path='/Config' element={<ConfigConta />} />
         <Route path='/Pagamento' element={<Pag_Men />} />
         <Route path='/cadastro' element={<Cadastro />} />
-        <Route path='/' element={<PaginaInicial />} />
+        <Route path='/PaginaInicial' element={<PaginaInicial />} />
         <Route path='/Config' element={<Config />} />
       </Routes>
     </Router>

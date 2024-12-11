@@ -294,10 +294,10 @@ function FormCadastro({ titulo, handleSubmit, id }) {
                 >
                   <option value="">Selecione sua cidade:</option>
                   <option value="cariacica">Cariacica</option>
-                  <option value="vitoria">Vitória</option>
-                  <option value="guarapari">Vila Velha</option>
-                  <option value="serra">Serra</option>
-                  <option value="guarapari">Guarapari</option>
+                  <option value="vitoria">Guarapari</option>
+                  <option value="guarapari">Serra</option>
+                  <option value="serra">Vila Velha</option>
+                  <option value="guarapari">Vitória</option>
                 </select>
                 <button type="submit" className={styles.cadastrar_button}>
                   {id ? "Editar" : "Cadastrar"}
