@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Perfil_Profissional.module.css';
 
 
-function Profissional() {
+function PerfilProfissional() {
     return (
         <div>
             {/* Navbar */}
@@ -50,5 +50,5 @@ function Profissional() {
         </div>
     );
 }
-// asdasdasdas
-export default Profissional;
+
+export default PerfilProfissional;
