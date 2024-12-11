@@ -1,27 +1,19 @@
 import telephone from '../pages/imagens/telephone-handle-silhouette.png';
-import stylesP from './Perfil_Profissional.module.css';
 import profilePic from '../pages/imagens/maite.webp';
+import stylesP from './Maite_Vieira.module.css';
 import NavInferior from '../layout/navInferior';
 import email from '../pages/imagens/email.png';
 import coin from '../pages/imagens/coin.png';
-import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
+import React, { useState } from 'react';
 import NavBar from '../layout/navBar';
 
 function Profissional() {
     const [menuOpen, setMenuOpen] = useState(false);
-
     const menuShow = () => {
         setMenuOpen(!menuOpen);
     };
-
-    const { nome } = useParams(); // Pega o nome do profissional da URL
-    const profissional = Profissional.find(p => p.nome.toLowerCase().replace(/ /g, '-') === nome);
-
-    if (!profissional) {
-        return <div>Profissional não encontrado.</div>;
-    }
-
+    const { nome } = useParams();
 
     return (
         <div style={{ backgroundColor: '#c2c2f8', width: '100%', display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
