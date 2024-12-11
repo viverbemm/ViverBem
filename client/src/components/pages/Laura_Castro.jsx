@@ -1,5 +1,5 @@
 import telephone from '../pages/imagens/telephone-handle-silhouette.png';
-import stylesP from './Perfil_Profissional.module.css';
+import stylesP from './Laura_Castro.module.css';
 import profilePic from '../pages/imagens/laura.webp';
 import NavInferior from '../layout/navInferior';
 import email from '../pages/imagens/email.png';

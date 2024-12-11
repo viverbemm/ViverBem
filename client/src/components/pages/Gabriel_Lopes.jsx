@@ -1,5 +1,5 @@
 import telephone from '../pages/imagens/telephone-handle-silhouette.png';
-import stylesP from './Perfil_Profissional.module.css';
+import stylesP from './Gabriel_Lopes.module.css';
 import profilePic from '../pages/imagens/gabriel.webp';
 import NavInferior from '../layout/navInferior';
 import email from '../pages/imagens/email.png';
