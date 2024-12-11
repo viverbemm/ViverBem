@@ -152,7 +152,6 @@ const EditProfile = () => {
                     <button type="submit" className={styles.submitButton}>Salvar Alterações</button>
                 </form>
             </div>
-            <NavInferior />
         </div>
     );
 };

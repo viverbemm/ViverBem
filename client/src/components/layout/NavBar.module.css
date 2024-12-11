@@ -1,31 +1,97 @@
-.navPrin{
+/* Navbar principal */
+.navPrin {
+    margin-top: -10px;
+    margin-bottom: -10px;
     font-size: 20px;
-    background-color: #3b00b9;
+    background-color: #c2c2f8;
     color: bisque;
-    background-color:#c2c2f8;
-  
+    padding: 10px 0;
 }
 
-.navBarEsq a{
-
-color: #3b00b9;
-padding: 14px 20px;
-text-decoration: none;
-background-color:#c2c2f8;
+/* Navbar esquerdo */
+.navBarEsq a {
+    color: #3b00b9;
+    padding: 14px 20px;
+    text-decoration: none;
+    background-color: #E6E6FA;
 }
 
-.navBarDire a{
+/* Navbar direito */
+.navBarDire a {
     text-decoration: none;
     cursor: pointer;
-    background-color:#c2c2f8;
-    color:#3b00b9;
-    
-
+    background-color: #E6E6FA;
+    color: #3b00b9;
 }
 
-.navPrin header{
-    
-    background-color:#c2c2f8;
- 
-    
+/* Header */
+.navPrin header {
+    background-color: #E6E6FA;
+}
+
+/* Media Queries para tornar o Navbar responsivo */
+
+/* Para telas menores que 768px */
+@media (max-width: 768px) {
+    .navPrin {
+        font-size: 18px;
+    }
+
+    /* Navbar esquerdo */
+    .navBarEsq a {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    /* Navbar direito */
+    .navBarDire a {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    /* Menu em telas pequenas: centraliza os itens e torna o menu mais compacto */
+    .navBarEsq,
+    .navBarDire {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    /* Alinha o header no centro */
+    .navPrin header {
+        text-align: center;
+        padding: 10px 0;
+    }
+}
+
+/* Para telas ainda menores (como smartphones) */
+@media (max-width: 480px) {
+    .navPrin {
+        font-size: 16px;
+    }
+
+    .navBarEsq a {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .navBarDire a {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .navBarEsq,
+    .navBarDire {
+        padding: 10px 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Ajuste no Header para telas muito pequenas */
+    .navPrin header {
+        font-size: 14px;
+    }
 }

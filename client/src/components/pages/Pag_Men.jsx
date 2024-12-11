@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import styles from './Pag_men.module.css';
 import NavBar from '../layout/navBar';
 import { useNavigate } from 'react-router-dom';
-import NavInferior from '../layout/navInferior';
 
 function Pagamento() {
     const [cardNumber, setCardNumber] = useState('');
@@ -157,7 +156,6 @@ function Pagamento() {
                 </form>
                 {authenticated && <p className={styles.success_message}><b>Compra efetuada com sucesso!<br /> Comprovante enviado no e-mail cadastrado</b></p>}
             </div>
-            <NavInferior/>
         </div>
     );
 }

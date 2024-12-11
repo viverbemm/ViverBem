@@ -1,19 +1,80 @@
-.end {
-    background-color: #c2c2f8;
-    padding: 25px;
-    text-align: center;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    
+.rod {
+  margin-top: -13px;
+  margin-bottom: -2px;
+  background-color: #c2c2f8;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
 
+.containerIV {
+  width: 82%;
+  padding: 5px;
+  background-color: #E6E6FA;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  margin-bottom: 30px;
+}
 
+.rodape {
+  text-align: center;
+  color: #23008D;
+  font-size: 25px;
+  margin-top: 30px;
+}
+
+/* Estilo dos links de contato */
+.containerIV p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.containerIV p img {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+}
+
+/* Media Query para telas pequenas */
+@media (max-width: 768px) {
+  .rodape {
+    font-size: 24px; /* Menor tamanho de fonte para dispositivos móveis */
   }
 
-.end h1{
-    color:#3b00b9;
-    font-size: 20px;
-    background-color:#c2c2f8 ;
-    font-family: 'Roboto', sans-serif
+  .containerIV {
+    width: 90%; /* Deixa o container um pouco maior em telas pequenas */
+    padding: 10px;
+  }
+
+  .containerIV p {
+    font-size: 16px; /* Tamanho de fonte menor para dispositivos móveis */
+  }
+
+  .containerIV p img {
+    width: 18px; /* Ajusta o tamanho dos ícones */
+    height: 18px;
+  }
+}
+
+/* Media Query para telas muito pequenas (ex: celulares em modo retrato) */
+@media (max-width: 480px) {
+  .rodape {
+    font-size: 20px; /* Diminui mais o tamanho da fonte */
+  }
+
+  .containerIV {
+    width: 100%; /* Ocupa toda a largura da tela em dispositivos muito pequenos */
+    padding: 5px;
+  }
+
+  .containerIV p {
+    font-size: 14px; /* Diminui o tamanho da fonte ainda mais */
+  }
+
+  .containerIV p img {
+    width: 16px; /* Ajusta o tamanho dos ícones ainda mais */
+    height: 16px;
+  }
 }

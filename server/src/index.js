@@ -10,14 +10,29 @@ import { atualizarPerfil, criarPerfil, deletarPerfil, downloadImagem, mostrarPer
 
 
 const app = express();
-const porta = 5000;
+const port = 5000;
 
-app.use(fileUpload());
 app.use(express.json());
-app.use(cors());
+app.use(express.urlencoded({ extended: true }));
+app.use(fileUpload());  // Adicionando o middleware para lidar com uploads de arquivos
 
-app.get('/',(req,res)=>{
-    res.send('API Funcionando!')
+// Rota para upload de imagens
+app.post('/upload', criarImagem);
+
+// Rota para visualizar todas as imagens
+app.get('/imagens', mostrarImagem);
+
+// Rota para visualizar uma imagem específica
+app.get('/imagens/:id_imagem', mostrarUmaImagem);
+
+// Rota para editar uma imagem existente
+app.put('/imagens/:id_imagem', editarImagem);
+
+// Rota para excluir uma imagem
+app.delete('/imagens/:id_imagem', deletarImagem);
+
+app.listen(port, () => {
+    console.log(`Servidor rodando em http://localhost:${port}`);
 });
 
 

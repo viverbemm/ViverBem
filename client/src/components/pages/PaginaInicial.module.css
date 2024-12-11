@@ -1,16 +1,11 @@
-.mainn {
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-   
-}
 
-.containerDoInicio {
+.comecando {
     text-align: center;
-    padding: 40px 20px;
-    background:#c2c2f8;
     color: #260077;
-    border-radius: 8px;
+    background-color: #c2c2f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .h11 {
@@ -27,18 +22,19 @@
 .botoesAcoes {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
     margin-top: 20px;
-   
 }
 
 .botaoPrimario {
     background-color: #260077;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 15px;
     font-size: 1rem;
-    border-radius: 5px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    margin-bottom: 30px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     width: 500px;
@@ -48,22 +44,20 @@
 .botaoSecundario {
     background-color: #260077;
     color: white;
-
-    padding: 10px 20px;
+    padding: 15px;
     font-size: 1rem;
-    border-radius: 5px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    margin-bottom: 30px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
     width: 500px;
 }
 
 .depoimentos {
-    margin-top: 40px;
     padding: 80px;
     text-align: center;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #c2c2f8;
 }
 
 .depoimentos h2 {
@@ -81,8 +75,10 @@
 }
 
 .card {
-    background-color: #f9f9f9;
-    border-radius: 8px;
+    background-color: #E6E6FA;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    margin-bottom: 30px;
     padding: 20px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -125,22 +121,26 @@
 
 .estrelas {
     font-size: 1.2rem;
-    color: #ffb400; /* Cor amarela para as estrelas */
+    color: #ffb400;
+    /* Cor amarela para as estrelas */
 }
 
-.imginicial{
-    width: 150px; /* Altere o tamanho conforme necessário */
-    height: 150px; /* Igual à largura para garantir o formato redondo */
+.imginicial {
+    width: 150px;
+    /* Altere o tamanho conforme necessário */
+    height: 150px;
+    /* Igual à largura para garantir o formato redondo */
     border-radius: 50%;
-    object-fit: cover; /* Garante que a imagem preencha o círculo */
-    margin: 0 auto; /* Centraliza a imagem dentro do container */
+    object-fit: cover;
+    /* Garante que a imagem preencha o círculo */
+    margin: 0 auto;
+    /* Centraliza a imagem dentro do container */
 }
 
-.cuidador{
+.cuidador {
     font-family: 'Roboto', sans-serif;
 }
 
-.depoimentos{
+.depoimentos {
     font-family: 'Roboto', sans-serif
 }
-

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './PaginaInicial.module.css';
-import NavInicial from '../layout/navInicial';
+import NavBar from '../layout/navBar';
 import NavInferior from '../layout/navInferior';
 import Laura from '../pages/imagens/laura.webp';
 import Leo from '../pages/imagens/leo.webp';
@@ -12,24 +12,32 @@ function PaginaInicial() {
 
     return (
         <div>
-            <NavInicial />
-            <main className={styles.mainn}>
+            <NavBar />
+            <main style={{ backgroundColor: '#c2c2f8', width: '100%', display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
                 {/* Banner principal */}
-                <div className={styles.containerDoInicio}>
-                    <section className={styles.comecando}>
+                <h1>ﾠﾠﾠﾠﾠﾠﾠﾠﾠﾠ</h1>
+                <section className={styles.comecando}>
+                    <section style={{
+                        border: '1px solid #ddd',
+                        borderRadius: '30px',
+                        marginBottom: '30px',
+                        width: '83%',
+                        backgroundColor: '#E6E6FA',
+                        padding: '40px'
+                    }}>
                         <h1 className={styles.h11}>
                             <b className={styles.cuidador}>
-                                Encontre o Cuidador Ideal para o Idoso que Você Ama
+                                Encontre o cuidador ideal para o idoso que você ama
                             </b>
                         </h1>
                         <p className={styles.textoInicial}>
-                            {`Conectamos cuidadores de confiança a idosos que precisam de atenção, cuidado e companhia.`} <br />
-                            {`Nosso site é uma plataforma de fácil navegação, onde você pode encontrar profissionais qualificados`} <br />
-                            {`para ajudar seu ente querido no dia a dia, garantindo um atendimento humanizado e seguro.`} <br /><br />
+                            {`Conectamos cuidadores de confiança a idosos que precisam de atenção, cuidados e companhia.`} <br />
+                            {`Nosso site é uma plataforma de fácil navegação, onde você encontrará profissionais qualificados`} <br />
+                            {`para ajudar seu ente querido no dia a dia, garantindo um atendimento humanizado e profissional.`} <br /><br />
                             {`Para os cuidadores, oferecemos um catálogo virtual que amplia a visibilidade de seus serviços.`} <br />
                             {`Por uma taxa acessível, de `}
-                            <strong className={styles.valorMensal}>R$ 29,90 mensais</strong> {` ou `} <strong className={styles.valorAnual}>R$ 299,90 anuais</strong>, {` os cuidadores têm seus contatos`} <br />
-                            {`exibidos no site, conectando-se a famílias que buscam assistência especializada.`} <br /><br />
+                            <strong className={styles.valorMensal}>R$ 29,90 mensal</strong> {` ou `} <strong className={styles.valorAnual}>R$ 299,90 anual</strong>, {` os cuidadores têm seu perfil`} <br />
+                            {`divulgado em nossa plataforma, conectando-se a famílias que buscam assistência especializada.`} <br /><br />
 
                         </p>
                         {/* Botões de ação */}
@@ -49,11 +57,12 @@ function PaginaInicial() {
                             </button>
                         </div>
                     </section>
-                </div>
+                </section>
 
                 {/* Seção de depoimentos */}
                 <section className={styles.depoimentos}>
                     <h2><b>O que dizem sobre nós</b></h2>
+                    <h1>ﾠﾠﾠﾠﾠﾠﾠﾠﾠﾠ</h1>
                     <div className={styles.cardsDepoimentos}>
                         <div className={styles.card}>
                             <img className={styles.imginicial} src={Laura} alt="Laura" />
@@ -88,7 +97,7 @@ function PaginaInicial() {
 
             </main>
             <NavInferior />
-        </div>
+        </div >
     );
 }
 

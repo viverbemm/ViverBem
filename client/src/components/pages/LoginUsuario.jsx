@@ -107,8 +107,7 @@ function LoginUsuario() {
                         className={styles.botao}
                         type="button"
                         onClick={handleLogin}
-                    >
-                        Entrar
+                    >                        Entrar
                     </button>
                 </form>
             </div>

@@ -2,8 +2,9 @@
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
+  margin-top: -10%;
   padding: 20px;
-  background-color: #f4f4f4;
+  background-color: #E6E6FA;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
