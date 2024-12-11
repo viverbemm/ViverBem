@@ -150,7 +150,7 @@ const Completar_Perfil = () => {
                 <h1 style={{
                     fontSize: '25px', textAlign: 'center', fontWeight: 'bold',
                     color: '#23008D', marginBottom: '20px'
-                }}>Complete seu perfil</h1>
+                }}>COMPLETE SEU PERFIL</h1>
                 <form onSubmit={handleSubmit}>
                     <div className={`${styles.form_group} ${errors.photo ? styles.error : ""}`}>
                         <label>Adicione sua foto:</label>
