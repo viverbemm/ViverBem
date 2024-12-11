@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Importando o Link para navegação
 import profileCarlos from '../pages/imagens/carlosmendes.jpg';
 import profileBenjamin from '../pages/imagens/benjamin.webp';
 import profileGabriel from '../pages/imagens/gabriel.webp';
@@ -8,12 +6,15 @@ import profileLuisa from '../pages/imagens/luisa.webp';
 import profileMaite from '../pages/imagens/maite.webp';
 import stylesT from './Tela_profissionais.module.css';
 import NavInferior from '../layout/navInferior';
+import { useParams } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import NavBar from '../layout/navBar';
 
 function Profissionais() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [search, setSearch] = useState(""); // Estado para armazenar a busca
-  const [filteredProfissionais, setFilteredProfissionais] = useState([]); // Estado para armazenar os profissionais filtrados
+  const [search, setSearch] = useState("");
+  const [filteredProfissionais, setFilteredProfissionais] = useState([]);
 
   const profissionais = [
     { nome: 'Carlos Mendes', experiencia: '3 anos', cidade: 'Vitória - ES', diaria: 'R$ 179,90', img: profileCarlos },
@@ -24,7 +25,7 @@ function Profissionais() {
     { nome: 'Maitê Vieira', experiencia: '9 meses', cidade: 'Fundão - ES', diaria: 'R$ 169,50', img: profileMaite },
   ];
 
-  // Função para lidar com a busca
+
   const handleSearch = (e) => {
     const query = e.target.value.toLowerCase();
     setSearch(query);
@@ -54,10 +55,8 @@ function Profissionais() {
           <h1><b>Profissionais</b></h1>
         </div>
         <section className={stylesT.grid_container}>
-          {/* Exibe os profissionais filtrados ou todos os profissionais */}
           {(filteredProfissionais.length > 0 ? filteredProfissionais : profissionais).map((profissional, index) => (
             <div className={stylesT.grid_item} key={index}>
-              {/* Link para a página de perfil do profissional */}
               <Link to={`/perfil_profissional/${profissional.nome.toLowerCase().replace(/ /g, '-')}`}>
                 <img src={profissional.img} alt={`Descrição da imagem de ${profissional.nome}`} />
               </Link>
