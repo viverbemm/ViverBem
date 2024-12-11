@@ -5,7 +5,7 @@ import cors from 'cors';
 
 import { criarUsuario, logarUsuario, mostrarUmUsuario, mostrarUsuario, deletarUsuario, atualizarUsuario} from './controllers/UsuarioController.js';
 import { criarImagem, mostrarImagem, editarImagem, deletarImagem, mostrarUmaImagem } from './controllers/ImagemController.js';
-import { atualizarPerfil, criarPerfil, deletarPerfil, mostrarPerfil, mostrarUmPerfil } from './controllers/PerfilController.js';
+import { atualizarPerfil, criarPerfil, deletarPerfil, downloadImagem, mostrarPerfil, mostrarUmPerfil } from './controllers/PerfilController.js';
 
 
 
@@ -44,6 +44,8 @@ app.get('/imagens', mostrarImagem);
 app.get('/imagens/:id_imagem', mostrarUmaImagem);
 app.put('/imagens/:id_imagem', editarImagem);
 app.delete('/imagens/:id_imagem', deletarImagem);
+
+app.get('/public/:nomeImg', downloadImagem);
 
 
 //Efetuar login

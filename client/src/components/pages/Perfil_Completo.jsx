@@ -81,22 +81,27 @@ const Perfil_Completo = () => {
 
     // Função para carregar os dados do perfil (no caso de não ter sido passado pelo estado)
     useEffect(() => {
+        //console.log('teste');
         const usuarioArmazenado = localStorage.getItem("id_usuario");
         if (usuarioArmazenado) {
             setId_usuario(usuarioArmazenado);
+            //console.log(`${usuarioArmazenado}`);
             if (!formData) {
-                //const id_usuario = localStorage.getItem("id_usuario");
-                //   if (id_usuario) {
-                fetch(`http://localhost:5000/perfil/${id_usuario}`)
-                    .then(response => response.json())
-                    .then(data => setEditableData(data))
-                    .catch(error => console.error("Erro ao carregar perfil:", error));
-                // }
-            }
+                carregarDados(usuarioArmazenado);
+        }
         }
 
     }, [formData]);
 
+    async function carregarDados(id_usuario) {
+        try {
+            const resposta = await fetch(`http://localhost:5000/perfil/${id_usuario}`);
+            const data = await resposta.json()
+            setEditableData(data)
+        } catch (error) {
+            console.error("Erro ao carregar perfil:", error)
+        }    
+    }
     return (
         <div>
             <NavConfig />
@@ -105,7 +110,7 @@ const Perfil_Completo = () => {
 
                 <div>
                     <h3>Foto:</h3>
-                    {isEditing ? (
+                       {/* {isEditing ? (
                         <div>
                             <input
                                 type="file"
@@ -113,13 +118,13 @@ const Perfil_Completo = () => {
                                 onChange={handleFileChange}
                             />
                         </div>
-                    ) : (
+                        ): ( */}
                         <img
-                            src={editableData.caminho_imagem ? URL.createObjectURL(editableData.caminho_imagem) : ''} // Corrigido para caminho_imagem
+                            src={`http://localhost:5000/public/${editableData.caminho_imagem}`} // Corrigido para caminho_imagem
                             alt="Perfil"
                             width="100"
                         />
-                    )}
+                    {/* )} */}
                 </div>
 
                 <div>

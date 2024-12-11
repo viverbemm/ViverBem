@@ -78,7 +78,7 @@ const DadosProfissionais = () => {
                 const data = await resposta.json();
                 localStorage.setItem("id_usuario", data.id_usuario);
                 alert("Perfil cadastrado com sucesso");
-                navigate("/perfil", { state: { formData } });
+                navigate("/LoginUsuario");
             }
         } catch (error) {
             console.error("Erro ao enviar perfil:", error);

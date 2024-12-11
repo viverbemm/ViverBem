@@ -120,3 +120,19 @@ export async function atualizarPerfil(req, res) {
         return res.status(500).json({ message: 'Erro ao atualizar usuário' });
     }
 }
+
+export async function downloadImagem(req, res) {
+    console.log('ImagemController :: Mostrando Imagem')
+
+    const { nomeImg } = req.params;
+    const caminho = path.join(__dirname, '..', '..', 'public', 'img', nomeImg);
+
+    console.log(caminho);
+
+    res.sendFile(caminho, (erro) => {
+        if (erro) {
+            console.log(erro)
+            res.status(404).json({ message: 'Imagem não encontrada' })
+        }
+    });
+}
