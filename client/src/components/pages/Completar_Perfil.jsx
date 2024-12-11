@@ -59,6 +59,7 @@ const Completar_Perfil = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+        // Validar todos os campos
         const newErrors = {
             photo: !formData.photo,
             experience: !formData.experience.trim(),
@@ -76,24 +77,37 @@ const Completar_Perfil = () => {
             return;
         }
 
+        // Pegar o id_usuario do localStorage
+        const idUsuario = localStorage.getItem('id_usuario');
+
+        if (!idUsuario) {
+            alert("Usuário não encontrado. Por favor, faça login.");
+            return;
+        }
+
+        // Preparar os dados para envio
         const formDataToSend = new FormData();
-        formDataToSend.append('imagem', formData.photo);  // Enviando apenas a foto
+        formDataToSend.append('imagem', formData.photo);  // Foto
+        formDataToSend.append('experiencia', formData.experience);  // Experiência
+        formDataToSend.append('formacao', formData.education);  // Formação
+        formDataToSend.append('fale_sobre', formData.about);  // Descrição
+        formDataToSend.append('valor_diaria', formData.dailyRate);  // Valor da diária
+        formDataToSend.append('termsAccepted', formData.termsAccepted);  // Aceite dos termos
+        formDataToSend.append('id_usuario', idUsuario);  // id_usuario
 
         try {
-            const response = await fetch('http://localhost:5000/imagens', {
+            const response = await fetch('http://localhost:5000/perfil', {
                 method: 'POST',
-                body: formDataToSend,  // Enviando os dados como FormData
+                body: formDataToSend,
             });
 
             if (response.ok) {
                 const data = await response.json();
                 alert('Perfil completo e imagem enviada com sucesso!');
-                navigate('/perfil', { state: { formData } });
+                navigate('/LoginUsuario', { state: { formData } });
             } else {
-                const data = await resposta.json();
-                localStorage.setItem("id_usuario", data.id_usuario);
-                alert("Perfil cadastrado com sucesso");
-                navigate("/LoginUsuario");
+                const data = await response.json();
+                alert(data.message); // Mostrar a mensagem do backend, caso ocorra um erro
             }
         } catch (error) {
             console.error('Erro ao enviar os dados:', error);

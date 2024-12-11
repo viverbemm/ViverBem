@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Perfil_Profissional.module.css';
 
 
-function PerfilProfissional() {
+function Profissional() {
     return (
         <div>
             {/* Navbar */}

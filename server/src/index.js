@@ -15,7 +15,7 @@ const port = 5000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(fileUpload());  // Adicionando o middleware para lidar com uploads de arquivos
-
+app.use(cors());
 // Rota para upload de imagens
 app.post('/upload', criarImagem);
 
@@ -63,9 +63,9 @@ app.delete('/imagens/:id_imagem', deletarImagem);
 app.get('/public/:nomeImg', downloadImagem);
 
 
-//Efetuar login
+// //Efetuar login
 app.post('/login',logarUsuario);
 
-app.listen(porta, ()=>{
-    console.log(`API Rodando na porta ${porta}`)
-});
+// app.listen(porta, ()=>{
+//     console.log(`API Rodando na porta ${porta}`)
+// });

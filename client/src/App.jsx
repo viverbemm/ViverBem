@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Perfil_Profissional from './components/pages/Perfil_profissional';
+import Perfil_Profissional from './components/pages/Perfil_Profissional';
 import Tela_profissionais from './components/pages/Tela_profissionais';
 import Tela_agendamentos from './components/pages/Tela_agendamentos';
 import Controle_Usuarios from './components/pages/Controle_Usuarios';

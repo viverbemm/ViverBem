@@ -5,7 +5,7 @@ const db = {
     host: 'localhost',
     user: 'root',
     password: '',  // Use a senha real do seu banco
-    database: 'imagens_viver_bem_mais'
+    database: 'viverbem+'
 };
 
 export default db;
