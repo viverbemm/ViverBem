@@ -5,6 +5,7 @@ import NavInferior from '../layout/navInferior';
 import email from '../pages/imagens/email.png';
 import coin from '../pages/imagens/coin.png';
 import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
 import NavBar from '../layout/navBar';
 
 function Profissional() {
@@ -13,6 +14,14 @@ function Profissional() {
     const menuShow = () => {
         setMenuOpen(!menuOpen);
     };
+
+    const { nome } = useParams(); // Pega o nome do profissional da URL
+    const profissional = Profissional.find(p => p.nome.toLowerCase().replace(/ /g, '-') === nome);
+
+    if (!profissional) {
+        return <div>Profissional não encontrado.</div>;
+    }
+
 
     return (
         <div style={{ backgroundColor: '#c2c2f8', width: '100%', display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>

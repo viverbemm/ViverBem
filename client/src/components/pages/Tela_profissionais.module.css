@@ -12,6 +12,17 @@
     font-size: 50px;
 }
 
+.busca {
+    margin-right: 65%;
+    border-radius: 15px;
+    border-color: #E6E6FA;
+    background-color: #E6E6FA;
+    padding: 8px;
+    cursor: pointer;
+    width: 15%;
+    font-size: 20px;
+}
+
 .grid_container {
     display: grid;
     width: 100%;

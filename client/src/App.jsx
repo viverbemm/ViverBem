@@ -28,7 +28,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/perfil_profissional/:nome" element={<Perfil_Profissional />} />
+      <Route path="/" element={<Tela_profissionais />} />
+      <Route path="/perfil_profissional/:nome" element={<Perfil_Profissional />} />
         <Route path='/Perfil_Profissional' element={<Perfil_Profissional />} />
         <Route path='/tela_profissionais' element={<Tela_profissionais />} />
         <Route path='/tela_agendamentos' element={<Tela_agendamentos />} />{/*não se aplica*/}
