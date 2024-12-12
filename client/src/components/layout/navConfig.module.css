@@ -1,25 +1,97 @@
-.navPrinc{
+/* Navbar principal */
+.navPrinc {
+    margin-top: -10px;
+    margin-bottom: -10px;
     font-size: 20px;
-    background-color: #3b00b9;
+    background-color: #c2c2f8;
     color: bisque;
+    padding: 10px 0;
 }
 
-.navBarEsqu a{
-
-color: #3b00b9;
-padding: 14px 20px;
-text-decoration: none;
+/* Navbar esquerdo */
+.navBarEsqu a {
+    color: #3b00b9;
+    padding: 14px 20px;
+    text-decoration: none;
+    background-color: #E6E6FA;
 }
 
-.navBarDirei a{
+/* Navbar direito */
+.navBarDirei a {
     text-decoration: none;
     cursor: pointer;
-    color:#3b00b9;
-
+    background-color: #E6E6FA;
+    color: #3b00b9;
 }
 
-.navPrinc header{
-    
-    background-color:#c2c2f8;
-    
+/* Header */
+.navPrinc header {
+    background-color: #E6E6FA;
+}
+
+/* Media Queries para tornar o Navbar responsivo */
+
+/* Para telas menores que 768px */
+@media (max-width: 768px) {
+    .navPrinc {
+        font-size: 18px;
+    }
+
+    /* Navbar esquerdo */
+    .navBarEsqu a {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    /* Navbar direito */
+    .navBarDirei a {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    /* Menu em telas pequenas: centraliza os itens e torna o menu mais compacto */
+    .navBarEsqu,
+    .navBarDirei {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    /* Alinha o header no centro */
+    .navPrinc header {
+        text-align: center;
+        padding: 10px 0;
+    }
+}
+
+/* Para telas ainda menores (como smartphones) */
+@media (max-width: 480px) {
+    .navPrinc {
+        font-size: 16px;
+    }
+
+    .navBarEsqu a {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .navBarDirei a {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .navBarEsqu,
+    .navBarDirei {
+        padding: 10px 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Ajuste no Header para telas muito pequenas */
+    .navPrinc header {
+        font-size: 14px;
+    }
 }

@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Importa o useNavigate para navegação
 import styles from './Config.module.css'; // Supondo que o CSS está neste arquivo
 import { FaTrashAlt, FaTimesCircle } from 'react-icons/fa'; // Ícones para desativar e cancelar
-import NavConfig from "../layout/navConfig";
-import NavBar from '../layout/navBar';
+import NavConfig from '../layout/navConfig';
 
 
 const ConfigConta = () => {
@@ -44,7 +43,7 @@ const ConfigConta = () => {
 
   return (
     <div>
-       <NavBar />
+       <NavConfig />
       <div className={styles.container}>
         <h2>Configurações da Conta</h2>
 

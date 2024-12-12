@@ -1,17 +1,18 @@
 import styles from './navInicial.module.css';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import logo from '../pages/imagens/logox.png';
 
 
 
 
 function NavInicial() {
 
-    return(
+    return (
         <div className={styles.navInicial}>
             <header>
                 <div className={styles.navInicialDire}>
-                    <a href="/">ViverBem+</a>
+                    <a href="/"><img src={logo} alt="" style={{ height: '80px', with: '80px', marginLeft: '120px' }}>/</img></a>
 
                 </div>
                 <div className={styles.navInicialEsq}>

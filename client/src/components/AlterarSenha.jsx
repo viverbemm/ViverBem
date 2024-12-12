@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import styles from './AlterarSenha.module.css';
 import NavBar from './layout/navBar';
-import NavInferior from './layout/navInferior';
 
 
 function AlterarSenha() {

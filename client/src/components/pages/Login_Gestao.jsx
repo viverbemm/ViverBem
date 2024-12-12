@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Login_Gestao.module.css';
+import NavBar from '../layout/navBar';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -40,7 +41,7 @@ const Login = () => {
   return (
     <div className={styles.login_page}>
       <div className={styles.login_box}>
-        <h2>ViveBem+</h2>
+        <h2>Viver Bem+</h2>
         <form onSubmit={(e) => e.preventDefault()}>
           <div className={styles.input_group}>
             <label>Matrícula*</label>
